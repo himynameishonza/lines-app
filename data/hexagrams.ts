@@ -13,6 +13,7 @@ export interface Hexagram {
   isEvolving: boolean;
   lines: ('yin' | 'yang')[]; // Array of 6 lines, bottom to top
   graphics?: string; // Path to image file
+  gradientColors?: string[]; // Gradient colors for background
   content: {
     cs: HexagramContent;
     en: HexagramContent;
@@ -27,6 +28,7 @@ export const placeholderHexagrams: Hexagram[] = [
     "romanization": "Qián",
     "isEvolving": false,
     "lines": ["yang", "yang", "yang", "yang", "yang", "yang"],
+    "gradientColors": ["#3A5A7A", "#3A5A7A", "#2B4158", "#1F2F42", "#1A2530"],
     "content": {
       "cs": {
         "meaning": "Hexagram 1 představuje princip Nebe – čistou tvořivou sílu. Je to energie počátku, vzestupu a nepřetržitého pohybu. Tvořivé symbolizuje vědomou aktivitu, schopnost zahájit dění a nést odpovědnost za směr. Není to impulzivní síla, ale vytrvalý, jasně zaměřený proud.\n\nTento hexagram ukazuje okamžik plného potenciálu. Pravá tvořivost vyrůstá z vnitřní integrity a souladu s vyšším řádem. Nebe se pohybuje bez ustání — člověk, který jej následuje, rozvíjí charakter skrze neustálé sebezdokonalování. Hexagram 1 představuje princip Nebe – čistou tvořivou sílu. Je to energie počátku, vzestupu a nepřetržitého pohybu. Tvořivé symbolizuje vědomou aktivitu, schopnost zahájit dění a nést odpovědnost za směr. Není to impulzivní síla, ale vytrvalý, jasně zaměřený proud.\n\nTento hexagram ukazuje okamžik plného potenciálu. Pravá tvořivost vyrůstá z vnitřní integrity a souladu s vyšším řádem. Nebe se pohybuje bez ustání — člověk, který jej následuje, rozvíjí charakter skrze neustálé sebezdokonalování.",
@@ -49,6 +51,7 @@ export const placeholderHexagrams: Hexagram[] = [
     "romanization": "Kūn",
     "isEvolving": false,
     "lines": ["yin", "yin", "yin", "yin", "yin", "yin"],
+    "gradientColors": ["#8B7A3A", "#8B7A3A", "#5A4E28", "#3A3320", "#2A2518"],
     "content": {
       "cs": {
         "meaning": "Hexagram 2 ztělesňuje princip Země – poddajnost, výživu a podporu. Přijímající umožňuje růst a poskytuje prostor. Nezahajuje, ale doprovází a stabilizuje.\n\nJe to síla trpělivosti a hluboké oddanosti. V jeho tichosti spočívá schopnost nést odpovědnost a umožnit druhým rozvinout jejich potenciál.",
@@ -71,6 +74,7 @@ export const placeholderHexagrams: Hexagram[] = [
     "romanization": "Zhūn",
     "isEvolving": false,
     "lines": ["yang", "yin", "yin", "yin", "yin", "yang"],
+    "gradientColors": ["#3A7A5A", "#3A7A5A", "#2B5842", "#1F3F30", "#1A2F25"],
     "content": {
       "cs": {
         "meaning": "Hexagram 3 představuje počátek, kdy se nové teprve rodí. Je to stav napětí mezi možností a skutečností. Chaos není chyba, ale přirozený stav vzniku.\n\nZrání vyžaduje trpělivost a ochotu projít nejistotou. V této fázi je důležitější vytrvat než spěchat.",
@@ -93,6 +97,7 @@ export const placeholderHexagrams: Hexagram[] = [
   "romanization": "Méng",
   "isEvolving": false,
   "lines": ["yin", "yin", "yang", "yin", "yin", "yang"],
+  "gradientColors": ["#5A4A6B", "#5A4A6B", "#3B2F47", "#2A2330", "#2A2330"],
   "content": {
     "cs": {
       "meaning": "Hexagram 4, Meng – Nezralost, představuje stav počáteční nevědomosti. Je to obraz mládí, které hledá vedení, a mysli, která ještě není ustálena. Nezralost není nedostatek, ale přirozená fáze vývoje.\n\nTento hexagram upozorňuje na potřebu učení, trpělivosti a správného vedení. Moudrost nepřichází sama – rodí se ze vztahu mezi otázkou a odpovědí.",

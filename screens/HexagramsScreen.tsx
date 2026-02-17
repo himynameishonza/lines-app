@@ -6,6 +6,7 @@ import TopNavigationBarHexagramsScreen from '../components/navbars/TopNavigation
 import HexagramSymbol from '../components/HexagramSymbol';
 import BodoniText from '../components/BodoniText';
 import { placeholderHexagrams } from '../data/hexagrams';
+import { getHexagramImage } from '../assets/hexagrams';
 import GeistMonoText from '../components/GeistMonoText';
 
 type ViewModes = "carousel" | "list" | "grid";
@@ -13,29 +14,9 @@ type ViewModes = "carousel" | "list" | "grid";
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const CARD_WIDTH = SCREEN_WIDTH * 0.8;
 const CARD_HEIGHT = CARD_WIDTH * 1.5;
-const CARD_SPACING = 0;
 const SIDE_SPACING = (SCREEN_WIDTH - CARD_WIDTH) / 2;
 
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList<typeof placeholderHexagrams[0]>);
-
-const FadeInText = ({ children, style }: { children: React.ReactNode; style?: any }) => {
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-
-  React.useEffect(() => {
-    fadeAnim.setValue(0);
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 500,
-      useNativeDriver: true,
-    }).start();
-  }, [children]);
-
-  return (
-    <Animated.View style={{ opacity: fadeAnim }}>
-      <Text style={style}>{children}</Text>
-    </Animated.View>
-  );
-};
 
 export default function HexagramsScreen() {
   const { t, i18n } = useTranslation();
@@ -44,7 +25,6 @@ export default function HexagramsScreen() {
   const flatListRef = useRef<FlatList<typeof placeholderHexagrams[0]> | null>(null);
   const scrollX = useRef(new Animated.Value(0)).current;
   const lastIndexRef = useRef(0);
-  const descriptionOpacity = useRef(new Animated.Value(1)).current;
 
   function changeViewMode() {
     if (viewMode === "carousel") {
@@ -64,27 +44,18 @@ export default function HexagramsScreen() {
     }
   }
 
+  const handleScroll = Animated.event(
+    [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+    { useNativeDriver: true }
+  );
+
   const handleMomentumScrollEnd = (event: any) => {
     const offsetX = event.nativeEvent.contentOffset.x;
     const index = Math.round(offsetX / CARD_WIDTH);
     
     if (index !== lastIndexRef.current && index >= 0 && index < placeholderHexagrams.length) {
       lastIndexRef.current = index;
-      
-      // Fade out
-      Animated.timing(descriptionOpacity, {
-        toValue: 0,
-        duration: 150,
-        useNativeDriver: true,
-      }).start(() => {
-        setCurrentIndex(index);
-        // Fade in
-        Animated.timing(descriptionOpacity, {
-          toValue: 1,
-          duration: 150,
-          useNativeDriver: true,
-        }).start();
-      });
+      setCurrentIndex(index);
     }
   };
 
@@ -113,10 +84,10 @@ export default function HexagramsScreen() {
     });
 
     return (
-      <View style={{ width: CARD_WIDTH, paddingHorizontal: CARD_SPACING / 2 }}>
+      <View style={{ width: CARD_WIDTH}}>
         <Animated.View
           style={{
-            width: CARD_WIDTH - CARD_SPACING,
+            width: CARD_WIDTH,
             height: CARD_HEIGHT,
             borderRadius: 24,
             overflow: 'hidden',
@@ -128,7 +99,7 @@ export default function HexagramsScreen() {
           
           {/* Background image */}
           <Image
-            source={require('../assets/hexagrams/34.png')}
+            source={getHexagramImage(item.number)}
             style={{
               position: 'absolute',
               top: 0,
@@ -165,7 +136,7 @@ export default function HexagramsScreen() {
             }}
           >
             <HexagramSymbol lines={item.lines} size={28} color="#EFDECA" />
-            <Text style={{ fontSize: 16, fontWeight: '500', color: '#EFDECA' }}>
+            <Text style={{ fontSize: 18, fontWeight: '500', color: '#EFDECA' }}>
               {item.chineseName}
             </Text>
           </View>
@@ -221,14 +192,18 @@ export default function HexagramsScreen() {
 
   const currentItem = placeholderHexagrams[currentIndex];
   const currentLang = i18n.language as 'cs' | 'en';
+  
+  const gradientColors = (currentItem?.gradientColors || ['#834D4A', '#834D4A', '#3B2B27', '#201F20', '#201F20']) as [string, string, ...string[]];
 
   return (
-    <LinearGradient
-      colors={['#834D4A', '#834D4A', '#3B2B27', '#201F20', '#201F20']}
-      style={{ flex: 1 }}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 0, y: 1 }}
-    >
+    <View style={{ flex: 1 }}>
+      {/* Simple gradient background - changes when currentIndex updates */}
+      <LinearGradient
+        colors={gradientColors}
+        style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 0, y: 1 }}
+      />
       <TopNavigationBarHexagramsScreen viewMode={viewMode} onViewModePress={changeViewMode} />
 
       {viewMode === "carousel" && (
@@ -245,10 +220,7 @@ export default function HexagramsScreen() {
               snapToInterval={CARD_WIDTH}
               snapToAlignment="start"
               decelerationRate="fast"
-              onScroll={Animated.event(
-                [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-                { useNativeDriver: true }
-              )}
+              onScroll={handleScroll}
               onMomentumScrollEnd={handleMomentumScrollEnd}
               scrollEventThrottle={16}
               contentContainerStyle={{
@@ -257,25 +229,25 @@ export default function HexagramsScreen() {
             />
             
             {/* Description text below carousel */}
-            <Animated.View style={{ 
-              paddingHorizontal: 40,
+            <View style={{ 
+              paddingHorizontal: 32,
               paddingTop: 24,
-              opacity: descriptionOpacity,
             }}>
             <GeistMonoText
-            variant='medium'
               style={{
                 fontSize: 14,
-                lineHeight: 20,
-                color: '#EFDECA',
-                opacity: 0.8,
+                lineHeight: 22,
+                color: 'rgba(255, 255, 255, 0.6)',
                 textAlign: 'center',
+                textTransform: "uppercase"
               }}
               numberOfLines={4}
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad recusandae eius culpa consequuntur sit libero velit laudantium impedit.
+              {currentItem?.lines.slice().reverse().map((line, index, array) => 
+                line + (index < array.length - 1 ? "→" : "")
+              )}
             </GeistMonoText>
-          </Animated.View>
+          </View>
           </View>
         </View>
       )}
@@ -291,6 +263,6 @@ export default function HexagramsScreen() {
           <Text style={{ color: '#EFDECA' }}>Grid view - Coming soon</Text>
         </View>
       )}
-    </LinearGradient>
+    </View>
   );
 }

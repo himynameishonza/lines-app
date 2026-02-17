@@ -47,13 +47,13 @@ export default function TopNavigationBarHexagramsScreen({
           strokeWidth={1.5}
         />}
 
-        {viewMode === "list" && <LayoutGrid 
+        {viewMode === "grid" && <LayoutGrid 
           size={28} 
           color="#EFDECA"
           strokeWidth={1.5}
         />}
 
-        {viewMode === "grid" && <Rows3 
+        {viewMode === "list" && <Rows3 
           size={28} 
           color="#EFDECA"
           strokeWidth={1.5}
