@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { View, ScrollView, Text } from "react-native";
+import { View, ScrollView, Text, Image } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { LinearGradient } from "expo-linear-gradient";
 import { Hexagram } from "../data/hexagrams";
 import TopNavigationBarHexagramDetail from "./navbars/TopNavigationBarHexagramDetail";
 import BottomNavigationBarHexagramDetail from "./navbars/BottomNavigationBarHexagramDetail";
 import BodoniText from "./BodoniText";
 import { getHexagramTranslatedName } from "../utils/hexagramHelpers";
+import { getHexagramImage } from "../assets/hexagrams";
 import { useTranslation } from "react-i18next";
 import { HexagramDetailTab } from "../types/hexagramDetail";
 
@@ -21,8 +23,6 @@ export default function HexagramDetail({
   onShare,
 }: HexagramDetailProps) {
   const insets = useSafeAreaInsets();
-
-
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as "cs" | "en";
   const translatedName = getHexagramTranslatedName(hexagram, currentLang, t);
@@ -48,31 +48,81 @@ export default function HexagramDetail({
     }
   };
 
+  const HEADER_HEIGHT = 180;
 
   return (
     <View style={{ flex: 1, backgroundColor: "#1A1A1A" }}>
       <TopNavigationBarHexagramDetail 
         onBack={onBack} 
-        onShare={onShare} 
+        onShare={onShare}
         activeTab={activeTab}
       />
 
-      <View style={{ paddingTop: insets.top + 56 }}>
-        <BodoniText
-          style={{ fontSize: 40, color: "white", textAlign: "center" }}
+      {/* Header with background image */}
+      <View 
+        style={{ 
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: HEADER_HEIGHT + insets.top,
+          zIndex: 0,
+        }}
+      >
+        <Image
+          source={getHexagramImage(hexagram.number)}
+          style={{
+            width: '100%',
+            height: '120%',
+          }}
+          resizeMode="cover"
+        />
+
+        {/* Hexagram name */}
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 40,
+            left: 0,
+            right: 0,
+            paddingHorizontal: 32,
+            alignItems: 'center',
+          }}
         >
-          {translatedName}
-        </BodoniText>
+          <BodoniText
+            variant="bold"
+            style={{
+              fontSize: 48,
+              lineHeight: 56,
+              color: '#EFDECA',
+              textAlign: 'center',
+            }}
+          >
+            {translatedName}
+          </BodoniText>
+        </View>
       </View>
 
-      {/* Content Area */}
+      {/* Scrollable content */}
       <ScrollView
         style={{ flex: 1 }}
         contentContainerStyle={{
-          paddingBottom: insets.bottom + 60,
+          paddingTop: HEADER_HEIGHT + insets.top,
+          paddingBottom: insets.bottom + 90,
         }}
       >
-        {renderContent()}
+        {/* Body container with background */}
+        <View
+          style={{
+            backgroundColor: '#1A1A1A',
+            borderTopLeftRadius: 24,
+            borderTopRightRadius: 24,
+            minHeight: 400,
+            paddingTop: 32,
+          }}
+        >
+          {renderContent()}
+        </View>
       </ScrollView>
 
       <BottomNavigationBarHexagramDetail
@@ -85,48 +135,80 @@ export default function HexagramDetail({
 
 // Content Components for each tab
 function MeaningContent({ hexagram }: { hexagram: Hexagram }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language as "cs" | "en";
 
   return (
-    <View style={{ padding: 24 }}>
-      <Text style={{ color: "#EFDECA", fontSize: 16, lineHeight: 24 }}>
-        {t(`detail.meaning`)}
+    <View style={{ paddingHorizontal: 24 }}>
+      <Text 
+        style={{ 
+          color: "rgba(239, 222, 205, 0.8)", 
+          fontSize: 16, 
+          lineHeight: 28,
+          fontFamily: 'System',
+        }}
+      >
+        {hexagram.content[currentLang]?.meaning || t(`detail.meaning`)}
       </Text>
     </View>
   );
 }
 
 function OracleContent({ hexagram }: { hexagram: Hexagram }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language as "cs" | "en";
 
   return (
-    <View style={{ padding: 24 }}>
-      <Text style={{ color: "#EFDECA", fontSize: 16, lineHeight: 24 }}>
-        {t(`detail.oracle`)}
+    <View style={{ paddingHorizontal: 24 }}>
+      <Text 
+        style={{ 
+          color: "rgba(239, 222, 205, 0.8)", 
+          fontSize: 16, 
+          lineHeight: 28,
+          fontFamily: 'System',
+        }}
+      >
+        {hexagram.content[currentLang]?.oracle || t(`detail.oracle`)}
       </Text>
     </View>
   );
 }
 
 function AnatomyContent({ hexagram }: { hexagram: Hexagram }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language as "cs" | "en";
 
   return (
-    <View style={{ padding: 24 }}>
-      <Text style={{ color: "#EFDECA", fontSize: 16, lineHeight: 24 }}>
-        {t(`detail.anatomy`)}
+    <View style={{ paddingHorizontal: 24 }}>
+      <Text 
+        style={{ 
+          color: "rgba(239, 222, 205, 0.8)", 
+          fontSize: 16, 
+          lineHeight: 28,
+          fontFamily: 'System',
+        }}
+      >
+        {hexagram.content[currentLang]?.anatomy || t(`detail.anatomy`)}
       </Text>
     </View>
   );
 }
 
 function EvolutionContent({ hexagram }: { hexagram: Hexagram }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language as "cs" | "en";
 
   return (
-    <View style={{ padding: 24 }}>
-      <Text style={{ color: "#EFDECA", fontSize: 16, lineHeight: 24 }}>
-        {t(`detail.evolution`)}
+    <View style={{ paddingHorizontal: 24 }}>
+      <Text 
+        style={{ 
+          color: "rgba(239, 222, 205, 0.8)", 
+          fontSize: 16, 
+          lineHeight: 28,
+          fontFamily: 'System',
+        }}
+      >
+        {hexagram.content[currentLang]?.evolution || t(`detail.evolution`)}
       </Text>
     </View>
   );
