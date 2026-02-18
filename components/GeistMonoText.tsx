@@ -10,7 +10,7 @@ interface GeistMonoTextProps extends TextProps {
  * GeistMonoText component for headlines and decorative text
  * Uses Geist Mono font from Google Fonts
  */
-export default function BodoniText({ 
+export default function GeistText({ 
   variant = 'regular', 
   style, 
   children, 

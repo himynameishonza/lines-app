@@ -1,24 +1,25 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { BookOpen, Bolt, GalleryHorizontalEnd } from 'lucide-react-native';
+import { Sparkles, Eye, DraftingCompass, Activity } from 'lucide-react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { MainNavigationTab } from '../../types/navigation';
+import { HexagramDetailTab } from '../../types/hexagramDetail';
 
-interface MainNavigationBarProps {
-  activeTab?: MainNavigationTab;
-  onTabChange?: (tab: MainNavigationTab) => void;
+interface BottomNavigationBarHexagramDetailProps {
+  activeTab?: HexagramDetailTab;
+  onTabChange?: (tab: HexagramDetailTab) => void;
 }
 
-export default function MainNavigationBar({
-  activeTab = 'dashboard',
+export default function BottomNavigationBarHexagramDetail({
+  activeTab = 'meaning',
   onTabChange,
-}: MainNavigationBarProps) {
+}: BottomNavigationBarHexagramDetailProps) {
   const insets = useSafeAreaInsets();
 
-  const tabs: Array<{ id: MainNavigationTab; Icon: typeof BookOpen }> = [
-    { id: 'dashboard', Icon: BookOpen },
-    { id: 'hexagrams', Icon: GalleryHorizontalEnd },
-    { id: 'settings', Icon: Bolt },
+  const tabs: Array<{ id: HexagramDetailTab; Icon: typeof Eye }> = [
+    { id: 'meaning', Icon: Eye },
+    { id: 'oracle', Icon: Sparkles },
+    { id: 'anatomy', Icon: DraftingCompass },
+    { id: 'evolution', Icon: Activity },
   ];
 
   return (
@@ -29,9 +30,8 @@ export default function MainNavigationBar({
         left: 0,
         right: 0,
         alignItems: 'center',
-        zIndex: 10
+        zIndex: 10,
       }}
-      testID="bottom-nav-container"
     >
       <View
         style={{
@@ -40,7 +40,7 @@ export default function MainNavigationBar({
           justifyContent: 'center',
           gap: 0,
           paddingVertical: 0,
-          paddingHorizontal: 20
+          paddingHorizontal: 20,
         }}
       >
         {tabs.map((tab) => {
@@ -51,10 +51,9 @@ export default function MainNavigationBar({
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: "33%",
+                width: '25%',
                 height: 44,
               }}
-              testID={`nav-${tab.id}`}
               onPress={() => onTabChange?.(tab.id)}
               activeOpacity={1}
             >

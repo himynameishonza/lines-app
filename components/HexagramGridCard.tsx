@@ -5,6 +5,7 @@ import { Hexagram } from "../data/hexagrams";
 import HexagramSymbol from "./HexagramSymbol";
 import GeistMonoText from "./GeistMonoText";
 import BodoniText from "./BodoniText";
+import { getHexagramTranslatedName } from "../utils/hexagramHelpers";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const CARD_WIDTH = (SCREEN_WIDTH - 48) / 2; // Screen width minus padding (16*2) and gap (16) divided by 2 columns
@@ -23,9 +24,7 @@ export default function HexagramGridCard({
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as "cs" | "en";
 
-  const translatedName = item.content[currentLang]?.meaning
-    ? t(`hexagrams.${item.number}`)
-    : item.chineseName;
+  const translatedName = getHexagramTranslatedName(item, currentLang, t);
 
   return (
     <TouchableOpacity

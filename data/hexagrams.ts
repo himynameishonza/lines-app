@@ -74,7 +74,7 @@ export const hexagrams: Hexagram[] = [
     "romanization": "Zhūn",
     "elements": [3, 5],
     "lines": [1, 0, 0, 0, 0, 1],
-    "gradientColors": ["#3A7A5A", "#3A7A5A", "#2B5842", "#1F3F30", "#1A2F25"],
+    "gradientColors": ["#003d39", "#003d39", "#003d39", "#00312e", "#00312e"],
     "content": {
       "cs": {
         "meaning": "Hexagram 3 představuje počátek, kdy se nové teprve rodí. Je to stav napětí mezi možností a skutečností. Chaos není chyba, ale přirozený stav vzniku.\n\nZrání vyžaduje trpělivost a ochotu projít nejistotou. V této fázi je důležitější vytrvat než spěchat.",

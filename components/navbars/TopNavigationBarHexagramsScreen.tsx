@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { GalleryHorizontal, LayoutGrid, Menu, Rows3, Search } from 'lucide-react-native';
+import { GalleryHorizontal, LayoutGrid, Rows3, Search } from 'lucide-react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import { HexagramsViewMode } from '../../types/navigation';
 
 interface TopNavigationBarHexagramsScreenProps {
   onViewModePress?: () => void;
   onSearchPress?: () => void;
-  viewMode: 'carousel' | 'list' | 'grid';
+  viewMode: HexagramsViewMode;
 }
 
 export default function TopNavigationBarHexagramsScreen({

@@ -5,6 +5,7 @@ import HexagramSymbol from "./HexagramSymbol";
 import BodoniText from "./BodoniText";
 import { useTranslation } from "react-i18next";
 import GeistMonoText from "./GeistMonoText";
+import { getHexagramTranslatedName } from "../utils/hexagramHelpers";
 
 interface HexagramListCardProps {
   item: Hexagram;
@@ -21,9 +22,7 @@ export default function HexagramListCard({
 
   const currentLang = i18n.language as "cs" | "en";
 
-  const translatedName = item.content[currentLang]?.meaning
-    ? t(`hexagrams.${item.number}`)
-    : item.chineseName;
+  const translatedName = getHexagramTranslatedName(item, currentLang, t);
 
   return (
     <TouchableOpacity

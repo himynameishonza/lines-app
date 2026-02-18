@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { View, FlatList, Dimensions, Text, Animated } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from "react-i18next";
@@ -6,12 +6,11 @@ import TopNavigationBarHexagramsScreen from "../components/navbars/TopNavigation
 import HexagramCarouselCard from "../components/HexagramCarouselCard";
 import HexagramListCard from "../components/HexagramListCard";
 import HexagramGridCard from "../components/HexagramGridCard";
-import { hexagrams } from "../data/hexagrams";
+import { hexagrams, Hexagram } from "../data/hexagrams";
 import { trigrams } from "../data/trigrams";
 import GeistMonoText from "../components/GeistMonoText";
 import { ArrowUpFromLine, ArrowUpToLine } from "lucide-react-native";
-
-type ViewModes = "carousel" | "list" | "grid";
+import { HexagramsViewMode } from "../types/navigation";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const CARD_WIDTH = SCREEN_WIDTH * 0.8;
@@ -30,21 +29,45 @@ export const getTrigramName = (
   return trigram ? trigram.content[language].name : "";
 };
 
-export default function HexagramsScreen() {
+interface HexagramsScreenProps {
+  onHexagramPress?: (hexagram: Hexagram) => void;
+  initialCarouselIndex?: number;
+  initialListScrollOffset?: number;
+  initialGridScrollOffset?: number;
+  onScrollPositionChange?: (viewMode: HexagramsViewMode, position: number) => void;
+  initialViewMode?: HexagramsViewMode;
+  onViewModeChange?: (viewMode: HexagramsViewMode) => void;
+}
+
+export default function HexagramsScreen({ 
+  onHexagramPress,
+  initialCarouselIndex = 0,
+  initialListScrollOffset = 0,
+  initialGridScrollOffset = 0,
+  onScrollPositionChange,
+  initialViewMode = 'carousel',
+  onViewModeChange,
+}: HexagramsScreenProps) {
   const { t, i18n } = useTranslation();
-  const [viewMode, setViewMode] = useState<ViewModes>("carousel");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [viewMode, setViewMode] = useState<HexagramsViewMode>(initialViewMode);
+  const [currentIndex, setCurrentIndex] = useState(initialCarouselIndex);
   const flatListRef = useRef<FlatList<(typeof hexagrams)[0]> | null>(null);
-  const scrollX = useRef(new Animated.Value(0)).current;
-  const lastIndexRef = useRef(0);
+  const listFlatListRef = useRef<FlatList<(typeof hexagrams)[0]> | null>(null);
+  const gridFlatListRef = useRef<FlatList<(typeof hexagrams)[0]> | null>(null);
+  const scrollX = useRef(new Animated.Value(initialCarouselIndex * CARD_WIDTH)).current;
+  const lastIndexRef = useRef(initialCarouselIndex);
+  const listScrollOffsetRef = useRef(initialListScrollOffset);
+  const gridScrollOffsetRef = useRef(initialGridScrollOffset);
 
   function changeViewMode() {
+    let newViewMode: HexagramsViewMode;
+    
     if (viewMode === "carousel") {
-      setViewMode("list");
+      newViewMode = "list";
     } else if (viewMode === "list") {
-      setViewMode("grid");
-    } else if (viewMode === "grid") {
-      setViewMode("carousel");
+      newViewMode = "grid";
+    } else {
+      newViewMode = "carousel";
       // Reset to first item when returning to carousel
       setCurrentIndex(0);
       lastIndexRef.current = 0;
@@ -54,6 +77,9 @@ export default function HexagramsScreen() {
         flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
       }, 0);
     }
+    
+    setViewMode(newViewMode);
+    onViewModeChange?.(newViewMode);
   }
 
   const handleScroll = Animated.event(
@@ -72,17 +98,33 @@ export default function HexagramsScreen() {
     ) {
       lastIndexRef.current = index;
       setCurrentIndex(index);
+      onScrollPositionChange?.('carousel', index);
     }
+  };
+
+  const handleListScroll = (event: any) => {
+    const offsetY = event.nativeEvent.contentOffset.y;
+    listScrollOffsetRef.current = offsetY;
+  };
+
+  const handleGridScroll = (event: any) => {
+    const offsetY = event.nativeEvent.contentOffset.y;
+    gridScrollOffsetRef.current = offsetY;
+  };
+
+  const handleListScrollEnd = () => {
+    onScrollPositionChange?.('list', listScrollOffsetRef.current);
+  };
+
+  const handleGridScrollEnd = () => {
+    onScrollPositionChange?.('grid', gridScrollOffsetRef.current);
   };
 
   const renderListItem = ({ item }: { item: (typeof hexagrams)[0] }) => {
     return (
       <HexagramListCard
         item={item}
-        onPress={() => {
-          // TODO: Navigate to hexagram detail or handle selection
-          console.log("Selected hexagram:", item.id);
-        }}
+        onPress={() => onHexagramPress?.(item)}
         testID="hexagram-list-item"
       />
     );
@@ -92,10 +134,7 @@ export default function HexagramsScreen() {
     return (
       <HexagramGridCard
         item={item}
-        onPress={() => {
-          // TODO: Navigate to hexagram detail or handle selection
-          console.log("Selected hexagram:", item.id);
-        }}
+        onPress={() => onHexagramPress?.(item)}
         testID="hexagram-grid-item"
       />
     );
@@ -116,6 +155,7 @@ export default function HexagramsScreen() {
         cardWidth={CARD_WIDTH}
         cardHeight={CARD_HEIGHT}
         testID="hexagram-card"
+        onPress={() => onHexagramPress?.(item)}
       />
     );
   };
@@ -176,6 +216,12 @@ export default function HexagramsScreen() {
               contentContainerStyle={{
                 paddingHorizontal: SIDE_SPACING,
               }}
+              initialScrollIndex={initialCarouselIndex}
+              getItemLayout={(data, index) => ({
+                length: CARD_WIDTH,
+                offset: CARD_WIDTH * index,
+                index,
+              })}
             />
 
             {/* Trigram Description */}
@@ -227,6 +273,7 @@ export default function HexagramsScreen() {
       {viewMode === "list" && (
         <View style={{ flex: 1 }}>
           <FlatList
+            ref={listFlatListRef}
             data={hexagrams}
             renderItem={renderListItem}
             keyExtractor={(item) => item.id.toString()}
@@ -235,6 +282,9 @@ export default function HexagramsScreen() {
               paddingTop: 120,
               paddingBottom: 120,
             }}
+            onScroll={handleListScroll}
+            onMomentumScrollEnd={handleListScrollEnd}
+            scrollEventThrottle={16}
           />
         </View>
       )}
@@ -242,6 +292,7 @@ export default function HexagramsScreen() {
       {viewMode === "grid" && (
         <View style={{ flex: 1 }}>
           <FlatList
+            ref={gridFlatListRef}
             data={hexagrams}
             renderItem={renderGridItem}
             keyExtractor={(item) => item.id.toString()}
@@ -256,6 +307,9 @@ export default function HexagramsScreen() {
               justifyContent: "space-between",
               marginBottom: 16,
             }}
+            onScroll={handleGridScroll}
+            onMomentumScrollEnd={handleGridScrollEnd}
+            scrollEventThrottle={16}
           />
         </View>
       )}
