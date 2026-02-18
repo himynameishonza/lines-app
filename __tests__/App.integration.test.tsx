@@ -6,9 +6,9 @@ import HexagramsScreen from '../screens/HexagramsScreen';
 import NewReadingScreen from '../screens/NewReadingScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import HexagramDetailsCard from '../components/HexagramDetailsCard';
-import NavigationBar from '../components/NavigationBar';
 import App from '../App';
-import { placeholderHexagrams } from '../data/hexagrams';
+import { hexagrams } from '../data/hexagrams';
+import MainNavigationBar from '../components/navbars/MainNavigationBar';
 
 // Mock the safe area insets hook
 jest.mock('react-native-safe-area-context', () => ({
@@ -69,13 +69,13 @@ describe('Integration Property Tests', () => {
         component: HexagramDetailsCard, 
         name: 'HexagramDetailsCard', 
         props: { 
-          hexagram: placeholderHexagrams[0],
+          hexagram: hexagrams[0],
           activeTab: 'meaning' as const,
           onClose: () => {},
           onShare: () => {},
         } 
       },
-      { component: NavigationBar, name: 'NavigationBar', props: { activeTab: 'dashboard' } },
+      { component: MainNavigationBar, name: 'NavigationBar', props: { activeTab: 'dashboard' } },
     ];
 
     screens.forEach(({ component: Component, name, props }) => {

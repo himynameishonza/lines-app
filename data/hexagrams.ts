@@ -10,8 +10,8 @@ export interface Hexagram {
   number: number;
   chineseName: string;
   romanization: string;
-  isEvolving: boolean;
-  lines: ('yin' | 'yang')[]; // Array of 6 lines, bottom to top
+  elements?: [number, number]; // [bottom trigram, top trigram]
+  lines: (0 | 1)[]; // Array of 6 lines, bottom to top (0 = yin, 1 = yang)
   graphics?: string; // Path to image file
   gradientColors?: string[]; // Gradient colors for background
   content: {
@@ -20,14 +20,14 @@ export interface Hexagram {
   };
 }
 
-export const placeholderHexagrams: Hexagram[] = [
+export const hexagrams: Hexagram[] = [
   {
     "id": 1,
     "number": 1,
     "chineseName": "乾",
     "romanization": "Qián",
-    "isEvolving": false,
-    "lines": ["yang", "yang", "yang", "yang", "yang", "yang"],
+    "elements": [1, 1],
+    "lines": [1, 1, 1, 1, 1, 1],
     "gradientColors": ["#3A5A7A", "#3A5A7A", "#2B4158", "#1F2F42", "#1A2530"],
     "content": {
       "cs": {
@@ -49,8 +49,8 @@ export const placeholderHexagrams: Hexagram[] = [
     "number": 2,
     "chineseName": "坤",
     "romanization": "Kūn",
-    "isEvolving": false,
-    "lines": ["yin", "yin", "yin", "yin", "yin", "yin"],
+    "elements": [2, 2],
+    "lines": [0, 0, 0, 0, 0, 0],
     "gradientColors": ["#8B7A3A", "#8B7A3A", "#5A4E28", "#3A3320", "#2A2518"],
     "content": {
       "cs": {
@@ -72,8 +72,8 @@ export const placeholderHexagrams: Hexagram[] = [
     "number": 3,
     "chineseName": "屯",
     "romanization": "Zhūn",
-    "isEvolving": false,
-    "lines": ["yang", "yin", "yin", "yin", "yin", "yang"],
+    "elements": [3, 5],
+    "lines": [1, 0, 0, 0, 0, 1],
     "gradientColors": ["#3A7A5A", "#3A7A5A", "#2B5842", "#1F3F30", "#1A2F25"],
     "content": {
       "cs": {
@@ -95,8 +95,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 4,
   "chineseName": "蒙",
   "romanization": "Méng",
-  "isEvolving": false,
-  "lines": ["yin", "yin", "yang", "yin", "yin", "yang"],
+    "elements": [5, 7],
+  "lines": [1, 0, 0, 1, 0, 0],
   "gradientColors": ["#5A4A6B", "#5A4A6B", "#3B2F47", "#2A2330", "#2A2330"],
   "content": {
     "cs": {
@@ -118,8 +118,9 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 5,
   "chineseName": "需",
     "romanization": "Xū",
-  "isEvolving": false,
-  "lines": ["yin", "yang", "yin", "yang", "yang", "yang"],
+    "elements": [1, 5],
+
+  "lines": [1, 1, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 5, Čekání, vyjadřuje napětí před naplněním. Síla je přítomná, ale čas ještě nenastal. Čekání není pasivita, nýbrž vědomé spočinutí v přípravě.\n\nV tomto stavu se učíme důvěře. Správné načasování je stejně důležité jako samotná akce.",
@@ -140,8 +141,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 6,
   "chineseName": "訟",
     "romanization": "Sòng",
-  "isEvolving": false,
-  "lines": ["yang", "yang", "yang", "yin", "yang", "yin"],
+    "elements": [5, 1],
+  "lines": [0, 1, 0, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 6, Spor, představuje střet dvou sil, které nejsou v souladu. Konflikt vzniká z rozdílných směrů a neochoty ustoupit.\n\nSpor nemusí být destruktivní, pokud vede k vyjasnění. Vyžaduje však nestrannost a schopnost rozlišovat podstatné od osobního.",
@@ -162,8 +163,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 7,
   "chineseName": "師",
     "romanization": "Shī",
-  "isEvolving": false,
-  "lines": ["yin", "yang", "yin", "yin", "yin", "yin"],
+    "elements": [2, 5],
+  "lines": [0, 0, 0, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 7, Vojsko, symbolizuje organizovanou sílu a disciplínu. Energie je soustředěná a řízená. Úspěch závisí na vedení a jasném řádu.\n\nVojsko zde neznamená boj, ale schopnost jednat jednotně.",
@@ -184,8 +185,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 8,
   "chineseName": "比",
     "romanization": "Bǐ",
-  "isEvolving": false,
-  "lines": ["yin", "yin", "yin", "yin", "yang", "yin"],
+    "elements": [2, 5],
+  "lines": [0, 1, 0, 0, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 8, Sblížení, představuje spojení a vzájemnou podporu. Jednota vzniká z důvěry a společného cíle.\n\nSblížení je dobrovolné a vyžaduje upřímnost.",
@@ -206,8 +207,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 9,
   "chineseName": "小畜",
     "romanization": "Xiǎo Chù",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yang","yang","yin"],
+    "elements": [1, 4],
+  "lines": [0, 1, 1, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 9, Malé zkrocení, vyjadřuje situaci, kdy je síla omezena drobnými překážkami. Energie je přítomná, ale nemůže se plně projevit. Malé omezení učí trpělivosti a jemné práci.\n\nTento hexagram ukazuje, že i malý vliv může mít význam. Ne vše je možné prosadit silou.",
@@ -228,8 +229,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 10,
   "chineseName": "履",
     "romanization": "Lǚ",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yin","yang","yang"],
+    "elements": [8, 1],
+  "lines": [1, 1, 0, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 10, Krokování, představuje vědomé jednání v náročné situaci. Je třeba kráčet opatrně, s respektem k silám kolem sebe.\n\nJedná se o zkoušku charakteru – odvaha musí být spojena s pokorou.",
@@ -250,8 +251,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 11,
   "chineseName": "泰",
     "romanization": "Tài",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yin","yin","yin"],
+    "elements": [1, 2],
+  "lines": [0, 0, 0, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 11, Mír, představuje harmonii mezi Nebem a Zemí. Síly jsou v rovnováze a výměna probíhá bez překážek.\n\nJe to období rozkvětu a vzájemného porozumění.",
@@ -272,8 +273,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 12,
   "chineseName": "否",
     "romanization": "Pǐ",
-  "isEvolving": false,
-  "lines": ["yin","yin","yin","yang","yang","yang"],
+    "elements": [2, 1],
+  "lines": [1, 1, 1, 0, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 12, Úpadek, představuje období uzavření a neporozumění. Spojení mezi silami je přerušeno.\n\nJe to čas trpělivosti a zachování integrity.",
@@ -294,8 +295,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 13,
   "chineseName": "同人",
     "romanization": "Tóng Rén",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yang","yin","yang"],
+  "elements": [6, 1],
+    "lines": [1, 0, 1, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 13, Společenství lidí, symbolizuje jednotu založenou na sdíleném cíli.\n\nOtevřenost a jasnost přinášejí sílu.",
@@ -316,8 +317,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 14,
   "chineseName": "大有",
     "romanization": "Dà Yǒu",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yang","yang","yang"],
+  "elements": [1, 6],
+    "lines": [1, 1, 1, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 14, Velké vlastnictví, představuje hojnost a vnitřní bohatství.\n\nSkutečné vlastnictví spočívá ve schopnosti správně nakládat s tím, co máme.",
@@ -338,8 +339,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 15,
   "chineseName": "謙",
     "romanization": "Qiān",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yin","yin"],
+  "elements": [2, 7],
+    "lines": [0, 0, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 15, Skromnost, symbolizuje vyváženost a nenápadnou sílu.\n\nSkromnost přináší respekt a dlouhodobý úspěch.",
@@ -360,8 +361,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 16,
   "chineseName": "豫",
     "romanization": "Yù",
-  "isEvolving": false,
-  "lines": ["yin","yin","yin","yang","yin","yin"],
+  "elements": [2, 3],
+    "lines": [0, 0, 1, 0, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 16, Nadšení, představuje radostnou energii, která probouzí pohyb.\n\nSprávně vedené nadšení inspiruje druhé.",
@@ -382,8 +383,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 17,
   "chineseName": "隨",
     "romanization": "Suí",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yang","yang","yin"],
+  "elements": [3, 8],
+    "lines": [0, 1, 1, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 17, Následování, vyjadřuje schopnost přizpůsobit se správnému vedení.\n\nNásledovat neznamená podřídit se bez rozmyslu, ale jednat v souladu s vyšším řádem.",
@@ -404,8 +405,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 18,
   "chineseName": "蠱",
     "romanization": "Gǔ",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yin","yang","yin"],
+  "elements": [4, 7],
+    "lines": [0, 1, 0, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 18, Oprava zkaženého, symbolizuje potřebu napravit to, co bylo zanedbáno.\n\nJe to čas očisty a obnovy.",
@@ -426,8 +427,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 19,
   "chineseName": "臨",
     "romanization": "Lín",
-  "isEvolving": false,
-  "lines": ["yin","yin","yin","yin","yang","yang"],
+  "elements": [8, 2],
+    "lines": [1, 1, 0, 0, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 19, Přiblížení, představuje blížící se růst a příležitost.\n\nJe to období otevřenosti a vstřícnosti.",
@@ -448,8 +449,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 20,
   "chineseName": "觀",
     "romanization": "Guān",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yin","yin"],
+  "elements": [2, 4],
+    "lines": [0, 0, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 20, Nazírání, symbolizuje pozorování a hluboké vnímání.\n\nSkutečné porozumění přichází z ticha.",
@@ -470,8 +471,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 21,
   "chineseName": "噬嗑",
     "romanization": "Shì Kè",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yin","yin","yang"],
+  "elements": [3, 6],
+    "lines": [1, 0, 0, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 21, Prokousnutí, symbolizuje potřebu odstranit překážku, která brání průchodu. Něco stojí mezi záměrem a jeho uskutečněním.\n\nJde o rozhodné jednání, které musí být spravedlivé a přiměřené.",
@@ -492,8 +493,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 22,
   "chineseName": "賁",
     "romanization": "Bì",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yin","yin","yin"],
+  "elements": [7, 6],
+    "lines": [0, 0, 0, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 22, Půvab, vyjadřuje krásu a zdobnost. Forma zde doplňuje obsah.\n\nKrása má smysl tehdy, když podporuje pravdivost.",
@@ -514,8 +515,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 23,
   "chineseName": "剝",
     "romanization": "Bō",
-  "isEvolving": false,
-  "lines": ["yin","yin","yin","yin","yin","yang"],
+  "elements": [2, 7],
+    "lines": [1, 0, 0, 0, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 23, Rozpad, symbolizuje úbytek a postupné oslabování.\n\nJe to čas zjednodušení a návratu k podstatě.",
@@ -536,8 +537,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 24,
   "chineseName": "復",
     "romanization": "Fù",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yin","yin","yin"],
+  "elements": [3, 2],
+    "lines": [0, 0, 0, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 24, Návrat, představuje nový začátek po období útlumu.\n\nMalý pohyb směrem k obnově přináší naději.",
@@ -558,8 +559,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 25,
   "chineseName": "無妄",
     "romanization": "Wú Wàng",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yin","yin","yin"],
+  "elements": [3, 1],
+    "lines": [0, 0, 0, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 25, Nevinnost, představuje spontánní pravdivost.\n\nJednání bez postranních úmyslů přináší čistotu.",
@@ -580,8 +581,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 26,
   "chineseName": "大畜",
     "romanization": "Dà Chù",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yang","yang","yang"],
+  "elements": [1, 7],
+    "lines": [1, 1, 1, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 26, Velké zkrocení, symbolizuje nahromaděnou sílu pod kontrolou.\n\nOvládání energie přináší stabilitu.",
@@ -602,8 +603,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 27,
   "chineseName": "頤",
     "romanization": "Yí",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yin","yin","yang"],
+  "elements": [3, 7],
+    "lines": [1, 0, 0, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 27, Výživa, představuje péči o tělo i ducha.\n\nTo, co přijímáme, nás utváří.",
@@ -624,8 +625,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 28,
   "chineseName": "大過",
     "romanization": "Dà Guò",
-  "isEvolving": false,
-  "lines": ["yin","yang","yang","yang","yang","yin"],
+  "elements": [4, 8],
+    "lines": [0, 1, 1, 1, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 28, Přetížení, symbolizuje situaci, kdy zátěž přesahuje únosnost.\n\nJe nutné jednat rozhodně.",
@@ -646,8 +647,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 29,
   "chineseName": "坎",
     "romanization": "Kǎn",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yin","yang","yin"],
+  "elements": [5, 5],
+    "lines": [0, 1, 0, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 29, Propast, představuje opakované nebezpečí.\n\nOdvaha a bdělost jsou nezbytné.",
@@ -668,8 +669,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 30,
   "chineseName": "離",
     "romanization": "Lí",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yang","yin","yang"],
+  "elements": [6, 6],
+    "lines": [1, 0, 1, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 30, Přilnutí, představuje světlo a jasnost.\n\nJasné poznání přináší orientaci.",
@@ -690,8 +691,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 31,
   "chineseName": "咸",
     "romanization": "Xián",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yang","yang","yin"],
+  "elements": [7, 8],
+    "lines": [0, 1, 1, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 31, Vliv, symbolizuje přitažlivost a vzájemné působení.\n\nCitlivost otevírá spojení.",
@@ -712,8 +713,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 32,
   "chineseName": "恆",
     "romanization": "Héng",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yang","yang","yin"],
+  "elements": [4, 3],
+    "lines": [0, 1, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 32, Trvání, představuje stálost a vytrvalost.\n\nPravidelnost přináší sílu.",
@@ -734,8 +735,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 33,
   "chineseName": "遯",
     "romanization": "Dùn",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yang","yang","yang"],
+  "elements": [1, 7],
+    "lines": [1, 1, 1, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 33, Ústup, představuje moudré stažení.\n\nNěkdy je ustoupení silou.",
@@ -756,8 +757,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 34,
   "chineseName": "大壯",
     "romanization": "Dà Zhuàng",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yang","yin","yin"],
+  "elements": [1, 3],
+    "lines": [0, 0, 1, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 34, Velká síla, symbolizuje silný vzestup energie.\n\nSíla musí být řízena moudrostí.",
@@ -778,8 +779,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 35,
   "chineseName": "晉",
     "romanization": "Jìn",
-  "isEvolving": false,
-  "lines": ["yin","yin","yin","yang","yang","yang"],
+  "elements": [2, 6],
+    "lines": [1, 1, 1, 0, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 35, Pokrok, představuje vzestup a zviditelnění.\n\nSprávné světlo přináší uznání.",
@@ -800,8 +801,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 36,
   "chineseName": "明夷",
     "romanization": "Míng Yí",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yin","yin","yin"],
+  "elements": [6, 2],
+    "lines": [0, 0, 0, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 36, Zatemnění světla, představuje období, kdy jasnost je skrytá.\n\nVnitřní světlo je třeba chránit.",
@@ -822,8 +823,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 37,
   "chineseName": "家人",
     "romanization": "Jiā Rén",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yin","yang","yin"],
+  "elements": [6, 4],
+    "lines": [0, 1, 0, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 37, Rodina, symbolizuje řád ve vztazích.\n\nSprávné uspořádání vytváří harmonii.",
@@ -844,8 +845,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 38,
   "chineseName": "睽",
     "romanization": "Kuí",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yang","yin","yang"],
+  "elements": [8, 6],
+    "lines": [1, 0, 1, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 38, Protiklad, představuje rozdílnost pohledů.\n\nRozdíl nemusí znamenat nepřátelství.",
@@ -866,8 +867,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 39,
   "chineseName": "蹇",
     "romanization": "Jiǎn",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yang","yin"],
+  "elements": [7, 5],
+    "lines": [0, 1, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 39, Překážka, symbolizuje obtížnou cestu.\n\nJe třeba hledat podporu.",
@@ -888,8 +889,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 40,
   "chineseName": "解",
     "romanization": "Xiè",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yang","yin","yin"],
+  "elements": [5, 3],
+    "lines": [0, 0, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 40, Uvolnění, představuje rozptýlení napětí.\n\nPo obtížích přichází úleva.",
@@ -910,8 +911,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 41,
   "chineseName": "損",
     "romanization": "Sǔn",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yang","yang"],
+  "elements": [8, 7],
+    "lines": [1, 1, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 41, Úbytek, představuje vědomé zmenšení. Někdy je nutné něco obětovat, aby celek zesílil.\n\nZjednodušení přináší jasnost.",
@@ -932,8 +933,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 42,
   "chineseName": "益",
     "romanization": "Yì",
-  "isEvolving": false,
-  "lines": ["yang","yang","yin","yang","yin","yin"],
+  "elements": [3, 4],
+    "lines": [0, 0, 1, 0, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 42, Přínos, symbolizuje rozšíření a podporu.\n\nRůst je výsledkem sdílení.",
@@ -954,8 +955,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 43,
   "chineseName": "夬",
     "romanization": "Guài",
-  "isEvolving": false,
-  "lines": ["yang","yang","yang","yang","yang","yin"],
+  "elements": [8, 1],
+    "lines": [0, 1, 1, 1, 1, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 43, Rozhodnutí, představuje průlom.\n\nJe nutné vyjádřit pravdu otevřeně.",
@@ -976,8 +977,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 44,
   "chineseName": "姤",
     "romanization": "Gòu",
-  "isEvolving": false,
-  "lines": ["yin","yang","yang","yang","yang","yang"],
+  "elements": [1, 4],
+    "lines": [1, 1, 1, 1, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 44, Setkání, představuje náhlý vliv.\n\nJe třeba rozlišovat, co přijmout.",
@@ -998,8 +999,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 45,
   "chineseName": "萃",
     "romanization": "Cuì",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yang","yang"],
+  "elements": [2, 8],
+    "lines": [1, 1, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 45, Shromáždění, symbolizuje sjednocení kolem společného cíle.\n\nJednota vyžaduje vedení.",
@@ -1020,8 +1021,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 46,
   "chineseName": "升",
     "romanization": "Shēng",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yin","yang","yin"],
+  "elements": [4, 2],
+    "lines": [0, 1, 0, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 46, Vzestup, představuje postupné stoupání.\n\nPokrok je výsledkem vytrvalosti.",
@@ -1042,8 +1043,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 47,
   "chineseName": "困",
     "romanization": "Kùn",
-  "isEvolving": false,
-  "lines": ["yin","yang","yang","yin","yang","yin"],
+  "elements": [5, 8],
+    "lines": [0, 1, 0, 1, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 47, Tíseň, symbolizuje omezení a tlak.\n\nVnitřní síla je klíčem k vytrvání.",
@@ -1064,8 +1065,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 48,
   "chineseName": "井",
     "romanization": "Jǐng",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yin","yang","yin"],
+  "elements": [4, 5],
+    "lines": [0, 1, 0, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 48, Studna, představuje zdroj, který je stále dostupný.\n\nHodnota spočívá v péči o základ.",
@@ -1086,8 +1087,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 49,
   "chineseName": "革",
     "romanization": "Gé",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yang","yin","yang"],
+  "elements": [6, 8],
+    "lines": [1, 0, 1, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 49, Proměna, symbolizuje zásadní změnu.\n\nZměna musí být oprávněná.",
@@ -1108,8 +1109,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 50,
   "chineseName": "鼎",
     "romanization": "Dǐng",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yang","yin","yang"],
+  "elements": [4, 6],
+    "lines": [1, 0, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 50, Kotlík, představuje přeměnu skrze kultivaci.\n\nVnitřní proměna vytváří hodnotu.",
@@ -1130,8 +1131,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 51,
   "chineseName": "震",
     "romanization": "Zhèn",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yang","yin","yin"],
+  "elements": [3, 3],
+    "lines": [0, 0, 1, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 51, Hrom, symbolizuje náhlý otřes.\n\nŠok probouzí vědomí.",
@@ -1152,8 +1153,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 52,
   "chineseName": "艮",
     "romanization": "Gèn",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yin","yang"],
+  "elements": [7, 7],
+    "lines": [1, 0, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 52, Klid, představuje zastavení.\n\nZastavení přináší soustředění.",
@@ -1174,8 +1175,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 53,
   "chineseName": "漸",
     "romanization": "Jiàn",
-  "isEvolving": false,
-  "lines": ["yin","yin","yang","yin","yang","yang"],
+  "elements": [7, 4],
+    "lines": [1, 1, 0, 1, 0, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 53, Postupný vývoj, symbolizuje pomalý růst.\n\nTrpělivost vytváří pevné základy.",
@@ -1196,8 +1197,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 54,
   "chineseName": "歸妹",
     "romanization": "Guī Mèi",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yang","yin","yin"],
+  "elements": [8, 3],
+    "lines": [0, 0, 1, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 54, Provdaná dívka, představuje vstup do nové situace bez plné kontroly.\n\nJe nutné přijmout dané okolnosti.",
@@ -1218,8 +1219,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 55,
   "chineseName": "豐",
     "romanization": "Fēng",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yang","yin","yin"],
+  "elements": [6, 3],
+    "lines": [0, 0, 1, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 55, Hojnost, symbolizuje vrchol naplnění.\n\nJe to období světla a plnosti.",
@@ -1240,8 +1241,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 56,
   "chineseName": "旅",
     "romanization": "Lǚ",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yang","yin","yang"],
+  "elements": [7, 6],
+    "lines": [1, 0, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 56, Poutník, symbolizuje přechodné období.\n\nJe třeba zachovat lehkost.",
@@ -1262,8 +1263,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 57,
   "chineseName": "巽",
     "romanization": "Xùn",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yin","yang","yin"],
+  "elements": [4, 4],
+    "lines": [0, 1, 0, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 57, Jemnost, představuje pronikavý vliv.\n\nMírnost má sílu.",
@@ -1284,8 +1285,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 58,
   "chineseName": "兌",
     "romanization": "Duì",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yang","yin","yang"],
+  "elements": [8, 8],
+    "lines": [1, 0, 1, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 58, Radost, symbolizuje otevřenost a sdílení.\n\nRadost spojuje.",
@@ -1306,8 +1307,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 59,
   "chineseName": "渙",
     "romanization": "Huàn",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yang","yin","yin"],
+  "elements": [5, 4],
+    "lines": [0, 0, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 59, Rozptýlení, představuje uvolnění napětí a rozptýlení překážek.\n\nJe čas rozpustit zatvrdlost.",
@@ -1328,8 +1329,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 60,
   "chineseName": "節",
     "romanization": "Jié",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yin","yang","yin"],
+  "elements": [8, 5],
+    "lines": [0, 1, 0, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 60, Omezení, symbolizuje hranice.\n\nSprávné míry vytvářejí svobodu.",
@@ -1350,8 +1351,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 61,
   "chineseName": "中孚",
     "romanization": "Zhōng Fú",
-  "isEvolving": false,
-  "lines": ["yang","yin","yin","yin","yang","yang"],
+  "elements": [8, 4],
+    "lines": [1, 1, 0, 0, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 61, Vnitřní pravdivost, symbolizuje hlubokou upřímnost.\n\nDůvěra vzniká zevnitř.",
@@ -1372,8 +1373,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 62,
   "chineseName": "小過",
     "romanization": "Xiǎo Guò",
-  "isEvolving": false,
-  "lines": ["yin","yang","yang","yin","yin","yang"],
+  "elements": [7, 3],
+    "lines": [1, 0, 0, 1, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 62, Malé přetížení, symbolizuje potřebu věnovat pozornost detailům.\n\nMalé věci mají význam.",
@@ -1394,8 +1395,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 63,
   "chineseName": "既濟",
     "romanization": "Jì Jì",
-  "isEvolving": false,
-  "lines": ["yang","yin","yang","yin","yang","yin"],
+  "elements": [6, 5],
+    "lines": [0, 1, 0, 1, 0, 1],
   "content": {
     "cs": {
       "meaning": "Hexagram 63, Po dokončení, symbolizuje stav po úspěchu.\n\nDokončení není konec bdělosti.",
@@ -1416,8 +1417,8 @@ export const placeholderHexagrams: Hexagram[] = [
   "number": 64,
   "chineseName": "未濟",
     "romanization": "Wèi Jì",
-  "isEvolving": false,
-  "lines": ["yin","yang","yin","yang","yin","yang"],
+  "elements": [5, 6],
+    "lines": [1, 0, 1, 0, 1, 0],
   "content": {
     "cs": {
       "meaning": "Hexagram 64, Před dokončením, představuje stav těsně před naplněním.\n\nCesta ještě není završena.",

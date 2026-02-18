@@ -21,6 +21,11 @@ export default function TopNavigationBarHexagramsScreen({
   return (
     <View
       style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 10,
         paddingTop: insets.top,
         paddingHorizontal: 16,
         paddingBottom: 12,

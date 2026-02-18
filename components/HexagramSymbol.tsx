@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Svg, { Rect } from 'react-native-svg';
 
 interface HexagramSymbolProps {
-  lines: ('yin' | 'yang')[]; // Array of 6 lines, bottom to top
+  lines: (0 | 1)[]; // Array of 6 lines, bottom to top (0 = yin, 1 = yang)
   size?: number; // Height and width (square aspect ratio)
   color?: string;
 }
@@ -39,7 +39,7 @@ export default function HexagramSymbol({
           // Lines are drawn from bottom to top (index 0 = bottom)
           const y = startY + (5 - index) * (lineHeight + lineSpacing);
 
-          if (lineType === 'yang') {
+          if (lineType === 1) {
             // Yang line: solid (—)
             return (
               <Rect

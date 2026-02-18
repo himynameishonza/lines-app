@@ -28,6 +28,7 @@ export default function MainNavigationBar({
         left: 0,
         right: 0,
         alignItems: 'center',
+        zIndex: 10
       }}
       testID="bottom-nav-container"
     >

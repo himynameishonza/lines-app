@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react-native';
 import HexagramDetailsCard from '../components/HexagramDetailsCard';
 import { ScrollView } from 'react-native';
-import { placeholderHexagrams } from '../data/hexagrams';
+import { hexagrams } from '../data/hexagrams';
 
 // Mock i18next
 jest.mock('react-i18next', () => ({
@@ -20,7 +20,7 @@ jest.mock('react-i18next', () => ({
 }));
 
 describe('HexagramDetailsCard', () => {
-  const testHexagram = placeholderHexagrams[0]; // First hexagram
+  const testHexagram = hexagrams[0]; // First hexagram
 
   it('renders without crashing', () => {
     const { root } = render(
