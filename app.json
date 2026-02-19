@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "lines-app",
+    "name": "Lines",
     "slug": "lines-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -31,6 +31,11 @@
     "plugins": [
       "expo-asset",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a5c8fa9e-81dc-4593-a5f6-01dead513640"
+      }
+    }
   }
 }

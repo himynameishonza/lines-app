@@ -1,10 +1,14 @@
 import React from 'react';
 import { Text, TextProps } from 'react-native';
+import { styled } from 'nativewind';
 
 interface BodoniTextProps extends TextProps {
   variant?: 'regular' | 'medium' | 'semibold' | 'bold';
   children: React.ReactNode;
+  className?: string;
 }
+
+const StyledText = styled(Text);
 
 /**
  * BodoniText component for headlines and decorative text
@@ -13,6 +17,7 @@ interface BodoniTextProps extends TextProps {
 export default function BodoniText({ 
   variant = 'regular', 
   style, 
+  className,
   children, 
   ...props 
 }: BodoniTextProps) {
@@ -24,8 +29,8 @@ export default function BodoniText({
   }[variant];
 
   return (
-    <Text style={[{ fontFamily }, style]} {...props}>
+    <StyledText style={[{ fontFamily }, style]} className={className} {...props}>
       {children}
-    </Text>
+    </StyledText>
   );
 }

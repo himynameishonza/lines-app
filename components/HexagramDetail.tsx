@@ -15,12 +15,16 @@ interface HexagramDetailProps {
   hexagram: Hexagram;
   onBack?: () => void;
   onShare?: () => void;
+  changingLines?: boolean[]; // Array of 6 booleans, true if line is changing
+  showHomeButton?: boolean; // Show home icon instead of back arrow
 }
 
 export default function HexagramDetail({
   hexagram,
   onBack,
   onShare,
+  changingLines,
+  showHomeButton = false,
 }: HexagramDetailProps) {
   const insets = useSafeAreaInsets();
   const { t, i18n } = useTranslation();
@@ -42,7 +46,7 @@ export default function HexagramDetail({
       case "anatomy":
         return <AnatomyContent hexagram={hexagram} />;
       case "evolution":
-        return <EvolutionContent hexagram={hexagram} />;
+        return <EvolutionContent hexagram={hexagram} changingLines={changingLines} />;
       default:
         return null;
     }
@@ -56,6 +60,7 @@ export default function HexagramDetail({
         onBack={onBack} 
         onShare={onShare}
         activeTab={activeTab}
+        showHomeButton={showHomeButton}
       />
 
       {/* Header with background image */}
@@ -194,22 +199,171 @@ function AnatomyContent({ hexagram }: { hexagram: Hexagram }) {
   );
 }
 
-function EvolutionContent({ hexagram }: { hexagram: Hexagram }) {
+function EvolutionContent({ hexagram, changingLines }: { hexagram: Hexagram; changingLines?: boolean[] }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as "cs" | "en";
 
+  // Calculate transformed hexagram if there are changing lines
+  let transformedHexagram: Hexagram | null = null;
+  if (changingLines && changingLines.some(line => line)) {
+    const transformedLines = hexagram.lines.map((line, index) => 
+      changingLines[index] ? (line === 0 ? 1 : 0) as (0 | 1) : line
+    );
+    
+    // Find the transformed hexagram
+    const { hexagrams } = require('../data/hexagrams');
+    transformedHexagram = hexagrams.find((h: Hexagram) => 
+      h.lines.every((line, index) => line === transformedLines[index])
+    ) || null;
+  }
+
   return (
     <View style={{ paddingHorizontal: 24 }}>
+      {/* Original evolution text */}
       <Text 
         style={{ 
           color: "rgba(239, 222, 205, 0.8)", 
           fontSize: 16, 
           lineHeight: 28,
           fontFamily: 'System',
+          marginBottom: 24,
         }}
       >
         {hexagram.content[currentLang]?.evolution || t(`detail.evolution`)}
       </Text>
+
+      {/* Changing Lines Section */}
+      {changingLines && changingLines.some(line => line) && (
+        <View style={{ marginTop: 24 }}>
+          <BodoniText 
+            variant="semibold"
+            style={{ 
+              color: "#EFDECA", 
+              fontSize: 20, 
+              marginBottom: 16 
+            }}
+          >
+            {t('evolution.changingLines')}
+          </BodoniText>
+
+          {/* Current Hexagram */}
+          <View style={{ marginBottom: 24 }}>
+            <Text style={{ color: "rgba(239, 222, 205, 0.6)", fontSize: 12, marginBottom: 8, fontFamily: 'GeistMono_400Regular' }}>
+              {t('evolution.present')}
+            </Text>
+            <View style={{ alignItems: 'center' }}>
+              {[...Array(6)].map((_, index) => {
+                const reverseIndex = 5 - index;
+                const line = hexagram.lines[reverseIndex];
+                const isChanging = changingLines[reverseIndex];
+                
+                return (
+                  <View key={index} style={{ marginBottom: 12, width: 120 }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                      {line === 1 ? (
+                        // Yang line (solid)
+                        <View style={{ 
+                          height: 6, 
+                          flex: 1, 
+                          borderRadius: 3,
+                          backgroundColor: isChanging ? '#EFDECA' : '#FFFFFF'
+                        }} />
+                      ) : (
+                        // Yin line (broken)
+                        <View style={{ flexDirection: 'row', flex: 1, gap: 8 }}>
+                          <View style={{ 
+                            height: 6, 
+                            flex: 1, 
+                            borderRadius: 3,
+                            backgroundColor: isChanging ? '#EFDECA' : '#FFFFFF'
+                          }} />
+                          <View style={{ 
+                            height: 6, 
+                            flex: 1, 
+                            borderRadius: 3,
+                            backgroundColor: isChanging ? '#EFDECA' : '#FFFFFF'
+                          }} />
+                        </View>
+                      )}
+                    </View>
+                  </View>
+                );
+              })}
+            </View>
+          </View>
+
+          {/* Transformation Arrow */}
+          {transformedHexagram && (
+            <>
+              <Text style={{ 
+                color: "#EFDECA", 
+                fontSize: 24, 
+                textAlign: 'center', 
+                marginVertical: 16 
+              }}>
+                ↓
+              </Text>
+
+              {/* Transformed Hexagram */}
+              <View style={{ marginBottom: 24 }}>
+                <Text style={{ color: "rgba(239, 222, 205, 0.6)", fontSize: 12, marginBottom: 8, fontFamily: 'GeistMono_400Regular' }}>
+                  {t('evolution.future')}
+                </Text>
+                <View style={{ alignItems: 'center' }}>
+                  {[...Array(6)].map((_, index) => {
+                    const reverseIndex = 5 - index;
+                    const line = transformedHexagram!.lines[reverseIndex];
+                    
+                    return (
+                      <View key={index} style={{ marginBottom: 12, width: 120 }}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                          {line === 1 ? (
+                            // Yang line (solid)
+                            <View style={{ 
+                              height: 6, 
+                              flex: 1, 
+                              borderRadius: 3,
+                              backgroundColor: '#EFDECA'
+                            }} />
+                          ) : (
+                            // Yin line (broken)
+                            <View style={{ flexDirection: 'row', flex: 1, gap: 8 }}>
+                              <View style={{ 
+                                height: 6, 
+                                flex: 1, 
+                                borderRadius: 3,
+                                backgroundColor: '#EFDECA'
+                              }} />
+                              <View style={{ 
+                                height: 6, 
+                                flex: 1, 
+                                borderRadius: 3,
+                                backgroundColor: '#EFDECA'
+                              }} />
+                            </View>
+                          )}
+                        </View>
+                      </View>
+                    );
+                  })}
+                </View>
+
+                <BodoniText 
+                  variant="semibold"
+                  style={{ 
+                    color: "#EFDECA", 
+                    fontSize: 18, 
+                    textAlign: 'center',
+                    marginTop: 16
+                  }}
+                >
+                  {transformedHexagram.number}. {getHexagramTranslatedName(transformedHexagram, currentLang, t)}
+                </BodoniText>
+              </View>
+            </>
+          )}
+        </View>
+      )}
     </View>
   );
 }

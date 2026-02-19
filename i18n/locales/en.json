@@ -10,8 +10,75 @@
     "anatomy": "Anatomy",
     "evolution": "Evolution"
   },
-  "buttons": {
-    "explore": "Explore"
+  "evolution": {
+    "changingLines": "Changing Lines",
+    "present": "Present Situation",
+    "future": "Future / Transformation"
+  },
+  "home": {
+    "greeting": {
+      "morning": "Good Morning",
+      "afternoon": "Good Afternoon",
+      "evening": "Good Evening"
+    },
+    "subtitle": "Your I Ching Journey",
+    "empty": {
+      "title": "No readings yet",
+      "subtitle": "Start your first reading to begin your journey"
+    },
+    "newReading": "New Reading",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "changing": "Changing",
+    "method": {
+      "random": "Random",
+      "randomWithChanging": "Random with Transformation",
+      "coinToss": "Coin Toss"
+    }
+  },
+  "newReading": {
+    "title": "New Reading",
+    "guide": "How to ask your question:",
+    "guideText": "Focus on open-ended questions that invite reflection rather than yes/no answers. Frame your question with clarity and intention. The I Ching responds best to questions about understanding situations, timing, and personal growth.",
+    "placeholder": "Enter your question...",
+    "randomHexagram": "Random Hexagram",
+    "randomWithChanging": "Random with Transformation",
+    "coinToss": "Coin Toss Method",
+    "close": "Close",
+    "next": "Next",
+    "back": "Back",
+    "step1": {
+      "title": "How to Ask",
+      "subtitle": "Guide to meaningful questions"
+    },
+    "step2": {
+      "title": "Your Question",
+      "subtitle": "What would you like to know?"
+    },
+    "step3": {
+      "title": "Choose Method",
+      "subtitle": "Select your reading method",
+      "randomDescription": "Get an instant hexagram reading",
+      "randomWithChangingDescription": "Random hexagram with transformation",
+      "coinTossDescription": "Traditional method with virtual coins"
+    }
+  },
+  "coinToss": {
+    "title": "Coin Toss",
+    "instruction": "Tap to toss 3 coins",
+    "line": "Line",
+    "fromBottom": "from bottom",
+    "tossCoins": "Toss Coins",
+    "complete": "Complete",
+    "changingLine": "Changing",
+    "yin": "Yin",
+    "yang": "Yang",
+    "oldYin": "Old Yin (changing to Yang)",
+    "oldYang": "Old Yang (changing to Yin)",
+    "heads": "Heads",
+    "tails": "Tails",
+    "lastToss": "Last Toss",
+    "sum": "Sum"
   },
   "hexagrams": {
     "1": "The Creative",

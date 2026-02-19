@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
-import { ArrowLeft, Share2 } from "lucide-react-native";
+import { ArrowLeft, Share2, Home } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { HexagramDetailTab } from "../../types/hexagramDetail";
@@ -9,12 +9,14 @@ interface TopNavigationBarHexagramDetailProps {
   onBack?: () => void;
   onShare?: () => void;
   activeTab?: HexagramDetailTab;
+  showHomeButton?: boolean;
 }
 
 export default function TopNavigationBarHexagramDetail({
   onBack,
   onShare,
   activeTab = 'meaning',
+  showHomeButton = false,
 }: TopNavigationBarHexagramDetailProps) {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
@@ -35,7 +37,7 @@ export default function TopNavigationBarHexagramDetail({
         justifyContent: "space-between",
       }}
     >
-      {/* Back Button */}
+      {/* Back/Home Button */}
       <TouchableOpacity
         onPress={onBack}
         activeOpacity={1}
@@ -47,7 +49,11 @@ export default function TopNavigationBarHexagramDetail({
           justifyContent: "center",
         }}
       >
-        <ArrowLeft size={28} color="#EFDECA" strokeWidth={1.5} />
+        {showHomeButton ? (
+          <Home size={28} color="#EFDECA" strokeWidth={1.5} />
+        ) : (
+          <ArrowLeft size={28} color="#EFDECA" strokeWidth={1.5} />
+        )}
       </TouchableOpacity>
 
       {/* Empty center space */}

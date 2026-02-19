@@ -10,11 +10,13 @@ import './i18n/config';
 import HomeScreen from './screens/HomeScreen';
 import HexagramsScreen from './screens/HexagramsScreen';
 import NewReadingScreen from './screens/NewReadingScreen';
+import NewReadingWizardScreen from './screens/NewReadingWizardScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import MainNavigationBar from './components/navbars/MainNavigationBar';
 import HexagramDetail from './components/HexagramDetail';
 import { Hexagram } from './data/hexagrams';
 import { MainNavigationTab, HexagramsViewMode } from './types/navigation';
+import { ReadingsProvider } from './contexts/ReadingsContext';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -24,6 +26,8 @@ type TabType = 'dashboard' | 'hexagrams' | 'new-reading' | 'settings';
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('dashboard');
   const [selectedHexagram, setSelectedHexagram] = useState<Hexagram | null>(null);
+  const [showWizard, setShowWizard] = useState(false);
+  const [homeShowingDetail, setHomeShowingDetail] = useState(false);
   
   // Track scroll positions for hexagrams screen
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -85,7 +89,7 @@ export default function App() {
   const renderScreen = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <HomeScreen />;
+        return <HomeScreen onOpenWizard={() => setShowWizard(true)} onShowDetail={setHomeShowingDetail} />;
       case 'hexagrams':
         return (
           <View style={{ flex: 1 }}>
@@ -116,19 +120,27 @@ export default function App() {
       case 'settings':
         return <SettingsScreen />;
       default:
-        return <HomeScreen />;
+        return <HomeScreen onOpenWizard={() => setShowWizard(true)} onShowDetail={setHomeShowingDetail} />;
     }
   };
 
   return (
-    <SafeAreaProvider>
-      <View style={{ flex: 1 }}>
-        {renderScreen()}
-        {!selectedHexagram && (
-          <MainNavigationBar activeTab={activeTab as MainNavigationTab} onTabChange={handleTabChange} />
-        )}
-        <StatusBar style="light" />
-      </View>
-    </SafeAreaProvider>
+    <ReadingsProvider>
+      <SafeAreaProvider>
+        <View style={{ flex: 1 }}>
+          {showWizard ? (
+            <NewReadingWizardScreen onClose={() => setShowWizard(false)} />
+          ) : (
+            <>
+              {renderScreen()}
+              {!selectedHexagram && !homeShowingDetail && (
+                <MainNavigationBar activeTab={activeTab as MainNavigationTab} onTabChange={handleTabChange} />
+              )}
+            </>
+          )}
+          <StatusBar style="light" />
+        </View>
+      </SafeAreaProvider>
+    </ReadingsProvider>
   );
 }
