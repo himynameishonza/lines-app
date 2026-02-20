@@ -10,13 +10,11 @@ import { getHexagramTranslatedName } from "../utils/hexagramHelpers";
 interface HexagramListCardProps {
   item: Hexagram;
   onPress?: () => void;
-  testID?: string;
 }
 
 export default function HexagramListCard({
   item,
   onPress,
-  testID,
 }: HexagramListCardProps) {
   const { t, i18n } = useTranslation();
 
@@ -27,7 +25,6 @@ export default function HexagramListCard({
   return (
     <TouchableOpacity
       onPress={onPress}
-      testID={testID}
       style={{
         flexDirection: "row",
         alignItems: "center",

@@ -16,24 +16,22 @@ export default function HomeScreen({ onAdd }: HomeScreenProps) {
       <TopNavigationBarHomeScreen onAdd={onAdd} />
       <View className="pt-24">
         <View className="divide-y divide-dashed divide-[#06283F]/25">
-          {readings.map((reading) => {
-            return (
-              <View className="flex flex-row w-full items-center justify-between py-6">
-                <GeistMonoText
-                  className="text-sm text-[#06283F]"
-                  variant="bold"
-                >
-                  {reading.question}
-                </GeistMonoText>
-                <GeistMonoText
-                  className="text-sm text-[#06283F]"
-                  variant="bold"
-                >
-                  {reading.createdAt}
-                </GeistMonoText>
-              </View>
-            );
-          })}
+          {readings.map((reading) => (
+            <View key={reading.id} className="flex flex-row w-full items-center justify-between py-6">
+              <GeistMonoText
+                className="text-sm text-[#06283F]"
+                variant="bold"
+              >
+                {reading.question}
+              </GeistMonoText>
+              <GeistMonoText
+                className="text-sm text-[#06283F]"
+                variant="bold"
+              >
+                {reading.createdAt}
+              </GeistMonoText>
+            </View>
+          ))}
         </View>
       </View>
     </View>

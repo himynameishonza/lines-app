@@ -1,15 +1,14 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import {
   GalleryHorizontal,
   LayoutGrid,
   Rows3,
   Search,
 } from "lucide-react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { HexagramsViewMode } from "../../types/navigation";
-import GeistMonoText from "../GeistMonoText";
+import TopNavigationBar from "../TopNavigationBar";
 
 interface TopNavigationBarHexagramsScreenProps {
   onViewModePress?: () => void;
@@ -22,75 +21,32 @@ export default function TopNavigationBarHexagramsScreen({
   onSearchPress,
   viewMode,
 }: TopNavigationBarHexagramsScreenProps) {
-  const insets = useSafeAreaInsets();
   const { t } = useTranslation();
 
+  const getViewModeIcon = () => {
+    switch (viewMode) {
+      case "carousel":
+        return <GalleryHorizontal size={28} color="#06283F" strokeWidth={1.5} />;
+      case "grid":
+        return <LayoutGrid size={28} color="#06283F" strokeWidth={1.5} />;
+      case "list":
+        return <Rows3 size={28} color="#06283F" strokeWidth={1.5} />;
+    }
+  };
+
   return (
-    <View
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 10,
-        paddingTop: insets.top,
-        paddingHorizontal: 16,
-        paddingBottom: 12,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
-      {/* Toggle View Icon */}
-      <TouchableOpacity
-        onPress={onViewModePress}
-        activeOpacity={0.6}
-        style={{
-          width: 44,
-          height: 44,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {viewMode === "carousel" && (
-          <GalleryHorizontal size={28} color="#06283F" strokeWidth={1.5} />
-        )}
-
-        {viewMode === "grid" && (
-          <LayoutGrid size={28} color="#06283F" strokeWidth={1.5} />
-        )}
-
-        {viewMode === "list" && (
-          <Rows3 size={28} color="#06283F" strokeWidth={1.5} />
-        )}
-      </TouchableOpacity>
-
-      {/* Title */}
-      <GeistMonoText
-        style={{
-          fontSize: 16,
-          color: "#06283F",
-        }}
-        variant="medium"
-      >
-        {t("nav.hexagrams")}
-      </GeistMonoText>
-
-      {/* Search Icon */}
-      <TouchableOpacity
-        onPress={onSearchPress}
-        activeOpacity={0.6}
-        style={{
-          width: 44,
-          height: 44,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Search size={28} color="#06283F" strokeWidth={1.5} />
-      </TouchableOpacity>
-    </View>
+    <TopNavigationBar
+      title={t("nav.hexagrams")}
+      leftElement={
+        <TouchableOpacity onPress={onViewModePress} activeOpacity={0.6}>
+          {getViewModeIcon()}
+        </TouchableOpacity>
+      }
+      rightElement={
+        <TouchableOpacity onPress={onSearchPress} activeOpacity={0.6}>
+          <Search size={28} color="#06283F" strokeWidth={1.5} />
+        </TouchableOpacity>
+      }
+    />
   );
 }

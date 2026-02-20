@@ -15,7 +15,6 @@ interface HexagramCarouselCardProps {
   scrollX: Animated.Value;
   cardWidth: number;
   cardHeight: number;
-  testID?: string;
   onPress?: () => void;
 }
 
@@ -25,7 +24,6 @@ export default function HexagramCarouselCard({
   scrollX,
   cardWidth,
   cardHeight,
-  testID = 'hexagram-card',
   onPress,
 }: HexagramCarouselCardProps) {
   const { t, i18n } = useTranslation();
@@ -58,7 +56,6 @@ export default function HexagramCarouselCard({
         activeOpacity={0.9}
       >
         <Animated.View
-          testID={testID}
           style={{
             width: cardWidth,
             height: cardHeight,

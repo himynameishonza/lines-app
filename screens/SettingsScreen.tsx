@@ -29,7 +29,7 @@ export default function SettingsScreen() {
   return (
     <View className="bg-[#D8D6C3] flex-1 px-6 justify-between">
       <TopNavigationBarSettingsScreen />
-      <View className="pt-24">
+      <View className="pt-32">
         <View className="divide-y divide-dashed divide-[#06283F]/25">
           {/* Language Picker */}
           <View className="flex flex-row w-full items-center justify-between py-6">

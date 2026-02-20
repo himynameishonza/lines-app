@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useState } from 'react';
 import { useFonts, BodoniModa_400Regular, BodoniModa_500Medium, BodoniModa_600SemiBold, BodoniModa_700Bold } from '@expo-google-fonts/bodoni-moda';

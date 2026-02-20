@@ -1,9 +1,9 @@
 import React from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { ArrowLeft, Share2, Home } from "lucide-react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { HexagramDetailTab } from "../../types/hexagramDetail";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import GeistMonoText from "../GeistMonoText";
 
 interface TopNavigationBarHexagramDetailProps {
@@ -19,69 +19,38 @@ export default function TopNavigationBarHexagramDetail({
   activeTab = 'meaning',
   showHomeButton = false,
 }: TopNavigationBarHexagramDetailProps) {
-  const insets = useSafeAreaInsets();
   const { t } = useTranslation();
+  const insets = useSafeAreaInsets();
 
   return (
     <View
+      className="absolute top-0 left-0 right-0 z-10 flex-row items-center justify-between px-4 pb-3"
       style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 10,
         paddingTop: insets.top,
-        paddingHorizontal: 16,
-        paddingBottom: 12,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
+        height: insets.top + 56,
       }}
     >
-      {/* Back/Home Button */}
-      <TouchableOpacity
-        onPress={onBack}
-        activeOpacity={1}
-        style={{
-          width: 44,
-          height: 44,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {showHomeButton ? (
-          <Home size={28} color="#EFDECA" strokeWidth={1.5} />
-        ) : (
-          <ArrowLeft size={28} color="#EFDECA" strokeWidth={1.5} />
-        )}
-      </TouchableOpacity>
+      <View className="w-11 h-11 items-center justify-center">
+        <TouchableOpacity onPress={onBack} activeOpacity={1}>
+          {showHomeButton ? (
+            <Home size={28} color="#EFDECA" strokeWidth={1.5} />
+          ) : (
+            <ArrowLeft size={28} color="#EFDECA" strokeWidth={1.5} />
+          )}
+        </TouchableOpacity>
+      </View>
 
-      {/* Empty center space */}
-      <GeistMonoText
-        style={{
-          fontSize: 16,
-          color: "#EFDECA",
-        }}
-        variant="medium"
-      >
-        {t(`detail.${activeTab}`)}
-      </GeistMonoText>
+      <View className="items-center">
+        <GeistMonoText className="text-base text-[#EFDECA]" variant="medium">
+          {t(`detail.${activeTab}`)}
+        </GeistMonoText>
+      </View>
 
-      {/* Share Button */}
-      <TouchableOpacity
-        onPress={onShare}
-        activeOpacity={1}
-        style={{
-          width: 44,
-          height: 44,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Share2 size={28} color="#EFDECA" strokeWidth={1.5} />
-      </TouchableOpacity>
+      <View className="w-11 h-11 items-center justify-center">
+        <TouchableOpacity onPress={onShare} activeOpacity={1}>
+          <Share2 size={28} color="#EFDECA" strokeWidth={1.5} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

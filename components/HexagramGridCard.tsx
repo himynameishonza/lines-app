@@ -13,13 +13,11 @@ const CARD_WIDTH = (SCREEN_WIDTH - 48) / 2; // Screen width minus padding (16*2)
 interface HexagramGridCardProps {
   item: Hexagram;
   onPress?: () => void;
-  testID?: string;
 }
 
 export default function HexagramGridCard({
   item,
   onPress,
-  testID,
 }: HexagramGridCardProps) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as "cs" | "en";
@@ -29,7 +27,6 @@ export default function HexagramGridCard({
   return (
     <TouchableOpacity
       onPress={onPress}
-      testID={testID}
       style={{
         width: CARD_WIDTH,
         backgroundColor: "rgba(255, 255, 255, 0.05)",

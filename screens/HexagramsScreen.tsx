@@ -125,7 +125,6 @@ export default function HexagramsScreen({
       <HexagramListCard
         item={item}
         onPress={() => onHexagramPress?.(item)}
-        testID="hexagram-list-item"
       />
     );
   };
@@ -135,7 +134,6 @@ export default function HexagramsScreen({
       <HexagramGridCard
         item={item}
         onPress={() => onHexagramPress?.(item)}
-        testID="hexagram-grid-item"
       />
     );
   };
@@ -154,7 +152,6 @@ export default function HexagramsScreen({
         scrollX={scrollX}
         cardWidth={CARD_WIDTH}
         cardHeight={CARD_HEIGHT}
-        testID="hexagram-card"
         onPress={() => onHexagramPress?.(item)}
       />
     );

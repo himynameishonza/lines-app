@@ -10,10 +10,6 @@ interface GeistMonoTextProps extends TextProps {
 
 const StyledText = styled(Text);
 
-/**
- * GeistMonoText component for headlines and decorative text
- * Uses Geist Mono font from Google Fonts
- */
 export default function GeistMonoText({ 
   variant = 'regular', 
   style, 

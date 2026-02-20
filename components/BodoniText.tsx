@@ -10,10 +10,6 @@ interface BodoniTextProps extends TextProps {
 
 const StyledText = styled(Text);
 
-/**
- * BodoniText component for headlines and decorative text
- * Uses Bodoni Moda font from Google Fonts
- */
 export default function BodoniText({ 
   variant = 'regular', 
   style, 
