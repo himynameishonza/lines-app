@@ -88,6 +88,7 @@ export default function SettingsScreen() {
             </GeistMonoText>
 
             <Switch
+              key={`switch-${settings.einkMode}`}
               value={settings.einkMode}
               onValueChange={setEinkMode}
               trackColor={{ false: "#D8D6C3", true: "#06283F" }}
