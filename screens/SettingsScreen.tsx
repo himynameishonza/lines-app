@@ -6,11 +6,11 @@ import GeistMonoText from "../components/typography/GeistMonoText";
 import Picker from "../components/Picker";
 import { useSettings } from "../contexts/SettingsContext";
 import { Coffee } from "lucide-react-native";
-import { TLanguage } from "../types/generic";
+import { TLanguage, TViewMode } from "../types/generic";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
-  const { settings, setSortBy, setEinkMode } = useSettings();
+  const { settings, setSortBy, setEinkMode, setViewMode } = useSettings();
   const currentLanguage = i18n.language as TLanguage;
 
   const changeLanguage = (lang: TLanguage) => {
@@ -29,6 +29,12 @@ export default function SettingsScreen() {
   const sortingOptions = [
     { label: t("settings.sort.fuSi"), value: "fuSi" },
     { label: t("settings.sort.wen"), value: "wen" },
+  ];
+
+  const viewModeOptions = [
+    { label: t("settings.viewModes.carousel"), value: "carousel" },
+    { label: t("settings.viewModes.list"), value: "list" },
+    { label: t("settings.viewModes.grid"), value: "grid" },
   ];
 
   return (
@@ -59,6 +65,19 @@ export default function SettingsScreen() {
               selectedValue={settings.sortBy}
               onValueChange={(value) => setSortBy(value as "fuSi" | "wen")}
               options={sortingOptions}
+            />
+          </View>
+
+           {/* View Modes picker */}
+          <View className="flex flex-row w-full items-center justify-between py-6">
+            <GeistMonoText className="text-sm text-text" variant="bold">
+              {t("settings.viewMode")}
+            </GeistMonoText>
+
+            <Picker
+              selectedValue={settings.viewMode}
+              onValueChange={(value) => setViewMode(value as TViewMode)}
+              options={viewModeOptions}
             />
           </View>
 

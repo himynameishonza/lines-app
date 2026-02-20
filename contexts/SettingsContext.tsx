@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { TViewMode } from '../types/generic';
 
 const SETTINGS_STORAGE_KEY = '@settings';
 
@@ -7,17 +8,20 @@ export type SortOption = 'fuSi' | 'wen';
 
 interface Settings {
   sortBy: SortOption;
+  viewMode: TViewMode
   einkMode: boolean;
 }
 
 interface SettingsContextType {
   settings: Settings;
   setSortBy: (sortBy: SortOption) => void;
+  setViewMode: (viewMode: TViewMode)=>void;
   setEinkMode: (einkMode: boolean) => void;
 }
 
 const defaultSettings: Settings = {
   sortBy: 'fuSi',
+  viewMode: "carousel",
   einkMode: false,
 };
 
@@ -69,8 +73,12 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     setSettings(prev => ({ ...prev, einkMode }));
   };
 
+  const setViewMode = (viewMode: TViewMode) => {
+    setSettings(prev => ({ ...prev, viewMode }));
+  };
+
   return (
-    <SettingsContext.Provider value={{ settings, setSortBy, setEinkMode }}>
+    <SettingsContext.Provider value={{ settings, setSortBy, setEinkMode, setViewMode }}>
       {children}
     </SettingsContext.Provider>
   );

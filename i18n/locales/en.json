@@ -19,6 +19,12 @@
     "title": "Settings",
     "language": "App language",
     "eink":"E-ink mode",
+    "viewMode": "Default hexagram view mode",
+    "viewModes":{
+     "carousel": "Carousel",
+     "list": "List",
+     "grid": "Grid"
+    },
     "sortBy": "Hexagram sorting",
     "sort": {
       "fuSi": "Fu Xi sequence",
