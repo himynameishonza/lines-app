@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Switch, TouchableOpacity } from "react-native";
+import { View, Switch, TouchableOpacity, Linking } from "react-native";
 import { useTranslation } from "react-i18next";
 import TopNavigationBarSettingsScreen from "../components/navbars/TopNavigationBarSettingsScreen";
 import GeistMonoText from "../components/GeistMonoText";
@@ -14,6 +14,10 @@ export default function SettingsScreen() {
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+  };
+
+  const handleCoffeePress = () => {
+    Linking.openURL("https://buymeacoffee.com/himynameishonza");
   };
 
   const languages = [
@@ -82,7 +86,11 @@ export default function SettingsScreen() {
         >
           {t("settings.coffee")}
         </GeistMonoText>
-        <TouchableOpacity className="rounded bg-[#06283F] w-full p-3">
+        <TouchableOpacity 
+          className="rounded bg-[#06283F] w-full p-3"
+          onPress={handleCoffeePress}
+          activeOpacity={0.8}
+        >
           <GeistMonoText className="text-white text-center" variant="medium">
             {t("settings.contribute")}
           </GeistMonoText>
