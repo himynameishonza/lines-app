@@ -23,7 +23,9 @@
      "sort": {
       "fuSi": "Sekvence Fu Si",
       "wen": "Sekvence krále Wena"
-    }
+    },
+    "coffee": "Tato aplikace je zdarma a vzniká nezávisle, ve volném čase. Pokud vám přináší hodnotu, můžete její další rozvoj podpořit malým příspěvkem — třeba na kávu.",
+    "contribute": "Přispět"
   },
   "home": {
     "greeting": {

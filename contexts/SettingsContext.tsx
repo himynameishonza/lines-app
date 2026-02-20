@@ -7,15 +7,18 @@ export type SortOption = 'fuSi' | 'wen';
 
 interface Settings {
   sortBy: SortOption;
+  einkMode: boolean;
 }
 
 interface SettingsContextType {
   settings: Settings;
   setSortBy: (sortBy: SortOption) => void;
+  setEinkMode: (einkMode: boolean) => void;
 }
 
 const defaultSettings: Settings = {
   sortBy: 'fuSi',
+  einkMode: false,
 };
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
@@ -62,8 +65,12 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     setSettings(prev => ({ ...prev, sortBy }));
   };
 
+  const setEinkMode = (einkMode: boolean) => {
+    setSettings(prev => ({ ...prev, einkMode }));
+  };
+
   return (
-    <SettingsContext.Provider value={{ settings, setSortBy }}>
+    <SettingsContext.Provider value={{ settings, setSortBy, setEinkMode }}>
       {children}
     </SettingsContext.Provider>
   );

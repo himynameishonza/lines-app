@@ -23,7 +23,9 @@
     "sort": {
       "fuSi": "Fu Xi sequence",
       "wen": "King Wen sequence"
-    }
+    },
+    "coffee": "This app is free and developed independently in spare time. If it brings you value, you can support its development with a small contribution — perhaps for a coffee.",
+    "contribute": "Contribute"
   },
   "home": {
     "greeting": {
