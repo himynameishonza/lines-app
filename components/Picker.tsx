@@ -51,20 +51,20 @@ export default function Picker({ selectedValue, onValueChange, options, placehol
           activeOpacity={1}
           onPress={() => setIsOpen(false)}
         >
-          <View className="bg-[#06283F] rounded-xl w-4/5 max-h-96 overflow-hidden">
+          <View className="bg-text rounded-xl w-4/5 max-h-96 overflow-hidden">
             <ScrollView>
               {options.map((option) => (
                 <TouchableOpacity
                   key={option.value}
-                  className="flex-row items-center justify-between p-4 border-b border-gray-700"
+                  className="flex-row items-center justify-between p-4 border-b border-text"
                   onPress={() => handleSelect(option.value)}
                   activeOpacity={0.8}
                 >
-                  <GeistMonoText className="text-white text-sm">
+                  <GeistMonoText className="text-[#D8D6C3] text-sm">
                     {option.label}
                   </GeistMonoText>
                   {selectedValue === option.value && (
-                    <Check size={20} color="#EFDECA" />
+                    <Check size={20} className="text-main" />
                   )}
                 </TouchableOpacity>
               ))}

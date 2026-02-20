@@ -48,7 +48,8 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       const stored = await AsyncStorage.getItem(SETTINGS_STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        setSettings(parsed);
+        // Merge with defaults to ensure all properties exist
+        setSettings({ ...defaultSettings, ...parsed });
       }
     } catch (error) {
       console.error('Error loading settings:', error);

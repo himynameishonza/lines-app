@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Switch, TouchableOpacity, Linking } from "react-native";
+import { View, TouchableOpacity, Linking } from "react-native";
 import { useTranslation } from "react-i18next";
 import TopNavigationBarSettingsScreen from "../components/navbars/TopNavigationBarSettingsScreen";
 import GeistMonoText from "../components/typography/GeistMonoText";
 import Picker from "../components/Picker";
+import Toggle from "../components/Toggle";
 import { useSettings } from "../contexts/SettingsContext";
 import { Coffee } from "lucide-react-native";
 import { TLanguage, TViewMode } from "../types/generic";
@@ -87,13 +88,9 @@ export default function SettingsScreen() {
               {t("settings.eink")}
             </GeistMonoText>
 
-            <Switch
-              key={`switch-${settings.einkMode}`}
+            <Toggle
               value={settings.einkMode}
               onValueChange={setEinkMode}
-              trackColor={{ false: "#D8D6C3", true: "#06283F" }}
-              thumbColor={settings.einkMode ? "#FF9677" : "#D8D6C3"}
-              ios_backgroundColor="#D8D6C3"
             />
           </View>
         </View>
