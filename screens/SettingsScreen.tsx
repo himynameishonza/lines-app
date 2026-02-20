@@ -40,8 +40,8 @@ export default function SettingsScreen() {
   return (
     <View className="bg-[#D8D6C3] flex-1 px-6 justify-between">
       <TopNavigationBarSettingsScreen />
-      <View className="pt-32">
-        <View className="divide-y divide-dashed divide-text/25">
+      <View>
+        <View className="divide-y divide-dashed divide-text/25 mt-28">
           {/* Language Picker */}
           <View className="flex flex-row w-full items-center justify-between py-6">
             <GeistMonoText className="text-sm text-text" variant="bold">
@@ -98,7 +98,7 @@ export default function SettingsScreen() {
         </View>
       </View>
 
-      <View className="flex flex-col gap-y-4 rounded-lg p-4 items-center bg-text/10 mb-32">
+      <View className="flex flex-col gap-y-4 rounded-lg p-4 items-center bg-text/10 mb-28">
         <Coffee size={40} strokeWidth={1.5} className="text-text" />
         <GeistMonoText
           className="text-xs text-text text-center"
