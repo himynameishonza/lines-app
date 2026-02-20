@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import GeistMonoText from '../GeistMonoText';
 
 export default function TopNavigationBarSettingscreen(){
   const insets = useSafeAreaInsets();
@@ -17,16 +18,15 @@ export default function TopNavigationBarSettingscreen(){
         justifyContent: 'center',
       }}
     >
-      <Text
+      <GeistMonoText
         style={{
           fontSize: 16,
-          fontWeight: '500',
-          color: '#EFDECA',
-          letterSpacing: 0.5,
+          color: '#06283F',
         }}
+        variant='medium'
       >
         {t('nav.settings')}
-      </Text>
+      </GeistMonoText>
     </View>
   );
 }

@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useState } from 'react';
 import { useFonts, BodoniModa_400Regular, BodoniModa_500Medium, BodoniModa_600SemiBold, BodoniModa_700Bold } from '@expo-google-fonts/bodoni-moda';
-import {GeistMono_400Regular, GeistMono_500Medium} from "@expo-google-fonts/geist-mono"
+import {GeistMono_400Regular, GeistMono_500Medium, GeistMono_700Bold} from "@expo-google-fonts/geist-mono"
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import './i18n/config';
@@ -17,6 +17,7 @@ import HexagramDetail from './components/HexagramDetail';
 import { Hexagram } from './data/hexagrams';
 import { MainNavigationTab, HexagramsViewMode } from './types/navigation';
 import { ReadingsProvider } from './contexts/ReadingsContext';
+import { SettingsProvider } from './contexts/SettingsContext';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -42,7 +43,8 @@ export default function App() {
     BodoniModa_600SemiBold,
     BodoniModa_700Bold,
     GeistMono_400Regular,
-    GeistMono_500Medium
+    GeistMono_500Medium,
+    GeistMono_700Bold
   });
 
   useEffect(() => {
@@ -125,22 +127,24 @@ export default function App() {
   };
 
   return (
-    <ReadingsProvider>
-      <SafeAreaProvider>
-        <View style={{ flex: 1 }}>
-          {showWizard ? (
-            <NewReadingWizardScreen onClose={() => setShowWizard(false)} />
-          ) : (
-            <>
-              {renderScreen()}
-              {!selectedHexagram && !homeShowingDetail && (
-                <MainNavigationBar activeTab={activeTab as MainNavigationTab} onTabChange={handleTabChange} />
-              )}
-            </>
-          )}
-          <StatusBar style="light" />
-        </View>
-      </SafeAreaProvider>
-    </ReadingsProvider>
+    <SettingsProvider>
+      <ReadingsProvider>
+        <SafeAreaProvider>
+          <View style={{ flex: 1 }}>
+            {showWizard ? (
+              <NewReadingWizardScreen onClose={() => setShowWizard(false)} />
+            ) : (
+              <>
+                {renderScreen()}
+                {!selectedHexagram && !homeShowingDetail && (
+                  <MainNavigationBar activeTab={activeTab as MainNavigationTab} onTabChange={handleTabChange} />
+                )}
+              </>
+            )}
+            <StatusBar />
+          </View>
+        </SafeAreaProvider>
+      </ReadingsProvider>
+    </SettingsProvider>
   );
 }

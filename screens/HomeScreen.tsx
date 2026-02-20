@@ -1,33 +1,65 @@
-import React, { useMemo, useState } from 'react';
-import { View, ScrollView, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useTranslation } from 'react-i18next';
-import BodoniText from '../components/BodoniText';
-import GeistMonoText from '../components/GeistMonoText';
-import HexagramDetail from '../components/HexagramDetail';
-import SwipeableReadingCard from '../components/SwipeableReadingCard';
-import { useReadings } from '../contexts/ReadingsContext';
-import { hexagrams, Hexagram } from '../data/hexagrams';
-import { getHexagramTranslatedName } from '../utils/hexagramHelpers';
+import React, { useMemo, useState } from "react";
+import { View, ScrollView, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
+import BodoniText from "../components/BodoniText";
+import GeistMonoText from "../components/GeistMonoText";
+import HexagramDetail from "../components/HexagramDetail";
+import SwipeableReadingCard from "../components/SwipeableReadingCard";
+import { useReadings } from "../contexts/ReadingsContext";
+import { useSettings } from "../contexts/SettingsContext";
+import { hexagrams, Hexagram } from "../data/hexagrams";
+import { getHexagramTranslatedName } from "../utils/hexagramHelpers";
+import { Reading } from "../types/reading";
 
 interface HomeScreenProps {
   onOpenWizard: () => void;
   onShowDetail: (show: boolean) => void;
 }
 
-export default function HomeScreen({ onOpenWizard, onShowDetail }: HomeScreenProps) {
+export default function HomeScreen({
+  onOpenWizard,
+  onShowDetail,
+}: HomeScreenProps) {
   const { t, i18n } = useTranslation();
   const { readings, deleteReading } = useReadings();
-  const currentLang = i18n.language as 'cs' | 'en';
-  const [selectedReadingId, setSelectedReadingId] = useState<string | null>(null);
+  const { settings } = useSettings();
+  const currentLang = i18n.language as "cs" | "en";
+  const [selectedReadingId, setSelectedReadingId] = useState<string | null>(
+    null,
+  );
 
   // Block 1: Greeting based on daytime
   const greeting = useMemo(() => {
     const hour = new Date().getHours();
-    if (hour < 12) return t('home.greeting.morning');
-    if (hour < 18) return t('home.greeting.afternoon');
-    return t('home.greeting.evening');
+    if (hour < 12) return t("home.greeting.morning");
+    if (hour < 18) return t("home.greeting.afternoon");
+    return t("home.greeting.evening");
   }, [t]);
+
+  // Sort readings based on settings
+  const sortedReadings = useMemo(() => {
+    const sorted = [...readings];
+    
+    switch (settings.sortBy) {
+      case 'fuSi':
+        // Fu Xi sequence - sort by hexagram id (natural order in data)
+        return sorted.sort((a, b) => a.hexagramId - b.hexagramId);
+      
+      case 'wen': {
+        // King Wen sequence - sort by hexagram number
+        return sorted.sort((a, b) => {
+          const hexagramA = hexagrams.find(h => h.id === a.hexagramId);
+          const hexagramB = hexagrams.find(h => h.id === b.hexagramId);
+          if (!hexagramA || !hexagramB) return 0;
+          return hexagramA.number - hexagramB.number;
+        });
+      }
+      
+      default:
+        return sorted;
+    }
+  }, [readings, settings.sortBy]);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -36,17 +68,20 @@ export default function HomeScreen({ onOpenWizard, onShowDetail }: HomeScreenPro
     yesterday.setDate(yesterday.getDate() - 1);
 
     if (date.toDateString() === today.toDateString()) {
-      return t('home.today');
+      return t("home.today");
     } else if (date.toDateString() === yesterday.toDateString()) {
-      return t('home.yesterday');
+      return t("home.yesterday");
     } else {
-      return date.toLocaleDateString(currentLang, { month: 'short', day: 'numeric' });
+      return date.toLocaleDateString(currentLang, {
+        month: "short",
+        day: "numeric",
+      });
     }
   };
 
   const handleShare = () => {
     // TODO: Implement share functionality
-    console.log('Share reading');
+    console.log("Share reading");
   };
 
   const handleOpenReading = (readingId: string) => {
@@ -61,9 +96,9 @@ export default function HomeScreen({ onOpenWizard, onShowDetail }: HomeScreenPro
 
   // Show hexagram detail if a reading is selected
   if (selectedReadingId) {
-    const reading = readings.find(r => r.id === selectedReadingId);
+    const reading = sortedReadings.find((r) => r.id === selectedReadingId);
     if (reading) {
-      const hexagram = hexagrams.find(h => h.id === reading.hexagramId);
+      const hexagram = hexagrams.find((h) => h.id === reading.hexagramId);
       if (hexagram) {
         return (
           <HexagramDetail
@@ -78,15 +113,11 @@ export default function HomeScreen({ onOpenWizard, onShowDetail }: HomeScreenPro
   }
 
   return (
-    <SafeAreaView className="flex-1 bg-background" edges={['top']}>
-      {/* Block 1: Greeting */}
+    <SafeAreaView className="flex-1 bg-[#D8D6C3]" edges={["top"]}>
       <View className="p-6">
-        <BodoniText variant="bold" className="text-3xl text-main pt-1">
+        <BodoniText variant="bold" className="text-3xl text-[#06283F] pt-1">
           {greeting}
         </BodoniText>
-        <GeistMonoText className="text-sm text-main/50">
-          {t('home.subtitle')}
-        </GeistMonoText>
       </View>
 
       {/* Block 2: Scrollable area with past readings */}
@@ -95,7 +126,7 @@ export default function HomeScreen({ onOpenWizard, onShowDetail }: HomeScreenPro
         contentContainerStyle={{ paddingHorizontal: 24, paddingTop: 8 }}
         showsVerticalScrollIndicator={false}
       >
-        {readings.length === 0 ? (
+        {sortedReadings.length === 0 ? (
           <View className="flex-1 justify-center items-center py-20">
             <GeistMonoText className="text-base text-main">
               {t('home.empty.title')}
@@ -105,7 +136,7 @@ export default function HomeScreen({ onOpenWizard, onShowDetail }: HomeScreenPro
             </GeistMonoText>
           </View>
         ) : (
-          readings.map((reading) => {
+          sortedReadings.map((reading) => {
             const hexagram = hexagrams.find(h => h.id === reading.hexagramId);
             if (!hexagram) return null;
 

@@ -60,7 +60,7 @@ export default function MainNavigationBar({
             >
               <IconComponent
                 size={28}
-                color={activeTab === tab.id ? '#EFDECA' : 'rgba(239, 222, 205, 0.4)'}
+                color={activeTab === tab.id ? '#06283F' : '#87A5A6'}
                 strokeWidth={1.5}
               />
             </TouchableOpacity>

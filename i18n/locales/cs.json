@@ -15,6 +15,16 @@
     "present": "Současná situace",
     "future": "Budoucnost / Transformace"
   },
+  "settings": {
+    "title": "Nastavení",
+    "language": "Jazyk aplikace",
+    "eink":"E-ink mód",
+    "sortBy": "Řazení hexagramů",
+     "sort": {
+      "fuSi": "Sekvence Fu Si",
+      "wen": "Sekvence krále Wena"
+    }
+  },
   "home": {
     "greeting": {
       "morning": "Dobré ráno",

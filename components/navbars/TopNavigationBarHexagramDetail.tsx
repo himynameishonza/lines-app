@@ -4,6 +4,7 @@ import { ArrowLeft, Share2, Home } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { HexagramDetailTab } from "../../types/hexagramDetail";
+import GeistMonoText from "../GeistMonoText";
 
 interface TopNavigationBarHexagramDetailProps {
   onBack?: () => void;
@@ -57,16 +58,15 @@ export default function TopNavigationBarHexagramDetail({
       </TouchableOpacity>
 
       {/* Empty center space */}
-      <Text
+      <GeistMonoText
         style={{
           fontSize: 16,
-          fontWeight: "500",
           color: "#EFDECA",
-          letterSpacing: 0.5,
         }}
+        variant="medium"
       >
         {t(`detail.${activeTab}`)}
-      </Text>
+      </GeistMonoText>
 
       {/* Share Button */}
       <TouchableOpacity

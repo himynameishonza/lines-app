@@ -3,7 +3,7 @@ import { Text, TextProps } from 'react-native';
 import { styled } from 'nativewind';
 
 interface GeistMonoTextProps extends TextProps {
-  variant?: 'regular' | 'medium';
+  variant?: 'regular' | 'medium' | 'bold';
   children: React.ReactNode;
   className?: string;
 }
@@ -24,6 +24,7 @@ export default function GeistMonoText({
   const fontFamily = {
     regular: 'GeistMono_400Regular',
     medium: 'GeistMono_500Medium',
+    bold: 'GeistMono_700Bold'
   }[variant];
 
   return (

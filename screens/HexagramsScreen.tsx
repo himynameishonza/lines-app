@@ -170,7 +170,12 @@ export default function HexagramsScreen({
   ]) as [string, string, ...string[]];
 
   return (
-    <View style={{ flex: 1 }}>
+        <View className="bg-[#D8D6C3] flex-1">
+     <TopNavigationBarHexagramsScreen
+        viewMode={viewMode}
+        onViewModePress={changeViewMode}
+      />
+    {/* <View style={{ flex: 1 }}>
       {viewMode === "carousel" ? (
         <LinearGradient
           colors={gradientColors}
@@ -224,7 +229,7 @@ export default function HexagramsScreen({
               })}
             />
 
-            {/* Trigram Description */}
+           
             <View
               style={{
                 paddingHorizontal: 32,
@@ -313,6 +318,7 @@ export default function HexagramsScreen({
           />
         </View>
       )}
+    </View>*/}
     </View>
   );
 }

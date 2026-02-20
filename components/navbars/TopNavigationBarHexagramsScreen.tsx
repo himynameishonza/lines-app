@@ -1,9 +1,15 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { GalleryHorizontal, LayoutGrid, Rows3, Search } from 'lucide-react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTranslation } from 'react-i18next';
-import { HexagramsViewMode } from '../../types/navigation';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import {
+  GalleryHorizontal,
+  LayoutGrid,
+  Rows3,
+  Search,
+} from "lucide-react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
+import { HexagramsViewMode } from "../../types/navigation";
+import GeistMonoText from "../GeistMonoText";
 
 interface TopNavigationBarHexagramsScreenProps {
   onViewModePress?: () => void;
@@ -14,7 +20,7 @@ interface TopNavigationBarHexagramsScreenProps {
 export default function TopNavigationBarHexagramsScreen({
   onViewModePress,
   onSearchPress,
-  viewMode
+  viewMode,
 }: TopNavigationBarHexagramsScreenProps) {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
@@ -22,7 +28,7 @@ export default function TopNavigationBarHexagramsScreen({
   return (
     <View
       style={{
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         left: 0,
         right: 0,
@@ -30,9 +36,9 @@ export default function TopNavigationBarHexagramsScreen({
         paddingTop: insets.top,
         paddingHorizontal: 16,
         paddingBottom: 12,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
       }}
     >
       {/* Toggle View Icon */}
@@ -44,40 +50,32 @@ export default function TopNavigationBarHexagramsScreen({
           height: 44,
           display: "flex",
           alignItems: "center",
-          justifyContent:"center",
+          justifyContent: "center",
         }}
       >
-       {viewMode === "carousel" && <GalleryHorizontal 
-          size={28} 
-          color="#EFDECA"
-          strokeWidth={1.5}
-        />}
+        {viewMode === "carousel" && (
+          <GalleryHorizontal size={28} color="#06283F" strokeWidth={1.5} />
+        )}
 
-        {viewMode === "grid" && <LayoutGrid 
-          size={28} 
-          color="#EFDECA"
-          strokeWidth={1.5}
-        />}
+        {viewMode === "grid" && (
+          <LayoutGrid size={28} color="#06283F" strokeWidth={1.5} />
+        )}
 
-        {viewMode === "list" && <Rows3 
-          size={28} 
-          color="#EFDECA"
-          strokeWidth={1.5}
-        />}
-
+        {viewMode === "list" && (
+          <Rows3 size={28} color="#06283F" strokeWidth={1.5} />
+        )}
       </TouchableOpacity>
 
       {/* Title */}
-      <Text
+      <GeistMonoText
         style={{
           fontSize: 16,
-          fontWeight: '500',
-          color: '#EFDECA',
-          letterSpacing: 0.5,
+          color: "#06283F",
         }}
+        variant="medium"
       >
-        {t('nav.hexagrams')}
-      </Text>
+        {t("nav.hexagrams")}
+      </GeistMonoText>
 
       {/* Search Icon */}
       <TouchableOpacity
@@ -88,14 +86,10 @@ export default function TopNavigationBarHexagramsScreen({
           height: 44,
           display: "flex",
           alignItems: "center",
-          justifyContent:"center"
+          justifyContent: "center",
         }}
       >
-        <Search 
-          size={28} 
-          color="#EFDECA"
-          strokeWidth={1.5}
-        />
+        <Search size={28} color="#06283F" strokeWidth={1.5} />
       </TouchableOpacity>
     </View>
   );

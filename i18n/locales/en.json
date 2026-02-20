@@ -15,6 +15,16 @@
     "present": "Present Situation",
     "future": "Future / Transformation"
   },
+  "settings": {
+    "title": "Settings",
+    "language": "App language",
+    "eink":"E-ink mode",
+    "sortBy": "Hexagram sorting",
+    "sort": {
+      "fuSi": "Fu Xi sequence",
+      "wen": "King Wen sequence"
+    }
+  },
   "home": {
     "greeting": {
       "morning": "Good Morning",
