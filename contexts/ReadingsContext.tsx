@@ -4,11 +4,45 @@ import { Reading } from '../types/reading';
 
 const STORAGE_KEY = '@readings';
 
+// Sandbox data for development
+const SANDBOX_READINGS: Reading[] = [
+  {
+    id: '1',
+    hexagramId: 1,
+    question: 'What should I focus on in my career?',
+    method: 'random',
+    createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), // 2 days ago
+  },
+  {
+    id: '2',
+    hexagramId: 34,
+    question: 'How can I improve my relationships?',
+    method: 'randomWithChanging',
+    changingLines: [false, true, false, false, true, false],
+    createdAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(), // 5 days ago
+  },
+  {
+    id: '3',
+    hexagramId: 11,
+    question: 'What is the best approach to my current challenge?',
+    method: 'coinToss',
+    createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(), // 7 days ago
+  },
+  {
+    id: '4',
+    hexagramId: 25,
+    question: 'Should I pursue this new opportunity?',
+    method: 'random',
+    createdAt: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString(), // 14 days ago
+  },
+];
+
 interface ReadingsContextType {
   readings: Reading[];
   addReading: (reading: Omit<Reading, 'id' | 'createdAt'>) => void;
   deleteReading: (id: string) => void;
   getReading: (id: string) => Reading | undefined;
+  clearAndReloadSandbox: () => Promise<void>;
 }
 
 const ReadingsContext = createContext<ReadingsContextType | undefined>(undefined);
@@ -35,9 +69,14 @@ export function ReadingsProvider({ children }: { children: ReactNode }) {
       if (stored) {
         const parsed = JSON.parse(stored);
         setReadings(parsed);
+      } else {
+        // Use sandbox data if no stored readings
+        setReadings(SANDBOX_READINGS);
       }
     } catch (error) {
       console.error('Error loading readings:', error);
+      // Fallback to sandbox data on error
+      setReadings(SANDBOX_READINGS);
     } finally {
       setIsLoaded(true);
     }
@@ -68,8 +107,17 @@ export function ReadingsProvider({ children }: { children: ReactNode }) {
     return readings.find(r => r.id === id);
   };
 
+  const clearAndReloadSandbox = async () => {
+    try {
+      await AsyncStorage.removeItem(STORAGE_KEY);
+      setReadings(SANDBOX_READINGS);
+    } catch (error) {
+      console.error('Error clearing storage:', error);
+    }
+  };
+
   return (
-    <ReadingsContext.Provider value={{ readings, addReading, deleteReading, getReading }}>
+    <ReadingsContext.Provider value={{ readings, addReading, deleteReading, getReading, clearAndReloadSandbox }}>
       {children}
     </ReadingsContext.Provider>
   );

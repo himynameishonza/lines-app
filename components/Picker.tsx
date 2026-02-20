@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Modal, ScrollView } from 'react-native';
 import { Check, ChevronDown } from 'lucide-react-native';
-import GeistMonoText from './GeistMonoText';
+import GeistMonoText from './typography/GeistMonoText';
 
 export interface PickerOption {
   label: string;

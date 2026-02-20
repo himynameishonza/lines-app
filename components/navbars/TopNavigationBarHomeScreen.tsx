@@ -18,7 +18,7 @@ export default function TopNavigationBarHomeScreen({
       justifyContent="flex-end"
       rightElement={
         <TouchableOpacity onPress={onAdd} activeOpacity={0.6}>
-          <Plus size={28} color="#06283F" strokeWidth={1.5} />
+          <Plus size={28} className='text-text' strokeWidth={1.5} />
         </TouchableOpacity>
       }
     />

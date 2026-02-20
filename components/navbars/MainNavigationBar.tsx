@@ -1,20 +1,20 @@
 import React from 'react';
-import { BookOpen, Bolt, GalleryHorizontalEnd } from 'lucide-react-native';
-import { MainNavigationTab } from '../../types/navigation';
+import { BookOpen, Bolt, Home } from 'lucide-react-native';
 import BottomNavigationBar, { BottomNavTab } from '../BottomNavigationBar';
+import { TMainNavigationTab } from '../../types/generic';
 
 interface MainNavigationBarProps {
-  activeTab?: MainNavigationTab;
-  onTabChange?: (tab: MainNavigationTab) => void;
+  activeTab?: TMainNavigationTab;
+  onTabChange?: (tab: TMainNavigationTab) => void;
 }
 
 export default function MainNavigationBar({
   activeTab = 'dashboard',
   onTabChange,
 }: MainNavigationBarProps) {
-  const tabs: BottomNavTab<MainNavigationTab>[] = [
-    { id: 'dashboard', Icon: BookOpen },
-    { id: 'hexagrams', Icon: GalleryHorizontalEnd },
+  const tabs: BottomNavTab<TMainNavigationTab>[] = [
+    { id: 'dashboard', Icon: Home },
+    { id: 'hexagrams', Icon: BookOpen },
     { id: 'settings', Icon: Bolt },
   ];
 

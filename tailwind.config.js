@@ -14,8 +14,12 @@ module.exports = {
         background: {
           DEFAULT: '#42436b',
         },
+        text: {
+          DEFAULT: '#06283F'
+        }
       }
     }
   },
   plugins: [],
 }
+

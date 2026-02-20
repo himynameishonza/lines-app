@@ -4,7 +4,7 @@ import { ArrowLeft, Share2, Home } from "lucide-react-native";
 import { useTranslation } from "react-i18next";
 import { HexagramDetailTab } from "../../types/hexagramDetail";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import GeistMonoText from "../GeistMonoText";
+import GeistMonoText from "../typography/GeistMonoText";
 
 interface TopNavigationBarHexagramDetailProps {
   onBack?: () => void;

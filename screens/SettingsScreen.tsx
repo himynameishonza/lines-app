@@ -2,17 +2,18 @@ import React from "react";
 import { View, Switch, TouchableOpacity, Linking } from "react-native";
 import { useTranslation } from "react-i18next";
 import TopNavigationBarSettingsScreen from "../components/navbars/TopNavigationBarSettingsScreen";
-import GeistMonoText from "../components/GeistMonoText";
+import GeistMonoText from "../components/typography/GeistMonoText";
 import Picker from "../components/Picker";
 import { useSettings } from "../contexts/SettingsContext";
 import { Coffee } from "lucide-react-native";
+import { TLanguage } from "../types/generic";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
   const { settings, setSortBy, setEinkMode } = useSettings();
-  const currentLanguage = i18n.language;
+  const currentLanguage = i18n.language as TLanguage;
 
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = (lang: TLanguage) => {
     i18n.changeLanguage(lang);
   };
 
@@ -34,23 +35,23 @@ export default function SettingsScreen() {
     <View className="bg-[#D8D6C3] flex-1 px-6 justify-between">
       <TopNavigationBarSettingsScreen />
       <View className="pt-32">
-        <View className="divide-y divide-dashed divide-[#06283F]/25">
+        <View className="divide-y divide-dashed divide-text/25">
           {/* Language Picker */}
           <View className="flex flex-row w-full items-center justify-between py-6">
-            <GeistMonoText className="text-sm text-[#06283F]" variant="bold">
+            <GeistMonoText className="text-sm text-text" variant="bold">
               {t("settings.language")}
             </GeistMonoText>
 
             <Picker
               selectedValue={currentLanguage}
-              onValueChange={changeLanguage}
+              onValueChange={(value) => changeLanguage(value as TLanguage)}
               options={languages}
             />
           </View>
 
           {/* Sorting picker */}
           <View className="flex flex-row w-full items-center justify-between py-6">
-            <GeistMonoText className="text-sm text-[#06283F]" variant="bold">
+            <GeistMonoText className="text-sm text-text" variant="bold">
               {t("settings.sortBy")}
             </GeistMonoText>
 
@@ -63,7 +64,7 @@ export default function SettingsScreen() {
 
           {/* E-ink mode switch */}
           <View className="flex flex-row w-full items-center justify-between py-6">
-            <GeistMonoText className="text-sm text-[#06283F]" variant="bold">
+            <GeistMonoText className="text-sm text-text" variant="bold">
               {t("settings.eink")}
             </GeistMonoText>
 
@@ -78,16 +79,16 @@ export default function SettingsScreen() {
         </View>
       </View>
 
-      <View className="flex flex-col gap-y-4 rounded-lg p-4 items-center bg-[#06283F]/10 mb-32">
-        <Coffee size={40} strokeWidth={1.5} color="#06283F" />
+      <View className="flex flex-col gap-y-4 rounded-lg p-4 items-center bg-text/10 mb-32">
+        <Coffee size={40} strokeWidth={1.5} className="text-text" />
         <GeistMonoText
-          className="text-xs text-[#06283F] text-center"
+          className="text-xs text-text text-center"
           variant="regular"
         >
           {t("settings.coffee")}
         </GeistMonoText>
         <TouchableOpacity 
-          className="rounded bg-[#06283F] w-full p-3"
+          className="rounded bg-text w-full p-3"
           onPress={handleCoffeePress}
           activeOpacity={0.8}
         >

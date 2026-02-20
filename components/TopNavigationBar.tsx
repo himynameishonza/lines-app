@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import GeistMonoText from "./GeistMonoText";
+import GeistMonoText from "./typography/GeistMonoText";
 
 interface TopNavigationBarProps {
   leftElement?: ReactNode;
@@ -38,7 +38,7 @@ export default function TopNavigationBar({
           className="items-center"
           style={{ flex: justifyContent === "space-between" ? 0 : 1 }}
         >
-          <GeistMonoText className="text-base" variant="medium">
+          <GeistMonoText className="text-base text-text" variant="medium">
             {title}
           </GeistMonoText>
         </View>
