@@ -44,7 +44,7 @@ export default function TopNavigationBarHexagramsScreen({
       {/* Toggle View Icon */}
       <TouchableOpacity
         onPress={onViewModePress}
-        activeOpacity={1}
+        activeOpacity={0.6}
         style={{
           width: 44,
           height: 44,
@@ -80,7 +80,7 @@ export default function TopNavigationBarHexagramsScreen({
       {/* Search Icon */}
       <TouchableOpacity
         onPress={onSearchPress}
-        activeOpacity={1}
+        activeOpacity={0.6}
         style={{
           width: 44,
           height: 44,

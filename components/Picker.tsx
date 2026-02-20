@@ -47,7 +47,7 @@ export default function Picker({ selectedValue, onValueChange, options, placehol
         onRequestClose={() => setIsOpen(false)}
       >
         <TouchableOpacity
-          className="flex-1 bg-[#06283F]/20 justify-center items-center"
+          className="flex-1 bg-[#D8D6C3]/80 justify-center items-center"
           activeOpacity={1}
           onPress={() => setIsOpen(false)}
         >

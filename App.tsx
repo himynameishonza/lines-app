@@ -9,8 +9,6 @@ import { useEffect } from 'react';
 import './i18n/config';
 import HomeScreen from './screens/HomeScreen';
 import HexagramsScreen from './screens/HexagramsScreen';
-import NewReadingScreen from './screens/NewReadingScreen';
-import NewReadingWizardScreen from './screens/NewReadingWizardScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import MainNavigationBar from './components/navbars/MainNavigationBar';
 import HexagramDetail from './components/HexagramDetail';
@@ -91,7 +89,7 @@ export default function App() {
   const renderScreen = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <HomeScreen onOpenWizard={() => setShowWizard(true)} onShowDetail={setHomeShowingDetail} />;
+        return <HomeScreen onAdd={() => setShowWizard(true)}/>;
       case 'hexagrams':
         return (
           <View style={{ flex: 1 }}>
@@ -117,12 +115,11 @@ export default function App() {
             )}
           </View>
         );
-      case 'new-reading':
-        return <NewReadingScreen />;
+    
       case 'settings':
         return <SettingsScreen />;
       default:
-        return <HomeScreen onOpenWizard={() => setShowWizard(true)} onShowDetail={setHomeShowingDetail} />;
+        return <HomeScreen onAdd={() => setShowWizard(true)}  />;
     }
   };
 
@@ -131,16 +128,13 @@ export default function App() {
       <ReadingsProvider>
         <SafeAreaProvider>
           <View style={{ flex: 1 }}>
-            {showWizard ? (
-              <NewReadingWizardScreen onClose={() => setShowWizard(false)} />
-            ) : (
-              <>
+           
+             
                 {renderScreen()}
                 {!selectedHexagram && !homeShowingDetail && (
                   <MainNavigationBar activeTab={activeTab as MainNavigationTab} onTabChange={handleTabChange} />
                 )}
-              </>
-            )}
+            
             <StatusBar />
           </View>
         </SafeAreaProvider>

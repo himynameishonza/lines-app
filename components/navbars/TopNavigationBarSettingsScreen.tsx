@@ -10,18 +10,25 @@ export default function TopNavigationBarSettingscreen(){
   
   return (
     <View
-      style={{
-        paddingTop: insets.top + 12.5,
-        paddingHorizontal: 16,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 10,
+            paddingTop: insets.top,
+            paddingHorizontal: 16,
+            paddingBottom: 12,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
       <GeistMonoText
         style={{
           fontSize: 16,
           color: '#06283F',
+          paddingVertical: 10
         }}
         variant='medium'
       >
