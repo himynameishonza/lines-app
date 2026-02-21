@@ -13,7 +13,7 @@ import TopNavigationBarHexagramsScreen from "../components/navbars/TopNavigation
 import GeistMonoText from "../components/typography/GeistMonoText";
 import HexagramSymbol from "../components/HexagramSymbol";
 import { TViewMode } from "../types/generic";
-import { hexagrams } from "../data/hexagrams";
+import { Hexagram, hexagrams } from "../data/hexagrams";
 import { useSettings } from "../contexts/SettingsContext";
 import { useTranslation } from "react-i18next";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -34,15 +34,19 @@ const fuXiSequence = [
 
 interface HexagramsScreenProps {
   onViewModeChange?: (viewMode: TViewMode) => void;
+  onHexagramPress?: (hexagram: Hexagram) => void;
+  initialViewMode?: TViewMode;
 }
 
 export default function HexagramsScreen({
   onViewModeChange,
+  onHexagramPress,
+  initialViewMode,
 }: HexagramsScreenProps) {
   const { settings, sessionViewMode, setSessionViewMode } = useSettings();
-  // Use session view mode if it exists, otherwise use default from settings
+  // Use session view mode if it exists, otherwise use initialViewMode or default from settings
   const [viewMode, setViewMode] = useState<TViewMode>(
-    sessionViewMode || settings.viewMode,
+    sessionViewMode || initialViewMode || settings.viewMode,
   );
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearchInput, setShowSearchInput] = useState(false);
@@ -57,10 +61,13 @@ export default function HexagramsScreen({
   // Sort hexagrams based on settings
   const sortedHexagrams =
     settings.sortBy === "fuSi"
-      ? fuXiSequence.map((num, index) => {
-          const hexagram = hexagrams.find((h) => h.number === num)!;
-          return { ...hexagram, displayNumber: index + 1 };
-        })
+      ? fuXiSequence
+          .map((num, index) => {
+            const hexagram = hexagrams.find((h) => h.number === num);
+            if (!hexagram) return null;
+            return { ...hexagram, displayNumber: index + 1 };
+          })
+          .filter((h): h is Hexagram & { displayNumber: number } => h !== null)
       : hexagrams.map((h) => ({ ...h, displayNumber: h.number }));
 
   // Filter hexagrams based on search query
@@ -207,7 +214,10 @@ export default function HexagramsScreen({
               </View>
             }
             renderItem={({ item, index }) => (
-              <View style={{ marginRight: index < filteredHexagrams.length - 1 ? CARD_SPACING : 0 }}>
+              <Pressable 
+                onPress={() => onHexagramPress?.(item)}
+                style={{ marginRight: index < filteredHexagrams.length - 1 ? CARD_SPACING : 0 }}
+              >
                 {settings.theme === 'default' && (
                   <CardDefault item={item} width={CARD_WIDTH} />
                 )}
@@ -217,7 +227,7 @@ export default function HexagramsScreen({
                 {settings.theme === 'patterns' && (
                   <CardPatterns item={item} width={CARD_WIDTH} />
                 )}
-              </View>
+              </Pressable>
             )}
           />
         </View>
@@ -251,31 +261,33 @@ export default function HexagramsScreen({
                 </View>
               }
               renderItem={({ item }) => (
-                <View className="flex px-2 py-4 w-full flex-row items-center">
-                  <View className="w-8 flex items-center">
-                    <GeistMonoText className="text-text/50 text-xs">
-                      {item.displayNumber}
-                    </GeistMonoText>
+                <Pressable onPress={() => onHexagramPress?.(item)}>
+                  <View className="flex px-2 py-4 w-full flex-row items-center">
+                    <View className="w-8 flex items-center">
+                      <GeistMonoText className="text-text/50 text-xs">
+                        {item.displayNumber}
+                      </GeistMonoText>
+                    </View>
+                    <View>
+                      <HexagramSymbol
+                        lines={item.lines}
+                        size={32}
+                        color="#42436b"
+                      />
+                    </View>
+                    <View className="px-4">
+                      <GeistMonoText variant="bold" className="text-text">
+                        {item.content[i18n.language as "cs" | "en"].name}
+                      </GeistMonoText>
+                      <GeistMonoText
+                        className="text-xs text-text/60"
+                        variant="regular"
+                      >
+                        {item.romanization}
+                      </GeistMonoText>
+                    </View>
                   </View>
-                  <View>
-                    <HexagramSymbol
-                      lines={item.lines}
-                      size={32}
-                      color="#42436b"
-                    />
-                  </View>
-                  <View className="px-4">
-                    <GeistMonoText variant="bold" className="text-text">
-                      {item.content[i18n.language as "cs" | "en"].name}
-                    </GeistMonoText>
-                    <GeistMonoText
-                      className="text-xs text-text/60"
-                      variant="regular"
-                    >
-                      {item.romanization}
-                    </GeistMonoText>
-                  </View>
-                </View>
+                </Pressable>
               )}
             />
           )}
@@ -307,7 +319,10 @@ export default function HexagramsScreen({
                 </View>
               }
               renderItem={({ item }) => (
-                <View className="flex-1 p-1.5">
+                <Pressable 
+                  onPress={() => onHexagramPress?.(item)}
+                  className="flex-1 p-1.5"
+                >
                   <View
                     className="border border-dashed border-text/25 rounded-sm p-4"
                     style={{ aspectRatio: 1.2 / 1 }}
@@ -337,7 +352,7 @@ export default function HexagramsScreen({
                       </View>
                     </View>
                   </View>
-                </View>
+                </Pressable>
               )}
             />
           )}

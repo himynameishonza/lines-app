@@ -7,6 +7,9 @@ export type TViewMode = "carousel" | "list" | "grid";
 // Main navigation tabs
 export type TMainNavigationTab = 'dashboard' | 'hexagrams' | 'settings';
 
+// Hexagram detail tabs
+export type HexagramDetailTab = 'meaning' | 'oracle' | 'anatomy' | 'evolution';
+
 // Themes
 export type TTheme = "default"|"minimal"|"patterns"
 

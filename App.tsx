@@ -9,11 +9,13 @@ import { useEffect } from 'react';
 import './i18n/config';
 import HomeScreen from './screens/HomeScreen';
 import HexagramsScreen from './screens/HexagramsScreen';
+import HexagramDetailScreen from './screens/HexagramDetailScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import MainNavigationBar from './components/navbars/MainNavigationBar';
 import { TMainNavigationTab, TViewMode } from './types/generic';
 import { ReadingsProvider } from './contexts/ReadingsContext';
 import { SettingsProvider } from './contexts/SettingsContext';
+import { Hexagram } from './data/hexagrams';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -23,6 +25,7 @@ type TabType = 'dashboard' | 'hexagrams' | 'new-reading' | 'settings';
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('dashboard');
   const [showWizard, setShowWizard] = useState(false);
+  const [selectedHexagram, setSelectedHexagram] = useState<Hexagram | null>(null);
   
   // Track scroll positions for hexagrams screen
   const [hexagramsViewMode, setHexagramsViewMode] = useState<TViewMode>('carousel');
@@ -56,7 +59,25 @@ export default function App() {
     setHexagramsViewMode(viewMode);
   };
 
+  const handleHexagramPress = (hexagram: Hexagram) => {
+    setSelectedHexagram(hexagram);
+  };
+
+  const handleBackFromDetail = () => {
+    setSelectedHexagram(null);
+  };
+
   const renderScreen = () => {
+    // Show hexagram detail if one is selected
+    if (selectedHexagram) {
+      return (
+        <HexagramDetailScreen
+          hexagram={selectedHexagram}
+          onBack={handleBackFromDetail}
+        />
+      );
+    }
+
     switch (activeTab) {
       case 'dashboard':
         return <HomeScreen onAdd={() => setShowWizard(true)}/>;
@@ -65,6 +86,7 @@ export default function App() {
           <HexagramsScreen 
             initialViewMode={hexagramsViewMode}
             onViewModeChange={handleViewModeChange}
+            onHexagramPress={handleHexagramPress}
           />
         );
       case 'settings':
@@ -80,7 +102,9 @@ export default function App() {
         <SafeAreaProvider>
           <View style={{ flex: 1 }}>
                 {renderScreen()}
-                <MainNavigationBar activeTab={activeTab as TMainNavigationTab} onTabChange={handleTabChange} />
+                {!selectedHexagram && (
+                  <MainNavigationBar activeTab={activeTab as TMainNavigationTab} onTabChange={handleTabChange} />
+                )}
             <StatusBar />
           </View>
         </SafeAreaProvider>
