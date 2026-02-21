@@ -30,7 +30,7 @@ export default function TopNavigationBarHexagramDetail({
         height: insets.top + 56,
       }}
     >
-      <View className="w-11 h-11 items-center justify-center">
+      <View className="w-12 h-12 items-center justify-center">
         <TouchableOpacity onPress={onBack} activeOpacity={1}>
           {showHomeButton ? (
             <Home size={28} color="#EFDECA" strokeWidth={1.5} />
@@ -46,7 +46,7 @@ export default function TopNavigationBarHexagramDetail({
         </GeistMonoText>
       </View>
 
-      <View className="w-11 h-11 items-center justify-center">
+      <View className="w-12 h-12 items-center justify-center">
         <TouchableOpacity onPress={onShare} activeOpacity={1}>
           <Share2 size={28} color="#EFDECA" strokeWidth={1.5} />
         </TouchableOpacity>

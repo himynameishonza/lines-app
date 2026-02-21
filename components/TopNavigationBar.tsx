@@ -20,7 +20,7 @@ export default function TopNavigationBar({
 
   return (
     <View
-      className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-4 pb-3"
+      className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-2 pb-3"
       style={{
         paddingTop: insets.top,
         height: insets.top + 56,
@@ -28,7 +28,7 @@ export default function TopNavigationBar({
       }}
     >
       {leftElement && (
-        <View className="w-11 h-11 items-center justify-center">
+        <View className="w-12 h-12 items-center justify-center">
           {leftElement}
         </View>
       )}
@@ -45,7 +45,7 @@ export default function TopNavigationBar({
       )}
 
       {rightElement && (
-        <View className="w-11 h-11 items-center justify-center">
+        <View className="w-12 h-12 items-center justify-center">
           {rightElement}
         </View>
       )}

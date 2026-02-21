@@ -70,7 +70,7 @@ export function CardPatterns({ item, width }: Props) {
         width={width} 
         height={height} 
         color="#42436B"
-        opacity={0.15}
+        opacity={0.05}
       />
       
       {/* Top trigram pattern - starts from center, extends upward (rotated 180deg) */}

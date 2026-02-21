@@ -40,12 +40,12 @@ export default function TopNavigationBarHexagramsScreen({
     <TopNavigationBar
       title={t("nav.hexagrams")}
       leftElement={
-        <TouchableOpacity onPress={onViewModePress} activeOpacity={0.6}>
+        <TouchableOpacity className="w-full h-full flex items-center justify-center" onPress={onViewModePress} activeOpacity={0.6}>
           {getViewModeIcon()}
         </TouchableOpacity>
       }
       rightElement={
-        <TouchableOpacity onPress={onSearchPress} activeOpacity={0.6}>
+        <TouchableOpacity className="w-full h-full flex items-center justify-center" onPress={onSearchPress} activeOpacity={0.6}>
           <View>
             <Search size={28} className='text-text' strokeWidth={1.5} />
             {isSearchActive && (
