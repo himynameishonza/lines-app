@@ -20,7 +20,7 @@ export default function TopNavigationBar({
 
   return (
     <View
-      className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-2 pb-3"
+      className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-3 pb-3"
       style={{
         paddingTop: insets.top,
         height: insets.top + 56,
