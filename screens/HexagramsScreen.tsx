@@ -1,11 +1,13 @@
 import React, { useState, useRef } from "react";
 import {
   View,
+  StyleSheet,
   Dimensions,
   FlatList,
   TextInput,
   TouchableOpacity,
   Pressable,
+  Image
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { CircleOff, X } from "lucide-react-native";
@@ -19,6 +21,7 @@ import { useSettings } from "../contexts/SettingsContext";
 import { useTranslation } from "react-i18next";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import DashedLine from "../components/DashedLine";
+import { CardBackground } from "../components/CardBackground";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
@@ -202,8 +205,14 @@ export default function HexagramsScreen({
             renderItem={({ item }) => (
               <View
                 style={{ width: CARD_WIDTH, aspectRatio: 1 / 1.4 }}
-                className="border border-dashed border-text/25 rounded-lg p-4 bg-[#D8D6C3] items-center justify-center"
+                className="border overflow-hidden border-text/10 rounded-lg"
               >
+                 <Image
+                      source={require("../assets/hexagram.png")}
+                      style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.6 }}
+                      resizeMode="cover"
+                    />
+                    
                 <View className="absolute top-4 left-4 w-8 h-8 flex items-center justify-center">
                   <GeistMonoText className="text-text/50 text-base">
                     {item.displayNumber}
@@ -217,24 +226,22 @@ export default function HexagramsScreen({
                     color="#42436b"
                   />
                 </View>
-                <View className="items-center">
-                  <View className="items-center">
-                    <BodoniText
-                      variant="bold"
-                      className="text-background text-9xl pt-8"
-                    >
-                      {item.chineseName}
-                    </BodoniText>
-                    <GeistMonoText className="text-text/60 text-lg">
-                      {item.romanization}
-                    </GeistMonoText>
-                    <GeistMonoText
-                      variant="bold"
-                      className="text-text text-2xl"
-                    >
-                      {item.content[i18n.language as "cs" | "en"].name}
-                    </GeistMonoText>
-                  </View>
+                <View className="flex-1 items-center justify-center">
+                  <BodoniText
+                    variant="bold"
+                    className="text-background text-9xl pt-5"
+                  >
+                    {item.chineseName}
+                  </BodoniText>
+                  <GeistMonoText className="text-text/60 text-lg">
+                    {item.romanization}
+                  </GeistMonoText>
+                  <GeistMonoText
+                    variant="bold"
+                    className="text-text text-2xl"
+                  >
+                    {item.content[i18n.language as "cs" | "en"].name}
+                  </GeistMonoText>
                 </View>
               </View>
             )}
