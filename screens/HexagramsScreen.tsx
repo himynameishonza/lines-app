@@ -184,15 +184,17 @@ export default function HexagramsScreen({
             maxToRenderPerBatch={5}
             windowSize={5}
             ListEmptyComponent={
-              <View
-                className="items-center gap-2"
-                style={{ width: SCREEN_WIDTH }}
-              >
-                <GeistMonoText className="text-text/50 text-lg">
-                  No results
+              <View className="flex-1 items-center justify-center gap-1">
+                <CircleOff
+                  strokeWidth={1.5}
+                  size={48}
+                  className="text-main mb-4"
+                />
+                <GeistMonoText variant="medium" className="text-text text-lg">
+                  {t("hexagrams.noResultsTitle")}
                 </GeistMonoText>
-                <GeistMonoText className="text-text/30 text-sm">
-                  Try a different search term
+                <GeistMonoText className="text-background text-sm">
+                  {t("hexagrams.noResultsDescription")}
                 </GeistMonoText>
               </View>
             }
@@ -249,9 +251,7 @@ export default function HexagramsScreen({
                 paddingHorizontal: 12,
                 flexGrow: 1,
               }}
-              ItemSeparatorComponent={() => (
-                <DashedLine/>
-              )}
+              ItemSeparatorComponent={() => <DashedLine />}
               ListEmptyComponent={
                 <View className="flex-1 items-center justify-center gap-1">
                   <CircleOff
@@ -308,12 +308,17 @@ export default function HexagramsScreen({
               }}
               columnWrapperStyle={{ gap: 0 }}
               ListEmptyComponent={
-                <View className="flex-1 items-center justify-center gap-2">
-                  <GeistMonoText className="text-text/50 text-lg">
-                    No results
+                <View className="flex-1 items-center justify-center gap-1">
+                  <CircleOff
+                    strokeWidth={1.5}
+                    size={48}
+                    className="text-main mb-4"
+                  />
+                  <GeistMonoText variant="medium" className="text-text text-lg">
+                    {t("hexagrams.noResultsTitle")}
                   </GeistMonoText>
-                  <GeistMonoText className="text-text/30 text-sm">
-                    Try a different search term
+                  <GeistMonoText className="text-background text-sm">
+                    {t("hexagrams.noResultsDescription")}
                   </GeistMonoText>
                 </View>
               }
