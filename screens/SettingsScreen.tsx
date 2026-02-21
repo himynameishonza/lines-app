@@ -96,7 +96,7 @@ export default function SettingsScreen() {
         </View>
       </View>
 
-      <View className="flex flex-col gap-y-4 rounded-lg p-4 items-center bg-text/10 mb-28">
+      <View className="flex flex-col gap-y-4 rounded-lg p-4 items-center border border-dashed border-text/25 mb-28">
         <Coffee size={40} strokeWidth={1.5} className="text-text" />
         <GeistMonoText
           className="text-xs text-text text-center"

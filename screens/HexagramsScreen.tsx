@@ -18,6 +18,7 @@ import BodoniText from "../components/typography/BodoniText";
 import { useSettings } from "../contexts/SettingsContext";
 import { useTranslation } from "react-i18next";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import DashedLine from "../components/DashedLine";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
@@ -137,7 +138,7 @@ export default function HexagramsScreen({
               height: insets.top + 56,
             }}
           >
-            <View className="flex flex-row w-full rounded bg-background">
+            <View className="flex flex-row w-full rounded bg-text">
               <TextInput
                 ref={searchInputRef}
                 value={searchQuery}
@@ -245,14 +246,11 @@ export default function HexagramsScreen({
               keyExtractor={(item) => item.id.toString()}
               contentContainerStyle={{
                 paddingVertical: 112,
-                paddingHorizontal: 8,
+                paddingHorizontal: 12,
                 flexGrow: 1,
               }}
               ItemSeparatorComponent={() => (
-                <View
-                  className="h-px bg-text/25"
-                  style={{ marginHorizontal: 8 }}
-                />
+                <DashedLine/>
               )}
               ListEmptyComponent={
                 <View className="flex-1 items-center justify-center gap-1">
@@ -305,10 +303,10 @@ export default function HexagramsScreen({
               numColumns={2}
               contentContainerStyle={{
                 paddingVertical: 112,
-                paddingHorizontal: 16,
+                paddingHorizontal: 12,
                 flexGrow: 1,
               }}
-              columnWrapperStyle={{ gap: 12 }}
+              columnWrapperStyle={{ gap: 0 }}
               ListEmptyComponent={
                 <View className="flex-1 items-center justify-center gap-2">
                   <GeistMonoText className="text-text/50 text-lg">
