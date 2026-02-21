@@ -16,6 +16,9 @@ module.exports = {
         },
         text: {
           DEFAULT: '#06283F'
+        },
+        primary: {
+          DEFAULT: '#F5E8DC'
         }
       }
     }

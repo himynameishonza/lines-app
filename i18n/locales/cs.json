@@ -24,11 +24,17 @@
       "fuSi": "Sekvence Fu Si",
       "wen": "Sekvence krále Wena"
     },
-    "viewMode": "Výchozí rozhraní hexagramů",
+    "viewMode": "Výchozí rozložení knihy",
     "viewModes":{
      "carousel": "Karousel",
      "list": "Seznam",
      "grid": "Mřížka"
+    },
+    "theme": "Vizuální téma knihy",
+    "themes":{
+      "default": "Výchozí",
+      "minimal": "Minimalistické",
+      "patterns": "Vzory"
     },
     "coffee": "Tato aplikace je zdarma a vzniká nezávisle, ve volném čase. Pokud vám přináší hodnotu, můžete její další rozvoj podpořit malým příspěvkem — třeba na kávu.",
     "contribute": "Přispět"

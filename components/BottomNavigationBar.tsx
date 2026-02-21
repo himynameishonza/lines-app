@@ -23,7 +23,7 @@ export default function BottomNavigationBar<T extends string>({
 
   return (
     <View
-      className="absolute left-8 right-8 items-center z-10 bg-[#D8D6C3]/95 rounded-full py-4"
+      className="absolute left-8 right-8 items-center z-10 bg-primary/90 rounded-full py-4"
       style={{ bottom: insets.bottom - 10 }}
     >
       <View className="flex-row items-center justify-center px-0">

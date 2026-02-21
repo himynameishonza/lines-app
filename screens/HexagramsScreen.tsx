@@ -1,13 +1,11 @@
 import React, { useState, useRef } from "react";
 import {
   View,
-  StyleSheet,
   Dimensions,
   FlatList,
   TextInput,
   TouchableOpacity,
-  Pressable,
-  Image
+  Pressable
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { CircleOff, X } from "lucide-react-native";
@@ -16,12 +14,13 @@ import GeistMonoText from "../components/typography/GeistMonoText";
 import HexagramSymbol from "../components/HexagramSymbol";
 import { TViewMode } from "../types/generic";
 import { hexagrams } from "../data/hexagrams";
-import BodoniText from "../components/typography/BodoniText";
 import { useSettings } from "../contexts/SettingsContext";
 import { useTranslation } from "react-i18next";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import DashedLine from "../components/DashedLine";
-import { CardBackground } from "../components/CardBackground";
+import { CardDefault } from "../components/cardThemes/CardDefault";
+import { CardMinimal } from "../components/cardThemes/CardMinimal";
+import { CardPatterns } from "../components/cardThemes/CardPatterns";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
@@ -121,7 +120,7 @@ export default function HexagramsScreen({
   const insets = useSafeAreaInsets();
 
   return (
-    <View className="flex-1 bg-[#D8D6C3]">
+    <View className="flex-1 bg-primary">
       <TopNavigationBarHexagramsScreen
         viewMode={viewMode}
         onViewModePress={changeViewMode}
@@ -134,7 +133,7 @@ export default function HexagramsScreen({
           onPress={handleCloseSearch}
         >
           <Pressable
-            className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-4 pb-3 bg-[#D8D6C3]"
+            className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-4 pb-3 bg-primary"
             onPress={(e) => e.stopPropagation()}
             style={{
               paddingTop: insets.top,
@@ -150,7 +149,7 @@ export default function HexagramsScreen({
                 placeholder={t("hexagrams.search")}
                 autoFocus
                 returnKeyType="search"
-                className="text-[#D8D6C3] flex-1 px-4 pb-1 h-11 text-sm"
+                className="text-primary flex-1 px-4 pb-1 h-11 text-sm"
                 placeholderTextColor="#a3a293"
                 style={{ fontFamily: "GeistMono_500Medium" }}
               />
@@ -160,7 +159,7 @@ export default function HexagramsScreen({
                   className="h-11 w-11 flex items-center justify-center"
                   activeOpacity={1}
                 >
-                  <X size={28} className="text-[#D8D6C3]" strokeWidth={1.5} />
+                  <X size={28} className="text-primary" strokeWidth={1.5} />
                 </TouchableOpacity>
               )}
             </View>
@@ -209,48 +208,17 @@ export default function HexagramsScreen({
               </View>
             }
             renderItem={({ item }) => (
-              <View
-                style={{ width: CARD_WIDTH, aspectRatio: 1 / 1.4 }}
-                className="border border-text/10 rounded-lg overflow-hidden"
-              >
-                <CardBackground 
-                  elements={item.elements ?? [0, 0]} 
-                />
-                    
-                <View className="absolute top-4 left-4 w-8 h-8 flex items-center justify-center">
-                  <GeistMonoText className="text-text/50 text-base">
-                    {item.displayNumber}
-                  </GeistMonoText>
-                </View>
-
-                <View className="absolute top-4 right-4 h-8 flex items-center justify-center">
-                  <BodoniText
-                    variant="medium"
-                    className="text-background text-xl"
-                  >
-                    {item.chineseName}
-                  </BodoniText>
-                </View>
-                <View className="flex-1 items-center justify-center">
-                  <HexagramSymbol
-                    lines={item.lines}
-                    size={100}
-                    color="#42436b"
-                    
-                  />
-                  
-                  <GeistMonoText className="text-text/60 text-base mt-2">
-                    {item.romanization}
-                  </GeistMonoText>
-
-                  <GeistMonoText
-                    variant="bold"
-                    className="text-text text-2xl px-12 text-center leading-7"
-                  >
-                    {item.content[i18n.language as "cs" | "en"].name}
-                  </GeistMonoText>
-                </View>
-              </View>
+              <>
+                {settings.theme === 'default' && (
+                  <CardDefault item={item} width={CARD_WIDTH} />
+                )}
+                 {settings.theme === 'minimal' && (
+                  <CardMinimal item={item} width={CARD_WIDTH} />
+                )}
+                {settings.theme === 'patterns' && (
+                  <CardPatterns item={item} width={CARD_WIDTH} />
+                )}
+              </>
             )}
           />
         </View>
@@ -378,9 +346,9 @@ export default function HexagramsScreen({
       )}
       <LinearGradient
         colors={[
-          "rgba(216, 214, 195, 1)",
-          "rgba(216, 214, 195, 1)",
-          "rgba(216, 214, 195, 0)",
+          "rgba(245, 232, 220, 1)",
+          "rgba(245, 232, 220, 1)",
+          "rgba(245, 232, 220, 0)",
         ]}
         className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
       />

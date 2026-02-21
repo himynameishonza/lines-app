@@ -19,11 +19,17 @@
     "title": "Settings",
     "language": "App language",
     "eink":"E-ink mode",
-    "viewMode": "Default hexagram view mode",
+    "viewMode": "Default book layout",
     "viewModes":{
      "carousel": "Carousel",
      "list": "List",
      "grid": "Grid"
+    },
+    "theme": "Book theme",
+    "themes":{
+      "default": "Default",
+      "minimal": "Minimalist",
+      "patterns": "Patterns"
     },
     "sortBy": "Hexagram sorting",
     "sort": {

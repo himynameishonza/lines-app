@@ -6,3 +6,9 @@ export type TViewMode = "carousel" | "list" | "grid";
 
 // Main navigation tabs
 export type TMainNavigationTab = 'dashboard' | 'hexagrams' | 'settings';
+
+// Themes
+export type TTheme = "default"|"minimal"|"patterns"
+
+// Sorting
+export type TSort = 'fuSi' | 'wen';

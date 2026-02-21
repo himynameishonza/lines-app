@@ -47,7 +47,7 @@ export default function Picker({ selectedValue, onValueChange, options, placehol
         onRequestClose={() => setIsOpen(false)}
       >
         <TouchableOpacity
-          className="flex-1 bg-[#D8D6C3]/80 justify-center items-center"
+          className="flex-1 bg-primary/80 justify-center items-center"
           activeOpacity={1}
           onPress={() => setIsOpen(false)}
         >
@@ -60,7 +60,7 @@ export default function Picker({ selectedValue, onValueChange, options, placehol
                   onPress={() => handleSelect(option.value)}
                   activeOpacity={0.8}
                 >
-                  <GeistMonoText className="text-[#D8D6C3] text-sm">
+                  <GeistMonoText className="text-primary text-sm">
                     {option.label}
                   </GeistMonoText>
                   {selectedValue === option.value && (

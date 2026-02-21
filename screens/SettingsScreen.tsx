@@ -7,11 +7,11 @@ import Picker from "../components/Picker";
 import Toggle from "../components/Toggle";
 import { useSettings } from "../contexts/SettingsContext";
 import { Coffee } from "lucide-react-native";
-import { TLanguage, TViewMode } from "../types/generic";
+import { TLanguage, TTheme, TViewMode } from "../types/generic";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
-  const { settings, setSortBy, setEinkMode, setViewMode } = useSettings();
+  const { settings, setSortBy, setEinkMode, setViewMode, setTheme } = useSettings();
   const currentLanguage = i18n.language as TLanguage;
 
   const changeLanguage = (lang: TLanguage) => {
@@ -38,8 +38,14 @@ export default function SettingsScreen() {
     { label: t("settings.viewModes.grid"), value: "grid" },
   ];
 
+  const themeOptions = [
+    { label: t("settings.themes.default"), value: "default" },
+    { label: t("settings.themes.minimal"), value: "minimal" },
+    { label: t("settings.themes.patterns"), value: "patterns" },
+  ];
+
   return (
-    <View className="bg-[#D8D6C3] flex-1 px-6 justify-between">
+    <View className="bg-primary flex-1 px-6 justify-between">
       <TopNavigationBarSettingsScreen />
       <View>
         <View className="divide-y divide-dashed divide-text/25 mt-28">
@@ -79,6 +85,19 @@ export default function SettingsScreen() {
               selectedValue={settings.viewMode}
               onValueChange={(value) => setViewMode(value as TViewMode)}
               options={viewModeOptions}
+            />
+          </View>
+
+           {/* Theme picker */}
+          <View className="flex flex-row w-full items-center justify-between py-6">
+            <GeistMonoText className="text-sm text-text" variant="bold">
+              {t("settings.theme")}
+            </GeistMonoText>
+
+            <Picker
+              selectedValue={settings.theme}
+              onValueChange={(value) => setTheme(value as TTheme)}
+              options={themeOptions}
             />
           </View>
 

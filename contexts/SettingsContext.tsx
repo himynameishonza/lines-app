@@ -1,24 +1,24 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { TViewMode } from '../types/generic';
+import { TSort, TTheme, TViewMode } from '../types/generic';
 
 const SETTINGS_STORAGE_KEY = '@settings';
 const SESSION_VIEW_MODE_KEY = '@hexagrams_session_view_mode';
 
-export type SortOption = 'fuSi' | 'wen';
-
 interface Settings {
-  sortBy: SortOption;
-  viewMode: TViewMode
+  sortBy: TSort;
+  viewMode: TViewMode;
   einkMode: boolean;
+  theme: TTheme;
 }
 
 interface SettingsContextType {
   settings: Settings;
   sessionViewMode: TViewMode | null;
-  setSortBy: (sortBy: SortOption) => void;
-  setViewMode: (viewMode: TViewMode)=>void;
+  setSortBy: (sortBy: TSort) => void;
+  setViewMode: (viewMode: TViewMode) => void;
   setEinkMode: (einkMode: boolean) => void;
+  setTheme: (theme: TTheme) => void;
   setSessionViewMode: (viewMode: TViewMode) => void;
 }
 
@@ -26,6 +26,7 @@ const defaultSettings: Settings = {
   sortBy: 'fuSi',
   viewMode: "carousel",
   einkMode: false,
+  theme: 'default',
 };
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
@@ -91,7 +92,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const setSortBy = (sortBy: SortOption) => {
+  const setSortBy = (sortBy: TSort) => {
     setSettings(prev => ({ ...prev, sortBy }));
   };
 
@@ -103,8 +104,12 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     setSettings(prev => ({ ...prev, viewMode }));
   };
 
+  const setTheme = (theme: TTheme) => {
+    setSettings(prev => ({ ...prev, theme }));
+  };
+
   return (
-    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setEinkMode, setViewMode, setSessionViewMode }}>
+    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setEinkMode, setViewMode, setTheme, setSessionViewMode }}>
       {children}
     </SettingsContext.Provider>
   );
