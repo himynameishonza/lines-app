@@ -179,7 +179,6 @@ export default function HexagramsScreen({
             scrollEnabled={filteredHexagrams.length > 0}
             contentContainerStyle={{
               paddingHorizontal: SIDE_PADDING,
-              gap: CARD_SPACING,
               alignItems: "center",
             }}
             style={{ flexGrow: 0 }}
@@ -207,8 +206,8 @@ export default function HexagramsScreen({
                 </GeistMonoText>
               </View>
             }
-            renderItem={({ item }) => (
-              <>
+            renderItem={({ item, index }) => (
+              <View style={{ marginRight: index < filteredHexagrams.length - 1 ? CARD_SPACING : 0 }}>
                 {settings.theme === 'default' && (
                   <CardDefault item={item} width={CARD_WIDTH} />
                 )}
@@ -218,7 +217,7 @@ export default function HexagramsScreen({
                 {settings.theme === 'patterns' && (
                   <CardPatterns item={item} width={CARD_WIDTH} />
                 )}
-              </>
+              </View>
             )}
           />
         </View>
