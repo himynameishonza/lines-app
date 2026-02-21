@@ -54,6 +54,11 @@
       "coinToss": "Hod mincí"
     }
   },
+  "hexagrams":{
+    "search": "Hledat v knize hexagramů...",
+    "noResultsTitle":"Žádné výsledky",
+    "noResultsDescription":"Zkuste vyhledat jiný výraz"
+  },
   "newReading": {
     "title": "Nové čtení",
     "guide": "Jak položit otázku:",

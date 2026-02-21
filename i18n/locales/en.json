@@ -33,6 +33,11 @@
     "coffee": "This app is free and developed independently in spare time. If it brings you value, you can support its development with a small contribution — perhaps for a coffee.",
     "contribute": "Contribute"
   },
+  "hexagrams":{
+    "search": "Search in book of hexagrams...",
+     "noResultsTitle":"No results",
+    "noResultsDescription":"Try a different search term"
+  },
   "home": {
     "greeting": {
       "morning": "Good Morning",

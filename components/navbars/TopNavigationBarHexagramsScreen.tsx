@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import {
   GalleryHorizontal,
   LayoutGrid,
@@ -14,12 +14,14 @@ interface TopNavigationBarHexagramsScreenProps {
   onViewModePress?: () => void;
   onSearchPress?: () => void;
   viewMode: TViewMode;
+  isSearchActive?: boolean;
 }
 
 export default function TopNavigationBarHexagramsScreen({
   onViewModePress,
   onSearchPress,
   viewMode,
+  isSearchActive = false,
 }: TopNavigationBarHexagramsScreenProps) {
   const { t } = useTranslation();
 
@@ -44,7 +46,12 @@ export default function TopNavigationBarHexagramsScreen({
       }
       rightElement={
         <TouchableOpacity onPress={onSearchPress} activeOpacity={0.6}>
-          <Search size={28} className='text-text' strokeWidth={1.5} />
+          <View>
+            <Search size={28} className='text-text' strokeWidth={1.5} />
+            {isSearchActive && (
+              <View className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-main rounded-full" />
+            )}
+          </View>
         </TouchableOpacity>
       }
     />
