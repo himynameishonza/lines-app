@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TViewMode } from '../types/generic';
 
 const SETTINGS_STORAGE_KEY = '@settings';
+const SESSION_VIEW_MODE_KEY = '@hexagrams_session_view_mode';
 
 export type SortOption = 'fuSi' | 'wen';
 
@@ -14,9 +15,11 @@ interface Settings {
 
 interface SettingsContextType {
   settings: Settings;
+  sessionViewMode: TViewMode | null;
   setSortBy: (sortBy: SortOption) => void;
   setViewMode: (viewMode: TViewMode)=>void;
   setEinkMode: (einkMode: boolean) => void;
+  setSessionViewMode: (viewMode: TViewMode) => void;
 }
 
 const defaultSettings: Settings = {
@@ -29,11 +32,13 @@ const SettingsContext = createContext<SettingsContextType | undefined>(undefined
 
 export function SettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<Settings>(defaultSettings);
+  const [sessionViewMode, setSessionViewModeState] = useState<TViewMode | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load settings from AsyncStorage on mount
+  // Load settings and session view mode from AsyncStorage on mount
   useEffect(() => {
     loadSettings();
+    loadSessionViewMode();
   }, []);
 
   // Save settings to AsyncStorage whenever they change
@@ -66,6 +71,26 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const loadSessionViewMode = async () => {
+    try {
+      const stored = await AsyncStorage.getItem(SESSION_VIEW_MODE_KEY);
+      if (stored) {
+        setSessionViewModeState(stored as TViewMode);
+      }
+    } catch (error) {
+      console.error('Error loading session view mode:', error);
+    }
+  };
+
+  const setSessionViewMode = async (viewMode: TViewMode) => {
+    try {
+      await AsyncStorage.setItem(SESSION_VIEW_MODE_KEY, viewMode);
+      setSessionViewModeState(viewMode);
+    } catch (error) {
+      console.error('Error saving session view mode:', error);
+    }
+  };
+
   const setSortBy = (sortBy: SortOption) => {
     setSettings(prev => ({ ...prev, sortBy }));
   };
@@ -79,7 +104,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <SettingsContext.Provider value={{ settings, setSortBy, setEinkMode, setViewMode }}>
+    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setEinkMode, setViewMode, setSessionViewMode }}>
       {children}
     </SettingsContext.Provider>
   );
