@@ -174,6 +174,7 @@ export default function HexagramsScreen({
             showsHorizontalScrollIndicator={false}
             snapToInterval={CARD_WIDTH + CARD_SPACING}
             decelerationRate="fast"
+            scrollEnabled={filteredHexagrams.length > 0}
             contentContainerStyle={{
               paddingHorizontal: SIDE_PADDING,
               gap: CARD_SPACING,
@@ -246,6 +247,7 @@ export default function HexagramsScreen({
             <FlatList
               data={filteredHexagrams}
               keyExtractor={(item) => item.id.toString()}
+              scrollEnabled={filteredHexagrams.length > 0}
               contentContainerStyle={{
                 paddingVertical: 112,
                 paddingHorizontal: 12,
@@ -301,6 +303,7 @@ export default function HexagramsScreen({
               data={filteredHexagrams}
               keyExtractor={(item) => item.id.toString()}
               numColumns={2}
+              scrollEnabled={filteredHexagrams.length > 0}
               contentContainerStyle={{
                 paddingVertical: 112,
                 paddingHorizontal: 12,
