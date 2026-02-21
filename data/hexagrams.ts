@@ -46,13 +46,13 @@ export const hexagrams: Hexagram[] = [
             "Jednej z jasnosti, ne z netrpělivosti. Síla je na tvé straně, pokud víš, proč ji používáš.",
             "Vytrvalost přináší úspěch. Každý krok dělej vědomě a bez okázalosti.",
             "Pozor na pýchu. Když síla překročí míru, začíná obrat.",
-            "Vytvářej, ale zůstávej bdělý. Největší moc je ta, která zná své hranice."
+            "Vytvářej, ale zůstávej bdělý. Největší moc je ta, která zná své hranice.",
           ],
           introspection: [
             "Kde ve svém životě právě stojíš na začátku?",
             "Jednáš z vnitřní jasnosti, nebo z tlaku okolí?",
-            "Víš, kdy je čas pokračovat – a kdy je čas ustoupit?"
-          ]
+            "Víš, kdy je čas pokračovat – a kdy je čas ustoupit?",
+          ],
         },
         anatomy:
           "Vývoj Tvořivého probíhá jako vzestup energie od skrytého potenciálu k plnému projevu. Začíná tiše – ve fázi přípravy, kdy síla ještě není viditelná. Postupně se však objevuje ve světě, získává vliv a dosahuje vrcholu.\n\nKaždý stupeň vyžaduje jiný druh vědomí. Nejprve trpělivost, poté odvahu, následně vytrvalost a nakonec schopnost nést odpovědnost za vlastní moc. Nejvyšší bod není konec cesty, ale zkouška charakteru.\n\nTvořivé ukazuje, že skutečný růst není jen expanze, ale i schopnost zastavit se ve správný okamžik. Pokud energie pokračuje bez míry, začíná její obrat. Udržet rovnováhu ve vrcholu je největší výzva.",
@@ -104,13 +104,13 @@ export const hexagrams: Hexagram[] = [
       en: {
         name: "The Creative",
         meaning:
-          "Hexagram 1 represents the principle of Heaven — pure creative force. It is the energy of initiation, ascent, and continuous movement. The Creative symbolizes conscious action and the capacity to set events into motion with responsibility and clarity.\n\nThis hexagram marks a moment of full potential. True creativity arises from inner integrity and alignment with a higher order. Heaven moves without rest — one who follows it strengthens character through constant self-cultivation.",
+          "The Creative represents the principle of Heaven — pure creative force. It is the energy of initiation, ascent, and continuous movement. The Creative symbolizes conscious action and the capacity to set events into motion with responsibility and clarity.\n\nThis hexagram marks a moment of full potential. True creativity arises from inner integrity and alignment with a higher order. Heaven moves without rest — one who follows it strengthens character through constant self-cultivation.",
         oracle: {
           interpretation: [
             "Success comes through perseverance and proper timing. Act from clarity and development will unfold naturally.",
-            "Beware of pride. When strength exceeds its measure, reversal begins."
+            "Beware of pride. When strength exceeds its measure, reversal begins.",
           ],
-          introspection: []
+          introspection: [],
         },
         anatomy:
           "The development of the Creative unfolds as a gradual ascent of energy from hidden potential to full expression. It begins quietly — in preparation and inner consolidation. Over time, strength becomes visible, influence grows, and the movement reaches its peak.\n\nEach stage requires a different kind of awareness: patience at the beginning, courage in emergence, perseverance in action, and responsibility at the height of power. The highest point is not an end, but a test of character.\n\nThe Creative teaches that true growth is not only expansion, but also the wisdom to stop at the right moment. When force continues beyond its measure, reversal begins. Maintaining balance at the summit is the greatest challenge.",
@@ -177,12 +177,12 @@ export const hexagrams: Hexagram[] = [
           interpretation: [
             "Neusiluj o kontrolu. Naslouchej tomu, co situace potřebuje.",
             "Stabilita přináší úspěch. Jednej trpělivě a bez potřeby okamžitého výsledku.",
-            "Následování není slabost, pokud víš, komu a čemu důvěřuješ."
+            "Následování není slabost, pokud víš, komu a čemu důvěřuješ.",
           ],
           introspection: [
             "Kde můžeš být oporou místo toho, abys tlačil vlastní směr?",
-            "Kde si pleteš trpělivost s pasivitou?"
-          ]
+            "Kde si pleteš trpělivost s pasivitou?",
+          ],
         },
         anatomy:
           "Vývoj Přijetí neprobíhá jako vzestup, ale jako prohlubování. Energie se usazuje, stabilizuje a vytváří prostor pro růst druhých.\n\nOd prvních jemných signálů až po plnou stabilitu jde o proces zrání důvěry. Síla se zde neprojevuje navenek, ale ve schopnosti nést a podporovat.\n\nPokud však stabilita přejde v nehybnost, vzniká napětí. Přijetí učí, že pružnost je silnější než odpor.",
@@ -239,12 +239,12 @@ export const hexagrams: Hexagram[] = [
           interpretation: [
             "Do not strive to control. Listen to what the situation requires.",
             "Stability brings success. Act with patience and without the need for immediate results.",
-            "Following is not weakness when you know whom and what you trust."
+            "Following is not weakness when you know whom and what you trust.",
           ],
           introspection: [
             "Where can you become support instead of pushing your own direction?",
-            "Where might patience be turning into passivity?"
-          ]
+            "Where might patience be turning into passivity?",
+          ],
         },
         anatomy:
           "The development of the Receptive is not an ascent but a deepening. Energy settles, stabilizes, and creates space for others to grow.\n\nFrom subtle beginnings to full steadiness, the process is one of maturing trust. Strength here does not manifest through dominance, but through the capacity to sustain and support.\n\nWhen stability hardens into immobility, tension appears. The Receptive teaches that flexibility is stronger than resistance.",
@@ -308,23 +308,17 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Počáteční obtíže představují okamžik zrodu, kdy se nové snaží prorazit do světa. Je to energie začátku, která však naráží na odpor prostředí. Chaos, nejistota a zmatek nejsou chybou – jsou přirozenou součástí vzniku.\n\nPsychologicky jde o fázi, kdy cítíš impuls ke změně, ale podmínky ještě nejsou stabilní. Směr existuje, ale forma je nejasná. Tento hexagram učí trpělivosti, vytrvalosti a schopnosti vyhledat podporu.\n\nObtíže nejsou znamením selhání. Jsou známkou toho, že něco skutečně vzniká. Pokud však tlak vede k ukvapenosti, může se proces zadrhnout. Začátky vyžadují vedení a strukturu.",
         oracle: {
-
           interpretation: [
-
             "Začátky jsou křehké. Nespěchej.",
 
             "Vyhledej podporu a buduj pevné základy místo rychlého postupu.",
 
-            "Obtíže jsou součástí cesty, nikoli jejím koncem."
-
+            "Obtíže jsou součástí cesty, nikoli jejím koncem.",
           ],
 
           introspection: [
-
-            "Kde ve svém životě právě něco začíná? Snažíš se prorazit silou, nebo buduješ postupně?"
-
-          ]
-
+            "Kde ve svém životě právě něco začíná? Snažíš se prorazit silou, nebo buduješ postupně?",
+          ],
         },
         anatomy:
           "Vývoj tohoto hexagramu připomíná klíčení semene. Nejprve tlak půdy, odpor a nejistota. Postupně však vzniká tvar a směr.\n\nObtíže nejsou překážkou růstu, ale jeho podmínkou. Pokud je proces veden trpělivě a s podporou, vzniká pevný základ.\n\nUspěchat počátek znamená oslabit budoucnost. Správné tempo je důležitější než rychlost.",
@@ -378,23 +372,17 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Initial Difficulty represents the moment of emergence, when something new attempts to take form in the world. It is the energy of beginning confronted by resistance. Confusion, uncertainty, and tension are not mistakes — they are natural aspects of birth.\n\nPsychologically, this hexagram reflects the phase when you feel the impulse for change but conditions are not yet stable. Direction exists, but structure is unclear. It teaches patience, perseverance, and the wisdom to seek guidance.\n\nDifficulties do not indicate failure. They signal that something real is coming into being. When pressure leads to haste, the process may stall. Beginnings require structure and support.",
         oracle: {
-
           interpretation: [
-
             "Beginnings are fragile. Do not rush.",
 
             "Seek support and build strong foundations instead of forcing rapid progress.",
 
-            "Obstacles are part of the path, not its end."
-
+            "Obstacles are part of the path, not its end.",
           ],
 
           introspection: [
-
-            "Where in your life is something trying to emerge? Are you forcing it, or allowing it to develop steadily?"
-
-          ]
-
+            "Where in your life is something trying to emerge? Are you forcing it, or allowing it to develop steadily?",
+          ],
         },
         anatomy:
           "The development of this hexagram resembles a seed pushing through soil. At first there is pressure, resistance, and uncertainty. Gradually, form and direction emerge.\n\nDifficulty is not the enemy of growth but its condition. With patience and support, a solid foundation forms.\n\nRushing the beginning weakens the future. Proper timing matters more than speed.",
@@ -458,23 +446,17 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Nezralost představuje stav, kdy člověk ještě nevidí jasně, ale je připraven učit se. Není to hloupost, nýbrž počáteční fáze poznání. Zmatek a nejistota zde nejsou překážkou, ale vstupní branou k pochopení.\n\nPsychologicky jde o moment, kdy si uvědomuješ, že nevíš. To je první krok k moudrosti. Hexagram učí pokoře a ochotě přijmout vedení. Učení však musí být dobrovolné – vnucené poučení nevede k růstu.\n\nNezralost je přirozená fáze každého začátku. Pokud je však doprovázena tvrdohlavostí nebo odmítáním rady, proměňuje se ve stagnaci. Otevřenost je zde klíčem.",
         oracle: {
-
           interpretation: [
-
             "Hledej radu, ale ptej se upřímně.",
 
             "Učení přichází, když jsi připraven naslouchat.",
 
-            "Nevyžaduj odpovědi, pokud nejsi ochoten změnit své chování."
-
+            "Nevyžaduj odpovědi, pokud nejsi ochoten změnit své chování.",
           ],
 
           introspection: [
-
-            "Kde ve svém životě potřebuješ vedení? A jsi skutečně připraven ho přijmout?"
-
-          ]
-
+            "Kde ve svém životě potřebuješ vedení? A jsi skutečně připraven ho přijmout?",
+          ],
         },
         anatomy:
           "Nezralost začíná nevědomostí, ale může skončit moudrostí. Proces vyžaduje pokoru a ochotu přijmout korekci.\n\nRůst nastává tehdy, když otázky vycházejí z opravdového zájmu, nikoli z provokace.\n\nOdmítání učení prodlužuje zmatek. Otevřenost jej proměňuje v porozumění.",
@@ -528,23 +510,17 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Youthful Folly represents the state of not yet knowing but being ready to learn. It is not stupidity, but the early stage of understanding. Confusion and uncertainty are not obstacles here — they are the gateway to insight.\n\nPsychologically, this hexagram marks the moment when you recognize your own ignorance. That recognition is the beginning of wisdom. It teaches humility and the willingness to accept guidance. Learning, however, must be voluntary; forced instruction does not create growth.\n\nFolly is a natural phase of every beginning. When combined with stubbornness or refusal to listen, it turns into stagnation. Openness is the essential key.",
         oracle: {
-
           interpretation: [
-
             "Seek guidance, but ask sincerely.",
 
             "Learning comes when you are ready to listen.",
 
-            "Do not demand answers if you are unwilling to change."
-
+            "Do not demand answers if you are unwilling to change.",
           ],
 
           introspection: [
-
-            "Where in your life do you need instruction? And are you truly willing to receive it?"
-
-          ]
-
+            "Where in your life do you need instruction? And are you truly willing to receive it?",
+          ],
         },
         anatomy:
           "Youthful Folly begins in not-knowing but can end in wisdom. The process requires humility and the willingness to be corrected.\n\nGrowth happens when questions arise from genuine curiosity rather than provocation.\n\nRefusing to learn prolongs confusion. Openness transforms it into understanding.",
@@ -608,23 +584,17 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Čekání představuje vědomé vyčkávání. Nejde o pasivitu, ale o schopnost zadržet akci do správného okamžiku. Síla je přítomná, ale okolnosti ještě nejsou zralé.\n\nPsychologicky je to stav, kdy cítíš napětí mezi touhou jednat a nutností počkat. Učí rozlišovat mezi impulsem a správným načasováním.\n\nTrpělivost zde není slabostí. Je to forma důvěry. Pokud však čekání přejde v úzkost nebo nečinnost, ztrácí svůj smysl.",
         oracle: {
-
           interpretation: [
-
             "Čekej klidně. Správný okamžik přijde.",
 
             "Neurychluj vývoj silou.",
 
-            "Trpělivost je aktivní postoj."
-
+            "Trpělivost je aktivní postoj.",
           ],
 
           introspection: [
-
-            "Kde tlačíš na výsledek, který ještě není připraven?"
-
-          ]
-
+            "Kde tlačíš na výsledek, který ještě není připraven?",
+          ],
         },
         anatomy:
           "Čekání začíná napětím a končí uvolněním. Pokud je vyčkávání vědomé, přináší jasnost.\n\nNetrpělivost vede k chybě. Správné načasování je silnější než rychlost.",
@@ -672,23 +642,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Waiting represents conscious restraint. It is not passivity, but the ability to hold action until the right moment. Strength exists, yet circumstances are not mature.\n\nPsychologically, it reflects tension between impulse and timing. It teaches discernment.\n\nPatience is not weakness. It is trust. When waiting turns into anxiety, it loses its power.",
         oracle: {
-
           interpretation: [
-
             "Wait calmly. The right moment will arrive.",
 
             "Do not force development.",
 
-            "Patience is an active stance."
-
+            "Patience is an active stance.",
           ],
 
-          introspection: [
-
-            "Where are you pushing for results too early?"
-
-          ]
-
+          introspection: ["Where are you pushing for results too early?"],
         },
         anatomy:
           "Waiting begins in tension and resolves in release. Conscious restraint brings clarity.\n\nImpatience leads to error. Timing outweighs speed.",
@@ -746,25 +708,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Konflikt nevzniká z ničeho. Vzniká ve chvíli, kdy se dvě pravdy odmítají slyšet. Tento hexagram nepopisuje hádku jako vnější událost, ale jako vnitřní napětí. Často jde o střet mezi tím, co chceme, a tím, co je možné. Nebo mezi potřebou být vyslyšen a obavou ze ztráty.\n\nPsychologicky představuje okamžik, kdy energie proudí proti sobě. Člověk má pocit, že musí obhajovat své stanovisko. Tlak roste. Myšlenky se vyostřují. V této fázi nejde o vítězství, ale o pochopení skutečného jádra problému.\n\nKonflikt může být očistný, pokud vede k vyjasnění. Pokud je však veden z ega, zanechává stopu rozdělení. Síla tohoto hexagramu spočívá ve schopnosti zastavit eskalaci dříve, než přeroste v destrukci.\n\nNěkdy je moudřejší ustoupit. Ne proto, že nemáš pravdu, ale proto, že cena vítězství je příliš vysoká.",
         oracle: {
-
           interpretation: [
-
             "Nezrychluj spor.",
 
             "Hledej jádro, ne povrch.",
 
-            "Mluv pravdivě, ale bez agrese."
-
+            "Mluv pravdivě, ale bez agrese.",
           ],
 
           introspection: [
-
             "Co vlastně bráníš – pravdu, nebo své ego?",
 
-            "A co by se stalo, kdybys na chvíli ustoupil?"
-
-          ]
-
+            "A co by se stalo, kdybys na chvíli ustoupil?",
+          ],
         },
         anatomy:
           "Konflikt začíná jako drobné napětí. Pokud není rozpoznán, sílí a polarizuje.\n\nSkutečný vývoj nastává ve chvíli, kdy člověk přestane bojovat o dominanci a začne hledat porozumění. Ustoupení zde není slabost, ale strategie vědomí.\n\nKaždý konflikt může být bodem růstu – nebo bodem rozdělení. Záleží na úrovni vědomí, z níž jednáš.",
@@ -816,25 +772,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Conflict does not arise out of nowhere. It appears when two truths refuse to hear one another. This hexagram does not describe an external quarrel but an inner tension. Often it is the clash between desire and reality, or between the need to be heard and the fear of losing position.\n\nPsychologically, it marks a state where energy moves against itself. One feels compelled to defend a stance. Pressure increases. Thoughts sharpen. At this stage, the issue is not victory but clarity.\n\nConflict can purify if it leads to understanding. But when driven by ego, it leaves division behind. Its wisdom lies in knowing when escalation becomes destructive.\n\nSometimes stepping back is strength. Not because you are wrong, but because the cost of winning may be too high.",
         oracle: {
-
           interpretation: [
-
             "Do not accelerate the dispute.",
 
             "Seek the core, not the surface.",
 
-            "Speak truth without aggression."
-
+            "Speak truth without aggression.",
           ],
 
           introspection: [
-
             "What are you defending – truth or ego?",
 
-            "And what would happen if you stepped back?"
-
-          ]
-
+            "And what would happen if you stepped back?",
+          ],
         },
         anatomy:
           "Conflict begins as subtle tension. If ignored, it intensifies and polarizes.\n\nTrue development occurs when the need to dominate is replaced by the wish to understand. Withdrawal here is awareness, not weakness.\n\nEvery conflict can become growth — or division. The outcome depends on consciousness.",
@@ -892,25 +842,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Vojsko symbolizuje organizovanou sílu. Nejde o agresi, ale o disciplínu. Tento hexagram se objevuje ve chvíli, kdy je potřeba soustředit energii a jednat koordinovaně. Chaos musí být nahrazen strukturou.\n\nPsychologicky představuje schopnost převzít odpovědnost za kolektivní situaci. Vnitřně může jít o sjednocení vlastních rozporuplných částí – rozptýlené impulzy se musí podřídit jasnému záměru.\n\nSíla bez řádu je nebezpečná. Řád bez lidskosti je tvrdý. Skutečné vedení spočívá ve vyváženosti těchto dvou pólů.\n\nVojsko není symbolem boje, ale schopnosti čelit obtížím organizovaně a s jasnou hierarchií hodnot.",
         oracle: {
-
           interpretation: [
-
             "Jednej disciplinovaně.",
 
             "Nespoléhej na chaos.",
 
-            "Vedení vyžaduje odpovědnost."
-
+            "Vedení vyžaduje odpovědnost.",
           ],
 
           introspection: [
-
             "Jsi připraven nést důsledky svých rozhodnutí?",
 
-            "A má tvé jednání jasný směr?"
-
-          ]
-
+            "A má tvé jednání jasný směr?",
+          ],
         },
         anatomy:
           "Síla se nejprve shromažďuje a strukturuje.\n\nVývoj nastává skrze disciplínu a odpovědnost. Bez nich se energie rozpadá.\n\nSkutečné vítězství není porážka druhých, ale zvládnutí vlastního chaosu.",
@@ -958,25 +902,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Army symbolizes organized strength. It is not aggression, but discipline. This hexagram appears when energy must be focused and coordinated. Chaos needs structure.\n\nPsychologically, it represents responsibility within collective situations. Internally, scattered impulses must align under a clear intention.\n\nStrength without order is dangerous. Order without humanity becomes rigid. True leadership balances both.\n\nThe Army is not about war, but about confronting difficulty with clarity and discipline.",
         oracle: {
-
           interpretation: [
-
             "Act with discipline.",
 
             "Do not rely on chaos.",
 
-            "Leadership requires responsibility."
-
+            "Leadership requires responsibility.",
           ],
 
           introspection: [
-
             "Are you ready to bear the consequences?",
 
-            "Is your direction clear?"
-
-          ]
-
+            "Is your direction clear?",
+          ],
         },
         anatomy:
           "Energy gathers and forms structure.\n\nDevelopment depends on discipline and responsibility.\n\nVictory lies in mastering inner chaos.",
@@ -1034,25 +972,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Sounáležitost vyjadřuje potřebu spojení. Člověk není izolovaný ostrov. Tento hexagram se objevuje tehdy, když je důležité navázat vztah nebo upevnit spojenectví.\n\nPsychologicky poukazuje na schopnost důvěřovat a zároveň si zachovat vlastní identitu. Spojení není splynutí, ale vědomé propojení.\n\nBez důvěry se vztahy rozpadají. Bez individuality se ztrácí autenticita.\n\nSounáležitost je vědomé rozhodnutí být součástí celku.",
         oracle: {
-
           interpretation: [
-
             "Hledej spojení.",
 
             "Buď důvěryhodný.",
 
-            "Nevzdávej se sebe sama."
-
+            "Nevzdávej se sebe sama.",
           ],
 
           introspection: [
-
             "S kým nebo s čím se máš propojit?",
 
-            "A je toto spojení vzájemné?"
-
-          ]
-
+            "A je toto spojení vzájemné?",
+          ],
         },
         anatomy:
           "Spojení začíná důvěrou.\n\nStabilita vzniká vzájemností.\n\nSkutečná jednota respektuje individualitu.",
@@ -1100,25 +1032,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Holding Together expresses the need for connection. No one exists in isolation. This hexagram arises when relationship and alliance matter.\n\nPsychologically, it reflects trust balanced with individuality. Connection is not fusion, but conscious bonding.\n\nWithout trust, bonds dissolve. Without identity, authenticity fades.\n\nUnity is a deliberate choice.",
         oracle: {
-
           interpretation: [
-
             "Seek connection.",
 
             "Be trustworthy.",
 
-            "Do not lose yourself."
-
+            "Do not lose yourself.",
           ],
 
-          introspection: [
-
-            "With whom should you align?",
-
-            "Is the bond mutual?"
-
-          ]
-
+          introspection: ["With whom should you align?", "Is the bond mutual?"],
         },
         anatomy:
           "Connection begins with trust.\n\nStability requires reciprocity.\n\nTrue unity preserves individuality.",
@@ -1176,25 +1098,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Síla malého představuje období, kdy velké kroky nejsou možné. Energie se hromadí, ale okolnosti ještě nedovolují plný průlom. Tento hexagram učí trpělivosti a jemnému působení. Není čas na razantní rozhodnutí, ale na kultivaci detailu.\n\nPsychologicky jde o fázi, kdy člověk cítí potenciál, ale naráží na jemné překážky. Frustrace může vznikat z pocitu zadržení. Ve skutečnosti však probíhá důležitý proces vnitřního zrání.\n\nMalé kroky, drobné úpravy a každodenní disciplína zde mají větší váhu než dramatické činy. To, co se jeví jako stagnace, může být ve skutečnosti konsolidací.\n\nSíla malého není slabost. Je to schopnost ovlivňovat situaci nenápadně, vytrvale a s respektem k rytmu času.",
         oracle: {
-
           interpretation: [
-
             "Neuspěchej výsledek.",
 
             "Zaměř se na detaily.",
 
-            "Udržuj směr, i když je tempo pomalé."
-
+            "Udržuj směr, i když je tempo pomalé.",
           ],
 
           introspection: [
-
             "Kde můžeš dnes udělat malý, ale důsledný krok?",
 
-            "A co v tobě právě dozrává?"
-
-          ]
-
+            "A co v tobě právě dozrává?",
+          ],
         },
         anatomy:
           "Proces začíná zadržením. Energie není blokována, ale kultivována.\n\nVývoj probíhá skrze trpělivost a jemnou vytrvalost. Malé úspěchy se postupně skládají do větší stability.\n\nPokud člověk přijme rytmus času, objeví, že zdánlivé omezení bylo přípravou na pevnější a vědomější krok vpřed.",
@@ -1243,25 +1159,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Taming Power of the Small represents a time when major advances are not yet possible. Energy gathers, but circumstances do not allow a breakthrough. This hexagram teaches patience and subtle influence. It is not a time for dramatic action, but for refinement.\n\nPsychologically, it reflects a state of contained potential. One feels capable, yet subtly restrained. Frustration may arise from perceived limitation, yet inner maturation is taking place.\n\nSmall actions, careful adjustments, and daily discipline matter more than bold gestures. What appears as delay may in fact be consolidation.\n\nThe power of the small is not weakness. It is the capacity to shape reality gently and persistently, respecting timing.",
         oracle: {
-
           interpretation: [
-
             "Do not rush the outcome.",
 
             "Focus on details.",
 
-            "Maintain direction despite slow progress."
-
+            "Maintain direction despite slow progress.",
           ],
 
           introspection: [
-
             "What small, consistent step can you take today?",
 
-            "What within you is quietly ripening?"
-
-          ]
-
+            "What within you is quietly ripening?",
+          ],
         },
         anatomy:
           "The process begins with containment. Energy is not blocked, but cultivated.\n\nDevelopment unfolds through patience and subtle persistence. Small successes build deeper stability.\n\nWhen timing is respected, restraint reveals itself as preparation for a more conscious advance.",
@@ -1319,25 +1229,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Kráčení symbolizuje vědomý pohyb vpřed v citlivé situaci. Tento hexagram se objevuje tehdy, když člověk vstupuje na nejistou půdu. Každý krok vyžaduje pozornost, respekt a sebekontrolu.\n\nPsychologicky jde o schopnost jednat s odvahou, aniž by člověk ztratil pokoru. Kráčení není útok, ale uvědomělé přibližování se k cíli.\n\nRiziko zde není nepřítel, ale učitel. Pokud je krok veden vědomě, nebezpečí se promění v růst.\n\nTento hexagram učí, že síla spočívá v přesnosti. Jeden neuvážený krok může situaci narušit, zatímco vědomý postup vytváří respekt.",
         oracle: {
-
           interpretation: [
-
             "Kráčej opatrně.",
 
             "Jednej s respektem.",
 
-            "Neztrácej rovnováhu."
-
+            "Neztrácej rovnováhu.",
           ],
 
           introspection: [
-
             "Kde právě vstupuješ na citlivou půdu?",
 
-            "A jak můžeš zachovat důstojnost v každém kroku?"
-
-          ]
-
+            "A jak můžeš zachovat důstojnost v každém kroku?",
+          ],
         },
         anatomy:
           "Proces začíná odvahou vstoupit.\n\nVývoj probíhá skrze rovnováhu mezi jistotou a pokorou.\n\nPokud člověk zachová bdělost, i nejistá cesta se stává stabilní. Vědomý krok je silnější než bezhlavý běh.",
@@ -1385,25 +1289,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Treading symbolizes conscious movement within a sensitive situation. It appears when one steps onto uncertain ground. Each action requires attention, respect, and self-control.\n\nPsychologically, it reflects courage balanced by humility. Treading is not aggression, but mindful approach.\n\nRisk is not the enemy but the teacher. When movement is aware, danger transforms into growth.\n\nThis hexagram teaches that strength lies in precision. A careless step may disrupt harmony, while careful movement builds trust.",
         oracle: {
-
           interpretation: [
-
             "Proceed carefully.",
 
             "Act with respect.",
 
-            "Maintain balance."
-
+            "Maintain balance.",
           ],
 
           introspection: [
-
             "Where are you stepping into sensitive territory?",
 
-            "How can you preserve dignity in each step?"
-
-          ]
-
+            "How can you preserve dignity in each step?",
+          ],
         },
         anatomy:
           "The process begins with courage.\n\nDevelopment unfolds through balance between confidence and humility.\n\nAwareness turns uncertain ground into stable progress.",
@@ -1461,25 +1359,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Mír představuje harmonické spojení protikladů. Nebe a Země jsou zde ve vzájemném souladu – to, co je nahoře, podporuje to, co je dole. Tento hexagram symbolizuje období přirozeného toku, kdy se věci vyvíjejí bez nadměrného úsilí.\n\nPsychologicky jde o stav vnitřní integrace. Rozum a cit, aktivita a klid, vnější svět a vnitřní potřeby nejsou ve sporu. Energie proudí volně, protože není blokována vnitřním odporem.\n\nMír však není samozřejmost. Vyžaduje vědomou péči. Jakmile se objeví pýcha nebo zanedbání, rovnováha se může vychýlit.\n\nTento hexagram připomíná, že harmonie není statický stav, ale živý proces. Je třeba ji udržovat citlivostí a otevřeností.",
         oracle: {
-
           interpretation: [
-
             "Využij období harmonie.",
 
             "Buduj vztahy.",
 
-            "Neusínej na úspěchu."
-
+            "Neusínej na úspěchu.",
           ],
 
           introspection: [
-
             "Kde ve tvém životě proudí věci přirozeně?",
 
-            "A jak tuto rovnováhu můžeš vědomě udržet?"
-
-          ]
-
+            "A jak tuto rovnováhu můžeš vědomě udržet?",
+          ],
         },
         anatomy:
           "Mír vzniká propojením protikladů.\n\nVývoj spočívá v udržování otevřenosti a pokory i v období hojnosti.\n\nPokud je harmonie vědomě chráněna, může přerůst v hlubší stabilitu. Pokud je zanedbána, začíná se nenápadně vytrácet.",
@@ -1527,25 +1419,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Peace represents harmonious balance between opposing forces. Heaven and Earth support one another. This hexagram signifies a time of natural flow, when events unfold with relative ease.\n\nPsychologically, it reflects inner integration. Reason and emotion, action and rest, outer demands and inner needs coexist without conflict. Energy moves freely because resistance dissolves.\n\nPeace, however, is not automatic. It requires awareness and humility. Pride or neglect can disturb balance.\n\nHarmony is not static; it is alive. It must be sustained through attentiveness and openness.",
         oracle: {
-
           interpretation: [
-
             "Use this time of harmony wisely.",
 
             "Strengthen relationships.",
 
-            "Do not grow complacent."
-
+            "Do not grow complacent.",
           ],
 
           introspection: [
-
             "Where is life flowing naturally?",
 
-            "How can you preserve this balance consciously?"
-
-          ]
-
+            "How can you preserve this balance consciously?",
+          ],
         },
         anatomy:
           "Peace arises from balanced integration.\n\nDevelopment depends on maintaining humility during prosperity.\n\nWhen harmony is consciously nurtured, it matures into lasting stability.",
@@ -1603,25 +1489,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Stagnace představuje období, kdy spojení mezi silami je přerušeno. To, co je nahoře, se odděluje od toho, co je dole. Komunikace slábne a proudění energie je omezené.\n\nPsychologicky jde o pocit odcizení, zablokování nebo nedorozumění. Člověk může mít dojem, že jeho úsilí nenachází odezvu. Tento stav však není konečný – je to fáze cyklu.\n\nStagnace učí trpělivosti a vnitřní stabilitě. Když vnější podmínky neumožňují pohyb, je čas obrátit se dovnitř.\n\nTento hexagram připomíná, že i období uzavření má svůj význam. Vnitřní růst může probíhat i tehdy, když se navenek zdá, že se nic nehýbe.",
         oracle: {
-
           interpretation: [
-
             "Nepřetlačuj odpor.",
 
             "Zachovej integritu.",
 
-            "Obrať se dovnitř."
-
+            "Obrať se dovnitř.",
           ],
 
           introspection: [
-
             "Kde cítíš odpojení?",
 
-            "A co můžeš kultivovat uvnitř sebe?"
-
-          ]
-
+            "A co můžeš kultivovat uvnitř sebe?",
+          ],
         },
         anatomy:
           "Stagnace je dočasné oddělení.\n\nVývoj probíhá skrze vnitřní stabilitu a trpělivost.\n\nKdyž jsou vnitřní základy pevné, proudění se přirozeně obnoví.",
@@ -1669,25 +1549,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Stagnation represents a time when connection between forces is disrupted. What is above separates from what is below. Communication weakens and energy flow is restricted.\n\nPsychologically, it reflects alienation or blockage. Effort may seem unsupported. Yet this state is part of a cycle.\n\nStagnation teaches patience and inner stability. When outer movement is limited, attention turns inward.\n\nEven periods of standstill carry meaning. Inner growth continues despite outer stillness.",
         oracle: {
-
           interpretation: [
-
             "Do not force resistance.",
 
             "Preserve integrity.",
 
-            "Turn inward."
-
+            "Turn inward.",
           ],
 
           introspection: [
-
             "Where do you feel disconnection?",
 
-            "What can you cultivate within?"
-
-          ]
-
+            "What can you cultivate within?",
+          ],
         },
         anatomy:
           "Stagnation marks temporary separation.\n\nDevelopment depends on patience and inner steadiness.\n\nWhen inner foundations are secure, flow naturally returns.",
@@ -1745,25 +1619,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Společenství lidí symbolizuje vědomé spojení mezi jednotlivci na základě sdílených hodnot. Nejde o náhodné seskupení, ale o sjednocení kolem společného smyslu. Tento hexagram se objevuje tehdy, když je třeba vystoupit z izolace a vytvořit autentické spojenectví.\n\nPsychologicky představuje potřebu otevřenosti. Člověk si uvědomuje, že růst není pouze individuální proces. Sdílená zkušenost přináší širší perspektivu.\n\nSkutečné společenství není založeno na přizpůsobení se za každou cenu. Je založeno na upřímnosti a respektu k rozdílnosti.\n\nTento hexagram učí, že spolupráce posiluje jednotlivce i celek. Když se spojení zakládá na pravdivosti, vzniká síla, která přesahuje individuální úsilí.",
         oracle: {
-
           interpretation: [
-
             "Hledej spojení na základě hodnot.",
 
             "Buď otevřený.",
 
-            "Nevzdávej se autenticity."
-
+            "Nevzdávej se autenticity.",
           ],
 
           introspection: [
-
             "S kým sdílíš skutečný směr?",
 
-            "A kde můžeš přispět celku bez ztráty sebe?"
-
-          ]
-
+            "A kde můžeš přispět celku bez ztráty sebe?",
+          ],
         },
         anatomy:
           "Společenství vzniká z otevřenosti.\n\nRoste skrze důvěru a sdílený smysl.\n\nPokud je založeno na pravdivosti, přináší stabilitu a sílu, která přesahuje jednotlivce.",
@@ -1811,25 +1679,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Fellowship with Others symbolizes conscious union based on shared values. It is not random gathering but alignment around a meaningful purpose. This hexagram appears when isolation must give way to authentic connection.\n\nPsychologically, it reflects openness to collective growth. Development is not purely individual; shared experience broadens awareness.\n\nTrue fellowship does not demand conformity. It rests on sincerity and mutual respect.\n\nWhen connection is grounded in truth, it generates strength beyond individual effort.",
         oracle: {
-
           interpretation: [
-
             "Seek alignment through shared values.",
 
             "Remain open.",
 
-            "Do not sacrifice authenticity."
-
+            "Do not sacrifice authenticity.",
           ],
 
           introspection: [
-
             "With whom do you share a genuine direction?",
 
-            "How can you contribute without losing yourself?"
-
-          ]
-
+            "How can you contribute without losing yourself?",
+          ],
         },
         anatomy:
           "Fellowship grows from openness.\n\nIt matures through trust and shared meaning.\n\nGrounded in authenticity, it becomes a source of enduring strength.",
@@ -1887,25 +1749,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Velké vlastnictví symbolizuje období hojnosti a vnitřní síly. Nejde pouze o materiální bohatství, ale o pocit plnosti – schopnost disponovat zdroji, talentem nebo vlivem.\n\nPsychologicky tento hexagram poukazuje na odpovědnost, která s hojností přichází. To, co vlastníme, nás zároveň zavazuje. Skutečné bohatství není v držení, ale ve způsobu užívání.\n\nHojnost může vést k velkorysosti, ale i k pýše. Rozdíl spočívá v míře vědomí.\n\nTento hexagram připomíná, že velké vlastnictví je testem charakteru. To, co je nashromážděno, musí být spravováno s rozvahou.",
         oracle: {
-
           interpretation: [
-
             "Buď velkorysý.",
 
             "Užívej zdroje vědomě.",
 
-            "Neztotožňuj se s vlastnictvím."
-
+            "Neztotožňuj se s vlastnictvím.",
           ],
 
           introspection: [
-
             "Jak nakládáš se svou silou?",
 
-            "A komu můžeš svou hojností prospět?"
-
-          ]
-
+            "A komu můžeš svou hojností prospět?",
+          ],
         },
         anatomy:
           "Hojnost začíná získáním zdrojů.\n\nVývoj spočívá ve vědomém nakládání s nimi.\n\nPokud je síla spravována s pokorou, může přinést trvalý prospěch. Pokud je zneužita, stává se příčinou úpadku.",
@@ -1953,25 +1809,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Possession in Great Measure symbolizes abundance and inner strength. It is not merely material wealth, but fullness of capacity, influence, or talent.\n\nPsychologically, it reflects responsibility. What we possess also binds us. True wealth lies not in ownership, but in stewardship.\n\nAbundance may foster generosity or pride. Awareness determines the difference.\n\nThis hexagram teaches that prosperity tests character. What is gathered must be managed wisely.",
         oracle: {
-
           interpretation: [
-
             "Be generous.",
 
             "Use resources consciously.",
 
-            "Do not identify with possession."
-
+            "Do not identify with possession.",
           ],
 
           introspection: [
-
             "How do you handle your strength?",
 
-            "Who benefits from your abundance?"
-
-          ]
-
+            "Who benefits from your abundance?",
+          ],
         },
         anatomy:
           "Abundance begins with acquisition.\n\nDevelopment lies in conscious stewardship.\n\nWhen power is guided by humility, it endures. When misused, it collapses.",
@@ -2029,25 +1879,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Skromnost je tichá síla, která nevyžaduje uznání. Tento hexagram ukazuje stav, kdy skutečná hodnota nepotřebuje být zdůrazňována. Hora je skryta pod zemí – velikost se neprojevuje navenek, ale spočívá v hloubce.\n\nPsychologicky jde o vyrovnanost ega. Člověk si je vědom svých schopností, ale nepotřebuje je vystavovat. Skromnost zde není popřením vlastní síly, ale jejím kultivovaným držením.\n\nTam, kde chybí pokora, vzniká napětí. Tam, kde je skromnost, přichází respekt.\n\nTento hexagram připomíná, že skutečný růst probíhá bez okázalosti. Stabilita vzniká ze schopnosti zůstat pevný a zároveň nenápadný.",
         oracle: {
-
           interpretation: [
-
             "Nezdůrazňuj své zásluhy.",
 
             "Zůstaň pevný, ale tichý.",
 
-            "Skutečná hodnota nepotřebuje obhajobu."
-
+            "Skutečná hodnota nepotřebuje obhajobu.",
           ],
 
           introspection: [
-
             "Kde můžeš ustoupit bez ztráty důstojnosti?",
 
-            "A kde je třeba zkrotit vlastní ego?"
-
-          ]
-
+            "A kde je třeba zkrotit vlastní ego?",
+          ],
         },
         anatomy:
           "Skromnost začíná vědomým ovládáním ega.\n\nPostupně se mění v přirozený postoj, který vytváří stabilitu a respekt.\n\nKdyž je síla držena s pokorou, přetrvává déle než okázalá dominance.",
@@ -2095,25 +1939,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Modesty is quiet strength that seeks no recognition. This hexagram shows a state in which true value does not require display. The mountain rests beneath the earth — greatness hidden in depth.\n\nPsychologically, it reflects balanced ego. One knows one’s abilities without the need to proclaim them. Modesty is not self-denial, but cultivated restraint.\n\nWhere humility is absent, tension arises. Where modesty is present, respect follows.\n\nThis hexagram teaches that authentic growth unfolds without spectacle. Stability emerges from quiet firmness.",
         oracle: {
-
           interpretation: [
-
             "Do not emphasize your achievements.",
 
             "Remain firm yet quiet.",
 
-            "True value needs no defense."
-
+            "True value needs no defense.",
           ],
 
           introspection: [
-
             "Where can you step back without losing dignity?",
 
-            "Where does ego require tempering?"
-
-          ]
-
+            "Where does ego require tempering?",
+          ],
         },
         anatomy:
           "Modesty begins with conscious restraint.\n\nIt matures into natural humility that stabilizes relationships.\n\nStrength guided by humility endures longer than visible dominance.",
@@ -2171,25 +2009,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Nadšení představuje energii pohybu, která přichází po období přípravy. Je to radost z očekávání a vnitřní soulad, který motivuje k činu. Tento hexagram symbolizuje okamžik, kdy se energie probouzí a chce být vyjádřena.\n\nPsychologicky jde o stav inspirace. Člověk cítí, že směr je správný, a objevuje lehkost v jednání. Nadšení však potřebuje strukturu – jinak se může rozptýlit.\n\nPokud je energie organizována, přináší radost i stabilitu. Pokud je bez směru, stává se chaotickou.\n\nTento hexagram učí, že radost je silou, která spojuje. Nadšení může být katalyzátorem změny, pokud je vedeno vědomím.",
         oracle: {
-
           interpretation: [
-
             "Dovol si radost.",
 
             "Uspořádej svou energii.",
 
-            "Nenech se unést bez směru."
-
+            "Nenech se unést bez směru.",
           ],
 
           introspection: [
-
             "Co tě skutečně inspiruje?",
 
-            "A jak můžeš tuto energii ukotvit?"
-
-          ]
-
+            "A jak můžeš tuto energii ukotvit?",
+          ],
         },
         anatomy:
           "Nadšení začíná jako jiskra inspirace.\n\nRozvíjí se, pokud je spojeno s vědomým směrem.\n\nPokud je energie správně ukotvena, přináší radost i dlouhodobý růst.",
@@ -2237,25 +2069,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Enthusiasm represents awakened energy following preparation. It is the joy of anticipation and inner alignment that motivates action. This hexagram marks a moment when energy wants expression.\n\nPsychologically, it reflects inspiration. One senses the right direction and experiences lightness in movement. Yet enthusiasm requires structure; without it, it dissipates.\n\nOrganized energy brings both joy and stability. Unfocused excitement becomes chaotic.\n\nThis hexagram teaches that joy can catalyze transformation when guided consciously.",
         oracle: {
-
           interpretation: [
-
             "Allow yourself joy.",
 
             "Organize your energy.",
 
-            "Avoid directionless excitement."
-
+            "Avoid directionless excitement.",
           ],
 
           introspection: [
-
             "What truly inspires you?",
 
-            "How can you ground that inspiration?"
-
-          ]
-
+            "How can you ground that inspiration?",
+          ],
         },
         anatomy:
           "Enthusiasm begins as inspiration.\n\nIt matures through conscious direction.\n\nGrounded energy transforms joy into lasting growth.",
@@ -2313,25 +2139,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Následování představuje schopnost reagovat na situaci bez rigidního lpění na vlastním postoji. Tento hexagram neznamená slepé podřízení, ale vědomé přizpůsobení se přirozenému směru událostí.\n\nPsychologicky jde o rozpoznání, že ne vždy je třeba být iniciátorem. Někdy je moudřejší sledovat proud a učit se z něj. Následování vyžaduje bdělost – člověk musí rozlišovat, co stojí za to následovat.\n\nTam, kde je následování založeno na respektu a vnitřní jasnosti, přináší harmonii. Pokud je založeno na strachu nebo pohodlnosti, vede ke ztrátě autenticity.\n\nTento hexagram učí pružnosti. Síla spočívá ve schopnosti změnit směr, aniž by se ztratilo jádro.",
         oracle: {
-
           interpretation: [
-
             "Sleduj, co je živé a smysluplné.",
 
             "Následuj vědomě.",
 
-            "Neztrácej vlastní kompas."
-
+            "Neztrácej vlastní kompas.",
           ],
 
           introspection: [
-
             "Koho nebo co právě následuješ?",
 
-            "A je to v souladu s tvými hodnotami?"
-
-          ]
-
+            "A je to v souladu s tvými hodnotami?",
+          ],
         },
         anatomy:
           "Následování začíná otevřeností.\n\nVyvíjí se skrze rozlišování a vědomé rozhodování.\n\nPokud je směr zvolen svobodně a v souladu s hodnotami, přináší harmonii a růst.",
@@ -2379,25 +2199,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Following represents the capacity to respond without rigid attachment to one's own position. It is not blind submission, but conscious adaptation to the natural flow of events.\n\nPsychologically, it acknowledges that leadership is not always required. Sometimes wisdom lies in observing and learning from the current direction. Following demands discernment — one must choose carefully what deserves allegiance.\n\nWhen grounded in clarity and respect, following brings harmony. When driven by fear or convenience, it erodes authenticity.\n\nThis hexagram teaches flexibility. Strength lies in adjusting direction without losing inner center.",
         oracle: {
-
           interpretation: [
-
             "Follow what feels alive and meaningful.",
 
             "Adapt consciously.",
 
-            "Do not abandon your compass."
-
+            "Do not abandon your compass.",
           ],
 
           introspection: [
-
             "Whom or what are you following?",
 
-            "Does it align with your values?"
-
-          ]
-
+            "Does it align with your values?",
+          ],
         },
         anatomy:
           "Following begins with openness.\n\nIt matures through discernment and conscious choice.\n\nWhen freely chosen, alignment fosters harmony and development.",
@@ -2455,25 +2269,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Náprava zkaženého symbolizuje období, kdy je třeba čelit důsledkům minulých chyb. Nejde o obviňování, ale o vědomé převzetí odpovědnosti. Tento hexagram poukazuje na nutnost očistit to, co bylo zanedbáno.\n\nPsychologicky představuje proces konfrontace se stíny – osobními i kolektivními. Staré vzorce, které již neslouží, musí být rozpoznány a přetvořeny.\n\nTento proces může být nepohodlný, ale je nezbytný pro obnovu vitality. Bez nápravy stagnace přetrvává.\n\nHexagram učí, že obnova vyžaduje odvahu a vytrvalost. Minulost nelze změnit, ale lze ji přetvořit skrze vědomé jednání.",
         oracle: {
-
           interpretation: [
-
             "Podívej se na to, co bylo zanedbáno.",
 
             "Přijmi odpovědnost.",
 
-            "Obnov, co je možné obnovit."
-
+            "Obnov, co je možné obnovit.",
           ],
 
           introspection: [
-
             "Jaký starý vzorec vyžaduje změnu?",
 
-            "A kde můžeš začít s nápravou?"
-
-          ]
-
+            "A kde můžeš začít s nápravou?",
+          ],
         },
         anatomy:
           "Proces začíná rozpoznáním narušení.\n\nVyvíjí se skrze odpovědnost a postupnou očistu.\n\nPokud je náprava důsledná, vzniká pevnější základ než před narušením.",
@@ -2521,25 +2329,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Work on What Has Been Spoiled represents a time of confronting the consequences of past neglect. It is not about blame, but conscious responsibility. This hexagram calls for cleansing what has deteriorated.\n\nPsychologically, it involves facing shadow aspects — personal or collective. Outdated patterns must be recognized and transformed.\n\nThe process may be uncomfortable, yet it restores vitality. Without correction, stagnation persists.\n\nThis hexagram teaches that renewal requires courage and persistence. The past cannot be erased, but it can be reshaped through awareness.",
         oracle: {
-
           interpretation: [
-
             "Examine what has been neglected.",
 
             "Take responsibility.",
 
-            "Restore what can be restored."
-
+            "Restore what can be restored.",
           ],
 
           introspection: [
-
             "Which old pattern needs revision?",
 
-            "Where can renewal begin?"
-
-          ]
-
+            "Where can renewal begin?",
+          ],
         },
         anatomy:
           "Correction begins with awareness.\n\nDevelopment proceeds through responsible action.\n\nThorough renewal creates stronger foundations than before disruption.",
@@ -2597,25 +2399,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Přiblížení symbolizuje okamžik, kdy se něco významného začíná přibližovat. Je to období otevřenosti a růstu, kdy se vytváří nové spojení nebo se rozšiřuje vliv. Tento hexagram vyjadřuje příznivý pohyb směrem k něčemu podstatnému.\n\nPsychologicky jde o fázi důvěry. Člověk se odvažuje vstoupit blíže – k lidem, k úkolu, k vlastnímu potenciálu. Přiblížení však vyžaduje citlivost. Přílišná horlivost může rovnováhu narušit.\n\nTento hexagram naznačuje, že nyní je vhodný čas jednat s otevřeným srdcem a vědomým respektem.\n\nPřiblížení není útok, ale nabídka. Je to pohyb směrem k druhému, který vytváří možnost vzájemnosti.",
         oracle: {
-
           interpretation: [
-
             "Přibližuj se s úctou.",
 
             "Buď otevřený.",
 
-            "Nespěchej."
-
+            "Nespěchej.",
           ],
 
           introspection: [
-
             "K čemu nebo ke komu se máš nyní přiblížit?",
 
-            "A jak můžeš zachovat rovnováhu?"
-
-          ]
-
+            "A jak můžeš zachovat rovnováhu?",
+          ],
         },
         anatomy:
           "Přiblížení začíná otevřeností.\n\nVyvíjí se skrze důvěru a citlivost.\n\nPokud je tempo přiměřené, vzniká stabilní a dlouhodobé spojení.",
@@ -2663,25 +2459,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Approach symbolizes a time when something meaningful draws near. It marks openness and expansion, when influence grows or new connection forms. The movement is favorable, yet requires awareness.\n\nPsychologically, it reflects trust and readiness to engage. One steps closer to people, purpose, or personal potential. Yet eagerness must be balanced with sensitivity.\n\nApproach is not intrusion, but invitation. It creates space for reciprocity.\n\nThis hexagram encourages conscious engagement grounded in respect.",
         oracle: {
-
           interpretation: [
-
             "Approach with respect.",
 
             "Remain open.",
 
-            "Avoid haste."
-
+            "Avoid haste.",
           ],
 
           introspection: [
-
             "What or whom are you drawing closer to?",
 
-            "How can you preserve balance?"
-
-          ]
-
+            "How can you preserve balance?",
+          ],
         },
         anatomy:
           "Approach begins with openness.\n\nIt develops through trust and sensitivity.\n\nBalanced engagement leads to stable and lasting connection.",
@@ -2739,25 +2529,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Nahlížení symbolizuje schopnost zastavit se a pozorovat. Tento hexagram zdůrazňuje význam odstupu – pohledu, který není zatížen okamžitou reakcí. Je to fáze vědomého vnímání.\n\nPsychologicky představuje introspekci. Člověk sleduje své motivace, vzorce i okolnosti bez nutnosti okamžitě jednat. Pozorování samo přináší jasnost.\n\nNahlížení vyžaduje klid a otevřenost. Bez nich se pohled zkresluje.\n\nTento hexagram učí, že někdy je největším činem nejednat, ale vidět. Teprve z jasného pohledu může vzniknout správné rozhodnutí.",
         oracle: {
-
           interpretation: [
-
             "Zastav se.",
 
             "Pozoruj bez hodnocení.",
 
-            "Hledej širší perspektivu."
-
+            "Hledej širší perspektivu.",
           ],
 
           introspection: [
-
             "Co přehlížíš v rychlosti jednání?",
 
-            "A jaký obraz se objeví, když zpomalíš?"
-
-          ]
-
+            "A jaký obraz se objeví, když zpomalíš?",
+          ],
         },
         anatomy:
           "Nahlížení začíná zpomalením.\n\nVyvíjí se skrze prohlubování pozornosti.\n\nKdyž je pohled jasný, další krok vzniká přirozeně a bez tlaku.",
@@ -2805,25 +2589,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Contemplation represents the power of observation. This hexagram emphasizes distance — perception free from immediate reaction. It marks a phase of conscious awareness.\n\nPsychologically, it reflects introspection. One observes motives, patterns, and circumstances without rushing to act. Clarity arises from stillness.\n\nContemplation requires calm and openness. Without them, perception distorts.\n\nSometimes the greatest action is to see clearly. Only from insight can appropriate response emerge.",
         oracle: {
-
           interpretation: [
-
             "Pause.",
 
             "Observe without judgment.",
 
-            "Seek a broader view."
-
+            "Seek a broader view.",
           ],
 
           introspection: [
-
             "What are you missing in haste?",
 
-            "What becomes visible when you slow down?"
-
-          ]
-
+            "What becomes visible when you slow down?",
+          ],
         },
         anatomy:
           "Contemplation begins with slowing down.\n\nIt develops through sustained attention.\n\nClarity transforms perception into wise action.",
@@ -2881,25 +2659,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Prokousání symbolizuje situaci, kdy je třeba odstranit překážku, která brání přirozenému toku. Něco je zaseknuté – mezi úmyslem a výsledkem stojí odpor. Tento hexagram vyjadřuje nutnost přímého, ale spravedlivého zásahu.\n\nPsychologicky jde o konfrontaci. Člověk musí pojmenovat problém, který byl přehlížen nebo tolerován. Vyhýbání se konfliktu by zde vedlo k větší stagnaci.\n\nZásah však nemá být impulzivní ani tvrdý bez rozmyslu. Jde o jasnost a důslednost.\n\nTento hexagram učí, že někdy je třeba „prokousat“ se skrze nepohodlí, aby mohl vzniknout řád a rovnováha.",
         oracle: {
-
           interpretation: [
-
             "Pojmenuj překážku.",
 
             "Jednej spravedlivě.",
 
-            "Neodkládej řešení."
-
+            "Neodkládej řešení.",
           ],
 
           introspection: [
-
             "Co ti brání v postupu?",
 
-            "A kde je třeba jasného rozhodnutí?"
-
-          ]
-
+            "A kde je třeba jasného rozhodnutí?",
+          ],
         },
         anatomy:
           "Prokousání začíná rozpoznáním překážky.\n\nVyvíjí se skrze jasné a spravedlivé jednání.\n\nPokud je zásah přiměřený, vzniká nový řád a tok energie se obnovuje.",
@@ -2947,25 +2719,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Biting Through represents a situation where an obstacle blocks natural flow. Something stands between intention and outcome. This hexagram calls for direct yet fair intervention.\n\nPsychologically, it reflects confrontation. A problem must be named rather than ignored. Avoidance would deepen stagnation.\n\nAction must be firm but not impulsive. Clarity and justice are essential.\n\nSometimes discomfort must be faced in order to restore balance and order.",
         oracle: {
-
           interpretation: [
-
             "Identify the obstacle.",
 
             "Act fairly.",
 
-            "Do not postpone resolution."
-
+            "Do not postpone resolution.",
           ],
 
           introspection: [
-
             "What blocks your progress?",
 
-            "Where is decisive action required?"
-
-          ]
-
+            "Where is decisive action required?",
+          ],
         },
         anatomy:
           "The process begins with recognizing obstruction.\n\nIt develops through fair and clear intervention.\n\nAppropriate action restores order and renews movement.",
@@ -3023,25 +2789,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Půvab symbolizuje vnější formu, která vyjadřuje vnitřní kvalitu. Tento hexagram poukazuje na význam estetiky, prezentace a kultivovaného projevu. Forma zde není povrchností, ale prostředkem vyjádření podstaty.\n\nPsychologicky jde o schopnost dát věcem krásu a strukturu. Vztahy, práce i komunikace získávají harmonii, pokud jsou upraveny s citem.\n\nPůvab však nesmí zakrývat prázdnotu. Pokud forma převáží nad obsahem, vzniká iluze.\n\nTento hexagram učí, že krása má smysl tehdy, když podporuje pravdivost. Ozdoba má být služebníkem podstaty, nikoli jejím náhradníkem.",
         oracle: {
-
           interpretation: [
-
             "Pečuj o formu.",
 
             "Zachovej autenticitu.",
 
-            "Nevytvářej iluzi."
-
+            "Nevytvářej iluzi.",
           ],
 
           introspection: [
-
             "Co potřebuje kultivovat svůj výraz?",
 
-            "A kde je třeba propojit formu s obsahem?"
-
-          ]
-
+            "A kde je třeba propojit formu s obsahem?",
+          ],
         },
         anatomy:
           "Půvab začíná úpravou formy.\n\nVyvíjí se skrze harmonii mezi obsahem a výrazem.\n\nPokud je krása podřízena pravdě, vytváří stabilní a důvěryhodný obraz.",
@@ -3089,25 +2849,19 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Grace represents the outer form that expresses inner quality. This hexagram emphasizes aesthetics, presentation, and cultivated expression. Form is not superficiality, but a vehicle for essence.\n\nPsychologically, it reflects the ability to bring harmony and refinement to situations. Communication and relationships benefit from thoughtful presentation.\n\nYet form must not conceal emptiness. When appearance dominates substance, illusion arises.\n\nGrace teaches that beauty serves truth. Ornament should enhance essence, not replace it.",
         oracle: {
-
           interpretation: [
-
             "Refine the form.",
 
             "Remain authentic.",
 
-            "Avoid illusion."
-
+            "Avoid illusion.",
           ],
 
           introspection: [
-
             "What requires thoughtful expression?",
 
-            "Where must form and substance align?"
-
-          ]
-
+            "Where must form and substance align?",
+          ],
         },
         anatomy:
           "Grace begins with shaping form.\n\nIt matures through harmony between substance and appearance.\n\nWhen beauty serves truth, expression becomes stable and trustworthy.",
@@ -3165,23 +2919,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Rozklad představuje postupné ubývání síly. Struktura se oslabuje.\n\nPsychologicky jde o období ztráty nebo únavy.\n\nJe čas ustoupit a chránit to podstatné.",
         oracle: {
-
           interpretation: [
-
             "Nevzdoruj nevyhnutelnému.",
 
             "Chraň jádro.",
 
-            "Ustoupení je někdy moudré."
-
+            "Ustoupení je někdy moudré.",
           ],
 
-          introspection: [
-
-            "Co je třeba nechat odejít?"
-
-          ]
-
+          introspection: ["Co je třeba nechat odejít?"],
         },
         anatomy:
           "Rozklad je přirozený cyklus.\n\nUstoupení chrání budoucnost.\n\nPo rozpadu přichází obnova.",
@@ -3229,23 +2975,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Splitting Apart represents gradual decline. Structure weakens.\n\nPsychologically, it reflects fatigue or loss.\n\nIt is time to retreat and protect what matters.",
         oracle: {
-
           interpretation: [
-
             "Do not resist the inevitable.",
 
             "Protect the core.",
 
-            "Retreat can be wise."
-
+            "Retreat can be wise.",
           ],
 
-          introspection: [
-
-            "What must you let go?"
-
-          ]
-
+          introspection: ["What must you let go?"],
         },
         anatomy:
           "Decline is part of cycles.\n\nRetreat protects renewal.\n\nAfter decay comes rebirth.",
@@ -3303,23 +3041,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Návrat představuje okamžik obratu po období úpadku. Malý impuls světla se znovu objevuje.\n\nPsychologicky jde o návrat k vlastní podstatě. Po vychýlení se člověk vrací ke středu.\n\nJe to začátek obnovy – nenápadný, ale zásadní.",
         oracle: {
-
           interpretation: [
-
             "Vrať se k tomu, co je pravdivé.",
 
             "Začni znovu, bez výčitek.",
 
-            "Malý krok stačí."
-
+            "Malý krok stačí.",
           ],
 
-          introspection: [
-
-            "Kam se potřebuješ vrátit?"
-
-          ]
-
+          introspection: ["Kam se potřebuješ vrátit?"],
         },
         anatomy:
           "Návrat je tichý začátek.\n\nMalá změna vede k velké obnově.\n\nVytrvalost upevňuje nový směr.",
@@ -3367,23 +3097,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Return marks the turning point after decline. A small light begins again.\n\nPsychologically, it represents coming back to one’s center.\n\nIt is a subtle but crucial renewal.",
         oracle: {
-
           interpretation: [
-
             "Return to what is true.",
 
             "Begin again without regret.",
 
-            "A small step is enough."
-
+            "A small step is enough.",
           ],
 
-          introspection: [
-
-            "Where do you need to return?"
-
-          ]
-
+          introspection: ["Where do you need to return?"],
         },
         anatomy:
           "Return begins quietly.\n\nSmall correction leads to renewal.\n\nConsistency secures growth.",
@@ -3441,23 +3163,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Nevinnost symbolizuje jednání bez postranních úmyslů. Čistota motivu přináší sílu.\n\nPsychologicky jde o spontánnost a pravdivost.\n\nManipulace narušuje rovnováhu.",
         oracle: {
-
           interpretation: [
-
             "Jednej upřímně.",
 
             "Nespekuluj.",
 
-            "Pravdivost přináší ochranu."
-
+            "Pravdivost přináší ochranu.",
           ],
 
-          introspection: [
-
-            "Jsou tvé úmysly čisté?"
-
-          ]
-
+          introspection: ["Jsou tvé úmysly čisté?"],
         },
         anatomy:
           "Nevinnost vychází z autenticity.\n\nBez pravdivosti se rozpadá.\n\nČistý motiv stabilizuje cestu.",
@@ -3505,23 +3219,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Innocence represents action without hidden motives. Purity of intention brings strength.\n\nPsychologically, it reflects authenticity.\n\nManipulation disturbs balance.",
         oracle: {
-
           interpretation: [
-
             "Act sincerely.",
 
             "Avoid scheming.",
 
-            "Truthfulness protects."
-
+            "Truthfulness protects.",
           ],
 
-          introspection: [
-
-            "Are your intentions clear?"
-
-          ]
-
+          introspection: ["Are your intentions clear?"],
         },
         anatomy:
           "Innocence stems from authenticity.\n\nWithout truth, it collapses.\n\nClear intention steadies the path.",
@@ -3579,23 +3285,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Velká zdrženlivost symbolizuje shromažďování síly bez okamžitého uvolnění.\n\nPsychologicky jde o disciplínu a trpělivost.\n\nZadržení energie zvyšuje její hodnotu.",
         oracle: {
-
           interpretation: [
-
             "Zadrž energii.",
 
             "Buduj základ.",
 
-            "Jednej až ve správný čas."
-
+            "Jednej až ve správný čas.",
           ],
 
-          introspection: [
-
-            "Kde je třeba vyčkat?"
-
-          ]
-
+          introspection: ["Kde je třeba vyčkat?"],
         },
         anatomy:
           "Zdrženlivost posiluje charakter.\n\nUvolnění přichází ve správný okamžik.\n\nDisciplína vytváří trvalou sílu.",
@@ -3643,23 +3341,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Great Restraint represents gathering strength without immediate release.\n\nPsychologically, it reflects discipline.\n\nContained energy gains value.",
         oracle: {
-
           interpretation: [
-
             "Hold your energy.",
 
             "Build foundations.",
 
-            "Act at the right time."
-
+            "Act at the right time.",
           ],
 
-          introspection: [
-
-            "Where must you wait?"
-
-          ]
-
+          introspection: ["Where must you wait?"],
         },
         anatomy:
           "Restraint strengthens character.\n\nRelease comes in proper timing.\n\nDiscipline creates lasting power.",
@@ -3717,23 +3407,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Výživa symbolizuje to, čím se živíme – fyzicky i duševně. Nejde jen o jídlo, ale o myšlenky, vztahy a podněty.\n\nPsychologicky ukazuje na kvalitu vstupů, které formují charakter.\n\nTo, co přijímáš, se stává součástí tebe.",
         oracle: {
-
           interpretation: [
-
             "Vědomě si vybírej, co přijímáš.",
 
             "Pečuj o své zdroje.",
 
-            "Nevhodná výživa oslabuje."
-
+            "Nevhodná výživa oslabuje.",
           ],
 
-          introspection: [
-
-            "Čím právě krmíš svou mysl?"
-
-          ]
-
+          introspection: ["Čím právě krmíš svou mysl?"],
         },
         anatomy:
           "Výživa formuje charakter.\n\nVědomá péče přináší sílu.\n\nNerovnováha vede k oslabení.",
@@ -3781,23 +3463,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Nourishment represents what feeds us — physically and mentally.\n\nPsychologically, it points to the quality of inputs shaping character.\n\nWhat you consume becomes part of you.",
         oracle: {
-
           interpretation: [
-
             "Choose carefully what you take in.",
 
             "Care for your resources.",
 
-            "Poor nourishment weakens."
-
+            "Poor nourishment weakens.",
           ],
 
-          introspection: [
-
-            "What feeds your mind now?"
-
-          ]
-
+          introspection: ["What feeds your mind now?"],
         },
         anatomy:
           "Nourishment shapes character.\n\nConscious care builds strength.\n\nImbalance leads to decline.",
@@ -3855,23 +3529,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Převaha velkého označuje situaci, kdy je zatížení větší než podpora.\n\nPsychologicky jde o přetížení odpovědností.\n\nJe třeba najít nový způsob podpory.",
         oracle: {
-
           interpretation: [
-
             "Nepřetěžuj se.",
 
             "Hledej oporu.",
 
-            "Změň strukturu."
-
+            "Změň strukturu.",
           ],
 
-          introspection: [
-
-            "Co tě tíží víc, než je únosné?"
-
-          ]
-
+          introspection: ["Co tě tíží víc, než je únosné?"],
         },
         anatomy:
           "Přetížení vyžaduje úpravu.\n\nBez podpory dochází k zlomu.\n\nObnova přichází změnou struktury.",
@@ -3914,23 +3580,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Great Excess indicates a burden heavier than support.\n\nPsychologically, it reflects overload.\n\nA new structure is needed.",
         oracle: {
-
           interpretation: [
-
             "Do not overstrain.",
 
             "Seek support.",
 
-            "Adjust the framework."
-
+            "Adjust the framework.",
           ],
 
-          introspection: [
-
-            "What feels heavier than it should?"
-
-          ]
-
+          introspection: ["What feels heavier than it should?"],
         },
         anatomy:
           "Excess demands adjustment.\n\nWithout support, collapse follows.\n\nRenewal comes through restructuring.",
@@ -3988,23 +3646,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Propast symbolizuje opakované nebezpečí nebo náročnou situaci.\n\nPsychologicky jde o čelení strachu.\n\nVnitřní klid je jedinou jistotou.",
         oracle: {
-
           interpretation: [
-
             "Zůstaň bdělý.",
 
             "Nepodléhej panice.",
 
-            "Vědomí je ochranou."
-
+            "Vědomí je ochranou.",
           ],
 
-          introspection: [
-
-            "Jak reaguješ na nejistotu?"
-
-          ]
-
+          introspection: ["Jak reaguješ na nejistotu?"],
         },
         anatomy:
           "Nebezpečí učí bdělosti.\n\nVnitřní rovnováha chrání.\n\nStrach může být učitelem.",
@@ -4052,23 +3702,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Abyss represents repeated danger or challenge.\n\nPsychologically, it reflects confronting fear.\n\nInner calm is the only security.",
         oracle: {
-
           interpretation: [
-
             "Stay alert.",
 
             "Do not panic.",
 
-            "Awareness protects."
-
+            "Awareness protects.",
           ],
 
-          introspection: [
-
-            "How do you respond to uncertainty?"
-
-          ]
-
+          introspection: ["How do you respond to uncertainty?"],
         },
         anatomy:
           "Danger teaches awareness.\n\nInner balance protects.\n\nFear can become a teacher.",
@@ -4126,23 +3768,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Jas představuje světlo a vědomí. Umožňuje rozpoznat pravdu.\n\nPsychologicky jde o vhled.\n\nSvětlo však může i oslepit.",
         oracle: {
-
           interpretation: [
-
             "Hledej jasnost.",
 
             "Neulpívej na povrchu.",
 
-            "Vědomí vede."
-
+            "Vědomí vede.",
           ],
 
-          introspection: [
-
-            "Co je nyní třeba vidět jasně?"
-
-          ]
-
+          introspection: ["Co je nyní třeba vidět jasně?"],
         },
         anatomy:
           "Jas přináší poznání.\n\nBez rovnováhy však oslepuje.\n\nVědomé světlo vede k porozumění.",
@@ -4190,23 +3824,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Clarity represents light and awareness.\n\nPsychologically, it reflects insight.\n\nLight can illuminate or blind.",
         oracle: {
-
           interpretation: [
-
             "Seek clarity.",
 
             "Look beneath the surface.",
 
-            "Awareness guides."
-
+            "Awareness guides.",
           ],
 
-          introspection: [
-
-            "What needs to be seen clearly?"
-
-          ]
-
+          introspection: ["What needs to be seen clearly?"],
         },
         anatomy:
           "Clarity reveals truth.\n\nWithout balance, it blinds.\n\nConscious light leads to understanding.",
@@ -4264,23 +3890,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Vliv představuje přirozenou přitažlivost mezi dvěma silami. Nejde o manipulaci, ale o rezonanci.\n\nPsychologicky symbolizuje otevřenost ke vztahu a citlivost vůči druhým.\n\nSkutečný vliv vychází z autenticity.",
         oracle: {
-
           interpretation: [
-
             "Buď otevřený citlivosti.",
 
             "Nemanipuluj.",
 
-            "Rezonance vzniká přirozeně."
-
+            "Rezonance vzniká přirozeně.",
           ],
 
-          introspection: [
-
-            "Co tě skutečně přitahuje – a proč?"
-
-          ]
-
+          introspection: ["Co tě skutečně přitahuje – a proč?"],
         },
         anatomy:
           "Vliv roste z citlivosti.\n\nBez autenticity se rozpadá.\n\nRespekt udržuje rovnováhu.",
@@ -4328,23 +3946,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Influence represents natural attraction between forces. It is resonance, not manipulation.\n\nPsychologically, it reflects relational sensitivity.\n\nTrue influence arises from authenticity.",
         oracle: {
-
           interpretation: [
-
             "Remain open and sensitive.",
 
             "Do not manipulate.",
 
-            "Resonance emerges naturally."
-
+            "Resonance emerges naturally.",
           ],
 
-          introspection: [
-
-            "What truly attracts you — and why?"
-
-          ]
-
+          introspection: ["What truly attracts you — and why?"],
         },
         anatomy:
           "Influence grows through sensitivity.\n\nWithout authenticity, it fades.\n\nRespect sustains harmony.",
@@ -4402,23 +4012,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Trvání představuje stabilitu v čase. Nejde o stagnaci, ale o vytrvalost v pravdivém směru.\n\nPsychologicky ukazuje na disciplínu a dlouhodobé závazky.\n\nTo, co má hodnotu, vyžaduje čas.",
         oracle: {
-
           interpretation: [
-
             "Vytrvej.",
 
             "Udrž směr.",
 
-            "Nestřídej cíl příliš rychle."
-
+            "Nestřídej cíl příliš rychle.",
           ],
 
-          introspection: [
-
-            "V čem potřebuješ větší důslednost?"
-
-          ]
-
+          introspection: ["V čem potřebuješ větší důslednost?"],
         },
         anatomy:
           "Trvání buduje hodnotu.\n\nBez vytrvalosti se záměr rozpadá.\n\nČas je spojencem stability.",
@@ -4466,23 +4068,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Duration represents stability through time. It is perseverance, not stagnation.\n\nPsychologically, it reflects discipline.\n\nWhat endures requires commitment.",
         oracle: {
-
           interpretation: [
-
             "Persist.",
 
             "Maintain direction.",
 
-            "Avoid constant shifts."
-
+            "Avoid constant shifts.",
           ],
 
-          introspection: [
-
-            "Where is consistency needed?"
-
-          ]
-
+          introspection: ["Where is consistency needed?"],
         },
         anatomy:
           "Duration builds value.\n\nWithout perseverance, intention fades.\n\nTime strengthens what is steady.",
@@ -4540,23 +4134,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Ústup neznamená porážku, ale strategickou ochranu síly.\n\nPsychologicky jde o rozpoznání, kdy není vhodný čas pro konfrontaci.\n\nUstoupit může být moudřejší než bojovat.",
         oracle: {
-
           interpretation: [
-
             "Nezůstávej tam, kde síla slábne.",
 
             "Ustup vědomě.",
 
-            "Chraň svou energii."
-
+            "Chraň svou energii.",
           ],
 
-          introspection: [
-
-            "Co je lepší opustit?"
-
-          ]
-
+          introspection: ["Co je lepší opustit?"],
         },
         anatomy:
           "Ústup chrání budoucnost.\n\nBez strategie se mění v útěk.\n\nSprávný čas je klíčový.",
@@ -4604,23 +4190,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Retreat does not mean defeat but strategic preservation.\n\nPsychologically, it reflects recognizing unfavorable timing.\n\nWithdrawing can be wiser than confrontation.",
         oracle: {
-
           interpretation: [
-
             "Do not stay where strength fades.",
 
             "Withdraw consciously.",
 
-            "Protect your energy."
-
+            "Protect your energy.",
           ],
 
-          introspection: [
-
-            "What is better left behind?"
-
-          ]
-
+          introspection: ["What is better left behind?"],
         },
         anatomy:
           "Retreat safeguards the future.\n\nWithout strategy, it becomes escape.\n\nTiming determines wisdom.",
@@ -4678,23 +4256,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Velká síla představuje vrchol energie a rozhodnosti. Síla je zřejmá a pohyb vpřed je téměř nevyhnutelný.\n\nPsychologicky jde o období vysoké vitality, odvahy a sebejistoty.\n\nSkutečná síla však spočívá v kontrole. Bez ní se mění v destrukci.",
         oracle: {
-
           interpretation: [
-
             "Jednej pevně, ale s mírou.",
 
             "Nepodléhej impulsu.",
 
-            "Síla vyžaduje odpovědnost."
-
+            "Síla vyžaduje odpovědnost.",
           ],
 
-          introspection: [
-
-            "Kde je třeba použít sílu – a kde ji zadržet?"
-
-          ]
-
+          introspection: ["Kde je třeba použít sílu – a kde ji zadržet?"],
         },
         anatomy:
           "Velká síla vrcholí v odpovědnosti.\n\nBez kontroly se obrací proti sobě.\n\nMoudrost řídí energii.",
@@ -4742,23 +4312,17 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Great Power represents peak strength and determination.\n\nPsychologically, it marks vitality and confidence.\n\nTrue power lies in restraint. Without control, it turns destructive.",
         oracle: {
-
           interpretation: [
-
             "Act firmly, but with moderation.",
 
             "Avoid impulsiveness.",
 
-            "Power requires responsibility."
-
+            "Power requires responsibility.",
           ],
 
           introspection: [
-
-            "Where should strength be used — and where restrained?"
-
-          ]
-
+            "Where should strength be used — and where restrained?",
+          ],
         },
         anatomy:
           "Great Power culminates in responsibility.\n\nWithout restraint, it collapses.\n\nWisdom directs strength.",
@@ -4816,23 +4380,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Pokrok představuje růst a posun vpřed. Energie stoupá a přináší nové možnosti.\n\nPsychologicky jde o období optimismu a rozvoje.\n\nJe však nutné zůstat pokorný.",
         oracle: {
-
           interpretation: [
-
             "Využij příležitosti.",
 
             "Zůstaň vděčný.",
 
-            "Postupuj krok za krokem."
-
+            "Postupuj krok za krokem.",
           ],
 
-          introspection: [
-
-            "Jak můžeš růst bez pýchy?"
-
-          ]
-
+          introspection: ["Jak můžeš růst bez pýchy?"],
         },
         anatomy:
           "Pokrok přináší světlo.\n\nBez pokory se mění v pád.\n\nVytrvalost stabilizuje růst.",
@@ -4880,23 +4436,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Progress represents advancement and opportunity.\n\nPsychologically, it reflects growth and optimism.\n\nHumility sustains success.",
         oracle: {
-
           interpretation: [
-
             "Seize opportunity.",
 
             "Remain grateful.",
 
-            "Advance steadily."
-
+            "Advance steadily.",
           ],
 
-          introspection: [
-
-            "How can you grow without arrogance?"
-
-          ]
-
+          introspection: ["How can you grow without arrogance?"],
         },
         anatomy:
           "Progress brings light.\n\nWithout humility, it reverses.\n\nConsistency sustains growth.",
@@ -4954,23 +4502,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Zatemnění světla znamená období, kdy je jas potlačen. Pravda není vítaná.\n\nPsychologicky jde o situaci, kdy je třeba chránit svou integritu.\n\nVnitřní světlo nesmí vyhasnout.",
         oracle: {
-
           interpretation: [
-
             "Chraň své hodnoty.",
 
             "Neodhaľuj vše předčasně.",
 
-            "Udrž světlo uvnitř."
-
+            "Udrž světlo uvnitř.",
           ],
 
-          introspection: [
-
-            "Kde je třeba zůstat nenápadný?"
-
-          ]
-
+          introspection: ["Kde je třeba zůstat nenápadný?"],
         },
         anatomy:
           "Světlo může být skryté.\n\nTrpělivost jej chrání.\n\nTemnota je dočasná.",
@@ -5018,23 +4558,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Darkening of the Light represents a time when clarity is suppressed.\n\nPsychologically, it calls for protecting integrity.\n\nInner light must remain intact.",
         oracle: {
-
           interpretation: [
-
             "Protect your values.",
 
             "Do not reveal too much.",
 
-            "Keep your light within."
-
+            "Keep your light within.",
           ],
 
-          introspection: [
-
-            "Where must you remain discreet?"
-
-          ]
-
+          introspection: ["Where must you remain discreet?"],
         },
         anatomy:
           "Light may be hidden.\n\nPatience preserves it.\n\nDarkness is temporary.",
@@ -5092,23 +4624,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Rodina představuje strukturu vztahů a odpovědností. Každý má své místo.\n\nPsychologicky jde o vnitřní uspořádání hodnot.\n\nHarmonie vzniká jasnými rolemi.",
         oracle: {
-
           interpretation: [
-
             "Upevni vztahy.",
 
             "Respektuj hranice.",
 
-            "Začni u sebe."
-
+            "Začni u sebe.",
           ],
 
-          introspection: [
-
-            "Jakou roli právě zastáváš?"
-
-          ]
-
+          introspection: ["Jakou roli právě zastáváš?"],
         },
         anatomy:
           "Rodina funguje díky rovnováze.\n\nBez respektu se struktura rozpadá.\n\nJasné role přinášejí harmonii.",
@@ -5156,23 +4680,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Family represents structured relationships and responsibility.\n\nPsychologically, it reflects inner order.\n\nHarmony arises from clear roles.",
         oracle: {
-
           interpretation: [
-
             "Strengthen relationships.",
 
             "Respect boundaries.",
 
-            "Begin with yourself."
-
+            "Begin with yourself.",
           ],
 
-          introspection: [
-
-            "What role are you fulfilling now?"
-
-          ]
-
+          introspection: ["What role are you fulfilling now?"],
         },
         anatomy:
           "Family thrives on balance.\n\nWithout respect, structure weakens.\n\nClear roles sustain harmony.",
@@ -5230,23 +4746,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Protiklad symbolizuje rozdílnost a napětí mezi dvěma směry.\n\nPsychologicky jde o vnitřní rozpor.\n\nRozdílnost nemusí být nepřátelství.",
         oracle: {
-
           interpretation: [
-
             "Hledej porozumění.",
 
             "Nezesiluj konflikt.",
 
-            "Rozdíly mohou obohatit."
-
+            "Rozdíly mohou obohatit.",
           ],
 
-          introspection: [
-
-            "Co je třeba přijmout jako jiné?"
-
-          ]
-
+          introspection: ["Co je třeba přijmout jako jiné?"],
         },
         anatomy:
           "Protiklad může vést k růstu.\n\nBez komunikace se mění v konflikt.\n\nRespekt umožňuje soužití.",
@@ -5294,23 +4802,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Opposition represents divergence and tension.\n\nPsychologically, it reflects inner conflict.\n\nDifference is not necessarily hostility.",
         oracle: {
-
           interpretation: [
-
             "Seek understanding.",
 
             "Do not escalate conflict.",
 
-            "Differences can enrich."
-
+            "Differences can enrich.",
           ],
 
-          introspection: [
-
-            "What must be accepted as different?"
-
-          ]
-
+          introspection: ["What must be accepted as different?"],
         },
         anatomy:
           "Opposition can foster growth.\n\nWithout dialogue, it becomes conflict.\n\nRespect enables coexistence.",
@@ -5368,23 +4868,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Překážka symbolizuje zastavení cesty.\n\nPsychologicky jde o moment, kdy je třeba přehodnotit směr.\n\nObcházení může být moudřejší než přímý postup.",
         oracle: {
-
           interpretation: [
-
             "Zvaž jinou cestu.",
 
             "Nepřetlačuj odpor.",
 
-            "Vyhledej pomoc."
-
+            "Vyhledej pomoc.",
           ],
 
-          introspection: [
-
-            "Kde je třeba změnit strategii?"
-
-          ]
-
+          introspection: ["Kde je třeba změnit strategii?"],
         },
         anatomy:
           "Překážka učí flexibilitě.\n\nObcházení může vést k úspěchu.\n\nTvrdohlavost situaci zhoršuje.",
@@ -5432,23 +4924,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Obstruction represents blocked progress.\n\nPsychologically, it signals need for reassessment.\n\nDetours may be wiser than force.",
         oracle: {
-
           interpretation: [
-
             "Consider another path.",
 
             "Do not force resistance.",
 
-            "Seek assistance."
-
+            "Seek assistance.",
           ],
 
-          introspection: [
-
-            "Where must strategy shift?"
-
-          ]
-
+          introspection: ["Where must strategy shift?"],
         },
         anatomy:
           "Obstruction teaches flexibility.\n\nDetours lead forward.\n\nForce worsens difficulty.",
@@ -5506,23 +4990,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Uvolnění přichází po napětí. Problém se rozpouští.\n\nPsychologicky jde o pocit úlevy.\n\nJe čas jednat lehce.",
         oracle: {
-
           interpretation: [
-
             "Nech věci odejít.",
 
             "Ulev si.",
 
-            "Využij nové možnosti."
-
+            "Využij nové možnosti.",
           ],
 
-          introspection: [
-
-            "Co můžeš konečně pustit?"
-
-          ]
-
+          introspection: ["Co můžeš konečně pustit?"],
         },
         anatomy:
           "Uvolnění obnovuje energii.\n\nJe čas pohybu.\n\nMinulé napětí se rozpouští.",
@@ -5570,23 +5046,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Deliverance follows tension. The problem dissolves.\n\nPsychologically, it reflects relief.\n\nLight action becomes possible.",
         oracle: {
-
           interpretation: [
-
             "Let things go.",
 
             "Release tension.",
 
-            "Use new freedom wisely."
-
+            "Use new freedom wisely.",
           ],
 
-          introspection: [
-
-            "What can you finally release?"
-
-          ]
-
+          introspection: ["What can you finally release?"],
         },
         anatomy:
           "Deliverance restores energy.\n\nMovement resumes.\n\nPast tension dissolves.",
@@ -5644,23 +5112,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Úbytek znamená vědomé zmenšení. Odevzdání části energie přináší dlouhodobý zisk.\n\nPsychologicky jde o schopnost zjednodušit.\n\nMéně může být více.",
         oracle: {
-
           interpretation: [
-
             "Zjednoduš.",
 
             "Obětuj přebytečné.",
 
-            "Posil to podstatné."
-
+            "Posil to podstatné.",
           ],
 
-          introspection: [
-
-            "Co je nyní zbytečné?"
-
-          ]
-
+          introspection: ["Co je nyní zbytečné?"],
         },
         anatomy:
           "Úbytek vede k očištění.\n\nOběť posiluje podstatu.\n\nRovnováha je klíčem.",
@@ -5708,23 +5168,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Decrease signifies conscious reduction. Giving up something strengthens what remains.\n\nPsychologically, it reflects simplification.\n\nLess can mean more.",
         oracle: {
-
           interpretation: [
-
             "Simplify.",
 
             "Sacrifice excess.",
 
-            "Strengthen essentials."
-
+            "Strengthen essentials.",
           ],
 
-          introspection: [
-
-            "What is unnecessary now?"
-
-          ]
-
+          introspection: ["What is unnecessary now?"],
         },
         anatomy:
           "Decrease purifies.\n\nSacrifice strengthens essence.\n\nBalance maintains growth.",
@@ -5782,23 +5234,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Přínos znamená růst skrze sdílení. Dávání přináší návrat.\n\nPsychologicky jde o otevřenost a podporu.\n\nRůst je kolektivní.",
         oracle: {
+          interpretation: ["Podpoř druhé.", "Buď štědrý.", "Růst sdílej."],
 
-          interpretation: [
-
-            "Podpoř druhé.",
-
-            "Buď štědrý.",
-
-            "Růst sdílej."
-
-          ],
-
-          introspection: [
-
-            "Kde můžeš být přínosem?"
-
-          ]
-
+          introspection: ["Kde můžeš být přínosem?"],
         },
         anatomy:
           "Přínos přináší expanzi.\n\nSdílení posiluje vztahy.\n\nMíra chrání rovnováhu.",
@@ -5846,23 +5284,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Increase signifies growth through generosity.\n\nPsychologically, it reflects openness and support.\n\nGrowth benefits all.",
         oracle: {
+          interpretation: ["Support others.", "Be generous.", "Share growth."],
 
-          interpretation: [
-
-            "Support others.",
-
-            "Be generous.",
-
-            "Share growth."
-
-          ],
-
-          introspection: [
-
-            "Where can you contribute?"
-
-          ]
-
+          introspection: ["Where can you contribute?"],
         },
         anatomy:
           "Increase brings expansion.\n\nSharing builds connection.\n\nModeration preserves balance.",
@@ -5920,23 +5344,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Rozhodnost znamená jasné vyjádření pravdy. Je čas říci věci otevřeně.\n\nPsychologicky jde o průlom.\n\nOdvaha musí být spojena s odpovědností.",
         oracle: {
-
           interpretation: [
-
             "Promluv jasně.",
 
             "Jednej rozhodně.",
 
-            "Nepodléhej hněvu."
-
+            "Nepodléhej hněvu.",
           ],
 
-          introspection: [
-
-            "Kde je třeba stanovit hranici?"
-
-          ]
-
+          introspection: ["Kde je třeba stanovit hranici?"],
         },
         anatomy:
           "Rozhodnost přináší průlom.\n\nBez míry vede ke konfliktu.\n\nOdpovědnost stabilizuje změnu.",
@@ -5984,23 +5400,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Breakthrough signifies decisive expression.\n\nPsychologically, it reflects confrontation and clarity.\n\nCourage must be balanced with responsibility.",
         oracle: {
+          interpretation: ["Speak clearly.", "Act decisively.", "Avoid anger."],
 
-          interpretation: [
-
-            "Speak clearly.",
-
-            "Act decisively.",
-
-            "Avoid anger."
-
-          ],
-
-          introspection: [
-
-            "Where must a boundary be set?"
-
-          ]
-
+          introspection: ["Where must a boundary be set?"],
         },
         anatomy:
           "Breakthrough clears the way.\n\nWithout moderation, conflict arises.\n\nResponsibility stabilizes change.",
@@ -6058,23 +5460,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Setkání představuje náhlý vstup silného vlivu do situace. Něco nového přichází rychle a intenzivně.\n\nPsychologicky jde o setkání s impulsem nebo osobou, která narušuje rovnováhu.\n\nJe třeba rozlišit mezi inspirací a pokušením.",
         oracle: {
-
           interpretation: [
-
             "Buď pozorný.",
 
             "Nepropadej okamžitému nadšení.",
 
-            "Zvaž důsledky."
-
+            "Zvaž důsledky.",
           ],
 
-          introspection: [
-
-            "Co do tvého života právě vstupuje?"
-
-          ]
-
+          introspection: ["Co do tvého života právě vstupuje?"],
         },
         anatomy:
           "Setkání může inspirovat.\n\nBez uvážení destabilizuje.\n\nVědomí chrání směr.",
@@ -6122,23 +5516,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Coming to Meet signifies the sudden arrival of a strong influence.\n\nPsychologically, it reflects encountering a disruptive impulse or person.\n\nDiscernment is essential.",
         oracle: {
-
           interpretation: [
-
             "Stay attentive.",
 
             "Do not rush into enthusiasm.",
 
-            "Consider consequences."
-
+            "Consider consequences.",
           ],
 
-          introspection: [
-
-            "What is entering your life now?"
-
-          ]
-
+          introspection: ["What is entering your life now?"],
         },
         anatomy:
           "Meeting can inspire.\n\nWithout awareness, it destabilizes.\n\nDiscernment preserves direction.",
@@ -6196,23 +5582,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Shromáždění znamená spojení lidí nebo energií kolem společného cíle.\n\nPsychologicky jde o pocit sounáležitosti.\n\nJednota přináší sílu.",
         oracle: {
-
           interpretation: [
-
             "Spoj se s ostatními.",
 
             "Sdílej záměr.",
 
-            "Buduj důvěru."
-
+            "Buduj důvěru.",
           ],
 
-          introspection: [
-
-            "Kde je potřeba kolektivní síla?"
-
-          ]
-
+          introspection: ["Kde je potřeba kolektivní síla?"],
         },
         anatomy:
           "Jednota přináší růst.\n\nBez důvěry se rozpadá.\n\nSpolečný cíl stabilizuje.",
@@ -6260,23 +5638,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Gathering Together represents uniting around a shared purpose.\n\nPsychologically, it reflects belonging.\n\nUnity creates strength.",
         oracle: {
-
           interpretation: [
-
             "Unite with others.",
 
             "Share intention.",
 
-            "Build trust."
-
+            "Build trust.",
           ],
 
-          introspection: [
-
-            "Where is collective strength needed?"
-
-          ]
-
+          introspection: ["Where is collective strength needed?"],
         },
         anatomy:
           "Unity strengthens growth.\n\nWithout trust, it collapses.\n\nShared purpose sustains cohesion.",
@@ -6334,23 +5704,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Vzestup představuje postupný růst skrze úsilí.\n\nPsychologicky jde o vytrvalé budování.\n\nKrok za krokem se dosahuje cíle.",
         oracle: {
-
           interpretation: [
-
             "Postupuj trpělivě.",
 
             "Nevynechávej kroky.",
 
-            "Vytrvalost přináší výsledek."
-
+            "Vytrvalost přináší výsledek.",
           ],
 
-          introspection: [
-
-            "Jaký je tvůj další malý krok?"
-
-          ]
-
+          introspection: ["Jaký je tvůj další malý krok?"],
         },
         anatomy:
           "Vzestup je postupný.\n\nVytrvalost buduje výšku.\n\nTrpělivost chrání stabilitu.",
@@ -6398,23 +5760,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Pushing Upward signifies gradual progress through effort.\n\nPsychologically, it reflects steady development.\n\nStep by step brings achievement.",
         oracle: {
-
           interpretation: [
-
             "Advance patiently.",
 
             "Do not skip stages.",
 
-            "Persistence yields results."
-
+            "Persistence yields results.",
           ],
 
-          introspection: [
-
-            "What is your next small step?"
-
-          ]
-
+          introspection: ["What is your next small step?"],
         },
         anatomy:
           "Ascent is gradual.\n\nPerseverance builds height.\n\nPatience ensures stability.",
@@ -6472,23 +5826,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Tíseň označuje období omezení a vnitřního tlaku. Vnější okolnosti svazují.\n\nPsychologicky jde o pocit vyčerpání nebo izolace.\n\nSíla se rodí zevnitř.",
         oracle: {
-
           interpretation: [
-
             "Nevzdávej se.",
 
             "Hledej vnitřní oporu.",
 
-            "Nevyčerpávej se bojem."
-
+            "Nevyčerpávej se bojem.",
           ],
 
-          introspection: [
-
-            "Kde čerpáš sílu?"
-
-          ]
-
+          introspection: ["Kde čerpáš sílu?"],
         },
         anatomy:
           "Tíseň učí vytrvalosti.\n\nVnitřní síla překoná omezení.\n\nTrpělivost přináší uvolnění.",
@@ -6536,23 +5882,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Oppression signifies constraint and inner pressure.\n\nPsychologically, it reflects exhaustion or isolation.\n\nStrength must come from within.",
         oracle: {
-
           interpretation: [
-
             "Do not give up.",
 
             "Seek inner support.",
 
-            "Avoid futile struggle."
-
+            "Avoid futile struggle.",
           ],
 
-          introspection: [
-
-            "Where do you draw strength?"
-
-          ]
-
+          introspection: ["Where do you draw strength?"],
         },
         anatomy:
           "Oppression builds endurance.\n\nInner strength overcomes limits.\n\nPatience leads to release.",
@@ -6610,23 +5948,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Studna symbolizuje zdroj, který zůstává stejný bez ohledu na okolnosti.\n\nPsychologicky jde o hluboké hodnoty.\n\nZdroje je třeba udržovat.",
         oracle: {
-
           interpretation: [
-
             "Pečuj o své zdroje.",
 
             "Nezanedbávej základ.",
 
-            "Čerpej vědomě."
-
+            "Čerpej vědomě.",
           ],
 
-          introspection: [
-
-            "Co je tvým trvalým zdrojem?"
-
-          ]
-
+          introspection: ["Co je tvým trvalým zdrojem?"],
         },
         anatomy:
           "Studna je trvalá.\n\nÚdržba je nutná.\n\nZanedbání vede k vyčerpání.",
@@ -6674,23 +6004,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Well represents a constant source.\n\nPsychologically, it reflects deep values.\n\nSources require maintenance.",
         oracle: {
-
           interpretation: [
-
             "Care for your resources.",
 
             "Maintain foundations.",
 
-            "Draw consciously."
-
+            "Draw consciously.",
           ],
 
-          introspection: [
-
-            "What is your lasting source?"
-
-          ]
-
+          introspection: ["What is your lasting source?"],
         },
         anatomy:
           "The Well remains constant.\n\nMaintenance preserves value.\n\nNeglect leads to decline.",
@@ -6748,23 +6070,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Proměna znamená zásadní změnu. Staré struktury již nefungují.\n\nPsychologicky jde o transformaci identity.\n\nZměna musí být načasovaná.",
         oracle: {
-
           interpretation: [
-
             "Jednej ve správný čas.",
 
             "Nepospíchej.",
 
-            "Buď transparentní."
-
+            "Buď transparentní.",
           ],
 
-          introspection: [
-
-            "Co je připraveno ke změně?"
-
-          ]
-
+          introspection: ["Co je připraveno ke změně?"],
         },
         anatomy:
           "Proměna obnovuje energii.\n\nBez načasování selže.\n\nVědomí stabilizuje přerod.",
@@ -6812,23 +6126,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Revolution signifies fundamental change.\n\nPsychologically, it reflects transformation.\n\nTiming determines success.",
         oracle: {
-
           interpretation: [
-
             "Act at the right moment.",
 
             "Do not rush.",
 
-            "Be transparent."
-
+            "Be transparent.",
           ],
 
-          introspection: [
-
-            "What is ready to change?"
-
-          ]
-
+          introspection: ["What is ready to change?"],
         },
         anatomy:
           "Revolution renews energy.\n\nWithout timing, it fails.\n\nAwareness stabilizes transition.",
@@ -6886,23 +6192,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Kotlík symbolizuje kultivaci a transformaci skrze péči.\n\nPsychologicky jde o proces zrání.\n\nSprávné prostředí umožňuje růst.",
         oracle: {
-
           interpretation: [
-
             "Pečuj o proces.",
 
             "Vytvářej hodnotu.",
 
-            "Buď trpělivý."
-
+            "Buď trpělivý.",
           ],
 
-          introspection: [
-
-            "Co je třeba kultivovat?"
-
-          ]
-
+          introspection: ["Co je třeba kultivovat?"],
         },
         anatomy:
           "Kotlík proměňuje surové v hodnotné.\n\nProces vyžaduje péči.\n\nTrpělivost přináší kvalitu.",
@@ -6950,23 +6248,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Cauldron represents cultivation and transformation.\n\nPsychologically, it reflects maturation.\n\nProper care enables refinement.",
         oracle: {
-
           interpretation: [
-
             "Nurture the process.",
 
             "Create value.",
 
-            "Be patient."
-
+            "Be patient.",
           ],
 
-          introspection: [
-
-            "What needs cultivation?"
-
-          ]
-
+          introspection: ["What needs cultivation?"],
         },
         anatomy:
           "The Cauldron refines raw material.\n\nProcess demands care.\n\nPatience produces quality.",
@@ -7024,23 +6314,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Otřes představuje náhlý impulz, který probouzí. Přichází bez varování a narušuje jistoty.\n\nPsychologicky jde o šok nebo náhlé uvědomění.\n\nOtřes může být děsivý, ale přináší probuzení.",
         oracle: {
-
           interpretation: [
-
             "Zachovej klid.",
 
             "Nereaguj unáhleně.",
 
-            "Vnímej, co tě situace učí."
-
+            "Vnímej, co tě situace učí.",
           ],
 
-          introspection: [
-
-            "Co tě právě probouzí?"
-
-          ]
-
+          introspection: ["Co tě právě probouzí?"],
         },
         anatomy:
           "Otřes probouzí vědomí.\n\nPrvní reakce je strach.\n\nKlid přináší porozumění.",
@@ -7088,23 +6370,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Shock represents sudden awakening. It disrupts certainty.\n\nPsychologically, it reflects sudden insight or crisis.\n\nShock can frighten but also enlighten.",
         oracle: {
-
           interpretation: [
-
             "Stay calm.",
 
             "Avoid impulsive reaction.",
 
-            "Learn from the moment."
-
+            "Learn from the moment.",
           ],
 
-          introspection: [
-
-            "What is awakening within you?"
-
-          ]
-
+          introspection: ["What is awakening within you?"],
         },
         anatomy:
           "Shock awakens awareness.\n\nFear subsides through calm.\n\nInsight emerges afterward.",
@@ -7162,23 +6436,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Zastavení symbolizuje klid a schopnost přerušit pohyb.\n\nPsychologicky jde o meditativní zastavení.\n\nZastavit se znamená obnovit rovnováhu.",
         oracle: {
+          interpretation: ["Zpomal.", "Nevyvíjej tlak.", "Najdi ticho."],
 
-          interpretation: [
-
-            "Zpomal.",
-
-            "Nevyvíjej tlak.",
-
-            "Najdi ticho."
-
-          ],
-
-          introspection: [
-
-            "Kde je třeba přestat?"
-
-          ]
-
+          introspection: ["Kde je třeba přestat?"],
         },
         anatomy:
           "Zastavení přináší jasnost.\n\nKlid obnovuje energii.\n\nPřílišná strnulost brzdí růst.",
@@ -7226,23 +6486,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Stillness signifies pause and restraint.\n\nPsychologically, it reflects meditation.\n\nStopping restores balance.",
         oracle: {
+          interpretation: ["Slow down.", "Do not force.", "Seek silence."],
 
-          interpretation: [
-
-            "Slow down.",
-
-            "Do not force.",
-
-            "Seek silence."
-
-          ],
-
-          introspection: [
-
-            "Where must you pause?"
-
-          ]
-
+          introspection: ["Where must you pause?"],
         },
         anatomy:
           "Stillness clarifies.\n\nCalm renews energy.\n\nRigidity blocks growth.",
@@ -7300,23 +6546,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Postupné působení symbolizuje pomalý, stabilní vývoj.\n\nPsychologicky jde o zrání vztahů nebo projektů.\n\nTrvalé změny jsou pozvolné.",
         oracle: {
-
           interpretation: [
-
             "Buď trpělivý.",
 
             "Nevynechávej kroky.",
 
-            "Buduj postupně."
-
+            "Buduj postupně.",
           ],
 
-          introspection: [
-
-            "Kde potřebuješ více času?"
-
-          ]
-
+          introspection: ["Kde potřebuješ více času?"],
         },
         anatomy:
           "Postupnost přináší stabilitu.\n\nTrpělivost buduje pevnost.\n\nUnáhlenost narušuje proces.",
@@ -7364,23 +6602,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Gradual Progress represents steady development.\n\nPsychologically, it reflects maturation.\n\nLasting change unfolds slowly.",
         oracle: {
-
           interpretation: [
-
             "Be patient.",
 
             "Do not skip steps.",
 
-            "Build steadily."
-
+            "Build steadily.",
           ],
 
-          introspection: [
-
-            "Where is time required?"
-
-          ]
-
+          introspection: ["Where is time required?"],
         },
         anatomy:
           "Gradual growth ensures stability.\n\nPatience builds strength.\n\nHaste disrupts progress.",
@@ -7438,23 +6668,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Tento hexagram symbolizuje vstup do vztahu nebo situace, kde nejsou podmínky plně vyrovnané.\n\nPsychologicky poukazuje na roli, kterou přijímáme bez plné kontroly.\n\nJe důležité znát své hranice.",
         oracle: {
-
           interpretation: [
-
             "Nepodceňuj svou hodnotu.",
 
             "Jednej s důstojností.",
 
-            "Nevstupuj do nerovnováhy bez vědomí."
-
+            "Nevstupuj do nerovnováhy bez vědomí.",
           ],
 
-          introspection: [
-
-            "Kde přijímáš méně, než si zasloužíš?"
-
-          ]
-
+          introspection: ["Kde přijímáš méně, než si zasloužíš?"],
         },
         anatomy:
           "Nerovnováha vyžaduje vědomí.\n\nSebehodnota chrání integritu.\n\nZralost přináší rovnost.",
@@ -7502,23 +6724,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "This hexagram signifies entering a relationship or role under unequal conditions.\n\nPsychologically, it reflects accepting limited agency.\n\nSelf-awareness is essential.",
         oracle: {
-
           interpretation: [
-
             "Know your worth.",
 
             "Act with dignity.",
 
-            "Avoid unconscious imbalance."
-
+            "Avoid unconscious imbalance.",
           ],
 
-          introspection: [
-
-            "Where are you accepting less than you deserve?"
-
-          ]
-
+          introspection: ["Where are you accepting less than you deserve?"],
         },
         anatomy:
           "Imbalance demands awareness.\n\nSelf-respect preserves integrity.\n\nMaturity restores equality.",
@@ -7576,23 +6790,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Hojnost představuje vrchol energie a plnosti.\n\nPsychologicky jde o období silné vitality a úspěchu.\n\nVrchol však netrvá věčně.",
         oracle: {
-
           interpretation: [
-
             "Využij plnost času.",
 
             "Buď vděčný.",
 
-            "Připrav se na změnu."
-
+            "Připrav se na změnu.",
           ],
 
-          introspection: [
-
-            "Jak zacházíš se svým úspěchem?"
-
-          ]
-
+          introspection: ["Jak zacházíš se svým úspěchem?"],
         },
         anatomy:
           "Hojnost je dočasná.\n\nVděčnost stabilizuje.\n\nPřipravenost chrání budoucnost.",
@@ -7640,23 +6846,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Abundance represents fullness and peak vitality.\n\nPsychologically, it reflects success and brightness.\n\nPeaks are temporary.",
         oracle: {
-
           interpretation: [
-
             "Use the moment wisely.",
 
             "Be grateful.",
 
-            "Prepare for change."
-
+            "Prepare for change.",
           ],
 
-          introspection: [
-
-            "How do you handle success?"
-
-          ]
-
+          introspection: ["How do you handle success?"],
         },
         anatomy:
           "Abundance is transient.\n\nGratitude stabilizes success.\n\nPreparedness protects continuity.",
@@ -7714,23 +6912,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Putování symbolizuje dočasnost a pohyb mimo domov.\n\nPsychologicky jde o období hledání.\n\nJe třeba zachovat lehkost a respekt.",
         oracle: {
-
           interpretation: [
-
             "Chovej se opatrně.",
 
             "Neulpívej.",
 
-            "Respektuj cizí prostředí."
-
+            "Respektuj cizí prostředí.",
           ],
 
-          introspection: [
-
-            "Co se učíš na cestě?"
-
-          ]
-
+          introspection: ["Co se učíš na cestě?"],
         },
         anatomy:
           "Putování přináší zkušenost.\n\nLehkost chrání.\n\nDomov se nachází uvnitř.",
@@ -7778,23 +6968,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Wanderer represents transience and movement away from home.\n\nPsychologically, it reflects a period of searching.\n\nLightness and respect are necessary.",
         oracle: {
-
           interpretation: [
-
             "Be cautious.",
 
             "Do not cling.",
 
-            "Respect foreign ground."
-
+            "Respect foreign ground.",
           ],
 
-          introspection: [
-
-            "What are you learning on this journey?"
-
-          ]
-
+          introspection: ["What are you learning on this journey?"],
         },
         anatomy:
           "Wandering brings experience.\n\nLightness protects.\n\nHome is found within.",
@@ -7852,23 +7034,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Pronikání symbolizuje jemný, vytrvalý vliv. Neprosazuje se silou, ale trpělivostí.\n\nPsychologicky jde o schopnost působit postupně.\n\nMěkkost může být silnější než tlak.",
         oracle: {
-
           interpretation: [
-
             "Buď vytrvalý.",
 
             "Postupuj nenápadně.",
 
-            "Nezvyšuj tlak."
-
+            "Nezvyšuj tlak.",
           ],
 
-          introspection: [
-
-            "Kde můžeš působit jemněji?"
-
-          ]
-
+          introspection: ["Kde můžeš působit jemněji?"],
         },
         anatomy:
           "Pronikání je postupné.\n\nTrpělivost přináší výsledek.\n\nJemnost stabilizuje změnu.",
@@ -7916,23 +7090,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "The Gentle represents gradual influence through persistence.\n\nPsychologically, it reflects subtle impact.\n\nSoftness can overcome force.",
         oracle: {
-
           interpretation: [
-
             "Persist quietly.",
 
             "Apply gentle pressure.",
 
-            "Avoid harshness."
-
+            "Avoid harshness.",
           ],
 
-          introspection: [
-
-            "Where can you act more subtly?"
-
-          ]
-
+          introspection: ["Where can you act more subtly?"],
         },
         anatomy:
           "Gentle influence is gradual.\n\nPatience yields success.\n\nSoftness stabilizes change.",
@@ -7990,23 +7156,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Radost představuje otevřenost a komunikaci.\n\nPsychologicky jde o lehkost bytí.\n\nSdílená radost posiluje vztahy.",
         oracle: {
-
           interpretation: [
-
             "Buď otevřený.",
 
             "Sdílej.",
 
-            "Nenech radost sklouznout k povrchnosti."
-
+            "Nenech radost sklouznout k povrchnosti.",
           ],
 
-          introspection: [
-
-            "Co tě skutečně těší?"
-
-          ]
-
+          introspection: ["Co tě skutečně těší?"],
         },
         anatomy:
           "Radost spojuje.\n\nUpřímnost ji stabilizuje.\n\nPovrchnost ji oslabuje.",
@@ -8054,23 +7212,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Joy represents openness and communication.\n\nPsychologically, it reflects lightness of being.\n\nShared joy strengthens bonds.",
         oracle: {
-
           interpretation: [
-
             "Be open.",
 
             "Share sincerely.",
 
-            "Avoid superficiality."
-
+            "Avoid superficiality.",
           ],
 
-          introspection: [
-
-            "What truly brings you joy?"
-
-          ]
-
+          introspection: ["What truly brings you joy?"],
         },
         anatomy:
           "Joy unites.\n\nSincerity stabilizes.\n\nSuperficiality weakens.",
@@ -8128,23 +7278,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Rozptýlení znamená uvolnění napětí a rozpuštění překážek.\n\nPsychologicky jde o rozvolnění strachu.\n\nJednota vzniká odstraněním bariér.",
         oracle: {
+          interpretation: ["Uvolni napětí.", "Spojuj.", "Nehromad obavy."],
 
-          interpretation: [
-
-            "Uvolni napětí.",
-
-            "Spojuj.",
-
-            "Nehromad obavy."
-
-          ],
-
-          introspection: [
-
-            "Co můžeš rozpustit?"
-
-          ]
-
+          introspection: ["Co můžeš rozpustit?"],
         },
         anatomy:
           "Rozpuštění přináší klid.\n\nJednota vzniká uvolněním.\n\nRovnováha je nutná.",
@@ -8192,23 +7328,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Dispersion signifies dissolving tension and obstacles.\n\nPsychologically, it reflects release of fear.\n\nUnity emerges through openness.",
         oracle: {
-
           interpretation: [
-
             "Release tension.",
 
             "Reconnect.",
 
-            "Do not cling to fear."
-
+            "Do not cling to fear.",
           ],
 
-          introspection: [
-
-            "What can you dissolve?"
-
-          ]
-
+          introspection: ["What can you dissolve?"],
         },
         anatomy:
           "Dispersion brings relief.\n\nUnity forms through openness.\n\nBalance maintains clarity.",
@@ -8266,23 +7394,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Omezení symbolizuje strukturu a hranice.\n\nPsychologicky jde o disciplínu.\n\nHranice chrání energii.",
         oracle: {
-
           interpretation: [
-
             "Stanov si meze.",
 
             "Respektuj pravidla.",
 
-            "Nepřeháněj omezení."
-
+            "Nepřeháněj omezení.",
           ],
 
-          introspection: [
-
-            "Kde potřebuješ jasné hranice?"
-
-          ]
-
+          introspection: ["Kde potřebuješ jasné hranice?"],
         },
         anatomy:
           "Omezení stabilizuje.\n\nDisciplína chrání.\n\nPřehnanost omezuje růst.",
@@ -8330,23 +7450,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Limitation represents structure and boundaries.\n\nPsychologically, it reflects discipline.\n\nBoundaries protect energy.",
         oracle: {
-
           interpretation: [
-
             "Set limits.",
 
             "Respect structure.",
 
-            "Avoid excess rigidity."
-
+            "Avoid excess rigidity.",
           ],
 
-          introspection: [
-
-            "Where are boundaries needed?"
-
-          ]
-
+          introspection: ["Where are boundaries needed?"],
         },
         anatomy:
           "Limitation stabilizes.\n\nDiscipline protects.\n\nRigidity blocks growth.",
@@ -8404,23 +7516,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Vnitřní pravda představuje upřímnost a důvěru.\n\nPsychologicky jde o soulad mezi slovem a činem.\n\nAutenticita vytváří důvěru.",
         oracle: {
+          interpretation: ["Buď upřímný.", "Naslouchej sobě.", "Buduj důvěru."],
 
-          interpretation: [
-
-            "Buď upřímný.",
-
-            "Naslouchej sobě.",
-
-            "Buduj důvěru."
-
-          ],
-
-          introspection: [
-
-            "Jednáš v souladu se svým nitrem?"
-
-          ]
-
+          introspection: ["Jednáš v souladu se svým nitrem?"],
         },
         anatomy:
           "Pravda vytváří spojení.\n\nIntegrita stabilizuje vztahy.\n\nSebeklam vede k rozpadu.",
@@ -8468,23 +7566,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Inner Truth represents sincerity and trust.\n\nPsychologically, it reflects alignment between words and actions.\n\nAuthenticity builds connection.",
         oracle: {
+          interpretation: ["Be sincere.", "Listen within.", "Build trust."],
 
-          interpretation: [
-
-            "Be sincere.",
-
-            "Listen within.",
-
-            "Build trust."
-
-          ],
-
-          introspection: [
-
-            "Are you aligned with yourself?"
-
-          ]
-
+          introspection: ["Are you aligned with yourself?"],
         },
         anatomy:
           "Truth builds connection.\n\nIntegrity sustains relationships.\n\nDeception dissolves trust.",
@@ -8537,23 +7621,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Převaha malého upozorňuje na důležitost detailu.\n\nPsychologicky jde o jemné úpravy.\n\nMalé kroky mají význam.",
         oracle: {
-
           interpretation: [
-
             "Buď pozorný k detailům.",
 
             "Neusiluj o velké skoky.",
 
-            "Postupuj opatrně."
-
+            "Postupuj opatrně.",
           ],
 
-          introspection: [
-
-            "Co vyžaduje jemnou úpravu?"
-
-          ]
-
+          introspection: ["Co vyžaduje jemnou úpravu?"],
         },
         anatomy:
           "Malé kroky budují stabilitu.\n\nDetail rozhoduje.\n\nPřehnanost škodí.",
@@ -8601,23 +7677,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Preponderance of the Small emphasizes attention to detail.\n\nPsychologically, it reflects subtle adjustments.\n\nSmall actions matter.",
         oracle: {
-
           interpretation: [
-
             "Focus on details.",
 
             "Avoid big leaps.",
 
-            "Proceed carefully."
-
+            "Proceed carefully.",
           ],
 
-          introspection: [
-
-            "What needs subtle refinement?"
-
-          ]
-
+          introspection: ["What needs subtle refinement?"],
         },
         anatomy:
           "Small steps ensure stability.\n\nDetails matter.\n\nExcess disrupts.",
@@ -8675,23 +7743,9 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Po dokončení symbolizuje stav, kdy je cíle dosaženo.\n\nPsychologicky jde o krátký moment rovnováhy.\n\nStav není trvalý.",
         oracle: {
+          interpretation: ["Zůstaň bdělý.", "Nepolevuj.", "Udržuj rovnováhu."],
 
-          interpretation: [
-
-            "Zůstaň bdělý.",
-
-            "Nepolevuj.",
-
-            "Udržuj rovnováhu."
-
-          ],
-
-          introspection: [
-
-            "Co je třeba dále udržovat?"
-
-          ]
-
+          introspection: ["Co je třeba dále udržovat?"],
         },
         anatomy:
           "Dokončení je dočasné.\n\nBdělost chrání stav.\n\nNedbalost vede k obratu.",
@@ -8739,23 +7793,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "After Completion signifies achieved order.\n\nPsychologically, it reflects temporary balance.\n\nCompletion is not permanent.",
         oracle: {
-
           interpretation: [
-
             "Remain vigilant.",
 
             "Do not relax too soon.",
 
-            "Maintain balance."
-
+            "Maintain balance.",
           ],
 
-          introspection: [
-
-            "What requires continued care?"
-
-          ]
-
+          introspection: ["What requires continued care?"],
         },
         anatomy:
           "Completion is temporary.\n\nVigilance preserves order.\n\nNeglect causes reversal.",
@@ -8813,23 +7859,15 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Před dokončením znamená, že proces ještě není uzavřen.\n\nPsychologicky jde o fázi těsně před cílem.\n\nOpatrnost je zásadní.",
         oracle: {
-
           interpretation: [
-
             "Nevzdávej se těsně před cílem.",
 
             "Buď trpělivý.",
 
-            "Dokonči proces vědomě."
-
+            "Dokonči proces vědomě.",
           ],
 
-          introspection: [
-
-            "Co zbývá dotáhnout?"
-
-          ]
-
+          introspection: ["Co zbývá dotáhnout?"],
         },
         anatomy:
           "Proces je téměř hotov.\n\nTrpělivost přináší dokončení.\n\nUnáhlenost vše narušuje.",
@@ -8877,23 +7915,13 @@ export const hexagrams: Hexagram[] = [
         meaning:
           "Before Completion signifies unfinished process.\n\nPsychologically, it reflects being near the goal.\n\nCaution is crucial.",
         oracle: {
-
           interpretation: [
-
             "Do not give up near the finish.",
-
             "Be patient.",
-
-            "Complete consciously."
-
+            "Complete consciously.",
           ],
 
-          introspection: [
-
-            "What remains unfinished?"
-
-          ]
-
+          introspection: ["What remains unfinished?"],
         },
         anatomy:
           "Completion is near.\n\nPatience ensures success.\n\nHaste disrupts fulfillment.",
