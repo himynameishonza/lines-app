@@ -1,5 +1,12 @@
 import React, { useState, useRef } from "react";
-import { View, Dimensions, FlatList, TextInput, TouchableOpacity, Pressable } from "react-native";
+import {
+  View,
+  Dimensions,
+  FlatList,
+  TextInput,
+  TouchableOpacity,
+  Pressable,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { CircleOff, X } from "lucide-react-native";
 import TopNavigationBarHexagramsScreen from "../components/navbars/TopNavigationBarHexagramsScreen";
@@ -10,11 +17,17 @@ import { hexagrams } from "../data/hexagrams";
 import BodoniText from "../components/typography/BodoniText";
 import { useSettings } from "../contexts/SettingsContext";
 import { useTranslation } from "react-i18next";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 // Fu Xi sequence (binary order)
-const fuXiSequence = [1, 43, 14, 34, 9, 5, 26, 11, 10, 58, 38, 54, 61, 60, 41, 19, 13, 49, 30, 55, 37, 63, 22, 36, 25, 17, 21, 51, 42, 3, 27, 24, 44, 28, 50, 32, 57, 48, 18, 46, 6, 47, 64, 40, 59, 29, 4, 7, 33, 31, 56, 62, 53, 39, 52, 15, 12, 45, 35, 16, 20, 8, 23, 2];
+const fuXiSequence = [
+  1, 43, 14, 34, 9, 5, 26, 11, 10, 58, 38, 54, 61, 60, 41, 19, 13, 49, 30, 55,
+  37, 63, 22, 36, 25, 17, 21, 51, 42, 3, 27, 24, 44, 28, 50, 32, 57, 48, 18, 46,
+  6, 47, 64, 40, 59, 29, 4, 7, 33, 31, 56, 62, 53, 39, 52, 15, 12, 45, 35, 16,
+  20, 8, 23, 2,
+];
 
 interface HexagramsScreenProps {
   onViewModeChange?: (viewMode: TViewMode) => void;
@@ -25,7 +38,9 @@ export default function HexagramsScreen({
 }: HexagramsScreenProps) {
   const { settings, sessionViewMode, setSessionViewMode } = useSettings();
   // Use session view mode if it exists, otherwise use default from settings
-  const [viewMode, setViewMode] = useState<TViewMode>(sessionViewMode || settings.viewMode);
+  const [viewMode, setViewMode] = useState<TViewMode>(
+    sessionViewMode || settings.viewMode,
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearchInput, setShowSearchInput] = useState(false);
   const searchInputRef = useRef<TextInput>(null);
@@ -37,22 +52,24 @@ export default function HexagramsScreen({
   const SIDE_PADDING = (SCREEN_WIDTH - CARD_WIDTH) / 2;
 
   // Sort hexagrams based on settings
-  const sortedHexagrams = settings.sortBy === 'fuSi'
-    ? fuXiSequence.map((num, index) => {
-        const hexagram = hexagrams.find(h => h.number === num)!;
-        return { ...hexagram, displayNumber: index + 1 };
-      })
-    : hexagrams.map(h => ({ ...h, displayNumber: h.number }));
+  const sortedHexagrams =
+    settings.sortBy === "fuSi"
+      ? fuXiSequence.map((num, index) => {
+          const hexagram = hexagrams.find((h) => h.number === num)!;
+          return { ...hexagram, displayNumber: index + 1 };
+        })
+      : hexagrams.map((h) => ({ ...h, displayNumber: h.number }));
 
   // Filter hexagrams based on search query
   const filteredHexagrams = searchQuery
     ? sortedHexagrams.filter((hexagram) => {
         const query = searchQuery.toLowerCase();
-        const localizedName = hexagram.content[i18n.language as 'cs' | 'en'].name.toLowerCase();
+        const localizedName =
+          hexagram.content[i18n.language as "cs" | "en"].name.toLowerCase();
         const chineseName = hexagram.chineseName.toLowerCase();
         const romanization = hexagram.romanization.toLowerCase();
         const number = hexagram.displayNumber.toString();
-        
+
         return (
           localizedName.includes(query) ||
           chineseName.includes(query) ||
@@ -97,6 +114,8 @@ export default function HexagramsScreen({
     setShowSearchInput(false);
   }
 
+  const insets = useSafeAreaInsets();
+
   return (
     <View className="flex-1 bg-[#D8D6C3]">
       <TopNavigationBarHexagramsScreen
@@ -106,13 +125,17 @@ export default function HexagramsScreen({
         isSearchActive={!!searchQuery}
       />
       {showSearchInput && (
-        <Pressable 
-          className="absolute -top-9 left-0 right-0 bottom-0 z-10"
+        <Pressable
+          className="absolute top-0 left-0 right-0 bottom-0 z-10 flex-row items-center px-4 pb-3"
           onPress={handleCloseSearch}
         >
-          <Pressable 
-            className="absolute top-0 px-4 h-32 inset-x-0 bg-[#D8D6C3] flex justify-end"
+          <Pressable
+            className="absolute top-0 left-0 right-0 z-10 flex-row items-center px-4 pb-3 bg-[#D8D6C3]"
             onPress={(e) => e.stopPropagation()}
+            style={{
+              paddingTop: insets.top,
+              height: insets.top + 56,
+            }}
           >
             <View className="flex flex-row w-full rounded bg-background">
               <TextInput
@@ -125,10 +148,10 @@ export default function HexagramsScreen({
                 returnKeyType="search"
                 className="text-[#D8D6C3] flex-1 px-4 pb-1 h-11 text-sm"
                 placeholderTextColor="#a3a293"
-                style={{ fontFamily: 'GeistMono_500Medium' }}
+                style={{ fontFamily: "GeistMono_500Medium" }}
               />
               {searchQuery.length > 0 && (
-                <TouchableOpacity 
+                <TouchableOpacity
                   onPress={handleClearSearch}
                   className="h-11 w-11 flex items-center justify-center"
                   activeOpacity={1}
@@ -153,16 +176,23 @@ export default function HexagramsScreen({
             contentContainerStyle={{
               paddingHorizontal: SIDE_PADDING,
               gap: CARD_SPACING,
-              alignItems: 'center',
+              alignItems: "center",
             }}
             style={{ flexGrow: 0 }}
             initialNumToRender={3}
             maxToRenderPerBatch={5}
             windowSize={5}
             ListEmptyComponent={
-              <View className="items-center gap-2" style={{ width: SCREEN_WIDTH }}>
-                <GeistMonoText className="text-text/50 text-lg">No results</GeistMonoText>
-                <GeistMonoText className="text-text/30 text-sm">Try a different search term</GeistMonoText>
+              <View
+                className="items-center gap-2"
+                style={{ width: SCREEN_WIDTH }}
+              >
+                <GeistMonoText className="text-text/50 text-lg">
+                  No results
+                </GeistMonoText>
+                <GeistMonoText className="text-text/30 text-sm">
+                  Try a different search term
+                </GeistMonoText>
               </View>
             }
             renderItem={({ item }) => (
@@ -177,21 +207,27 @@ export default function HexagramsScreen({
                 </View>
 
                 <View className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center">
-                    <HexagramSymbol
-                      lines={item.lines}
-                      size={32}
-                      color="#42436b"
-                    />
-                  </View>
+                  <HexagramSymbol
+                    lines={item.lines}
+                    size={32}
+                    color="#42436b"
+                  />
+                </View>
                 <View className="items-center">
                   <View className="items-center">
-                     <BodoniText variant="bold" className="text-background text-9xl pt-8">
+                    <BodoniText
+                      variant="bold"
+                      className="text-background text-9xl pt-8"
+                    >
                       {item.chineseName}
                     </BodoniText>
                     <GeistMonoText className="text-text/60 text-lg">
                       {item.romanization}
                     </GeistMonoText>
-                    <GeistMonoText variant="bold" className="text-text text-2xl">
+                    <GeistMonoText
+                      variant="bold"
+                      className="text-text text-2xl"
+                    >
                       {item.content[i18n.language as "cs" | "en"].name}
                     </GeistMonoText>
                   </View>
@@ -207,13 +243,30 @@ export default function HexagramsScreen({
             <FlatList
               data={filteredHexagrams}
               keyExtractor={(item) => item.id.toString()}
-              contentContainerStyle={{ paddingVertical: 112, paddingHorizontal: 8, flexGrow: 1 }}
-              ItemSeparatorComponent={() => <View className="h-px bg-text/25" style={{ marginHorizontal: 8 }} />}
+              contentContainerStyle={{
+                paddingVertical: 112,
+                paddingHorizontal: 8,
+                flexGrow: 1,
+              }}
+              ItemSeparatorComponent={() => (
+                <View
+                  className="h-px bg-text/25"
+                  style={{ marginHorizontal: 8 }}
+                />
+              )}
               ListEmptyComponent={
                 <View className="flex-1 items-center justify-center gap-1">
-                  <CircleOff strokeWidth={1.5} size={48} className="text-main mb-4"/>
-                  <GeistMonoText variant="medium" className="text-text text-lg">{t("hexagrams.noResultsTitle")}</GeistMonoText>
-                  <GeistMonoText className="text-background text-sm">{t("hexagrams.noResultsDescription")}</GeistMonoText>
+                  <CircleOff
+                    strokeWidth={1.5}
+                    size={48}
+                    className="text-main mb-4"
+                  />
+                  <GeistMonoText variant="medium" className="text-text text-lg">
+                    {t("hexagrams.noResultsTitle")}
+                  </GeistMonoText>
+                  <GeistMonoText className="text-background text-sm">
+                    {t("hexagrams.noResultsDescription")}
+                  </GeistMonoText>
                 </View>
               }
               renderItem={({ item }) => (
@@ -250,12 +303,20 @@ export default function HexagramsScreen({
               data={filteredHexagrams}
               keyExtractor={(item) => item.id.toString()}
               numColumns={2}
-              contentContainerStyle={{ paddingVertical: 112, paddingHorizontal: 16, flexGrow: 1 }}
+              contentContainerStyle={{
+                paddingVertical: 112,
+                paddingHorizontal: 16,
+                flexGrow: 1,
+              }}
               columnWrapperStyle={{ gap: 12 }}
               ListEmptyComponent={
                 <View className="flex-1 items-center justify-center gap-2">
-                  <GeistMonoText className="text-text/50 text-lg">No results</GeistMonoText>
-                  <GeistMonoText className="text-text/30 text-sm">Try a different search term</GeistMonoText>
+                  <GeistMonoText className="text-text/50 text-lg">
+                    No results
+                  </GeistMonoText>
+                  <GeistMonoText className="text-text/30 text-sm">
+                    Try a different search term
+                  </GeistMonoText>
                 </View>
               }
               renderItem={({ item }) => (
@@ -295,15 +356,14 @@ export default function HexagramsScreen({
           )}
         </View>
       )}
-      {!showSearchInput && <LinearGradient
+      <LinearGradient
         colors={[
           "rgba(216, 214, 195, 1)",
           "rgba(216, 214, 195, 1)",
           "rgba(216, 214, 195, 0)",
         ]}
         className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
-      />}
+      />
     </View>
   );
 }
-
