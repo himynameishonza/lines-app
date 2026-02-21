@@ -184,9 +184,15 @@ export default function HexagramsScreen({
               alignItems: "center",
             }}
             style={{ flexGrow: 0 }}
-            initialNumToRender={3}
-            maxToRenderPerBatch={5}
-            windowSize={5}
+            initialNumToRender={2}
+            maxToRenderPerBatch={2}
+            windowSize={3}
+            removeClippedSubviews={true}
+            getItemLayout={(data, index) => ({
+              length: CARD_WIDTH + CARD_SPACING,
+              offset: (CARD_WIDTH + CARD_SPACING) * index,
+              index,
+            })}
             ListEmptyComponent={
               <View className="flex-1 items-center justify-center gap-1">
                 <CircleOff
@@ -205,13 +211,11 @@ export default function HexagramsScreen({
             renderItem={({ item }) => (
               <View
                 style={{ width: CARD_WIDTH, aspectRatio: 1 / 1.4 }}
-                className="border overflow-hidden border-text/10 rounded-lg"
+                className="border border-text/10 rounded-lg overflow-hidden"
               >
-                 <Image
-                      source={require("../assets/hexagram.png")}
-                      style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.6 }}
-                      resizeMode="cover"
-                    />
+                <CardBackground 
+                  elements={item.elements ?? [0, 0]} 
+                />
                     
                 <View className="absolute top-4 left-4 w-8 h-8 flex items-center justify-center">
                   <GeistMonoText className="text-text/50 text-base">
@@ -219,26 +223,29 @@ export default function HexagramsScreen({
                   </GeistMonoText>
                 </View>
 
-                <View className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center">
-                  <HexagramSymbol
-                    lines={item.lines}
-                    size={32}
-                    color="#42436b"
-                  />
-                </View>
-                <View className="flex-1 items-center justify-center">
+                <View className="absolute top-4 right-4 h-8 flex items-center justify-center">
                   <BodoniText
-                    variant="bold"
-                    className="text-background text-9xl pt-5"
+                    variant="medium"
+                    className="text-background text-xl"
                   >
                     {item.chineseName}
                   </BodoniText>
-                  <GeistMonoText className="text-text/60 text-lg">
+                </View>
+                <View className="flex-1 items-center justify-center">
+                  <HexagramSymbol
+                    lines={item.lines}
+                    size={100}
+                    color="#42436b"
+                    
+                  />
+                  
+                  <GeistMonoText className="text-text/60 text-base mt-2">
                     {item.romanization}
                   </GeistMonoText>
+
                   <GeistMonoText
                     variant="bold"
-                    className="text-text text-2xl"
+                    className="text-text text-2xl px-12 text-center leading-7"
                   >
                     {item.content[i18n.language as "cs" | "en"].name}
                   </GeistMonoText>

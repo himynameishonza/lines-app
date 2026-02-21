@@ -9,6 +9,12 @@ export interface Trigram {
   symbol: string;
   pinyin: string;  
   element: string;
+  visual: {
+    composition: "vertical" | "horizontal" | "diagonal" | "radial" | "diffused" | "deep" | "still" | "mist";
+    hue: number;
+    saturation: number;
+    lightness: number;
+  };
   content: {
     cs: TrigramContent;
     en: TrigramContent;
@@ -22,6 +28,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Qián",
     symbol: "☰",
     element: "Heaven",
+    visual: {
+      composition: "vertical",
+      hue: 210,
+      saturation: 25,
+      lightness: 70
+    },
     content: {
       cs: {
         name: "Nebe",
@@ -41,6 +53,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Kūn",
     symbol: "☷",
     element: "Earth",
+    visual: {
+      composition: "horizontal",
+      hue: 35,
+      saturation: 30,
+      lightness: 65
+    },
     content: {
       cs: {
         name: "Země",
@@ -60,6 +78,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Zhèn",
     symbol: "☳",
     element: "Thunder",
+    visual: {
+      composition: "diagonal",
+      hue: 280,
+      saturation: 35,
+      lightness: 60
+    },
     content: {
       cs: {
         name: "Hrom",
@@ -79,6 +103,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Xùn",
     symbol: "☴",
     element: "Wind",
+    visual: {
+      composition: "diffused",
+      hue: 150,
+      saturation: 28,
+      lightness: 68
+    },
     content: {
       cs: {
         name: "Vítr",
@@ -98,6 +128,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Kǎn",
     symbol: "☵",
     element: "Water",
+    visual: {
+      composition: "deep",
+      hue: 200,
+      saturation: 40,
+      lightness: 50
+    },
     content: {
       cs: {
         name: "Voda",
@@ -117,6 +153,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Lí",
     symbol: "☲",
     element: "Fire",
+    visual: {
+      composition: "radial",
+      hue: 15,
+      saturation: 45,
+      lightness: 72
+    },
     content: {
       cs: {
         name: "Oheň",
@@ -136,6 +178,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Gèn",
     symbol: "☶",
     element: "Mountain",
+    visual: {
+      composition: "still",
+      hue: 25,
+      saturation: 20,
+      lightness: 55
+    },
     content: {
       cs: {
         name: "Hora",
@@ -155,6 +203,12 @@ export const trigrams:Trigram[] = [
     pinyin: "Duì",
     symbol: "☱",
     element: "Lake",
+    visual: {
+      composition: "mist",
+      hue: 190,
+      saturation: 32,
+      lightness: 75
+    },
     content: {
       cs: {
         name: "Jezero",
