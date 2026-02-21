@@ -66,11 +66,11 @@ export function CardBackground({ elements, style }: Props) {
         colors={allColors as any}
         start={gradientPoints.start}
         end={gradientPoints.end}
-        style={[StyleSheet.absoluteFill, { opacity: 0.4 }]}
+        style={[StyleSheet.absoluteFill, { opacity: 0.2 }]}
       />
       <Image
         source={require("../assets/textures/mountain.jpg")}
-        style={[StyleSheet.absoluteFill, { opacity: 0.4 }]}
+        style={[StyleSheet.absoluteFill, { opacity: 0.3 }]}
         resizeMode="cover"
       />
     </View>
