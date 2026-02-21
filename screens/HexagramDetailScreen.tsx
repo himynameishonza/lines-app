@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { View, ScrollView } from "react-native";
 import { Hexagram } from "../data/hexagrams";
 import { HexagramDetailTab, TLanguage } from "../types/generic";
@@ -20,6 +20,12 @@ export default function HexagramDetailScreen({
   onShare,
 }: HexagramDetailScreenProps) {
   const [activeTab, setActiveTab] = useState<HexagramDetailTab>("meaning");
+  const scrollViewRef = useRef<ScrollView>(null);
+
+  // Reset scroll position when tab changes
+  useEffect(() => {
+    scrollViewRef.current?.scrollTo({ y: 0, animated: false });
+  }, [activeTab]);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -32,58 +38,94 @@ export default function HexagramDetailScreen({
           </View>
         );
       case "oracle":
+        const oracleContent = hexagram.content[i18n.language as TLanguage].oracle;
         return (
-          <View className="p-6">
-            <GeistMonoText className="text-text text-base leading-7">
-              {hexagram.content[i18n.language as TLanguage].oracle}
-            </GeistMonoText>
+          <View className="py-6 space-y-10">
+            <View className="divide-y divide-dashed divide-text/25 px-6">
+              <GeistMonoText
+                variant="bold"
+                className="text-text text-base py-2"
+              >
+                Výklad
+              </GeistMonoText>
+              {oracleContent.interpretation.map(
+                (text, index) => (
+                  <GeistMonoText
+                    key={index}
+                    className="text-text text-base py-4"
+                  >
+                    {text}
+                  </GeistMonoText>
+                ),
+              )}
+            </View>
+            {oracleContent.introspection.length > 0 && (
+              <View className="divide-y divide-dashed divide-text/25 px-6">
+                <GeistMonoText
+                  variant="bold"
+                  className="text-text text-base py-2"
+                >
+                  Introspekce
+                </GeistMonoText>
+                {oracleContent.introspection.map(
+                  (text, index) => (
+                    <GeistMonoText
+                      key={index}
+                      className="text-text text-base py-4"
+                    >
+                      {text}
+                    </GeistMonoText>
+                  ),
+                )}
+              </View>
+            )}
           </View>
         );
       case "anatomy":
         return (
           <View className="p-6">
             <View className="divide-y divide-dashed divide-text/25">
-              {hexagram.content[i18n.language as "cs" | "en"].anatomy.map(
-                (item) => {
-                  return (
-                    <View
-                      key={item.type + "-" + item.name}
-                      className="py-4 flex gap-1"
-                    >
-                      <View className="w-10 rounded bg-main p-0.5 mb-1">
-                        <GeistMonoText
-                          variant="medium"
-                          className="text-text text-xs text-center"
-                        >
-                          {getYinYangTranslation(
-                            item.type,
-                            i18n.language as TLanguage,
-                          )}
-                        </GeistMonoText>
-                      </View>
-                      <GeistMonoText
-                        className="text-text text-base"
-                        variant="bold"
-                      >
-                        {item.position}. linie - {item.name}
-                      </GeistMonoText>
-
-                      <GeistMonoText className="text-text text-base leading-7">
-                        {item.description}{" "}
-                      </GeistMonoText>
-                    </View>
-                  );
-                },
-              )}
+              <GeistMonoText className="text-text text-base leading-7">
+                {hexagram.content[i18n.language as TLanguage].anatomy}
+              </GeistMonoText>
             </View>
           </View>
         );
       case "evolution":
         return (
           <View className="p-6">
-            <GeistMonoText className="text-text text-base leading-7">
-              {hexagram.content[i18n.language as TLanguage].evolution}
-            </GeistMonoText>
+            {hexagram.content[i18n.language as "cs" | "en"].evolution.map(
+              (item) => {
+                return (
+                  <View
+                    key={item.type + "-" + item.name}
+                    className="py-4 flex gap-1"
+                  >
+                    <View className="w-10 rounded bg-main p-0.5 mb-1">
+                      <GeistMonoText
+                        variant="medium"
+                        className="text-text text-xs text-center"
+                      >
+                        {getYinYangTranslation(
+                          item.type,
+                          i18n.language as TLanguage,
+                        )}
+                      </GeistMonoText>
+                    </View>
+                    <GeistMonoText
+                      className="text-text text-base"
+                      variant="bold"
+                    >
+                      {item.position}. linie - {item.name}
+                    </GeistMonoText>
+
+                    <GeistMonoText className="text-text text-base leading-7">
+                      {item.description}{" "}
+                    </GeistMonoText>
+                  </View>
+                );
+              },
+            )}
           </View>
         );
     }
@@ -108,6 +150,7 @@ export default function HexagramDetailScreen({
         </GeistMonoText>
       </View>
       <ScrollView
+        ref={scrollViewRef}
         className="flex-1 z-1 bg-primary"
         contentContainerStyle={{ paddingTop: 0, paddingBottom: 100 }}
       >
