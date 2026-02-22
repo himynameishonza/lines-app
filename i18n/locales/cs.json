@@ -48,16 +48,16 @@
     "subtitle": "Vaše cesta I-ťing",
     "empty": {
       "title": "Zatím žádná čtení",
-      "subtitle": "Začněte své první čtení a vydejte se na cestu"
+      "subtitle": "Začněte své první čtení a vydejte se na cestu poznání."
     },
     "newReading": "Nové čtení",
     "today": "Dnes",
     "yesterday": "Včera",
-    "changing": "Proměnná",
+    "changing": "Proměnný",
     "method": {
-      "random": "Náhodný",
-      "randomWithChanging": "Náhodný s proměnou",
-      "coinToss": "Hod mincí"
+      "random": "Náhodný hexagram",
+      "randomWithChanging": "Náhodný hexagram s proměnou",
+      "coinToss": "Metoda hodu mincí"
     }
   },
   "hexagrams":{

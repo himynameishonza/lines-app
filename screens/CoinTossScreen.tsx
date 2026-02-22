@@ -11,7 +11,7 @@ import i18n from "../i18n/config";
 
 interface CoinTossScreenProps {
   onBack: () => void;
-  onComplete?: (hexagram: Hexagram) => void;
+  onComplete?: (hexagram: Hexagram, changingLines: boolean[]) => void;
 }
 
 export default function CoinTossScreen({
@@ -62,49 +62,80 @@ export default function CoinTossScreen({
 
   const handleExploreHexagram = () => {
     if (lines.length === 6 && onComplete && hexagram) {
-      onComplete(hexagram);
+      onComplete(hexagram, changingLines);
     }
+  };
+
+  // Helper function to match trigram pattern
+  const matchTrigramPattern = (trigramLines: (0 | 1)[], pattern: (0 | 1)[]) => {
+    return trigramLines.length === 3 && 
+           trigramLines[0] === pattern[0] && 
+           trigramLines[1] === pattern[1] && 
+           trigramLines[2] === pattern[2];
+  };
+
+  // Trigram patterns (bottom to top): King Wen sequence
+  const trigramPatterns: { [key: number]: (0 | 1)[] } = {
+    1: [1, 1, 1], // ☰ Heaven
+    2: [0, 0, 0], // ☷ Earth
+    3: [1, 0, 0], // ☳ Thunder
+    4: [1, 1, 0], // ☴ Wind
+    5: [0, 1, 0], // ☵ Water
+    6: [1, 0, 1], // ☲ Fire
+    7: [0, 0, 1], // ☶ Mountain
+    8: [0, 1, 1], // ☱ Lake
   };
 
   const getLowerTrigram = () => {
     if (lines.length < 3) return null;
     const trigramLines = lines.slice(0, 3);
-    return trigrams.find(t => 
-      t.id === 1 && trigramLines.every((l, i) => l === 1) || // ☰ Heaven 111
-      t.id === 2 && trigramLines.every((l, i) => l === 0) || // ☷ Earth 000
-      t.id === 3 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 0 || // ☳ Thunder 001
-      t.id === 4 && trigramLines[0] === 1 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☴ Wind 011
-      t.id === 5 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☵ Water 010
-      t.id === 6 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☲ Fire 101
-      t.id === 7 && trigramLines[0] === 0 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☶ Mountain 100
-      t.id === 8 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 1    // ☱ Lake 110
-    );
+    
+    for (const [id, pattern] of Object.entries(trigramPatterns)) {
+      if (matchTrigramPattern(trigramLines, pattern)) {
+        return trigrams.find(t => t.id === parseInt(id));
+      }
+    }
+    return null;
   };
 
   const getUpperTrigram = () => {
     if (lines.length < 6) return null;
     const trigramLines = lines.slice(3, 6);
-    return trigrams.find(t => 
-      t.id === 1 && trigramLines.every((l, i) => l === 1) || // ☰ Heaven 111
-      t.id === 2 && trigramLines.every((l, i) => l === 0) || // ☷ Earth 000
-      t.id === 3 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 0 || // ☳ Thunder 001
-      t.id === 4 && trigramLines[0] === 1 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☴ Wind 011
-      t.id === 5 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☵ Water 010
-      t.id === 6 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☲ Fire 101
-      t.id === 7 && trigramLines[0] === 0 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☶ Mountain 100
-      t.id === 8 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 1    // ☱ Lake 110
-    );
+    
+    for (const [id, pattern] of Object.entries(trigramPatterns)) {
+      if (matchTrigramPattern(trigramLines, pattern)) {
+        return trigrams.find(t => t.id === parseInt(id));
+      }
+    }
+    return null;
   };
 
   const lowerTrigram = getLowerTrigram();
   const upperTrigram = getUpperTrigram();
 
-  // Get hexagram by lines
+  // Get hexagram by matching lines array (more reliable than elements field which has errors)
   const getHexagram = () => {
     if (lines.length < 6) return null;
-    return hexagrams.find(h => 
-      h.lines.every((line, index) => line === lines[index])
+    
+    const foundHexagram = hexagrams.find(h => 
+      h.lines.length === 6 &&
+      h.lines[0] === lines[0] &&
+      h.lines[1] === lines[1] &&
+      h.lines[2] === lines[2] &&
+      h.lines[3] === lines[3] &&
+      h.lines[4] === lines[4] &&
+      h.lines[5] === lines[5]
     );
+    
+    // Debug: log if hexagram not found
+    if (!foundHexagram) {
+      console.log('Hexagram not found!');
+      console.log('Lines:', lines);
+      console.log('Lower trigram:', lowerTrigram?.id, lowerTrigram?.content.en.name);
+      console.log('Upper trigram:', upperTrigram?.id, upperTrigram?.content.en.name);
+    }
+    
+    return foundHexagram;
   };
 
   const hexagram = getHexagram();
@@ -269,15 +300,23 @@ export default function CoinTossScreen({
               </GeistMonoText>
             </View>
           </View> */}
-          {currentLine >= 6 && hexagram ? (
-            // Show hexagram name when complete
+          {currentLine >= 6 ? (
+            // Show hexagram name when complete or error message
             <View className="items-center py-8">
-              <GeistMonoText variant="bold" className="text-text text-2xl text-center">
-                {hexagram.content[i18n.language as TLanguage].name}
-              </GeistMonoText>
-              <GeistMonoText className="text-text/50 text-base text-center mt-2">
-                {hexagram.chineseName} · {hexagram.romanization}
-              </GeistMonoText>
+              {hexagram ? (
+                <>
+                  <GeistMonoText variant="bold" className="text-text text-2xl text-center">
+                    {hexagram.content[i18n.language as TLanguage].name}
+                  </GeistMonoText>
+                  <GeistMonoText className="text-text/50 text-base text-center mt-2">
+                    {hexagram.chineseName} · {hexagram.romanization}
+                  </GeistMonoText>
+                </>
+              ) : (
+                <GeistMonoText className="text-text/50 text-base text-center">
+                  Tento hexagram zatím není v databázi
+                </GeistMonoText>
+              )}
             </View>
           ) : (
             // Show coin toss interface
@@ -325,9 +364,12 @@ export default function CoinTossScreen({
             className="rounded bg-text w-full px-3 py-5"
             activeOpacity={0.8}
             onPress={currentLine >= 6 ? handleExploreHexagram : tossCoins}
+            disabled={currentLine >= 6 && !hexagram}
           >
             <GeistMonoText className="text-white text-center" variant="medium">
-              {currentLine >= 6 ? t("coinToss.exploreHexagram") : t("coinToss.tossCoins")}
+              {currentLine >= 6 
+                ? (hexagram ? t("coinToss.exploreHexagram") : "Hexagram nenalezen") 
+                : t("coinToss.tossCoins")}
             </GeistMonoText>
           </TouchableOpacity>
         </View>
