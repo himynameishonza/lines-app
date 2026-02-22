@@ -50,6 +50,10 @@
       "title": "Zatím žádná čtení",
       "subtitle": "Začněte své první čtení a vydejte se na cestu poznání."
     },
+    "loading": {
+      "title": "Načítání čtení",
+      "subtitle": "Prosím čekejte..."
+    },
     "newReading": "Nové čtení",
     "today": "Dnes",
     "yesterday": "Včera",
@@ -113,5 +117,11 @@
     "tails": "Orel",
     "lastToss": "Poslední hod",
     "sum": "Součet"
+  },
+  "deleteModal": {
+    "title": "Smazat čtení?",
+    "message": "Tato akce je nevratná. Čtení bude trvale odstraněno.",
+    "cancel": "Zrušit",
+    "confirm": "Smazat"
   }
 }

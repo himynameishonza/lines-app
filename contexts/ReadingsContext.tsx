@@ -39,6 +39,7 @@ const SANDBOX_READINGS: Reading[] = [
 
 interface ReadingsContextType {
   readings: Reading[];
+  isLoading: boolean;
   addReading: (reading: Omit<Reading, 'id' | 'createdAt'>) => void;
   deleteReading: (id: string) => void;
   getReading: (id: string) => Reading | undefined;
@@ -117,7 +118,7 @@ export function ReadingsProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <ReadingsContext.Provider value={{ readings, addReading, deleteReading, getReading, clearAndReloadSandbox }}>
+    <ReadingsContext.Provider value={{ readings, isLoading: !isLoaded, addReading, deleteReading, getReading, clearAndReloadSandbox }}>
       {children}
     </ReadingsContext.Provider>
   );

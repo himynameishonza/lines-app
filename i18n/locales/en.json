@@ -55,6 +55,10 @@
       "title": "No readings yet",
       "subtitle": "Start your first reading to begin your journey"
     },
+    "loading": {
+      "title": "Loading readings",
+      "subtitle": "Please wait..."
+    },
     "newReading": "New Reading",
     "today": "Today",
     "yesterday": "Yesterday",
@@ -109,5 +113,11 @@
     "tails": "Tails",
     "lastToss": "Last Toss",
     "sum": "Sum"
+  },
+  "deleteModal": {
+    "title": "Delete Reading?",
+    "message": "This action cannot be undone. The reading will be permanently removed.",
+    "cancel": "Cancel",
+    "confirm": "Delete"
   }
 }

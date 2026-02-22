@@ -1,14 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { View, ScrollView } from "react-native";
 import TopNavigationBarHomeScreen from "../components/navbars/TopNavigationBarHomeScreen";
 import GeistMonoText from "../components/typography/GeistMonoText";
 import EmptyState from "../components/readingList/EmptyState";
+import LoadingState from "../components/readingList/LoadingState";
 import ReadingListItem from "../components/readingList/ReadingListItem";
+import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
 import { useReadings } from "../contexts/ReadingsContext";
 import { hexagrams } from "../data/hexagrams";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n/config";
 import ReadingListDateHeader from "../components/readingList/ReadingListDateHeader";
+import { LinearGradient } from "expo-linear-gradient";
 
 interface HomeScreenProps {
   onAdd: () => void;
@@ -18,8 +21,10 @@ interface HomeScreenProps {
 
 export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeScreenProps) {
   const { t } = useTranslation();
-  const { readings, deleteReading } = useReadings();
+  const { readings, isLoading, deleteReading } = useReadings();
   const closeSwipeCallbacks = useRef<{ [key: string]: () => void }>({});
+  const [deleteModalVisible, setDeleteModalVisible] = useState(false);
+  const [readingToDelete, setReadingToDelete] = useState<string | null>(null);
 
   // Group readings by date
   const groupedReadings = readings.reduce((groups, reading) => {
@@ -72,15 +77,39 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
     return Object.keys(closeSwipeCallbacks.current).length > 0;
   };
 
+  const handleDeleteRequest = (readingId: string) => {
+    setReadingToDelete(readingId);
+    setDeleteModalVisible(true);
+  };
+
+  const handleConfirmDelete = () => {
+    setDeleteModalVisible(false);
+    if (readingToDelete) {
+      deleteReading(readingToDelete);
+    }
+    setReadingToDelete(null);
+    // Close all open swipes
+    Object.values(closeSwipeCallbacks.current).forEach(callback => callback());
+  };
+
+  const handleCancelDelete = () => {
+    setDeleteModalVisible(false);
+    setReadingToDelete(null);
+    // Close all open swipes
+    Object.values(closeSwipeCallbacks.current).forEach(callback => callback());
+  };
+
   return (
     <View className="bg-primary flex-1">
       <TopNavigationBarHomeScreen onAdd={onCoinToss} />
       
-      {readings.length === 0 ? (
+      {isLoading ? (
+        <LoadingState />
+      ) : readings.length === 0 ? (
         <EmptyState  />
       ) : (
         <View className="flex-1" onStartShouldSetResponder={() => true} onResponderRelease={handleOutsideTap}>
-          <ScrollView className="flex-1 px-6 pt-32">
+          <ScrollView className="flex-1 px-6 pt-32" contentContainerStyle={{ paddingBottom: 80 }}>
             {Object.entries(groupedReadings).map(([dateLabel, dateReadings]) => (
               <View key={dateLabel} className="mb-6">
                 <ReadingListDateHeader dateLabel={dateLabel}/>
@@ -96,7 +125,7 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
                       hexagram={hexagram}
                       hasChangingLines={hasChangingLines(reading) || false}
                       onPress={() => onReadingPress(reading.id)}
-                      onDelete={() => deleteReading(reading.id)}
+                      onDelete={() => handleDeleteRequest(reading.id)}
                       onRegisterClose={(callback) => registerCloseCallback(reading.id, callback)}
                       onUnregisterClose={() => unregisterCloseCallback(reading.id)}
                       onCloseOthers={() => {
@@ -114,6 +143,20 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
           </ScrollView>
         </View>
       )}
+      <LinearGradient
+              colors={[
+                "rgba(245, 232, 220, 1)",
+                "rgba(245, 232, 220, 1)",
+                "rgba(245, 232, 220, 0)",
+              ]}
+              className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+            />
+
+      <ConfirmDeleteModal
+        visible={deleteModalVisible}
+        onConfirm={handleConfirmDelete}
+        onCancel={handleCancelDelete}
+      />
     </View>
   );
 }

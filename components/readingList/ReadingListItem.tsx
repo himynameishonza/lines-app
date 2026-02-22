@@ -132,13 +132,7 @@ export default function ReadingListItem({
   ).current;
 
   const handleDelete = () => {
-    Animated.timing(translateX, {
-      toValue: -400,
-      duration: 300,
-      useNativeDriver: true,
-    }).start(() => {
-      onDelete();
-    });
+    onDelete();
   };
 
   return (
@@ -163,27 +157,26 @@ export default function ReadingListItem({
           onPress={handleCardPress}
           activeOpacity={1}
           disabled={hasAnyOpen()}
-          className="bg-primary border border-text/25 border-dashed rounded-lg p-4 flex-row items-center"
+          className="bg-primary border border-text/25 border-dashed rounded-lg p-4"
         >
-          <View className="space-y-2">
-            <View className="flex flex-row gap-x-2 justify-between items-center">
-              <View className="flex flex-row gap-x-3">
-                <HexagramSymbol
-                  lines={hexagram.lines}
-                  size={48}
-                  color="#06283F"
-                  changingLines={reading.changingLines}
-                />
+          <View className="flex-row items-center gap-x-3 pl-4 mb-2">
+            <HexagramSymbol
+              lines={hexagram.lines}
+              size={48}
+              color="#06283F"
+              changingLines={reading.changingLines}
+            />
 
-                <View>
-                  <GeistMonoText variant="bold" className="text-lg">
-                    {hexagram.content[i18n.language as TLanguage].name}
-                  </GeistMonoText>
-                  <GeistMonoText className="text-sm text-background">
-                    {hexagram.chineseName} {hexagram.romanization}
-                  </GeistMonoText>
-                </View>
+            <View className="flex-1 flex-row items-center justify-between">
+              <View className="flex-1 mr-2">
+                <GeistMonoText variant="bold" className="text-base leading-5">
+                  {hexagram.content[i18n.language as TLanguage].name}
+                </GeistMonoText>
+                <GeistMonoText className="text-sm text-background">
+                  {hexagram.chineseName} {hexagram.romanization}
+                </GeistMonoText>
               </View>
+              
               {hasChangingLines && (
                 <View className="bg-main rounded px-1.5 py-0.5">
                   <GeistMonoText className="text-text text-xs">
@@ -192,13 +185,13 @@ export default function ReadingListItem({
                 </View>
               )}
             </View>
-
-            <GeistMonoText className="text-sm leading-5 text-text/70">
-              {/* {reading.question} */}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto, quibusdam temporibus aut ducimus corporis neque.
-            </GeistMonoText>
           </View>
+
+          <GeistMonoText className="text-sm leading-5 text-text/70">
+            {/* {reading.question} */}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Architecto, quibusdam temporibus aut ducimus corporis neque.
+          </GeistMonoText>
         </TouchableOpacity>
       </Animated.View>
     </View>
