@@ -1,17 +1,131 @@
-# Lines I-ching App
+# Lines - I Ching App
 
-A mobile/web application for I-ching hexagram readings and affirmations built with React Native, Expo, and NativeWind.
+A mobile application for I Ching hexagram readings built with React Native and Expo.
+
+## Prerequisites
+
+Before building the app, ensure you have the following installed:
+
+### Required for All Platforms
+- **Node.js** (v18 or higher)
+- **npm** or **yarn**
+- **Expo CLI**: `npm install -g expo-cli`
+
+### For iOS Development
+- **macOS** (required for iOS builds)
+- **Xcode** (latest version from Mac App Store)
+- **Xcode Command Line Tools**: `xcode-select --install`
+- **CocoaPods**: `sudo gem install cocoapods`
+- **iOS Simulator** (included with Xcode)
+
+### For Android Development
+- **Android Studio** (latest version)
+- **Android SDK** (API level 33 or higher)
+- **Android Emulator** or physical Android device
+- **Java Development Kit (JDK)** 17 or higher
+
+### For Physical Devices
+- **iOS**: Apple Developer account (free or paid)
+- **Android**: Enable Developer Mode and USB Debugging on your device
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd lines-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Generate native projects (first time only):
+```bash
+npx expo prebuild
+```
+
+## Running the App
+
+### Development Mode
+
+Start the Expo development server:
+```bash
+npm start
+```
+
+Then press:
+- `i` for iOS simulator
+- `a` for Android emulator
+- `w` for web browser
+
+### iOS Simulator
+```bash
+npm run ios
+```
+
+### Android Emulator
+```bash
+npm run android
+```
+
+### Physical Devices
+
+#### iOS Device
+```bash
+npx expo run:ios --device
+```
+
+#### Android Device
+```bash
+npx expo run:android --device
+```
+
+## Building for Production
+
+### iOS (Release Build)
+```bash
+npx expo run:ios --configuration Release --device
+```
+
+### Android (Release Build)
+```bash
+npx expo run:android --variant release
+```
+
+### Using EAS Build (Recommended for Distribution)
+```bash
+# Install EAS CLI
+npm install -g eas-cli
+
+# Login to Expo account
+eas login
+
+# Build for iOS
+eas build --platform ios
+
+# Build for Android
+eas build --platform android
+```
 
 ## Project Structure
 
 ```
 lines-app/
-├── components/     # Reusable UI components
-├── screens/        # Screen components
-├── types/          # TypeScript type definitions
-├── data/           # Placeholder data files
-├── assets/         # Images and static assets
-└── App.tsx         # Main application entry point
+├── components/          # Reusable UI components
+│   ├── navbars/        # Navigation bar components
+│   ├── patterns/       # Background pattern components
+│   ├── readingList/    # Reading list components
+│   └── typography/     # Text components
+├── screens/            # Screen components
+├── contexts/           # React Context providers
+├── data/               # Hexagram and trigram data
+├── i18n/               # Internationalization
+│   └── locales/        # Translation files (cs, en)
+├── types/              # TypeScript type definitions
+├── assets/             # Images and static assets
+└── App.tsx             # Main application entry point
 ```
 
 ## Tech Stack
@@ -19,62 +133,54 @@ lines-app/
 - **Framework**: React Native with Expo
 - **Styling**: NativeWind (Tailwind CSS for React Native)
 - **Language**: TypeScript
-- **Testing**: Jest + React Native Testing Library
+- **State Management**: React Context API
+- **Storage**: AsyncStorage
+- **Internationalization**: i18next
+- **Icons**: Lucide React Native
 
-## Getting Started
+## Features
 
-### Prerequisites
+- Traditional I Ching coin toss method
+- 64 hexagrams with detailed interpretations
+- Changing lines and transformations
+- Reading history with swipe-to-delete
+- Multiple languages (Czech, English)
+- Customizable themes and view modes
+- Offline-first architecture
 
-- Node.js (v16 or higher)
-- npm or yarn
+## Version Management
 
-### Installation
-
-Dependencies are already installed. To reinstall:
-
+Build numbers are automatically incremented on each commit using git hooks. To manually increment:
 ```bash
-npm install
+npm run increment-build
 ```
 
-### Running the App
+## Troubleshooting
 
+### iOS Icon Not Updating
 ```bash
-# Start the development server
-npm start
-
-# Run on iOS simulator
-npm run ios
-
-# Run on Android emulator
-npm run android
-
-# Run on web
-npm run web
+rm -rf ios
+rm -rf ~/Library/Developer/Xcode/DerivedData
+npx expo prebuild --clean
 ```
 
-### Testing
-
+### Android Build Issues
 ```bash
-# Run all tests
-npm test
-
-# Run tests in watch mode
-npm test -- --watch
+cd android
+./gradlew clean
+cd ..
+npx expo prebuild --clean
 ```
 
-## Development Status
+### Clear Cache
+```bash
+npx expo start --clear
+```
 
-Currently in Phase 1: UI Scaffolding
-- Project structure and dependencies ✓
-- Shared UI components (in progress)
-- Screen layouts (pending)
-- Navigation wiring (pending)
+## License
 
-## Design System
+[Add your license here]
 
-The app uses a custom Tailwind configuration with the following color palette:
+## Contact
 
-- **Primary**: cyan (#06b6d4)
-- **Gray Scale**: 50, 100, 200, 300, 600, 700, 900
-
-See `tailwind.config.js` for the complete theme configuration.
+[Add contact information here]
