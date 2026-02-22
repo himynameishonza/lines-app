@@ -69,22 +69,30 @@ export default function CoinTossScreen({
   const getLowerTrigram = () => {
     if (lines.length < 3) return null;
     const trigramLines = lines.slice(0, 3);
-    return trigrams.find(
-      (t) =>
-        t.id ===
-        parseInt(trigramLines.map((l) => (l === 1 ? "1" : "0")).join(""), 2) +
-          1,
+    return trigrams.find(t => 
+      t.id === 1 && trigramLines.every((l, i) => l === 1) || // ☰ Heaven 111
+      t.id === 2 && trigramLines.every((l, i) => l === 0) || // ☷ Earth 000
+      t.id === 3 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 0 || // ☳ Thunder 001
+      t.id === 4 && trigramLines[0] === 1 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☴ Wind 011
+      t.id === 5 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☵ Water 010
+      t.id === 6 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☲ Fire 101
+      t.id === 7 && trigramLines[0] === 0 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☶ Mountain 100
+      t.id === 8 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 1    // ☱ Lake 110
     );
   };
 
   const getUpperTrigram = () => {
     if (lines.length < 6) return null;
     const trigramLines = lines.slice(3, 6);
-    return trigrams.find(
-      (t) =>
-        t.id ===
-        parseInt(trigramLines.map((l) => (l === 1 ? "1" : "0")).join(""), 2) +
-          1,
+    return trigrams.find(t => 
+      t.id === 1 && trigramLines.every((l, i) => l === 1) || // ☰ Heaven 111
+      t.id === 2 && trigramLines.every((l, i) => l === 0) || // ☷ Earth 000
+      t.id === 3 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 0 || // ☳ Thunder 001
+      t.id === 4 && trigramLines[0] === 1 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☴ Wind 011
+      t.id === 5 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 0 || // ☵ Water 010
+      t.id === 6 && trigramLines[0] === 1 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☲ Fire 101
+      t.id === 7 && trigramLines[0] === 0 && trigramLines[1] === 0 && trigramLines[2] === 1 || // ☶ Mountain 100
+      t.id === 8 && trigramLines[0] === 0 && trigramLines[1] === 1 && trigramLines[2] === 1    // ☱ Lake 110
     );
   };
 
