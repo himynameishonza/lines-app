@@ -179,8 +179,8 @@ npx expo start --clear
 
 ## License
 
-[Add your license here]
+(c) Jan Rádl
 
 ## Contact
 
-[Add contact information here]
+himynameishonza@gmail.com
