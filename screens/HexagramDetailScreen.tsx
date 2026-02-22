@@ -12,12 +12,14 @@ interface HexagramDetailScreenProps {
   hexagram: Hexagram;
   onBack: () => void;
   onShare?: () => void;
+  showHomeButton?: boolean;
 }
 
 export default function HexagramDetailScreen({
   hexagram,
   onBack,
   onShare,
+  showHomeButton = false,
 }: HexagramDetailScreenProps) {
   const [activeTab, setActiveTab] = useState<HexagramDetailTab>("meaning");
   const scrollViewRef = useRef<ScrollView>(null);
@@ -137,6 +139,7 @@ export default function HexagramDetailScreen({
         onBack={onBack}
         onShare={onShare}
         activeTab={activeTab}
+        showHomeButton={showHomeButton}
       />
       <View className="bg-main relative h-64 flex justify-center items-center pt-20 px-6 text-center">
         <GeistMonoText className="text-xl text-background">

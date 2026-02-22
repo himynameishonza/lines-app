@@ -11,6 +11,7 @@ import HomeScreen from './screens/HomeScreen';
 import HexagramsScreen from './screens/HexagramsScreen';
 import HexagramDetailScreen from './screens/HexagramDetailScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import CoinTossScreen from './screens/CoinTossScreen';
 import MainNavigationBar from './components/navbars/MainNavigationBar';
 import { TMainNavigationTab, TViewMode } from './types/generic';
 import { ReadingsProvider } from './contexts/ReadingsContext';
@@ -24,8 +25,8 @@ type TabType = 'dashboard' | 'hexagrams' | 'new-reading' | 'settings';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('dashboard');
-  const [showWizard, setShowWizard] = useState(false);
   const [selectedHexagram, setSelectedHexagram] = useState<Hexagram | null>(null);
+  const [showCoinToss, setShowCoinToss] = useState(false);
   
   // Track scroll positions for hexagrams screen
   const [hexagramsViewMode, setHexagramsViewMode] = useState<TViewMode>('carousel');
@@ -63,24 +64,45 @@ export default function App() {
     setSelectedHexagram(hexagram);
   };
 
+  const handleCoinTossComplete = (hexagram: Hexagram) => {
+    setSelectedHexagram(hexagram);
+    setShowCoinToss(false);
+  };
+
   const handleBackFromDetail = () => {
     setSelectedHexagram(null);
   };
 
+  const handleHomeFromDetail = () => {
+    setSelectedHexagram(null);
+    setActiveTab('dashboard');
+  };
+
   const renderScreen = () => {
+    // Show coin toss screen
+    if (showCoinToss) {
+      return (
+        <CoinTossScreen
+          onBack={() => setShowCoinToss(false)}
+          onComplete={handleCoinTossComplete}
+        />
+      );
+    }
+
     // Show hexagram detail if one is selected
     if (selectedHexagram) {
       return (
         <HexagramDetailScreen
           hexagram={selectedHexagram}
-          onBack={handleBackFromDetail}
+          onBack={handleHomeFromDetail}
+          showHomeButton={true}
         />
       );
     }
 
     switch (activeTab) {
       case 'dashboard':
-        return <HomeScreen onAdd={() => setShowWizard(true)}/>;
+        return <HomeScreen onAdd={() => setShowCoinToss(true)} />;
       case 'hexagrams':
         return (
           <HexagramsScreen 
@@ -92,7 +114,7 @@ export default function App() {
       case 'settings':
         return <SettingsScreen />;
       default:
-        return <HomeScreen onAdd={() => setShowWizard(true)}  />;
+        return <HomeScreen onAdd={() => setShowCoinToss(true)} />;
     }
   };
 
@@ -102,7 +124,7 @@ export default function App() {
         <SafeAreaProvider>
           <View style={{ flex: 1 }}>
                 {renderScreen()}
-                {!selectedHexagram && (
+                {!selectedHexagram && !showCoinToss && (
                   <MainNavigationBar activeTab={activeTab as TMainNavigationTab} onTabChange={handleTabChange} />
                 )}
             <StatusBar />
