@@ -1,6 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity, Linking } from "react-native";
 import { useTranslation } from "react-i18next";
+import Constants from "expo-constants";
 import TopNavigationBarSettingsScreen from "../components/navbars/TopNavigationBarSettingsScreen";
 import GeistMonoText from "../components/typography/GeistMonoText";
 import Picker from "../components/Picker";
@@ -14,6 +15,11 @@ export default function SettingsScreen() {
   const { settings, setSortBy, setEinkMode, setViewMode, setTheme } =
     useSettings();
   const currentLanguage = i18n.language as TLanguage;
+
+  const appVersion = Constants.expoConfig?.version || "1.0.0";
+  const buildNumber = Constants.expoConfig?.ios?.buildNumber || 
+                      Constants.expoConfig?.android?.versionCode || 
+                      "1";
 
   const changeLanguage = (lang: TLanguage) => {
     i18n.changeLanguage(lang);
@@ -108,7 +114,7 @@ export default function SettingsScreen() {
             </GeistMonoText>
 
             <GeistMonoText className="text-sm text-text">
-              0.1-BETA build 121
+              {appVersion} ({buildNumber})
             </GeistMonoText>
           </View>
           {/* E-ink mode switch */}

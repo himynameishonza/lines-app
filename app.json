@@ -17,6 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.linesapp",
+      "buildNumber": "1",
       "infoPlist": {
         "UIStatusBarStyle": "UIStatusBarStyleLightContent"
       }
@@ -26,7 +27,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.linesapp"
+      "package": "com.anonymous.linesapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
