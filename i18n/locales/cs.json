@@ -72,16 +72,16 @@
   },
   "newReading": {
     "title": "Nové čtení",
-    "guide": "Jak položit otázku:",
+    "guide": "Jak položit otázku?",
     "guideText": "Zaměřte se na otevřené otázky, které vedou k zamyšlení, spíše než na odpovědi typu ano/ne. Formulujte svou otázku jasně a s úmyslem. Kniha proměn nejlépe odpovídá na otázky týkající se pochopení situací, načasování a osobního růstu.",
     "exampleBad1": "Budu bohatý/bohatá?",
     "exampleGood1": "Na co bych se měl zaměřit, abych vytvořil větší stabilitu a hojnost?",
     "exampleBad2": "Mám se rozejít s partnerem/partnerkou?",
     "exampleGood2": "Jaký přístup mi pomůže jednat správně v tomto vztahu?",
-    "placeholder": "Zadejte svou otázku...",
+    "placeholder": "Položte svou otázku...",
     "randomHexagram": "Náhodný hexagram",
     "randomWithChanging": "Náhodný s proměnou",
-    "coinToss": "Metoda hodu mincí",
+    "coinToss": "Vytvořit hexagram",
     "close": "Zavřít",
     "next": "Další krok",
     "back": "Zpět",
@@ -91,7 +91,7 @@
     },
     "step2": {
       "title": "Položte otázku",
-      "subtitle": "Co byste chtěli vědět?"
+      "subtitle": "Vaše otázka"
     },
     "step3": {
       "title": "Vyberte metodu",

@@ -11,6 +11,7 @@ import HexagramsScreen from './screens/HexagramsScreen';
 import HexagramDetailScreen from './screens/HexagramDetailScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import CoinTossScreen from './screens/CoinTossScreen';
+import NewReadingScreen from './screens/NewReadingScreen';
 import MainNavigationBar from './components/navbars/MainNavigationBar';
 import { TMainNavigationTab, TViewMode } from './types/generic';
 import { ReadingsProvider, useReadings } from './contexts/ReadingsContext';
@@ -28,6 +29,8 @@ function AppContent() {
   const [selectedHexagram, setSelectedHexagram] = useState<Hexagram | null>(null);
   const [changingLines, setChangingLines] = useState<boolean[]>([]);
   const [showCoinToss, setShowCoinToss] = useState(false);
+  const [showNewReading, setShowNewReading] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState('');
   
   // Track scroll positions for hexagrams screen
   const [hexagramsViewMode, setHexagramsViewMode] = useState<TViewMode>('carousel');
@@ -49,7 +52,7 @@ function AppContent() {
     // Save the reading
     addReading({
       hexagramId: hexagram.id,
-      question: '', // TODO: Add question input in coin toss flow
+      question: currentQuestion,
       method: 'coinToss',
       changingLines: lines,
     });
@@ -57,6 +60,17 @@ function AppContent() {
     setSelectedHexagram(hexagram);
     setChangingLines(lines);
     setShowCoinToss(false);
+    setCurrentQuestion('');
+  };
+
+  const handleStartNewReading = () => {
+    setShowNewReading(true);
+  };
+
+  const handleNewReadingContinue = (question: string) => {
+    setCurrentQuestion(question);
+    setShowNewReading(false);
+    setShowCoinToss(true);
   };
 
   const handleReadingPress = (readingId: string) => {
@@ -76,11 +90,24 @@ function AppContent() {
   };
 
   const renderScreen = () => {
+    // Show new reading screen
+    if (showNewReading) {
+      return (
+        <NewReadingScreen
+          onBack={() => setShowNewReading(false)}
+          onCoinToss={handleNewReadingContinue}
+        />
+      );
+    }
+
     // Show coin toss screen
     if (showCoinToss) {
       return (
         <CoinTossScreen
-          onBack={() => setShowCoinToss(false)}
+          onBack={() => {
+            setShowCoinToss(false);
+            setCurrentQuestion('');
+          }}
           onComplete={handleCoinTossComplete}
         />
       );
@@ -100,7 +127,7 @@ function AppContent() {
 
     switch (activeTab) {
       case 'dashboard':
-        return <HomeScreen onAdd={() => {}} onCoinToss={() => setShowCoinToss(true)} onReadingPress={handleReadingPress} />;
+        return <HomeScreen onAdd={() => {}} onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
       case 'hexagrams':
         return (
           <HexagramsScreen 
@@ -112,14 +139,14 @@ function AppContent() {
       case 'settings':
         return <SettingsScreen />;
       default:
-        return <HomeScreen onAdd={() => {}} onCoinToss={() => setShowCoinToss(true)} onReadingPress={handleReadingPress} />;
+        return <HomeScreen onAdd={() => {}} onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
     }
   };
 
   return (
     <View style={{ flex: 1 }}>
       {renderScreen()}
-      {!selectedHexagram && !showCoinToss && (
+      {!selectedHexagram && !showCoinToss && !showNewReading && (
         <MainNavigationBar activeTab={activeTab as TMainNavigationTab} onTabChange={handleTabChange} />
       )}
       <StatusBar />

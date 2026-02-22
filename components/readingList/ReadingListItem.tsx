@@ -178,9 +178,7 @@ export default function ReadingListItem({
           </View>
 
           <GeistMonoText className="text-sm leading-5 text-text/70">
-            {/* {reading.question} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Architecto, quibusdam temporibus aut ducimus corporis neque.
+            {reading.question}
           </GeistMonoText>
         </TouchableOpacity>
       </Animated.View>

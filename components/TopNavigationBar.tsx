@@ -27,11 +27,11 @@ export default function TopNavigationBar({
         justifyContent,
       }}
     >
-      {leftElement && (
+      {leftElement ? (
         <View className="w-12 h-12 items-center justify-center">
           {leftElement}
         </View>
-      )}
+      ):<View className="w-12 h-12 items-center justify-center"/>}
 
       {title && (
         <View
@@ -44,11 +44,11 @@ export default function TopNavigationBar({
         </View>
       )}
 
-      {rightElement && (
+      {rightElement ? (
         <View className="w-12 h-12 items-center justify-center">
           {rightElement}
         </View>
-      )}
+      ) : <View className="w-12 h-12 items-center justify-center"/>}
     </View>
   );
 }

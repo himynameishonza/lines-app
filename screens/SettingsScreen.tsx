@@ -134,11 +134,11 @@ export default function SettingsScreen() {
           {t("settings.coffee")}
         </GeistMonoText>
         <TouchableOpacity
-          className="rounded bg-text w-full p-3"
+          className="rounded bg-text w-full px-3 py-4"
           onPress={handleCoffeePress}
           activeOpacity={0.8}
         >
-          <GeistMonoText className="text-white text-center" variant="medium">
+          <GeistMonoText className="text-primary text-center" variant="medium">
             {t("settings.contribute")}
           </GeistMonoText>
         </TouchableOpacity>
