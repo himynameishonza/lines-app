@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Increment build numbers in app.json
+node scripts/increment-build.js
+
+# Add the updated app.json to the commit
+git add app.json
