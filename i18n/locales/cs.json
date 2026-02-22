@@ -19,6 +19,7 @@
     "title": "Nastavení",
     "language": "Jazyk aplikace",
     "eink":"E-ink mód",
+    "version":"Verze",
     "sortBy": "Řazení hexagramů",
      "sort": {
       "fuSi": "Sekvence Fu Si",

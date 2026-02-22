@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { View, ScrollView } from "react-native";
 import TopNavigationBarHomeScreen from "../components/navbars/TopNavigationBarHomeScreen";
-import GeistMonoText from "../components/typography/GeistMonoText";
 import EmptyState from "../components/readingList/EmptyState";
 import LoadingState from "../components/readingList/LoadingState";
 import ReadingListItem from "../components/readingList/ReadingListItem";
@@ -61,10 +60,6 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
     return reading.changingLines?.some(line => line === true);
   };
 
-  const handleOutsideTap = () => {
-    Object.values(closeSwipeCallbacks.current).forEach(callback => callback());
-  };
-
   const registerCloseCallback = (id: string, callback: () => void) => {
     closeSwipeCallbacks.current[id] = callback;
   };
@@ -108,8 +103,8 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
       ) : readings.length === 0 ? (
         <EmptyState  />
       ) : (
-        <View className="flex-1" onStartShouldSetResponder={() => true} onResponderRelease={handleOutsideTap}>
-          <ScrollView className="flex-1 px-6 pt-32" contentContainerStyle={{ paddingBottom: 80 }}>
+        <View className="flex-1 border">
+          <ScrollView className="flex-1 px-6 pt-32" contentContainerStyle={{ paddingBottom: 80, flexGrow: 1 }}>
             {Object.entries(groupedReadings).map(([dateLabel, dateReadings]) => (
               <View key={dateLabel} className="mb-6">
                 <ReadingListDateHeader dateLabel={dateLabel}/>
@@ -123,7 +118,6 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
                       key={reading.id}
                       reading={reading}
                       hexagram={hexagram}
-                      hasChangingLines={hasChangingLines(reading) || false}
                       onPress={() => onReadingPress(reading.id)}
                       onDelete={() => handleDeleteRequest(reading.id)}
                       onRegisterClose={(callback) => registerCloseCallback(reading.id, callback)}

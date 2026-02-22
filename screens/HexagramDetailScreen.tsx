@@ -353,13 +353,13 @@ export default function HexagramDetailScreen({
         showHomeButton={showHomeButton}
       />
       <View className="bg-main relative h-64 flex justify-center items-center pt-20 px-6 text-center">
-        <GeistMonoText className="text-xl text-background">
+        <GeistMonoText className="text-xl text-background text-center">
           {hexagram.chineseName}
         </GeistMonoText>
-        <GeistMonoText className="text-base text-background" variant="medium">
+        <GeistMonoText className="text-base text-background text-center" variant="medium">
           {hexagram.romanization}
         </GeistMonoText>
-        <GeistMonoText variant="bold" className="text-3xl text-text pt-1 -mt-1">
+        <GeistMonoText variant="bold" className="text-3xl text-text text-center pt-1 -mt-1">
           {hexagram.content[i18n.language as TLanguage].name}
         </GeistMonoText>
       </View>

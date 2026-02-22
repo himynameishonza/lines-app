@@ -333,7 +333,7 @@ export default function CoinTossScreen({
                   {coinValues.length > 0 ? (coinValues[0] === 2 ? t("coinToss.heads") : t("coinToss.tails")) : "???"}
                 </GeistMonoText>
               </View>
-              <View className="flex flex-col gap-y-2">
+              <View className="flex flex-col gap-y-2 -translate-y-4">
                 <View className="w-20 h-20 rounded-full border border-text/20 bg-background/5 border-dashed items-center justify-center">
                   {coinValues.length > 0 && (
                     <GeistMonoText variant="bold" className="text-background text-2xl">

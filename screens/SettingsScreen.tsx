@@ -11,7 +11,8 @@ import { TLanguage, TTheme, TViewMode } from "../types/generic";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
-  const { settings, setSortBy, setEinkMode, setViewMode, setTheme } = useSettings();
+  const { settings, setSortBy, setEinkMode, setViewMode, setTheme } =
+    useSettings();
   const currentLanguage = i18n.language as TLanguage;
 
   const changeLanguage = (lang: TLanguage) => {
@@ -75,7 +76,7 @@ export default function SettingsScreen() {
             />
           </View>
 
-           {/* View Modes picker */}
+          {/* View Modes picker */}
           <View className="flex flex-row w-full items-center justify-between py-6">
             <GeistMonoText className="text-sm text-text" variant="bold">
               {t("settings.viewMode")}
@@ -88,7 +89,7 @@ export default function SettingsScreen() {
             />
           </View>
 
-           {/* Theme picker */}
+          {/* Theme picker */}
           <View className="flex flex-row w-full items-center justify-between py-6">
             <GeistMonoText className="text-sm text-text" variant="bold">
               {t("settings.theme")}
@@ -101,8 +102,17 @@ export default function SettingsScreen() {
             />
           </View>
 
-          {/* E-ink mode switch */}
           <View className="flex flex-row w-full items-center justify-between py-6">
+            <GeistMonoText className="text-sm text-text" variant="bold">
+              {t("settings.version")}
+            </GeistMonoText>
+
+            <GeistMonoText className="text-sm text-text">
+              0.1-BETA build 121
+            </GeistMonoText>
+          </View>
+          {/* E-ink mode switch */}
+          {/* <View className="flex flex-row w-full items-center justify-between py-6">
             <GeistMonoText className="text-sm text-text" variant="bold">
               {t("settings.eink")}
             </GeistMonoText>
@@ -111,7 +121,7 @@ export default function SettingsScreen() {
               value={settings.einkMode}
               onValueChange={setEinkMode}
             />
-          </View>
+          </View> */}
         </View>
       </View>
 
@@ -123,7 +133,7 @@ export default function SettingsScreen() {
         >
           {t("settings.coffee")}
         </GeistMonoText>
-        <TouchableOpacity 
+        <TouchableOpacity
           className="rounded bg-text w-full p-3"
           onPress={handleCoffeePress}
           activeOpacity={0.8}

@@ -11,7 +11,6 @@ import { Reading } from "../../types/reading";
 interface ReadingListItemProps {
   reading: Reading;
   hexagram: Hexagram;
-  hasChangingLines: boolean;
   onPress: () => void;
   onDelete: () => void;
   onRegisterClose: (callback: () => void) => void;
@@ -24,7 +23,6 @@ interface ReadingListItemProps {
 export default function ReadingListItem({
   reading,
   hexagram,
-  hasChangingLines,
   onPress,
   onDelete,
   onRegisterClose,
@@ -159,7 +157,7 @@ export default function ReadingListItem({
           disabled={hasAnyOpen()}
           className="bg-primary border border-text/25 border-dashed rounded-lg p-4"
         >
-          <View className="flex-row items-center gap-x-3 pl-4 mb-2">
+          <View className="flex-row items-center gap-x-3 pl-3 mb-2">
             <HexagramSymbol
               lines={hexagram.lines}
               size={48}
@@ -176,14 +174,6 @@ export default function ReadingListItem({
                   {hexagram.chineseName} {hexagram.romanization}
                 </GeistMonoText>
               </View>
-              
-              {hasChangingLines && (
-                <View className="bg-main rounded px-1.5 py-0.5">
-                  <GeistMonoText className="text-text text-xs">
-                    {t("home.changing")}
-                  </GeistMonoText>
-                </View>
-              )}
             </View>
           </View>
 

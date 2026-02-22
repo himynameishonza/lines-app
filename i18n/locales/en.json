@@ -19,6 +19,7 @@
     "title": "Settings",
     "language": "App language",
     "eink":"E-ink mode",
+    "version":"Version",
     "viewMode": "Default book layout",
     "viewModes":{
      "carousel": "Carousel",
