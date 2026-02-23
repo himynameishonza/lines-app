@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.0] - 2026-02-23
+
+### Added
+- Share hexagram details as text via native share sheet
+
 ## [0.2.0] - 2026-02-23
 
 ### Added

@@ -2,7 +2,7 @@
   "expo": {
     "name": "Lines",
     "slug": "lines-app",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.linesapp",
-      "buildNumber": "6",
+      "buildNumber": "7",
       "infoPlist": {
         "UIStatusBarStyle": "UIStatusBarStyleLightContent"
       }
@@ -28,7 +28,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.linesapp",
-      "versionCode": 5
+      "versionCode": 6
     },
     "web": {
       "favicon": "./assets/favicon.png"
