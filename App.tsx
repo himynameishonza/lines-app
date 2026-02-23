@@ -31,6 +31,7 @@ function AppContent() {
   const [showCoinToss, setShowCoinToss] = useState(false);
   const [showNewReading, setShowNewReading] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState('');
+  const [navigationSource, setNavigationSource] = useState<'dashboard' | 'hexagrams'>('dashboard');
   
   // Track scroll positions for hexagrams screen
   const [hexagramsViewMode, setHexagramsViewMode] = useState<TViewMode>('carousel');
@@ -46,6 +47,7 @@ function AppContent() {
   const handleHexagramPress = (hexagram: Hexagram) => {
     setSelectedHexagram(hexagram);
     setChangingLines([]);
+    setNavigationSource('hexagrams');
   };
 
   const handleCoinTossComplete = (hexagram: Hexagram, lines: boolean[]) => {
@@ -80,13 +82,18 @@ function AppContent() {
       if (hexagram) {
         setSelectedHexagram(hexagram);
         setChangingLines(reading.changingLines || []);
+        setNavigationSource('dashboard');
       }
     }
   };
 
   const handleHomeFromDetail = () => {
     setSelectedHexagram(null);
-    setActiveTab('dashboard');
+    if (navigationSource === 'dashboard') {
+      setActiveTab('dashboard');
+    } else {
+      setActiveTab('hexagrams');
+    }
   };
 
   const renderScreen = () => {
@@ -119,7 +126,7 @@ function AppContent() {
         <HexagramDetailScreen
           hexagram={selectedHexagram}
           onBack={handleHomeFromDetail}
-          showHomeButton={true}
+          showHomeButton={navigationSource === 'dashboard'}
           changingLines={changingLines}
         />
       );
