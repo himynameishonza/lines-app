@@ -1,6 +1,6 @@
 {
   "name": "lines-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -9,7 +9,9 @@
     "web": "expo start --web",
     "increment-build": "node scripts/increment-build.js",
     "build:ios": "npm run increment-build && npx expo run:ios --configuration Release --device",
-    "build:android": "npm run increment-build && npx expo run:android --variant release"
+    "build:android": "npm run increment-build && npx expo run:android --variant release",
+    "changelog": "node scripts/generate-changelog.js",
+    "changelog:tag": "node scripts/generate-changelog.js $(git describe --tags --abbrev=0 2>/dev/null || echo '')"
   },
   "keywords": [],
   "author": "",
