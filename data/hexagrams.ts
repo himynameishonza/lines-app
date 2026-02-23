@@ -301,7 +301,7 @@ export const hexagrams: Hexagram[] = [
     chineseName: "屯",
     romanization: "Zhūn",
     elements: [3, 5],
-    lines: [1, 0, 0, 0, 0, 1],
+    lines: [1, 0, 0, 0, 1, 0],
     content: {
       cs: {
         name: "Počáteční obtíže",
@@ -576,7 +576,7 @@ export const hexagrams: Hexagram[] = [
     number: 5,
     chineseName: "需",
     romanization: "Xū",
-    elements: [5, 1],
+    elements: [1, 5],
     lines: [1, 1, 1, 0, 1, 0],
     content: {
       cs: {
@@ -701,7 +701,7 @@ export const hexagrams: Hexagram[] = [
     chineseName: "訟",
     romanization: "Sòng",
     elements: [5, 1],
-    lines: [1, 0, 1, 1, 1, 1],
+    lines: [0, 1, 0, 1, 1, 1],
     content: {
       cs: {
         name: "Konflikt",
@@ -834,7 +834,7 @@ export const hexagrams: Hexagram[] = [
     number: 7,
     chineseName: "師",
     romanization: "Shī",
-    elements: [5, 3],
+    elements: [5, 2],
     lines: [0, 1, 0, 0, 0, 0],
     content: {
       cs: {
@@ -1090,7 +1090,7 @@ export const hexagrams: Hexagram[] = [
     number: 9,
     chineseName: "小畜",
     romanization: "Xiǎo Chù",
-    elements: [4, 1],
+    elements: [1, 4],
     lines: [1, 1, 1, 0, 1, 1],
     content: {
       cs: {
@@ -1222,7 +1222,7 @@ export const hexagrams: Hexagram[] = [
     chineseName: "履",
     romanization: "Lǚ",
     elements: [8, 1],
-    lines: [1, 1, 1, 1, 1, 0],
+    lines: [1, 1, 0, 1, 1, 1],
     content: {
       cs: {
         name: "Kráčení",
@@ -1351,8 +1351,8 @@ export const hexagrams: Hexagram[] = [
     number: 11,
     chineseName: "泰",
     romanization: "Tài",
-    elements: [2, 1],
-    lines: [0, 0, 0, 1, 1, 1],
+    elements: [1, 2],
+    lines: [1, 1, 1, 0, 0, 0],
     content: {
       cs: {
         name: "Mír",
@@ -1481,8 +1481,8 @@ export const hexagrams: Hexagram[] = [
     number: 12,
     chineseName: "否",
     romanization: "Pǐ",
-    elements: [1, 2],
-    lines: [1, 1, 1, 0, 0, 0],
+    elements: [2, 1],
+    lines: [0, 0, 0, 1, 1, 1],
     content: {
       cs: {
         name: "Stagnace",
@@ -1611,8 +1611,8 @@ export const hexagrams: Hexagram[] = [
     number: 13,
     chineseName: "同人",
     romanization: "Tóng Rén",
-    elements: [1, 6],
-    lines: [1, 1, 1, 0, 1, 1],
+    elements: [6, 1],
+    lines: [1, 0, 1, 1, 1, 1],
     content: {
       cs: {
         name: "Společenství lidí",
@@ -1741,7 +1741,7 @@ export const hexagrams: Hexagram[] = [
     number: 14,
     chineseName: "大有",
     romanization: "Dà Yǒu",
-    elements: [6, 1],
+    elements: [1, 6],
     lines: [1, 1, 1, 1, 0, 1],
     content: {
       cs: {
@@ -2001,7 +2001,7 @@ export const hexagrams: Hexagram[] = [
     number: 16,
     chineseName: "豫",
     romanization: "Yù",
-    elements: [3, 2],
+    elements: [2, 3],
     lines: [0, 0, 0, 1, 0, 0],
     content: {
       cs: {
@@ -2131,7 +2131,7 @@ export const hexagrams: Hexagram[] = [
     number: 17,
     chineseName: "隨",
     romanization: "Suí",
-    elements: [8, 3],
+    elements: [3, 8],
     lines: [1, 0, 0, 1, 1, 0],
     content: {
       cs: {
@@ -2261,7 +2261,7 @@ export const hexagrams: Hexagram[] = [
     number: 18,
     chineseName: "蠱",
     romanization: "Gǔ",
-    elements: [7, 4],
+    elements: [4, 7],
     lines: [0, 1, 1, 0, 0, 1],
     content: {
       cs: {
@@ -2391,8 +2391,8 @@ export const hexagrams: Hexagram[] = [
     number: 19,
     chineseName: "臨",
     romanization: "Lín",
-    elements: [2, 8],
-    lines: [0, 0, 1, 1, 0, 0],
+    elements: [8, 2],
+    lines: [1, 1, 0, 0, 0, 0],
     content: {
       cs: {
         name: "Přiblížení",
@@ -2521,7 +2521,7 @@ export const hexagrams: Hexagram[] = [
     number: 20,
     chineseName: "觀",
     romanization: "Guān",
-    elements: [4, 2],
+    elements: [2, 4],
     lines: [0, 0, 0, 0, 1, 1],
     content: {
       cs: {
@@ -2782,7 +2782,7 @@ export const hexagrams: Hexagram[] = [
     chineseName: "賁",
     romanization: "Bì",
     elements: [6, 7],
-    lines: [1, 0, 0, 0, 1, 0],
+    lines: [1, 0, 1, 0, 0, 1],
     content: {
       cs: {
         name: "Půvab",
@@ -2911,118 +2911,122 @@ export const hexagrams: Hexagram[] = [
     number: 23,
     chineseName: "剝",
     romanization: "Bō",
-    elements: [7, 2],
+    elements: [2, 7],
     lines: [0, 0, 0, 0, 0, 1],
     content: {
       cs: {
-        name: "Rozklad",
+        name: "Rozpad",
         meaning:
-          "Rozklad představuje postupné ubývání síly. Struktura se oslabuje.\n\nPsychologicky jde o období ztráty nebo únavy.\n\nJe čas ustoupit a chránit to podstatné.",
+          "Rozpad symbolizuje postupné oslabování struktury. Nejde o náhlý kolaps, ale o pomalé odlupování toho, co už není pevné. Tento hexagram ukazuje fázi cyklu, kdy staré formy ztrácejí svou nosnost a vnější stabilita se vytrácí.\n\nPsychologicky se může projevovat jako pocit nejistoty, únavy nebo ztráty směru. To, co dříve fungovalo, už nepřináší oporu. Tento proces však není chybou – je to přirozená součást obnovy.\n\nRozpad odhaluje slabá místa. Učí, že držet se rozpadající struktury pouze prohlubuje napětí. Skutečná síla zde spočívá v přijetí konce a ochraně vnitřního jádra integrity.",
         oracle: {
           interpretation: [
-            "Nevzdoruj nevyhnutelnému.",
-
-            "Chraň jádro.",
-
-            "Ustoupení je někdy moudré.",
+            "Nepřidržuj to, co se přirozeně rozpadá.",
+            "Zachovej vnitřní klid i v nestabilitě.",
+            "Nyní není čas expandovat, ale chránit podstatu.",
           ],
-
-          introspection: ["Co je třeba nechat odejít?"],
+          introspection: [
+            "Co ve tvém životě ztrácí svou pevnost?",
+            "Čeho se držíš ze strachu před ztrátou?",
+            "Jak můžeš uchovat svou vnitřní integritu?",
+          ],
         },
         anatomy:
-          "Rozklad je přirozený cyklus.\n\nUstoupení chrání budoucnost.\n\nPo rozpadu přichází obnova.",
+          "Rozpad tvoří Hora nad Zemí. Hora symbolizuje pevnost a hranici, Země poddajnost a podporu. Když se pevná struktura oddělí od nosného základu, dochází k oslabení.\n\nTento obraz ukazuje situaci, kdy forma zůstává, ale její opora je narušena. Vnější struktura se drolí, protože základ již není živý.\n\nAnatomie hexagramu upozorňuje, že skutečná stabilita nevzniká z tvrdosti, ale z propojení mezi formou a základem.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "První oslabení",
-            description: "Základ se drolí.",
+            description:
+              "Narušení je jemné, ale již patrné. Je čas věnovat pozornost signálům.",
           },
           {
             position: 2,
             type: 0,
-            name: "Pokračující úpadek",
-            description: "Síla slábne.",
+            name: "Ztráta podpory",
+            description: "Opory se vytrácejí. Stabilita už není samozřejmá.",
           },
           {
             position: 3,
             type: 0,
-            name: "Ztráta opory",
-            description: "Podpora mizí.",
+            name: "Prohlubující se rozklad",
+            description: "Slabiny se odhalují otevřeněji.",
           },
           {
             position: 4,
             type: 0,
-            name: "Vnější tlak",
-            description: "Problém je zřejmý.",
+            name: "Ohrožené jádro",
+            description: "Ztráta se přibližuje centru situace.",
           },
           {
             position: 5,
             type: 0,
-            name: "Zachování středu",
-            description: "Vnitřní hodnota zůstává.",
+            name: "Poslední opora",
+            description: "Zůstává jen malý zbytek pevnosti.",
           },
           {
             position: 6,
             type: 1,
-            name: "Zbytek síly",
-            description: "Jádro přežívá.",
+            name: "Zachování integrity",
+            description:
+              "Vnější struktura může padnout, ale vnitřní pevnost lze uchovat.",
           },
         ],
       },
       en: {
         name: "Splitting Apart",
         meaning:
-          "Splitting Apart represents gradual decline. Structure weakens.\n\nPsychologically, it reflects fatigue or loss.\n\nIt is time to retreat and protect what matters.",
+          "Splitting Apart represents gradual erosion rather than sudden collapse. Structures lose their strength step by step. This hexagram marks a phase in which outer forms weaken because their foundation no longer supports them.\n\nPsychologically, it may manifest as uncertainty, fatigue, or loss of direction. What once worked no longer provides stability. Yet this is not failure — it is part of renewal.\n\nDissolution exposes weak foundations. Clinging to what is already breaking only increases tension. True strength now lies in accepting the ending and protecting inner integrity.",
         oracle: {
           interpretation: [
-            "Do not resist the inevitable.",
-
-            "Protect the core.",
-
-            "Retreat can be wise.",
+            "Do not cling to what is naturally falling away.",
+            "Preserve inner calm amidst instability.",
+            "This is a time to protect essence, not expand outward.",
           ],
-
-          introspection: ["What must you let go?"],
+          introspection: [
+            "What in your life is losing its foundation?",
+            "What are you holding onto out of fear?",
+            "How can you preserve your inner integrity?",
+          ],
         },
         anatomy:
-          "Decline is part of cycles.\n\nRetreat protects renewal.\n\nAfter decay comes rebirth.",
+          "The image is Mountain above Earth. Mountain symbolizes firmness and boundary; Earth represents support and receptivity. When structure separates from its foundation, weakening begins.\n\nThe form remains, but its base erodes. External stability falters because the root connection is compromised.\n\nThis anatomy teaches that lasting stability depends not on rigidity, but on living alignment between structure and foundation.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "Initial Weakening",
-            description: "The foundation erodes.",
+            description: "The disturbance is subtle but visible.",
           },
           {
             position: 2,
             type: 0,
-            name: "Continued Decline",
-            description: "Strength diminishes.",
+            name: "Loss of Support",
+            description: "Foundations begin to erode.",
           },
           {
             position: 3,
             type: 0,
-            name: "Loss of Support",
-            description: "Support fades.",
+            name: "Deepening Decline",
+            description: "Weakness becomes more evident.",
           },
           {
             position: 4,
             type: 0,
-            name: "External Pressure",
-            description: "The problem is visible.",
+            name: "Threatened Core",
+            description: "The center of stability is affected.",
           },
           {
             position: 5,
             type: 0,
-            name: "Preserved Core",
-            description: "Inner value remains.",
+            name: "Last Support",
+            description: "Only a remnant of firmness remains.",
           },
           {
             position: 6,
             type: 1,
-            name: "Remaining Strength",
-            description: "The core survives.",
+            name: "Preserved Integrity",
+            description: "External loss does not destroy inner strength.",
           },
         ],
       },
@@ -3039,112 +3043,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Návrat",
         meaning:
-          "Návrat představuje okamžik obratu po období úpadku. Malý impuls světla se znovu objevuje.\n\nPsychologicky jde o návrat k vlastní podstatě. Po vychýlení se člověk vrací ke středu.\n\nJe to začátek obnovy – nenápadný, ale zásadní.",
+          "Návrat symbolizuje obrat po období úpadku. Po rozkladu přichází první impuls obnovy. Je to jemný, ale zásadní moment, kdy se energie vrací k životu.\n\nPsychologicky jde o návrat k vlastnímu středu. Po bloudění nebo vyčerpání se člověk znovu orientuje podle svých hodnot. Tento proces není dramatický, ale hluboce transformační.\n\nNávrat ukazuje, že i po ztrátě existuje možnost nového začátku. Stačí malý, vědomý krok zpět k pravdivosti.",
         oracle: {
           interpretation: [
-            "Vrať se k tomu, co je pravdivé.",
-
-            "Začni znovu, bez výčitek.",
-
-            "Malý krok stačí.",
+            "Vrať se k podstatě.",
+            "Začni znovu bez zbytečné komplikace.",
+            "Malý krok může změnit směr celého cyklu.",
           ],
-
-          introspection: ["Kam se potřebuješ vrátit?"],
+          introspection: [
+            "Kam se potřebuješ vrátit?",
+            "Co je tvým skutečným základem?",
+            "Kde můžeš začít znovu jednodušeji?",
+          ],
         },
         anatomy:
-          "Návrat je tichý začátek.\n\nMalá změna vede k velké obnově.\n\nVytrvalost upevňuje nový směr.",
+          "Obraz tvoří Země nad Hromem. Země symbolizuje přijímání, Hrom probuzení a impuls. V tichu země se rodí první pohyb.\n\nStruktura hexagramu ukazuje návrat energie zdola. Obnova nezačíná nahoře, ale v kořenech.\n\nAnatomie připomíná, že skutečný restart vzniká zevnitř, nikoli z vnějšího tlaku.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "První světlo",
-            description: "Obnova začíná uvnitř.",
+            name: "První jiskra",
+            description: "Objevuje se impuls změny.",
           },
           {
             position: 2,
             type: 0,
             name: "Stabilizace směru",
-            description: "Vracíš se k jádru.",
+            description: "Návrat získává pevnost.",
           },
           {
             position: 3,
             type: 0,
-            name: "Nejistý krok",
-            description: "Vytrvej v obratu.",
+            name: "Zkouška vytrvalosti",
+            description: "Staré vzorce mohou znovu lákat.",
           },
           {
             position: 4,
             type: 0,
-            name: "Sdílený návrat",
-            description: "Podpora pomáhá.",
+            name: "Postupná obnova",
+            description: "Směr se upevňuje.",
           },
           {
             position: 5,
             type: 0,
-            name: "Pevný střed",
-            description: "Rovnováha se obnovuje.",
+            name: "Znovunalezená rovnováha",
+            description: "Vnitřní stabilita sílí.",
           },
           {
             position: 6,
             type: 0,
-            name: "Opakování chyby",
-            description: "Neztrať znovu směr.",
+            name: "Riziko odklonu",
+            description: "Neopatrnost může návrat přerušit.",
           },
         ],
       },
       en: {
         name: "Return",
         meaning:
-          "Return marks the turning point after decline. A small light begins again.\n\nPsychologically, it represents coming back to one’s center.\n\nIt is a subtle but crucial renewal.",
+          "Return marks the turning point after decline. Following dissolution, the first impulse of renewal appears. It is subtle yet decisive.\n\nPsychologically, it reflects re-centering. After confusion or exhaustion, one realigns with core values. The process is quiet but transformative.\n\nReturn reminds us that even after loss, a new beginning is possible. A small, conscious step restores direction.",
         oracle: {
           interpretation: [
-            "Return to what is true.",
-
-            "Begin again without regret.",
-
-            "A small step is enough.",
+            "Return to what is essential.",
+            "Begin again without unnecessary complexity.",
+            "A small step can redirect the entire cycle.",
           ],
-
-          introspection: ["Where do you need to return?"],
+          introspection: [
+            "Where do you need to return?",
+            "What is your true foundation?",
+            "How can you begin again more simply?",
+          ],
         },
         anatomy:
-          "Return begins quietly.\n\nSmall correction leads to renewal.\n\nConsistency secures growth.",
+          "The image is Earth above Thunder. Earth symbolizes receptivity; Thunder represents awakening impulse. Renewal begins in the depths.\n\nEnergy rises from below. True restoration starts at the roots.\n\nThis anatomy teaches that genuine restart emerges internally, not through external pressure.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "First Light",
-            description: "Renewal starts within.",
+            name: "First Spark",
+            description: "The impulse for renewal appears.",
           },
           {
             position: 2,
             type: 0,
             name: "Stabilizing Direction",
-            description: "Center is regained.",
+            description: "Return gains firmness.",
           },
           {
             position: 3,
             type: 0,
-            name: "Uncertain Step",
-            description: "Persist in the turn.",
+            name: "Test of Persistence",
+            description: "Old patterns may tempt return.",
           },
           {
             position: 4,
             type: 0,
-            name: "Shared Return",
-            description: "Support strengthens.",
+            name: "Gradual Restoration",
+            description: "Alignment strengthens.",
           },
           {
             position: 5,
             type: 0,
-            name: "Firm Center",
-            description: "Balance restores.",
+            name: "Recovered Balance",
+            description: "Inner stability deepens.",
           },
           {
             position: 6,
             type: 0,
-            name: "Repeating Error",
-            description: "Do not stray again.",
+            name: "Risk of Deviation",
+            description: "Carelessness may interrupt renewal.",
           },
         ],
       },
@@ -3161,112 +3167,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Nevinnost",
         meaning:
-          "Nevinnost symbolizuje jednání bez postranních úmyslů. Čistota motivu přináší sílu.\n\nPsychologicky jde o spontánnost a pravdivost.\n\nManipulace narušuje rovnováhu.",
+          "Nevinnost představuje jednání bez postranních úmyslů. Je to stav vnitřní přímosti, kdy čin vychází z čistého úmyslu a není zatížen manipulací ani kalkulem.\n\nPsychologicky jde o návrat k autenticitému jádru. Člověk jedná v souladu se svou přirozeností, nikoli ze strachu nebo strategie. Tento stav vyžaduje odvahu — být pravdivý i bez záruky výsledku.\n\nNevinnost však není naivita. Neznamená ignorovat realitu, ale jednat bez vnitřní falešnosti.\n\nHexagram učí, že čistota úmyslu přináší vnitřní klid. Pokud je motivace pravdivá, cesta se vyjasní sama.",
         oracle: {
           interpretation: [
-            "Jednej upřímně.",
-
-            "Nespekuluj.",
-
-            "Pravdivost přináší ochranu.",
+            "Jednej z čistého úmyslu.",
+            "Nevytvářej skryté strategie.",
+            "Zachovej autenticitu i v nejistotě.",
           ],
-
-          introspection: ["Jsou tvé úmysly čisté?"],
+          introspection: [
+            "Je tvůj záměr skutečně čistý?",
+            "Kde jednáš z obavy místo z pravdivosti?",
+            "Co by znamenalo být plně autentický?",
+          ],
         },
         anatomy:
-          "Nevinnost vychází z autenticity.\n\nBez pravdivosti se rozpadá.\n\nČistý motiv stabilizuje cestu.",
+          "Hexagram tvoří Nebe nad Hromem. Nebe symbolizuje čistou iniciativu, Hrom probuzení a pohyb. Impuls vychází zdola, ale je veden vyšším principem.\n\nStruktura ukazuje, že čin má být spontánní, ale zároveň v souladu s řádem.\n\nAnatomie připomíná, že pravdivé jednání spojuje energii pohybu s morální jasností.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Přímý krok",
-            description: "Jednání bez kalkulu.",
+            name: "Čistý začátek",
+            description: "Impuls je přirozený a nevinný.",
           },
           {
             position: 2,
             type: 0,
-            name: "Přirozenost",
-            description: "Buď autentický.",
+            name: "Vnitřní pochybnost",
+            description: "Objevuje se otázka motivace.",
           },
           {
             position: 3,
             type: 0,
-            name: "Pochybnost",
-            description: "Neztrácej důvěru.",
+            name: "Riziko odklonu",
+            description: "Pokušení jednat z vypočítavosti.",
           },
           {
             position: 4,
             type: 1,
-            name: "Ochrana pravdy",
-            description: "Upřímnost chrání.",
+            name: "Návrat k pravdivosti",
+            description: "Záměr se očišťuje.",
           },
           {
             position: 5,
             type: 1,
-            name: "Střední čistota",
-            description: "Motiv je jasný.",
+            name: "Jednání v souladu",
+            description: "Čin vychází z integrity.",
           },
           {
             position: 6,
             type: 1,
-            name: "Ztráta nevinnosti",
-            description: "Narušení přináší důsledky.",
+            name: "Porušení nevinnosti",
+            description: "Ztráta autenticity vede k obratu.",
           },
         ],
       },
       en: {
         name: "Innocence",
         meaning:
-          "Innocence represents action without hidden motives. Purity of intention brings strength.\n\nPsychologically, it reflects authenticity.\n\nManipulation disturbs balance.",
+          "Innocence represents action without hidden motives. It is a state of inner sincerity, where behavior arises from authenticity rather than manipulation.\n\nPsychologically, it reflects alignment with one’s true nature. One acts without strategic calculation, guided by inner truth.\n\nInnocence is not naivety. It means remaining genuine even in complex situations.\n\nThis hexagram teaches that clarity of intention creates inner stability. When motive is pure, direction becomes evident.",
         oracle: {
           interpretation: [
-            "Act sincerely.",
-
-            "Avoid scheming.",
-
-            "Truthfulness protects.",
+            "Act from sincere intention.",
+            "Avoid hidden agendas.",
+            "Remain authentic in uncertainty.",
           ],
-
-          introspection: ["Are your intentions clear?"],
+          introspection: [
+            "Is your intention truly sincere?",
+            "Where are you acting from fear rather than truth?",
+            "What would full authenticity require?",
+          ],
         },
         anatomy:
-          "Innocence stems from authenticity.\n\nWithout truth, it collapses.\n\nClear intention steadies the path.",
+          "Heaven above Thunder forms this hexagram. Thunder represents movement; Heaven symbolizes guiding principle. Energy arises from below and aligns with higher order.\n\nThe structure emphasizes spontaneous yet principled action.\n\nTrue innocence integrates impulse with moral clarity.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Direct Step",
-            description: "Action without calculation.",
+            name: "Pure Beginning",
+            description: "The impulse is natural and sincere.",
           },
           {
             position: 2,
             type: 0,
-            name: "Naturalness",
-            description: "Be authentic.",
+            name: "Inner Questioning",
+            description: "Motivation is examined.",
           },
           {
             position: 3,
             type: 0,
-            name: "Doubt",
-            description: "Do not lose trust.",
+            name: "Risk of Deviation",
+            description: "Temptation toward calculation appears.",
           },
           {
             position: 4,
             type: 1,
-            name: "Protection of Truth",
-            description: "Sincerity safeguards.",
+            name: "Return to Integrity",
+            description: "Intention becomes clear again.",
           },
           {
             position: 5,
             type: 1,
-            name: "Centered Purity",
-            description: "Motivation is clear.",
+            name: "Aligned Action",
+            description: "Behavior reflects inner truth.",
           },
           {
             position: 6,
             type: 1,
             name: "Loss of Innocence",
-            description: "Distortion brings consequences.",
+            description: "Deviation leads to consequence.",
           },
         ],
       },
@@ -3277,118 +3285,120 @@ export const hexagrams: Hexagram[] = [
     number: 26,
     chineseName: "大畜",
     romanization: "Dà Chù",
-    elements: [7, 1],
+    elements: [1, 7],
     lines: [1, 1, 1, 0, 0, 1],
     content: {
       cs: {
-        name: "Velká zdrženlivost",
+        name: "Velká síla",
         meaning:
-          "Velká zdrženlivost symbolizuje shromažďování síly bez okamžitého uvolnění.\n\nPsychologicky jde o disciplínu a trpělivost.\n\nZadržení energie zvyšuje její hodnotu.",
+          "Velká síla symbolizuje energii, která je zadržována a kultivována. Nejde o okamžitou akci, ale o vědomé shromažďování moci a zdrojů.\n\nPsychologicky představuje disciplínu. Člověk má potenciál jednat, ale rozhodne se jej ovládnout a směrovat. Tato fáze vyžaduje trpělivost a sebeovládání.\n\nSíla bez kontroly je nebezpečná. Síla zadržovaná a vědomě spravovaná se stává stabilní a účinnou.\n\nHexagram učí, že skutečná moc není v impulzivním projevu, ale v schopnosti čekat na správný okamžik.",
         oracle: {
           interpretation: [
-            "Zadrž energii.",
-
-            "Buduj základ.",
-
-            "Jednej až ve správný čas.",
+            "Zadrž energii a kultivuj ji.",
+            "Nepodléhej okamžitému impulsu.",
+            "Připravuj se na větší krok.",
           ],
-
-          introspection: ["Kde je třeba vyčkat?"],
+          introspection: [
+            "Kde můžeš projevit větší sebekontrolu?",
+            "Co právě vyžaduje trpělivost?",
+            "Jak můžeš svou sílu nasměrovat vědomě?",
+          ],
         },
         anatomy:
-          "Zdrženlivost posiluje charakter.\n\nUvolnění přichází ve správný okamžik.\n\nDisciplína vytváří trvalou sílu.",
+          "Hora nad Nebem vytváří obraz zadržované energie. Nebe symbolizuje tvořivou sílu, Hora omezení a stabilitu.\n\nSíla je přítomná, ale je držena v mezích. Tato kombinace vytváří potenciál, který dozrává.\n\nAnatomie hexagramu ukazuje, že růst vyžaduje nejen energii, ale i hranice.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Zastavení síly",
-            description: "Nespěchej.",
+            name: "První impuls síly",
+            description: "Potenciál je patrný.",
           },
           {
             position: 2,
             type: 1,
-            name: "Vnitřní kontrola",
-            description: "Disciplína roste.",
+            name: "Sebekontrola",
+            description: "Síla je vědomě držena.",
           },
           {
             position: 3,
             type: 1,
-            name: "Napětí",
-            description: "Energie je silná.",
+            name: "Riziko přetlaku",
+            description: "Napětí může růst.",
           },
           {
             position: 4,
             type: 0,
-            name: "Stabilní základ",
-            description: "Trpělivost chrání.",
+            name: "Stabilizace",
+            description: "Omezení vytváří bezpečí.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vyváženost",
-            description: "Čekání je vědomé.",
+            name: "Zralá síla",
+            description: "Energie je připravena k použití.",
           },
           {
             position: 6,
             type: 1,
             name: "Uvolnění",
-            description: "Čas akce přichází.",
+            description: "Síla může být konečně projevena.",
           },
         ],
       },
       en: {
-        name: "Great Restraint",
+        name: "The Taming Power of the Great",
         meaning:
-          "Great Restraint represents gathering strength without immediate release.\n\nPsychologically, it reflects discipline.\n\nContained energy gains value.",
+          "The Taming Power of the Great represents cultivated strength held in restraint. It is not immediate action, but conscious accumulation of power.\n\nPsychologically, it reflects discipline. One possesses potential yet chooses to direct and control it.\n\nUncontrolled force is destructive. Restrained force becomes stable and effective.\n\nThis hexagram teaches that true power lies in waiting for the right moment.",
         oracle: {
           interpretation: [
-            "Hold your energy.",
-
-            "Build foundations.",
-
-            "Act at the right time.",
+            "Restrain and cultivate your energy.",
+            "Do not act impulsively.",
+            "Prepare for a greater step.",
           ],
-
-          introspection: ["Where must you wait?"],
+          introspection: [
+            "Where is greater self-discipline required?",
+            "What situation calls for patience?",
+            "How can you channel your strength wisely?",
+          ],
         },
         anatomy:
-          "Restraint strengthens character.\n\nRelease comes in proper timing.\n\nDiscipline creates lasting power.",
+          "Mountain above Heaven symbolizes restrained creative force. Heaven holds dynamic energy; Mountain imposes structure.\n\nEnergy is present but contained, allowing maturation.\n\nGrowth requires both strength and boundary.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Stopping Force",
-            description: "Do not rush.",
+            name: "Emerging Strength",
+            description: "Potential becomes visible.",
           },
           {
             position: 2,
             type: 1,
-            name: "Inner Control",
-            description: "Discipline grows.",
+            name: "Self-Control",
+            description: "Energy is consciously restrained.",
           },
           {
             position: 3,
             type: 1,
-            name: "Tension",
-            description: "Energy builds.",
+            name: "Pressure Builds",
+            description: "Tension increases beneath restraint.",
           },
           {
             position: 4,
             type: 0,
-            name: "Stable Base",
-            description: "Patience protects.",
+            name: "Stabilization",
+            description: "Structure creates safety.",
           },
           {
             position: 5,
             type: 0,
-            name: "Balanced Waiting",
-            description: "Delay is conscious.",
+            name: "Mature Power",
+            description: "Strength is ready.",
           },
           {
             position: 6,
             type: 1,
             name: "Release",
-            description: "Time for action arrives.",
+            description: "Power is finally expressed.",
           },
         ],
       },
@@ -3399,118 +3409,120 @@ export const hexagrams: Hexagram[] = [
     number: 27,
     chineseName: "頤",
     romanization: "Yí",
-    elements: [7, 3],
-    lines: [0, 0, 1, 0, 0, 1],
+    elements: [3, 7],
+    lines: [1, 0, 0, 0, 0, 1],
     content: {
       cs: {
         name: "Výživa",
         meaning:
-          "Výživa symbolizuje to, čím se živíme – fyzicky i duševně. Nejde jen o jídlo, ale o myšlenky, vztahy a podněty.\n\nPsychologicky ukazuje na kvalitu vstupů, které formují charakter.\n\nTo, co přijímáš, se stává součástí tebe.",
+          "Výživa symbolizuje to, čím se člověk živí – nejen fyzicky, ale i psychicky a duchovně. Tento hexagram ukazuje potřebu věnovat pozornost tomu, co přijímáme a co zároveň dáváme.\n\nPsychologicky jde o uvědomění, že naše myšlenky, vztahy i informace formují náš vnitřní svět. Výživa není jen o spotřebě, ale i o odpovědnosti.\n\nTo, co přijímáme, nás buduje nebo oslabuje. Stejně tak to, co vysíláme, ovlivňuje okolí.\n\nHexagram učí rozlišování. Moudrost spočívá v péči o to, co vstupuje do našeho života, i v tom, jak sami přispíváme světu.",
         oracle: {
           interpretation: [
-            "Vědomě si vybírej, co přijímáš.",
-
-            "Pečuj o své zdroje.",
-
-            "Nevhodná výživa oslabuje.",
+            "Věnuj pozornost tomu, co přijímáš.",
+            "Pečuj o svou vnitřní výživu.",
+            "Buď si vědom toho, co předáváš dál.",
           ],
-
-          introspection: ["Čím právě krmíš svou mysl?"],
+          introspection: [
+            "Čím se právě vyživuješ – mentálně i emocionálně?",
+            "Co ve tvém životě tě posiluje a co tě oslabuje?",
+            "Jakým způsobem přispíváš druhým?",
+          ],
         },
         anatomy:
-          "Výživa formuje charakter.\n\nVědomá péče přináší sílu.\n\nNerovnováha vede k oslabení.",
+          "Hora nad Hromem vytváří obraz úst, která se otevírají a zavírají. Hora představuje stabilitu, Hrom pohyb a impuls.\n\nStruktura hexagramu ukazuje výměnu mezi přijímáním a vydáváním.\n\nAnatomie připomíná, že rovnováha mezi těmito dvěma směry je klíčem k dlouhodobé stabilitě.",
         evolution: [
           {
             position: 1,
-            type: 0,
-            name: "Touha",
-            description: "Rozpoznání potřeby.",
+            type: 1,
+            name: "Vědomé přijetí",
+            description: "Začíná uvědomění toho, co vstupuje dovnitř.",
           },
           {
             position: 2,
             type: 0,
-            name: "Vnější výživa",
-            description: "Pozor na kvalitu.",
+            name: "Nesprávná výživa",
+            description: "Přijetí něčeho, co nepodporuje růst.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Nesprávné přijetí",
-            description: "Nevhodné zdroje škodí.",
+            type: 0,
+            name: "Závislost",
+            description: "Přílišné spoléhání na vnější zdroj.",
           },
           {
             position: 4,
             type: 0,
-            name: "Vnitřní podpora",
-            description: "Péče posiluje.",
+            name: "Vyváženost",
+            description: "Přijímání i dávání jsou v harmonii.",
           },
           {
             position: 5,
             type: 0,
-            name: "Střední rovnováha",
-            description: "Zdravé hranice.",
+            name: "Zodpovědnost",
+            description: "Člověk si uvědomuje dopad svého vlivu.",
           },
           {
             position: 6,
             type: 1,
-            name: "Nadměrnost",
-            description: "Přesycení oslabuje.",
+            name: "Nadměrná konzumace",
+            description: "Přebytek narušuje rovnováhu.",
           },
         ],
       },
       en: {
         name: "Nourishment",
         meaning:
-          "Nourishment represents what feeds us — physically and mentally.\n\nPsychologically, it points to the quality of inputs shaping character.\n\nWhat you consume becomes part of you.",
+          "Nourishment represents what sustains us — physically, mentally, and spiritually. This hexagram invites awareness of what we take in and what we offer in return.\n\nPsychologically, it reflects the understanding that thoughts, relationships, and information shape our inner world.\n\nWhat we consume strengthens or weakens us. What we give influences others.\n\nWisdom lies in conscious selection and responsible sharing.",
         oracle: {
           interpretation: [
-            "Choose carefully what you take in.",
-
-            "Care for your resources.",
-
-            "Poor nourishment weakens.",
+            "Be mindful of what you take in.",
+            "Care for your inner nourishment.",
+            "Consider what you are feeding others.",
           ],
-
-          introspection: ["What feeds your mind now?"],
+          introspection: [
+            "What currently nourishes you?",
+            "What drains your strength?",
+            "How do your words and actions affect others?",
+          ],
         },
         anatomy:
-          "Nourishment shapes character.\n\nConscious care builds strength.\n\nImbalance leads to decline.",
+          "Mountain above Thunder forms the image of the mouth. Mountain stabilizes; Thunder initiates movement.\n\nThe structure emphasizes exchange between receiving and giving.\n\nBalance between these flows sustains vitality.",
         evolution: [
           {
             position: 1,
-            type: 0,
-            name: "Desire",
-            description: "Recognition of need.",
+            type: 1,
+            name: "Conscious Intake",
+            description: "Awareness of what enters begins.",
           },
           {
             position: 2,
             type: 0,
-            name: "External Nourishment",
-            description: "Quality matters.",
+            name: "Misguided Consumption",
+            description: "Intake does not support growth.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Improper Intake",
-            description: "Wrong sources harm.",
+            type: 0,
+            name: "Dependency",
+            description: "Overreliance on external sources.",
           },
           {
             position: 4,
             type: 0,
-            name: "Inner Support",
-            description: "Care strengthens.",
+            name: "Balanced Exchange",
+            description: "Giving and receiving align.",
           },
           {
             position: 5,
             type: 0,
-            name: "Balanced Center",
-            description: "Healthy boundaries.",
+            name: "Responsibility",
+            description: "Influence is handled consciously.",
           },
           {
             position: 6,
             type: 1,
             name: "Excess",
-            description: "Overindulgence weakens.",
+            description: "Overconsumption disturbs equilibrium.",
           },
         ],
       },
@@ -3521,113 +3533,120 @@ export const hexagrams: Hexagram[] = [
     number: 28,
     chineseName: "大過",
     romanization: "Dà Guò",
-    elements: [8, 4],
+    elements: [4, 8],
     lines: [0, 1, 1, 1, 1, 0],
     content: {
       cs: {
-        name: "Převaha velkého",
+        name: "Přetížení",
         meaning:
-          "Převaha velkého označuje situaci, kdy je zatížení větší než podpora.\n\nPsychologicky jde o přetížení odpovědností.\n\nJe třeba najít nový způsob podpory.",
+          "Přetížení symbolizuje situaci, kdy váha odpovědnosti nebo tlaku přesahuje běžnou míru. Struktura je zatížena více, než na co byla původně určena.\n\nPsychologicky může jít o období intenzity, kdy se člověk cítí pod tlakem okolností nebo vlastních očekávání. Přetížení vyžaduje vědomé rozhodnutí – buď posílit strukturu, nebo uvolnit zátěž.\n\nTento hexagram neznamená nutně selhání. Může naznačovat výjimečnou situaci, která vyžaduje odvahu.\n\nMoudrost spočívá v rozpoznání hranice. Pokud tlak není vědomě řízen, může dojít k prasknutí.",
         oracle: {
           interpretation: [
-            "Nepřetěžuj se.",
-
-            "Hledej oporu.",
-
-            "Změň strukturu.",
+            "Rozpoznej míru zátěže.",
+            "Jednej rozhodně, ale vědomě.",
+            "Posil strukturu nebo uvolni tlak.",
           ],
-
-          introspection: ["Co tě tíží víc, než je únosné?"],
+          introspection: [
+            "Kde se cítíš přetížen?",
+            "Co můžeš delegovat nebo změnit?",
+            "Jak můžeš vytvořit stabilnější oporu?",
+          ],
         },
         anatomy:
-          "Přetížení vyžaduje úpravu.\n\nBez podpory dochází k zlomu.\n\nObnova přichází změnou struktury.",
+          "Jezero nad Větrem vytváří obraz ohnutého nosníku. Vnitřní čáry jsou silné, vnější slabé – struktura je napjatá.\n\nTato kombinace ukazuje situaci, kdy síla není rovnoměrně rozložena.\n\nAnatomie hexagramu upozorňuje, že dlouhodobé napětí bez úpravy vede k narušení rovnováhy.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První tlak",
-            description: "Zátěž se objevuje.",
+            name: "První napětí",
+            description: "Zátěž začíná být patrná.",
           },
           {
             position: 2,
             type: 1,
-            name: "Napětí roste",
-            description: "Struktura je ohrožena.",
+            name: "Zvýšený tlak",
+            description: "Odpovědnost roste.",
           },
           {
             position: 3,
             type: 1,
-            name: "Kritický bod",
-            description: "Riziko zlomu.",
+            name: "Riziko přetížení",
+            description: "Struktura je na hraně.",
           },
           {
             position: 4,
             type: 1,
-            name: "Hledání podpory",
-            description: "Je nutná změna.",
+            name: "Vědomý zásah",
+            description: "Je třeba aktivní rozhodnutí.",
           },
           {
             position: 5,
             type: 1,
-            name: "Dočasná stabilita",
-            description: "Opora pomáhá.",
+            name: "Vrchol tlaku",
+            description: "Situace dosahuje maxima.",
           },
-          { position: 6, type: 0, name: "Obrat", description: "Změna směru." },
+          {
+            position: 6,
+            type: 0,
+            name: "Uvolnění nebo zlomení",
+            description: "Dochází k přechodu – buď stabilizace, nebo kolaps.",
+          },
         ],
       },
       en: {
-        name: "Great Excess",
+        name: "Preponderance of the Great",
         meaning:
-          "Great Excess indicates a burden heavier than support.\n\nPsychologically, it reflects overload.\n\nA new structure is needed.",
+          "Preponderance of the Great signifies a situation of excessive weight or pressure. The structure bears more than it was designed to hold.\n\nPsychologically, it reflects intensity and responsibility beyond ordinary limits. One must decide whether to strengthen the foundation or release the burden.\n\nThis hexagram does not necessarily mean failure. It may signal an extraordinary moment requiring courage.\n\nWisdom lies in recognizing limits. If tension is unmanaged, rupture may follow.",
         oracle: {
           interpretation: [
-            "Do not overstrain.",
-
-            "Seek support.",
-
-            "Adjust the framework.",
+            "Recognize the weight you carry.",
+            "Act decisively and consciously.",
+            "Strengthen structure or release pressure.",
           ],
-
-          introspection: ["What feels heavier than it should?"],
+          introspection: [
+            "Where do you feel overloaded?",
+            "What can you adjust or delegate?",
+            "How can you create stronger support?",
+          ],
         },
         anatomy:
-          "Excess demands adjustment.\n\nWithout support, collapse follows.\n\nRenewal comes through restructuring.",
+          "Lake above Wind creates the image of a beam bending under strain. Inner lines are strong while outer lines are weak, indicating tension.\n\nStrength is unevenly distributed.\n\nWithout adjustment, prolonged pressure disrupts balance.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Initial Pressure",
-            description: "The burden appears.",
+            name: "Initial Strain",
+            description: "The burden becomes noticeable.",
           },
           {
             position: 2,
             type: 1,
-            name: "Growing Strain",
-            description: "Structure weakens.",
+            name: "Increasing Pressure",
+            description: "Responsibility intensifies.",
           },
           {
             position: 3,
             type: 1,
             name: "Critical Point",
-            description: "Risk of break.",
+            description: "Structure approaches its limit.",
           },
           {
             position: 4,
             type: 1,
-            name: "Seeking Support",
-            description: "Change is required.",
+            name: "Conscious Intervention",
+            description: "Active decision required.",
           },
           {
             position: 5,
             type: 1,
-            name: "Temporary Stability",
-            description: "Support holds.",
+            name: "Peak Tension",
+            description: "The situation reaches maximum strain.",
           },
           {
             position: 6,
             type: 0,
-            name: "Turn",
-            description: "Direction shifts.",
+            name: "Release or Break",
+            description: "Transition toward stabilization or collapse.",
           },
         ],
       },
@@ -3644,112 +3663,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Propast",
         meaning:
-          "Propast symbolizuje opakované nebezpečí nebo náročnou situaci.\n\nPsychologicky jde o čelení strachu.\n\nVnitřní klid je jedinou jistotou.",
+          "Propast symbolizuje opakované setkání s nebezpečím nebo hlubokou nejistotou. Nejde o jednorázovou krizi, ale o období, kdy člověk musí projít úzkým prostorem bez jasných záruk.\n\nPsychologicky jde o konfrontaci se strachem. Situace může působit jako uzavřený kruh, kdy se obtíž opakuje v různých podobách. Propast učí vytrvalosti a bdělosti.\n\nNebezpečí není nepřítel, ale učitel. Vnitřní stabilita je důležitější než vnější jistota.\n\nHexagram ukazuje, že cesta skrze obtíž vede přes přítomnost. Pokud člověk neztrácí vědomí a postupuje krok za krokem, překážka se stává zdrojem síly.",
         oracle: {
           interpretation: [
-            "Zůstaň bdělý.",
-
-            "Nepodléhej panice.",
-
-            "Vědomí je ochranou.",
+            "Zachovej klid uprostřed obtíží.",
+            "Postupuj krok za krokem.",
+            "Nenech se ochromit strachem.",
           ],
-
-          introspection: ["Jak reaguješ na nejistotu?"],
+          introspection: [
+            "Čeho se právě obáváš?",
+            "Jak můžeš reagovat vědomě místo impulzivně?",
+            "Co tě tato situace učí o tvé síle?",
+          ],
         },
         anatomy:
-          "Nebezpečí učí bdělosti.\n\nVnitřní rovnováha chrání.\n\nStrach může být učitelem.",
+          "Voda nad Vodou vytváří obraz hluboké propasti. Voda symbolizuje nebezpečí i tok života.\n\nOpakování stejného trigramu zdůrazňuje intenzitu situace.\n\nAnatomie hexagramu ukazuje, že obtíž je součástí přirozeného proudu – vyžaduje flexibilitu a vnitřní pevnost.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První pád",
-            description: "Riziko je zřejmé.",
+            name: "První vstup do nebezpečí",
+            description: "Situace začíná být nejistá.",
           },
           {
             position: 2,
             type: 1,
-            name: "Držení středu",
-            description: "Stabilita uvnitř.",
+            name: "Vnitřní pevnost",
+            description: "Objevuje se schopnost zvládat tlak.",
           },
           {
             position: 3,
             type: 0,
-            name: "Ztráta jistoty",
-            description: "Strach narůstá.",
+            name: "Ztráta rovnováhy",
+            description: "Hrozí sklouznutí do chaosu.",
           },
           {
             position: 4,
             type: 0,
-            name: "Opakovaná výzva",
-            description: "Lekce se vrací.",
+            name: "Vytrvalost",
+            description: "Postup vpřed je pomalý, ale vědomý.",
           },
           {
             position: 5,
             type: 1,
-            name: "Vytrvalost",
-            description: "Vnitřní síla roste.",
+            name: "Střed obtíže",
+            description: "Největší tlak vyžaduje největší klid.",
           },
           {
             position: 6,
             type: 0,
-            name: "Přehnaný strach",
-            description: "Panika oslabuje.",
+            name: "Uvolnění napětí",
+            description: "Nebezpečí postupně slábne.",
           },
         ],
       },
       en: {
-        name: "The Abyss",
+        name: "The Abysmal",
         meaning:
-          "The Abyss represents repeated danger or challenge.\n\nPsychologically, it reflects confronting fear.\n\nInner calm is the only security.",
+          "The Abysmal represents repeated encounters with danger or uncertainty. It is not a single crisis but a sustained period of challenge.\n\nPsychologically, it reflects confrontation with fear. Difficulties may seem cyclical. The Abysmal teaches vigilance and perseverance.\n\nDanger is not an enemy but a teacher. Inner stability matters more than outer certainty.\n\nMoving through difficulty requires presence. Step by step, fear transforms into strength.",
         oracle: {
           interpretation: [
-            "Stay alert.",
-
-            "Do not panic.",
-
-            "Awareness protects.",
+            "Remain calm in danger.",
+            "Proceed step by step.",
+            "Do not let fear paralyze you.",
           ],
-
-          introspection: ["How do you respond to uncertainty?"],
+          introspection: [
+            "What fear are you facing?",
+            "How can you respond with awareness?",
+            "What strength is this challenge cultivating?",
+          ],
         },
         anatomy:
-          "Danger teaches awareness.\n\nInner balance protects.\n\nFear can become a teacher.",
+          "Water over Water forms the image of a deep abyss. Water symbolizes both danger and flow.\n\nThe repetition intensifies the experience.\n\nDifficulty becomes part of natural movement, requiring flexibility and inner strength.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "First Fall",
-            description: "Risk appears.",
+            name: "Entering Danger",
+            description: "Uncertainty begins.",
           },
           {
             position: 2,
             type: 1,
-            name: "Holding Center",
-            description: "Inner stability.",
+            name: "Inner Stability",
+            description: "Strength develops within.",
           },
           {
             position: 3,
             type: 0,
-            name: "Loss of Certainty",
-            description: "Fear grows.",
+            name: "Risk of Imbalance",
+            description: "Clarity may waver.",
           },
           {
             position: 4,
             type: 0,
-            name: "Repeated Challenge",
-            description: "Lesson returns.",
+            name: "Perseverance",
+            description: "Steady progress continues.",
           },
           {
             position: 5,
             type: 1,
-            name: "Perseverance",
-            description: "Inner strength develops.",
+            name: "Center of the Abyss",
+            description: "Calm is essential.",
           },
           {
             position: 6,
             type: 0,
-            name: "Excess Fear",
-            description: "Panic weakens.",
+            name: "Release",
+            description: "Danger gradually subsides.",
           },
         ],
       },
@@ -3766,112 +3787,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Jas",
         meaning:
-          "Jas představuje světlo a vědomí. Umožňuje rozpoznat pravdu.\n\nPsychologicky jde o vhled.\n\nSvětlo však může i oslepit.",
+          "Jas symbolizuje světlo vědomí a schopnost rozlišovat. Tento hexagram ukazuje období, kdy je třeba vidět věci takové, jaké jsou, bez zkreslení.\n\nPsychologicky jde o uvědomění a poznání. Jasnost přináší orientaci, ale také odpovědnost.\n\nSvětlo odhaluje nejen pravdu, ale i stíny. Vidět znamená přijmout realitu bez úniku.\n\nHexagram učí, že skutečné světlo vychází zevnitř. Vnější zdroje mohou pomoci, ale stabilní jasnost je stav mysli.",
         oracle: {
           interpretation: [
-            "Hledej jasnost.",
-
-            "Neulpívej na povrchu.",
-
-            "Vědomí vede.",
+            "Hledej jasnost místo domněnek.",
+            "Rozlišuj mezi fakty a projekcí.",
+            "Buď světlem i pro ostatní.",
           ],
-
-          introspection: ["Co je nyní třeba vidět jasně?"],
+          introspection: [
+            "Co je nyní třeba uvidět otevřeně?",
+            "Kde se vyhýbáš pravdě?",
+            "Jak můžeš přinést více vědomí do situace?",
+          ],
         },
         anatomy:
-          "Jas přináší poznání.\n\nBez rovnováhy však oslepuje.\n\nVědomé světlo vede k porozumění.",
+          "Oheň nad Ohněm vytváří obraz světla, které se udržuje samo.\n\nOpakování trigramu zdůrazňuje sílu vědomí.\n\nAnatomie ukazuje, že světlo potřebuje palivo – bez výživy vědomí zhasíná.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "První světlo",
-            description: "Poznání začíná.",
+            name: "První záblesk",
+            description: "Objevuje se vhled.",
           },
           {
             position: 2,
             type: 0,
-            name: "Stabilní plamen",
-            description: "Jas roste.",
+            name: "Zkouška jasnosti",
+            description: "Může dojít k pochybnosti.",
           },
           {
             position: 3,
             type: 1,
-            name: "Přílišná intenzita",
-            description: "Oheň může pálit.",
+            name: "Prohloubení poznání",
+            description: "Vědomí se stabilizuje.",
           },
           {
             position: 4,
             type: 1,
-            name: "Osvícení",
-            description: "Vědomí vrcholí.",
+            name: "Sdílení světla",
+            description: "Jas ovlivňuje okolí.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vyvážený vhled",
-            description: "Světlo je stabilní.",
+            name: "Riziko oslnění",
+            description: "Přehnaná jistota může zkreslit.",
           },
           {
             position: 6,
             type: 1,
-            name: "Vyhasnutí",
-            description: "Energie slábne.",
+            name: "Stálé světlo",
+            description: "Jasnost je vnitřně ukotvená.",
           },
         ],
       },
       en: {
         name: "Clarity",
         meaning:
-          "Clarity represents light and awareness.\n\nPsychologically, it reflects insight.\n\nLight can illuminate or blind.",
+          "Clarity represents illumination and discernment. It calls for seeing reality without distortion.\n\nPsychologically, it reflects awareness and insight. Clarity brings direction and responsibility.\n\nLight reveals both truth and shadow.\n\nTrue illumination arises from within. External light may guide, but inner clarity sustains.",
         oracle: {
           interpretation: [
-            "Seek clarity.",
-
-            "Look beneath the surface.",
-
-            "Awareness guides.",
+            "Seek clarity over assumption.",
+            "Distinguish fact from projection.",
+            "Be a light for others.",
           ],
-
-          introspection: ["What needs to be seen clearly?"],
+          introspection: [
+            "What must you see clearly now?",
+            "Where are you avoiding truth?",
+            "How can you cultivate awareness?",
+          ],
         },
         anatomy:
-          "Clarity reveals truth.\n\nWithout balance, it blinds.\n\nConscious light leads to understanding.",
+          "Fire above Fire forms the image of sustained light.\n\nRepetition emphasizes awareness.\n\nLight requires fuel; consciousness needs nourishment.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "First Light",
-            description: "Insight begins.",
+            name: "Initial Insight",
+            description: "Understanding begins.",
           },
           {
             position: 2,
             type: 0,
-            name: "Steady Flame",
-            description: "Clarity grows.",
+            name: "Testing Clarity",
+            description: "Doubt may arise.",
           },
           {
             position: 3,
             type: 1,
-            name: "Excess Intensity",
-            description: "Light may burn.",
+            name: "Deepening Awareness",
+            description: "Insight stabilizes.",
           },
           {
             position: 4,
             type: 1,
-            name: "Illumination",
-            description: "Awareness peaks.",
+            name: "Radiance",
+            description: "Light influences others.",
           },
           {
             position: 5,
             type: 0,
-            name: "Balanced Insight",
-            description: "Light stabilizes.",
+            name: "Risk of Overconfidence",
+            description: "Certainty may distort.",
           },
           {
             position: 6,
             type: 1,
-            name: "Fading",
-            description: "Energy diminishes.",
+            name: "Sustained Light",
+            description: "Clarity becomes stable.",
           },
         ],
       },
@@ -3888,112 +3911,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Vliv",
         meaning:
-          "Vliv představuje přirozenou přitažlivost mezi dvěma silami. Nejde o manipulaci, ale o rezonanci.\n\nPsychologicky symbolizuje otevřenost ke vztahu a citlivost vůči druhým.\n\nSkutečný vliv vychází z autenticity.",
+          "Vliv symbolizuje jemné působení mezi lidmi nebo silami. Nejde o tlak ani manipulaci, ale o přirozenou rezonanci, která vzniká otevřeností.\n\nPsychologicky se tento hexagram vztahuje k citlivosti a schopnosti reagovat. Vztah nebo situace se vyvíjí skrze vzájemné naladění.\n\nSkutečný vliv nepřichází z dominance, ale z autenticity. To, co je pravdivé, přirozeně přitahuje.\n\nHexagram ukazuje, že otevřené srdce je silnější než kontrola. Přitažlivost vzniká ze souladu, nikoli z tlaku.",
         oracle: {
           interpretation: [
-            "Buď otevřený citlivosti.",
-
-            "Nemanipuluj.",
-
-            "Rezonance vzniká přirozeně.",
+            "Jednej jemně, ne silou.",
+            "Buď otevřený vzájemnému působení.",
+            "Nech věci vznikat přirozeně.",
           ],
-
-          introspection: ["Co tě skutečně přitahuje – a proč?"],
+          introspection: [
+            "Kde právě vzniká vzájemná rezonance?",
+            "Ovlivňuješ, nebo jsi ovlivňován?",
+            "Jednáš autenticky?",
+          ],
         },
         anatomy:
-          "Vliv roste z citlivosti.\n\nBez autenticity se rozpadá.\n\nRespekt udržuje rovnováhu.",
+          "Jezero nad Horou vytváří obraz radosti spočívající na stabilním základu. Hora představuje klid a pevnost, Jezero otevřenost a sdílení.\n\nVliv vzniká, když stabilita podporuje citlivost.\n\nAnatomie hexagramu zdůrazňuje rovnováhu mezi vnitřní pevností a vnější otevřeností.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První dotek",
-            description: "Vzniká jemné spojení.",
+            name: "První cit",
+            description: "Vzniká jemné naladění.",
           },
           {
             position: 2,
-            type: 0,
-            name: "Citlivost",
-            description: "Otevřenost roste.",
+            type: 1,
+            name: "Vzájemná otevřenost",
+            description: "Rezonance sílí.",
           },
           {
             position: 3,
             type: 1,
-            name: "Silná přitažlivost",
-            description: "Pozor na závislost.",
+            name: "Riziko přehnané reakce",
+            description: "Emoce mohou převládnout.",
           },
           {
             position: 4,
             type: 1,
-            name: "Vzájemnost",
-            description: "Rovnováha vztahu.",
+            name: "Stabilní spojení",
+            description: "Vliv je vyvážený.",
           },
           {
             position: 5,
-            type: 1,
-            name: "Upřímná rezonance",
-            description: "Spojení je pravdivé.",
+            type: 0,
+            name: "Vnitřní jistota",
+            description: "Spojení je pevné.",
           },
           {
             position: 6,
             type: 0,
-            name: "Povrchní vliv",
-            description: "Chybí hloubka.",
+            name: "Přehnaná citlivost",
+            description: "Nadměrná reakce může narušit harmonii.",
           },
         ],
       },
       en: {
         name: "Influence",
         meaning:
-          "Influence represents natural attraction between forces. It is resonance, not manipulation.\n\nPsychologically, it reflects relational sensitivity.\n\nTrue influence arises from authenticity.",
+          "Influence represents subtle interaction between forces or people. It is not pressure, but natural resonance born from openness.\n\nPsychologically, it reflects sensitivity and responsiveness. Relationships evolve through mutual attunement.\n\nTrue influence arises from authenticity, not dominance.\n\nOpen-hearted presence creates attraction through harmony.",
         oracle: {
           interpretation: [
-            "Remain open and sensitive.",
-
-            "Do not manipulate.",
-
-            "Resonance emerges naturally.",
+            "Act gently rather than forcefully.",
+            "Remain open to mutual influence.",
+            "Allow things to unfold naturally.",
           ],
-
-          introspection: ["What truly attracts you — and why?"],
+          introspection: [
+            "Where is resonance forming?",
+            "Are you influencing or being influenced?",
+            "Are you acting authentically?",
+          ],
         },
         anatomy:
-          "Influence grows through sensitivity.\n\nWithout authenticity, it fades.\n\nRespect sustains harmony.",
+          "Lake above Mountain creates joy resting on stability. Mountain symbolizes firmness; Lake openness.\n\nInfluence emerges when stability supports sensitivity.\n\nBalance between inner strength and outer receptivity is essential.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "First Contact",
-            description: "A subtle connection forms.",
+            name: "Initial Feeling",
+            description: "Subtle attunement begins.",
           },
           {
             position: 2,
-            type: 0,
-            name: "Sensitivity",
-            description: "Openness grows.",
+            type: 1,
+            name: "Mutual Openness",
+            description: "Resonance deepens.",
           },
           {
             position: 3,
             type: 1,
-            name: "Strong Attraction",
-            description: "Beware dependency.",
+            name: "Emotional Excess",
+            description: "Reaction may become exaggerated.",
           },
           {
             position: 4,
             type: 1,
-            name: "Mutuality",
-            description: "Balance in relationship.",
+            name: "Stable Connection",
+            description: "Influence is balanced.",
           },
           {
             position: 5,
-            type: 1,
-            name: "Sincere Resonance",
-            description: "Connection is genuine.",
+            type: 0,
+            name: "Inner Certainty",
+            description: "Connection stabilizes.",
           },
           {
             position: 6,
             type: 0,
-            name: "Superficial Appeal",
-            description: "Lacks depth.",
+            name: "Over-Sensitivity",
+            description: "Excess emotion disrupts harmony.",
           },
         ],
       },
@@ -4004,118 +4029,120 @@ export const hexagrams: Hexagram[] = [
     number: 32,
     chineseName: "恆",
     romanization: "Héng",
-    elements: [3, 4],
-    lines: [0, 1, 1, 0, 1, 0],
+    elements: [4, 3],
+    lines: [0, 1, 1, 1, 0, 0],
     content: {
       cs: {
         name: "Trvání",
         meaning:
-          "Trvání představuje stabilitu v čase. Nejde o stagnaci, ale o vytrvalost v pravdivém směru.\n\nPsychologicky ukazuje na disciplínu a dlouhodobé závazky.\n\nTo, co má hodnotu, vyžaduje čas.",
+          "Trvání symbolizuje stálost a vytrvalost v čase. Nejde o strnulost, ale o schopnost udržet směr i přes proměny.\n\nPsychologicky tento hexagram vyjadřuje věrnost hodnotám a dlouhodobé úsilí. Stabilita nevzniká z rigidity, ale z vědomého závazku.\n\nTrvání vyžaduje rytmus – pohyb a klid ve správném poměru.\n\nHexagram učí, že skutečná síla se projevuje v kontinuitě. Dlouhodobá práce přináší hlubší výsledky než krátkodobý impuls.",
         oracle: {
           interpretation: [
-            "Vytrvej.",
-
-            "Udrž směr.",
-
-            "Nestřídej cíl příliš rychle.",
+            "Zachovej směr.",
+            "Buduj stabilitu krok za krokem.",
+            "Vytrvalost přináší plody.",
           ],
-
-          introspection: ["V čem potřebuješ větší důslednost?"],
+          introspection: [
+            "V čem je třeba vytrvat?",
+            "Držíš se svých hodnot?",
+            "Co vyžaduje dlouhodobý závazek?",
+          ],
         },
         anatomy:
-          "Trvání buduje hodnotu.\n\nBez vytrvalosti se záměr rozpadá.\n\nČas je spojencem stability.",
+          "Hrom nad Větrem vytváří obraz pohybu v rytmu. Hrom symbolizuje iniciativu, Vítr postupné pronikání.\n\nTrvání vzniká, když se impuls opakuje s vědomým směrem.\n\nAnatomie hexagramu ukazuje, že kontinuita je kombinací energie a trpělivosti.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Nejistý začátek",
-            description: "Směr se hledá.",
+            name: "Počáteční závazek",
+            description: "Vzniká rozhodnutí vytrvat.",
           },
           {
             position: 2,
             type: 1,
-            name: "Stálost",
-            description: "Roste vytrvalost.",
+            name: "Stabilizace",
+            description: "Směr se upevňuje.",
           },
           {
             position: 3,
             type: 1,
-            name: "Pochybnost",
-            description: "Zkouška trpělivosti.",
+            name: "Zkouška",
+            description: "Objevují se překážky.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Obnova závazku",
-            description: "Znovu potvrď směr.",
+            type: 1,
+            name: "Upevnění rytmu",
+            description: "Vytrvalost se stává přirozenou.",
           },
           {
             position: 5,
-            type: 1,
-            name: "Pevný střed",
-            description: "Stabilita vrcholí.",
+            type: 0,
+            name: "Zralost",
+            description: "Stabilita je dosažena.",
           },
           {
             position: 6,
             type: 0,
-            name: "Vyčerpání",
-            description: "Pozor na únavu.",
+            name: "Riziko stagnace",
+            description: "Nadměrná setrvačnost může brzdit růst.",
           },
         ],
       },
       en: {
         name: "Duration",
         meaning:
-          "Duration represents stability through time. It is perseverance, not stagnation.\n\nPsychologically, it reflects discipline.\n\nWhat endures requires commitment.",
+          "Duration represents constancy through time. It is not rigidity, but the ability to maintain direction amidst change.\n\nPsychologically, it reflects commitment to values and sustained effort.\n\nStability arises from conscious dedication.\n\nEndurance brings deeper results than fleeting enthusiasm.",
         oracle: {
           interpretation: [
-            "Persist.",
-
-            "Maintain direction.",
-
-            "Avoid constant shifts.",
+            "Maintain your direction.",
+            "Build stability step by step.",
+            "Perseverance bears fruit.",
           ],
-
-          introspection: ["Where is consistency needed?"],
+          introspection: [
+            "Where must you persist?",
+            "Are you aligned with your values?",
+            "What requires long-term commitment?",
+          ],
         },
         anatomy:
-          "Duration builds value.\n\nWithout perseverance, intention fades.\n\nTime strengthens what is steady.",
+          "Thunder above Wind symbolizes rhythmic motion. Thunder initiates; Wind sustains.\n\nDuration arises from repeated impulse guided by intention.\n\nContinuity requires both energy and patience.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Uncertain Start",
-            description: "Direction is unclear.",
+            name: "Initial Commitment",
+            description: "Decision to persist.",
           },
           {
             position: 2,
             type: 1,
-            name: "Steadiness",
-            description: "Perseverance grows.",
+            name: "Stabilization",
+            description: "Direction becomes firm.",
           },
           {
             position: 3,
             type: 1,
-            name: "Doubt",
-            description: "Patience is tested.",
+            name: "Trial",
+            description: "Obstacles test endurance.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Renewed Commitment",
-            description: "Affirm direction again.",
+            type: 1,
+            name: "Rhythmic Continuity",
+            description: "Persistence becomes natural.",
           },
           {
             position: 5,
-            type: 1,
-            name: "Firm Center",
-            description: "Stability peaks.",
+            type: 0,
+            name: "Maturity",
+            description: "Stability achieved.",
           },
           {
             position: 6,
             type: 0,
-            name: "Fatigue",
-            description: "Beware exhaustion.",
+            name: "Risk of Stagnation",
+            description: "Excess constancy may hinder growth.",
           },
         ],
       },
@@ -4127,117 +4154,119 @@ export const hexagrams: Hexagram[] = [
     chineseName: "遯",
     romanization: "Dùn",
     elements: [7, 1],
-    lines: [1, 1, 1, 1, 0, 0],
+    lines: [0, 0, 1, 1, 1, 1],
     content: {
       cs: {
         name: "Ústup",
         meaning:
-          "Ústup neznamená porážku, ale strategickou ochranu síly.\n\nPsychologicky jde o rozpoznání, kdy není vhodný čas pro konfrontaci.\n\nUstoupit může být moudřejší než bojovat.",
+          "Ústup symbolizuje vědomé stažení se z nepříznivé situace. Nejde o porážku ani zbabělost, ale o strategické rozpoznání okamžiku, kdy pokračování by znamenalo ztrátu integrity.\n\nPsychologicky se tento hexagram týká hranic. Člověk si uvědomuje, že ne každá konfrontace stojí za vybojování. Někdy je moudřejší ustoupit, než se vyčerpat v neplodném střetu.\n\nÚstup vyžaduje sílu. Slabost prchá ze strachu, zatímco moudrost ustupuje z jasnosti.\n\nHexagram učí, že zachování vnitřní stability má větší hodnotu než vnější vítězství.",
         oracle: {
           interpretation: [
-            "Nezůstávej tam, kde síla slábne.",
-
-            "Ustup vědomě.",
-
+            "Rozpoznej, kdy je čas ustoupit.",
             "Chraň svou energii.",
+            "Nepleť si moudrost s porážkou.",
           ],
-
-          introspection: ["Co je lepší opustit?"],
+          introspection: [
+            "Kde zbytečně bojuješ?",
+            "Co by znamenalo ustoupit bez pocitu selhání?",
+            "Jak můžeš zachovat svou důstojnost?",
+          ],
         },
         anatomy:
-          "Ústup chrání budoucnost.\n\nBez strategie se mění v útěk.\n\nSprávný čas je klíčový.",
+          "Hora nad Nebem vytváří obraz pevnosti, která se stahuje. Nebe představuje tvořivou sílu, Hora hranici a zastavení.\n\nSíla je přítomná, ale je vědomě omezena.\n\nAnatomie hexagramu ukazuje, že ústup je aktivní rozhodnutí, nikoli pasivní únik.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "První ústup",
-            description: "Rozpoznání rizika.",
+            name: "První signál",
+            description: "Objevuje se potřeba stáhnout se.",
           },
           {
             position: 2,
             type: 1,
-            name: "Ochrana hranic",
-            description: "Ustupuj klidně.",
+            name: "Vnitřní rozhodnutí",
+            description: "Ústup je přijat jako vědomá volba.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Napětí",
-            description: "Situace je náročná.",
+            type: 0,
+            name: "Riziko váhání",
+            description: "Nerozhodnost může zkomplikovat situaci.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Strategie",
-            description: "Ústup je vědomý.",
+            type: 0,
+            name: "Upevnění hranic",
+            description: "Odstup přináší stabilitu.",
           },
           {
             position: 5,
             type: 0,
-            name: "Stabilní ochrana",
-            description: "Síla se zachovává.",
+            name: "Zachování integrity",
+            description: "Důstojnost je uchována.",
           },
           {
             position: 6,
             type: 0,
-            name: "Příliš pozdní reakce",
-            description: "Zdržení škodí.",
+            name: "Úplné stažení",
+            description: "Vnější kontakt se minimalizuje.",
           },
         ],
       },
       en: {
         name: "Retreat",
         meaning:
-          "Retreat does not mean defeat but strategic preservation.\n\nPsychologically, it reflects recognizing unfavorable timing.\n\nWithdrawing can be wiser than confrontation.",
+          "Retreat represents conscious withdrawal from unfavorable circumstances. It is not defeat but strategic clarity.\n\nPsychologically, it concerns boundaries. Not every conflict deserves engagement.\n\nRetreat requires strength. Wisdom steps back to preserve integrity.\n\nTrue victory may lie in maintaining inner stability.",
         oracle: {
           interpretation: [
-            "Do not stay where strength fades.",
-
-            "Withdraw consciously.",
-
-            "Protect your energy.",
+            "Recognize when to step back.",
+            "Preserve your energy.",
+            "Do not confuse wisdom with defeat.",
           ],
-
-          introspection: ["What is better left behind?"],
+          introspection: [
+            "Where are you fighting unnecessarily?",
+            "What would dignified withdrawal look like?",
+            "How can you protect your integrity?",
+          ],
         },
         anatomy:
-          "Retreat safeguards the future.\n\nWithout strategy, it becomes escape.\n\nTiming determines wisdom.",
+          "Mountain above Heaven shows strength contained. Heaven symbolizes creative force; Mountain sets boundaries.\n\nEnergy is restrained by conscious limit.\n\nWithdrawal is an active choice, not passive escape.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Initial Withdrawal",
-            description: "Risk is recognized.",
+            name: "Initial Signal",
+            description: "Need for retreat appears.",
           },
           {
             position: 2,
             type: 1,
-            name: "Protecting Boundaries",
-            description: "Retreat calmly.",
+            name: "Inner Decision",
+            description: "Withdrawal is consciously chosen.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Tension",
-            description: "Pressure intensifies.",
+            type: 0,
+            name: "Hesitation",
+            description: "Indecision complicates matters.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Strategy",
-            description: "Withdrawal is deliberate.",
+            type: 0,
+            name: "Boundary Established",
+            description: "Distance restores stability.",
           },
           {
             position: 5,
             type: 0,
-            name: "Stable Protection",
-            description: "Strength is preserved.",
+            name: "Integrity Preserved",
+            description: "Dignity remains intact.",
           },
           {
             position: 6,
             type: 0,
-            name: "Too Late",
-            description: "Delay harms.",
+            name: "Complete Withdrawal",
+            description: "External engagement ends.",
           },
         ],
       },
@@ -4248,120 +4277,120 @@ export const hexagrams: Hexagram[] = [
     number: 34,
     chineseName: "大壯",
     romanization: "Dà Zhuàng",
-    elements: [3, 1],
+    elements: [1, 3],
     lines: [1, 1, 1, 1, 0, 0],
     content: {
       cs: {
         name: "Velká síla",
         meaning:
-          "Velká síla představuje vrchol energie a rozhodnosti. Síla je zřejmá a pohyb vpřed je téměř nevyhnutelný.\n\nPsychologicky jde o období vysoké vitality, odvahy a sebejistoty.\n\nSkutečná síla však spočívá v kontrole. Bez ní se mění v destrukci.",
+          "Velká síla symbolizuje období intenzivní energie a expanze. Síla je viditelná a aktivní, ale zároveň vyžaduje kontrolu.\n\nPsychologicky jde o fázi, kdy člověk cítí moc a odhodlání. Tento stav může přinést významné posuny, pokud je veden vědomím.\n\nBez vnitřní disciplíny se síla mění v agresi.\n\nHexagram učí, že opravdová moc je v rovnováze mezi energií a etikou.",
         oracle: {
           interpretation: [
-            "Jednej pevně, ale s mírou.",
-
-            "Nepodléhej impulsu.",
-
-            "Síla vyžaduje odpovědnost.",
+            "Používej sílu s rozvahou.",
+            "Jednej odvážně, ale ne bezhlavě.",
+            "Respektuj hranice druhých.",
           ],
-
-          introspection: ["Kde je třeba použít sílu – a kde ji zadržet?"],
+          introspection: [
+            "Kde můžeš projevit svou sílu konstruktivně?",
+            "Jednáš z integrity, nebo z ega?",
+            "Jak můžeš vyvážit energii s pokorou?",
+          ],
         },
         anatomy:
-          "Velká síla vrcholí v odpovědnosti.\n\nBez kontroly se obrací proti sobě.\n\nMoudrost řídí energii.",
+          "Hrom nad Nebem vytváří obraz silného pohybu podporovaného tvořivou energií.\n\nSíla roste zdola a expanduje vzhůru.\n\nAnatomie hexagramu ukazuje dynamiku růstu, která musí být řízena vědomím.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "První tlak",
-            description: "Energie narůstá.",
+            name: "První nával síly",
+            description: "Energie je čerstvá a intenzivní.",
           },
           {
             position: 2,
             type: 1,
-            name: "Stabilní síla",
-            description: "Pevnost roste.",
+            name: "Stabilizace síly",
+            description: "Odvaha se upevňuje.",
           },
           {
             position: 3,
             type: 1,
-            name: "Nadměrná tvrdost",
-            description: "Riziko přehnané reakce.",
+            name: "Riziko přehnanosti",
+            description: "Hrozí překročení míry.",
           },
           {
             position: 4,
             type: 1,
-            name: "Směřovaná energie",
-            description: "Síla je řízená.",
+            name: "Vědomé vedení",
+            description: "Síla je řízena rozumem.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vyvážené vedení",
-            description: "Kontrola stabilizuje.",
+            name: "Vyvážená moc",
+            description: "Energie je harmonická.",
           },
           {
             position: 6,
             type: 0,
-            name: "Zneužití síly",
-            description: "Překročení míry vede k obratu.",
+            name: "Útlum",
+            description: "Intenzita se přirozeně snižuje.",
           },
         ],
       },
       en: {
-        name: "Great Power",
+        name: "The Power of the Great",
         meaning:
-          "Great Power represents peak strength and determination.\n\nPsychologically, it marks vitality and confidence.\n\nTrue power lies in restraint. Without control, it turns destructive.",
+          "The Power of the Great represents strong and visible energy. It is a time of expansion and decisive movement.\n\nPsychologically, it reflects determination and vitality. Progress is possible if guided consciously.\n\nWithout discipline, strength turns into aggression.\n\nTrue power balances energy with ethics.",
         oracle: {
           interpretation: [
-            "Act firmly, but with moderation.",
-
-            "Avoid impulsiveness.",
-
-            "Power requires responsibility.",
+            "Use strength wisely.",
+            "Act boldly but not recklessly.",
+            "Respect boundaries.",
           ],
-
           introspection: [
-            "Where should strength be used — and where restrained?",
+            "Where can your strength serve constructively?",
+            "Are you acting from ego or integrity?",
+            "How can you balance power with humility?",
           ],
         },
         anatomy:
-          "Great Power culminates in responsibility.\n\nWithout restraint, it collapses.\n\nWisdom directs strength.",
+          "Thunder above Heaven symbolizes dynamic expansion. Creative force supports powerful movement.\n\nEnergy rises and expands.\n\nGrowth must be guided by awareness.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Rising Pressure",
-            description: "Energy builds.",
+            name: "Initial Surge",
+            description: "Energy is intense.",
           },
           {
             position: 2,
             type: 1,
-            name: "Stable Strength",
-            description: "Firmness grows.",
+            name: "Stabilized Strength",
+            description: "Courage strengthens.",
           },
           {
             position: 3,
             type: 1,
-            name: "Excess Force",
-            description: "Risk of overreaction.",
+            name: "Excess Risk",
+            description: "Danger of overreach.",
           },
           {
             position: 4,
             type: 1,
-            name: "Directed Energy",
-            description: "Strength is guided.",
+            name: "Conscious Leadership",
+            description: "Strength guided by reason.",
           },
           {
             position: 5,
             type: 0,
-            name: "Balanced Leadership",
-            description: "Control stabilizes.",
+            name: "Balanced Power",
+            description: "Energy harmonized.",
           },
           {
             position: 6,
             type: 0,
-            name: "Misuse of Power",
-            description: "Excess leads to reversal.",
+            name: "Decline",
+            description: "Intensity naturally subsides.",
           },
         ],
       },
@@ -4372,118 +4401,120 @@ export const hexagrams: Hexagram[] = [
     number: 35,
     chineseName: "晉",
     romanization: "Jìn",
-    elements: [6, 2],
+    elements: [2, 6],
     lines: [0, 0, 0, 1, 0, 1],
     content: {
       cs: {
         name: "Pokrok",
         meaning:
-          "Pokrok představuje růst a posun vpřed. Energie stoupá a přináší nové možnosti.\n\nPsychologicky jde o období optimismu a rozvoje.\n\nJe však nutné zůstat pokorný.",
+          "Pokrok symbolizuje postupné vyjasňování a vzestup do světla. Je to období, kdy se věci dávají do pohybu správným směrem a výsledky se začínají ukazovat navenek.\n\nPsychologicky jde o fázi růstu sebevědomí a uznání. Člověk je viditelnější, jeho práce přináší odezvu a okolí si začíná všímat jeho kvality.\n\nPokrok však vyžaduje vděčnost a pokoru. Světlo přitahuje pozornost, ale zároveň zvyšuje odpovědnost.\n\nHexagram učí, že skutečný vzestup je udržitelný jen tehdy, pokud je postaven na vnitřní stabilitě, nikoli na touze po uznání.",
         oracle: {
           interpretation: [
-            "Využij příležitosti.",
-
-            "Zůstaň vděčný.",
-
-            "Postupuj krok za krokem.",
+            "Využij příznivého období k rozvoji.",
+            "Buď otevřený uznání, ale neztrácej pokoru.",
+            "Rozšiřuj své světlo postupně.",
           ],
-
-          introspection: ["Jak můžeš růst bez pýchy?"],
+          introspection: [
+            "Jak můžeš využít současného momentum?",
+            "Jednáš z touhy po růstu, nebo po uznání?",
+            "Jak si zachovat vnitřní rovnováhu ve vzestupu?",
+          ],
         },
         anatomy:
-          "Pokrok přináší světlo.\n\nBez pokory se mění v pád.\n\nVytrvalost stabilizuje růst.",
+          "Oheň nad Zemí vytváří obraz světla, které vychází nad horizont. Země představuje základ a podporu, Oheň vědomí a viditelnost.\n\nPokrok vzniká, když je světlo ukotveno v pevné půdě.\n\nAnatomie hexagramu ukazuje, že stabilní základ umožňuje přirozený vzestup bez přepětí.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Skromný začátek",
-            description: "Růst začíná pomalu.",
+            name: "První uznání",
+            description: "Objevuje se první známka postupu.",
           },
           {
             position: 2,
             type: 0,
-            name: "Podpora",
-            description: "Pomoc přichází.",
+            name: "Růst důvěry",
+            description: "Sebevědomí se upevňuje.",
           },
           {
             position: 3,
             type: 0,
-            name: "Nejistota",
-            description: "Nevzdávej se.",
+            name: "Viditelnost",
+            description: "Úsilí je jasně patrné.",
           },
           {
             position: 4,
             type: 1,
-            name: "Zviditelnění",
-            description: "Úspěch je viditelný.",
+            name: "Aktivní expanze",
+            description: "Postup je zřetelný a energický.",
           },
           {
             position: 5,
             type: 0,
-            name: "Stabilní pokrok",
-            description: "Růst je pevný.",
+            name: "Zralé uznání",
+            description: "Úspěch je stabilní a respektovaný.",
           },
           {
             position: 6,
             type: 1,
-            name: "Pýcha",
-            description: "Pozor na přehnané sebevědomí.",
+            name: "Riziko přehřátí",
+            description: "Nadměrná ambice může ohrozit rovnováhu.",
           },
         ],
       },
       en: {
         name: "Progress",
         meaning:
-          "Progress represents advancement and opportunity.\n\nPsychologically, it reflects growth and optimism.\n\nHumility sustains success.",
+          "Progress represents rising into visibility and light. It marks a time when efforts bear fruit and direction becomes clearer.\n\nPsychologically, it reflects growing confidence and recognition. One’s work gains attention and influence.\n\nYet visibility brings responsibility.\n\nTrue advancement remains sustainable only when grounded in inner stability rather than the desire for praise.",
         oracle: {
           interpretation: [
-            "Seize opportunity.",
-
-            "Remain grateful.",
-
-            "Advance steadily.",
+            "Use this favorable momentum wisely.",
+            "Accept recognition with humility.",
+            "Expand steadily rather than abruptly.",
           ],
-
-          introspection: ["How can you grow without arrogance?"],
+          introspection: [
+            "How can you build on current progress?",
+            "Are you seeking growth or validation?",
+            "What keeps you grounded in success?",
+          ],
         },
         anatomy:
-          "Progress brings light.\n\nWithout humility, it reverses.\n\nConsistency sustains growth.",
+          "Fire above Earth symbolizes light rising from stable ground.\n\nProgress depends on solid foundation.\n\nStable growth emerges from grounded awareness.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Humble Start",
-            description: "Growth begins slowly.",
+            name: "Initial Recognition",
+            description: "First signs of advancement.",
           },
           {
             position: 2,
             type: 0,
-            name: "Support",
-            description: "Help arrives.",
+            name: "Growing Confidence",
+            description: "Trust strengthens.",
           },
           {
             position: 3,
             type: 0,
-            name: "Uncertainty",
-            description: "Persevere.",
+            name: "Visibility",
+            description: "Effort becomes noticeable.",
           },
           {
             position: 4,
             type: 1,
-            name: "Visibility",
-            description: "Success becomes evident.",
+            name: "Active Expansion",
+            description: "Movement accelerates.",
           },
           {
             position: 5,
             type: 0,
-            name: "Stable Progress",
-            description: "Advancement is steady.",
+            name: "Mature Success",
+            description: "Achievement stabilizes.",
           },
           {
             position: 6,
             type: 1,
-            name: "Arrogance",
-            description: "Beware overconfidence.",
+            name: "Overextension Risk",
+            description: "Ambition may exceed balance.",
           },
         ],
       },
@@ -4495,117 +4526,119 @@ export const hexagrams: Hexagram[] = [
     chineseName: "明夷",
     romanization: "Míng Yí",
     elements: [6, 2],
-    lines: [1, 0, 0, 0, 0, 1],
+    lines: [1, 0, 1, 0, 0, 0],
     content: {
       cs: {
         name: "Zatemnění světla",
         meaning:
-          "Zatemnění světla znamená období, kdy je jas potlačen. Pravda není vítaná.\n\nPsychologicky jde o situaci, kdy je třeba chránit svou integritu.\n\nVnitřní světlo nesmí vyhasnout.",
+          "Zatemnění světla symbolizuje období, kdy jasnost musí být chráněna před nepříznivými podmínkami. Není čas zářit navenek, ale uchovat si světlo uvnitř.\n\nPsychologicky jde o situaci, kdy otevřenost může vést ke zranitelnosti. Moudrost spočívá ve schopnosti přizpůsobit se okolnostem, aniž by člověk zradil své hodnoty.\n\nTento hexagram neznamená porážku, ale strategickou skrytost.\n\nSvětlo, které je chráněno, může přežít temnotu a později znovu zazářit.",
         oracle: {
           interpretation: [
-            "Chraň své hodnoty.",
-
-            "Neodhaľuj vše předčasně.",
-
-            "Udrž světlo uvnitř.",
+            "Chraň své vnitřní světlo.",
+            "Nevystavuj se zbytečnému riziku.",
+            "Buď opatrný, ale ne zatrpklý.",
           ],
-
-          introspection: ["Kde je třeba zůstat nenápadný?"],
+          introspection: [
+            "Kde je třeba větší diskrétnost?",
+            "Jak můžeš ochránit svou integritu?",
+            "Co je třeba nyní uchovat v tichosti?",
+          ],
         },
         anatomy:
-          "Světlo může být skryté.\n\nTrpělivost jej chrání.\n\nTemnota je dočasná.",
+          "Země nad Ohněm vytváří obraz světla skrytého pod povrchem. Oheň představuje vědomí, Země ochranu a zakrytí.\n\nSvětlo není zhaslé, pouze dočasně zastřené.\n\nAnatomie hexagramu ukazuje, že vnější temnota nemusí znamenat ztrátu vnitřní jasnosti.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Zraněné světlo",
-            description: "Pravda je potlačena.",
+            name: "První ohrožení",
+            description: "Světlo je vystaveno tlaku.",
           },
           {
             position: 2,
             type: 0,
-            name: "Vnitřní ochrana",
-            description: "Chraň si energii.",
+            name: "Stažení",
+            description: "Dochází k vědomému ústupu.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Těžká situace",
-            description: "Nevzdoruj otevřeně.",
+            type: 1,
+            name: "Skrytá vytrvalost",
+            description: "Vnitřní síla zůstává.",
           },
           {
             position: 4,
             type: 0,
-            name: "Skrytá síla",
-            description: "Světlo zůstává uvnitř.",
+            name: "Tlak okolí",
+            description: "Podmínky nejsou příznivé.",
           },
           {
             position: 5,
             type: 0,
-            name: "Tichá vytrvalost",
-            description: "Trpělivost chrání.",
+            name: "Ochrana jádra",
+            description: "Hodnoty jsou uchovány.",
           },
           {
             position: 6,
-            type: 1,
-            name: "Úplné zatmění",
-            description: "Temnota vrcholí před obratem.",
+            type: 0,
+            name: "Přežití světla",
+            description: "Světlo přetrvává pod povrchem.",
           },
         ],
       },
       en: {
         name: "Darkening of the Light",
         meaning:
-          "Darkening of the Light represents a time when clarity is suppressed.\n\nPsychologically, it calls for protecting integrity.\n\nInner light must remain intact.",
+          "Darkening of the Light represents a time when clarity must be protected rather than displayed.\n\nPsychologically, openness may lead to vulnerability. Adaptation becomes necessary.\n\nThis is not defeat but strategic concealment.\n\nLight preserved within can survive darkness and shine again later.",
         oracle: {
           interpretation: [
-            "Protect your values.",
-
-            "Do not reveal too much.",
-
-            "Keep your light within.",
+            "Protect your inner light.",
+            "Avoid unnecessary exposure.",
+            "Remain cautious yet true.",
           ],
-
-          introspection: ["Where must you remain discreet?"],
+          introspection: [
+            "Where is discretion needed?",
+            "How can you safeguard your integrity?",
+            "What must be kept quietly alive?",
+          ],
         },
         anatomy:
-          "Light may be hidden.\n\nPatience preserves it.\n\nDarkness is temporary.",
+          "Earth above Fire shows light hidden beneath the surface.\n\nThe flame remains, though concealed.\n\nExternal darkness does not extinguish inner clarity.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Wounded Light",
-            description: "Truth is suppressed.",
+            name: "Initial Threat",
+            description: "Light faces pressure.",
           },
           {
             position: 2,
             type: 0,
-            name: "Inner Protection",
-            description: "Preserve energy.",
+            name: "Withdrawal",
+            description: "Conscious retreat occurs.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Difficult Circumstances",
-            description: "Avoid open confrontation.",
+            type: 1,
+            name: "Hidden Strength",
+            description: "Inner power persists.",
           },
           {
             position: 4,
             type: 0,
-            name: "Hidden Strength",
-            description: "Light remains within.",
+            name: "Adverse Conditions",
+            description: "Environment is unfavorable.",
           },
           {
             position: 5,
             type: 0,
-            name: "Quiet Perseverance",
-            description: "Patience protects.",
+            name: "Core Protection",
+            description: "Values are safeguarded.",
           },
           {
             position: 6,
-            type: 1,
-            name: "Total Eclipse",
-            description: "Darkness peaks before change.",
+            type: 0,
+            name: "Surviving Flame",
+            description: "Light endures beneath concealment.",
           },
         ],
       },
@@ -4616,118 +4649,120 @@ export const hexagrams: Hexagram[] = [
     number: 37,
     chineseName: "家人",
     romanization: "Jiā Rén",
-    elements: [4, 6],
-    lines: [1, 0, 1, 0, 1, 0],
+    elements: [6, 4],
+    lines: [1, 0, 1, 0, 1, 1],
     content: {
       cs: {
         name: "Rodina",
         meaning:
-          "Rodina představuje strukturu vztahů a odpovědností. Každý má své místo.\n\nPsychologicky jde o vnitřní uspořádání hodnot.\n\nHarmonie vzniká jasnými rolemi.",
+          "Rodina symbolizuje strukturu vztahů, ve kterých má každý své místo a odpovědnost. Nejde pouze o biologickou rodinu, ale o jakékoli společenství založené na sdílených hodnotách.\n\nPsychologicky tento hexagram upozorňuje na roli, kterou člověk zastává v rámci systému. Harmonie vzniká tehdy, když každý přebírá odpovědnost za svou část.\n\nStabilita rodiny není založena na kontrole, ale na důvěře a jasně vymezených hranicích.\n\nHexagram učí, že pořádek začíná uvnitř. Pokud je člověk vnitřně vyrovnaný, jeho vztahy se přirozeně uspořádají.",
         oracle: {
           interpretation: [
-            "Upevni vztahy.",
-
-            "Respektuj hranice.",
-
-            "Začni u sebe.",
+            "Pečuj o vztahy s vědomou odpovědností.",
+            "Stanov jasné hranice.",
+            "Buduj harmonii zevnitř.",
           ],
-
-          introspection: ["Jakou roli právě zastáváš?"],
+          introspection: [
+            "Jakou roli právě zastáváš?",
+            "Plníš své závazky vůči druhým?",
+            "Je ve tvých vztazích rovnováha?",
+          ],
         },
         anatomy:
-          "Rodina funguje díky rovnováze.\n\nBez respektu se struktura rozpadá.\n\nJasné role přinášejí harmonii.",
+          "Vítr nad Ohněm vytváří obraz komunikace uvnitř domu. Oheň symbolizuje jasnost a střed, Vítr pronikání a vliv.\n\nRodinná harmonie vzniká, když je světlo v centru a komunikace je otevřená.\n\nAnatomie hexagramu zdůrazňuje, že zdravý systém vyžaduje jasný střed a citlivé propojení mezi členy.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Základ domácnosti",
-            description: "Stabilita začíná dole.",
+            name: "Stanovení hranic",
+            description: "Základní pravidla jsou vymezena.",
           },
           {
             position: 2,
             type: 0,
-            name: "Vnitřní péče",
-            description: "Podpora je klíčová.",
+            name: "Podpora",
+            description: "Vzniká stabilní zázemí.",
           },
           {
             position: 3,
             type: 1,
             name: "Napětí",
-            description: "Neshody vyžadují řešení.",
+            description: "Objevují se konflikty role.",
           },
           {
             position: 4,
             type: 0,
-            name: "Vyváženost",
-            description: "Role jsou jasné.",
+            name: "Stabilizace",
+            description: "Rovnováha je obnovena.",
           },
           {
             position: 5,
             type: 1,
-            name: "Vedení",
-            description: "Odpovědnost drží celek.",
+            name: "Zralé vedení",
+            description: "Vztahy jsou řízeny moudře.",
           },
           {
             position: 6,
-            type: 0,
-            name: "Přehnaná kontrola",
-            description: "Přílišná tvrdost narušuje.",
+            type: 1,
+            name: "Riziko dominance",
+            description: "Přehnaná kontrola může narušit harmonii.",
           },
         ],
       },
       en: {
         name: "The Family",
         meaning:
-          "The Family represents structured relationships and responsibility.\n\nPsychologically, it reflects inner order.\n\nHarmony arises from clear roles.",
+          "The Family represents structured relationships in which each member holds responsibility. It refers not only to biological family, but to any shared community.\n\nPsychologically, it reflects one’s role within a system. Harmony arises when each person fulfills their part.\n\nStability depends on trust and clear boundaries.\n\nOrder begins within; balanced individuals create balanced relationships.",
         oracle: {
           interpretation: [
-            "Strengthen relationships.",
-
-            "Respect boundaries.",
-
-            "Begin with yourself.",
+            "Act responsibly in relationships.",
+            "Clarify boundaries.",
+            "Build harmony from within.",
           ],
-
-          introspection: ["What role are you fulfilling now?"],
+          introspection: [
+            "What role are you playing?",
+            "Are you honoring your responsibilities?",
+            "Is there balance in your relationships?",
+          ],
         },
         anatomy:
-          "Family thrives on balance.\n\nWithout respect, structure weakens.\n\nClear roles sustain harmony.",
+          "Wind above Fire shows communication within the household. Fire is the center; Wind spreads influence.\n\nHarmony requires clear center and open exchange.\n\nHealthy systems depend on both structure and communication.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Foundation",
-            description: "Stability starts below.",
+            name: "Setting Boundaries",
+            description: "Rules are established.",
           },
           {
             position: 2,
             type: 0,
-            name: "Inner Care",
-            description: "Support matters.",
+            name: "Support",
+            description: "Foundation stabilizes.",
           },
           {
             position: 3,
             type: 1,
-            name: "Tension",
-            description: "Conflicts require attention.",
+            name: "Role Conflict",
+            description: "Tensions arise.",
           },
           {
             position: 4,
             type: 0,
-            name: "Balance",
-            description: "Roles are aligned.",
+            name: "Restored Balance",
+            description: "Equilibrium returns.",
           },
           {
             position: 5,
             type: 1,
-            name: "Leadership",
-            description: "Responsibility holds unity.",
+            name: "Mature Leadership",
+            description: "Guidance is wise.",
           },
           {
             position: 6,
-            type: 0,
-            name: "Overcontrol",
-            description: "Excess authority disrupts.",
+            type: 1,
+            name: "Dominance Risk",
+            description: "Excess control disrupts harmony.",
           },
         ],
       },
@@ -4739,117 +4774,119 @@ export const hexagrams: Hexagram[] = [
     chineseName: "睽",
     romanization: "Kuí",
     elements: [8, 6],
-    lines: [1, 0, 1, 1, 0, 1],
+    lines: [1, 1, 0, 1, 0, 1],
     content: {
       cs: {
         name: "Protiklad",
         meaning:
-          "Protiklad symbolizuje rozdílnost a napětí mezi dvěma směry.\n\nPsychologicky jde o vnitřní rozpor.\n\nRozdílnost nemusí být nepřátelství.",
+          "Protiklad symbolizuje rozdílnost pohledů a napětí mezi dvěma směry. Neznamená nutně konflikt, ale rozdílné perspektivy.\n\nPsychologicky jde o fázi, kdy je důležité respektovat odlišnost bez nutnosti okamžitého sjednocení.\n\nRozdíl může být zdrojem kreativity, pokud není potlačován.\n\nHexagram učí, že i protikladné síly mohou koexistovat, pokud je mezi nimi vědomý odstup a respekt.",
         oracle: {
           interpretation: [
-            "Hledej porozumění.",
-
-            "Nezesiluj konflikt.",
-
-            "Rozdíly mohou obohatit.",
+            "Respektuj rozdílné pohledy.",
+            "Neusiluj o násilné sjednocení.",
+            "Hledej společný bod bez ztráty identity.",
           ],
-
-          introspection: ["Co je třeba přijmout jako jiné?"],
+          introspection: [
+            "Kde vzniká napětí mezi rozdíly?",
+            "Dokážeš přijmout jiný názor?",
+            "Jak může odlišnost obohatit situaci?",
+          ],
         },
         anatomy:
-          "Protiklad může vést k růstu.\n\nBez komunikace se mění v konflikt.\n\nRespekt umožňuje soužití.",
+          "Oheň nad Jezerem vytváří obraz světla odrážejícího se na hladině. Obě síly mají jiný směr, ale mohou spolu existovat.\n\nTato kombinace ukazuje napětí, které nemusí být destruktivní.\n\nAnatomie hexagramu připomíná, že harmonie někdy spočívá v respektované rozdílnosti.",
         evolution: [
           {
             position: 1,
             type: 1,
             name: "První rozdíl",
-            description: "Odlišnost je patrná.",
+            description: "Objevuje se nesoulad.",
           },
           {
             position: 2,
             type: 0,
-            name: "Snaha o spojení",
-            description: "Dialog je možný.",
+            name: "Uznání odlišnosti",
+            description: "Rozdíl je přijat.",
           },
           {
             position: 3,
             type: 1,
-            name: "Napětí roste",
-            description: "Konflikt sílí.",
+            name: "Napětí",
+            description: "Kontrast se zvýrazňuje.",
           },
           {
             position: 4,
             type: 1,
-            name: "Hledání rovnováhy",
-            description: "Most mezi póly.",
+            name: "Dialog",
+            description: "Probíhá výměna názorů.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Porozumění",
-            description: "Respekt zmírňuje rozdíl.",
+            type: 1,
+            name: "Respekt",
+            description: "Vzniká vzájemné pochopení.",
           },
           {
             position: 6,
-            type: 1,
-            name: "Ostrý střet",
-            description: "Tvrdohlavost škodí.",
+            type: 0,
+            name: "Uvolnění napětí",
+            description: "Rozdíl již není hrozbou.",
           },
         ],
       },
       en: {
         name: "Opposition",
         meaning:
-          "Opposition represents divergence and tension.\n\nPsychologically, it reflects inner conflict.\n\nDifference is not necessarily hostility.",
+          "Opposition represents differing perspectives and tension between directions. It does not necessarily mean conflict.\n\nPsychologically, it calls for respect of difference without forced unity.\n\nDifference can foster creativity when acknowledged.\n\nHarmony may arise from conscious distance rather than uniformity.",
         oracle: {
           interpretation: [
-            "Seek understanding.",
-
-            "Do not escalate conflict.",
-
-            "Differences can enrich.",
+            "Respect differing views.",
+            "Do not force agreement.",
+            "Seek common ground while honoring identity.",
           ],
-
-          introspection: ["What must be accepted as different?"],
+          introspection: [
+            "Where does tension arise from difference?",
+            "Can you accept another viewpoint?",
+            "How can contrast become constructive?",
+          ],
         },
         anatomy:
-          "Opposition can foster growth.\n\nWithout dialogue, it becomes conflict.\n\nRespect enables coexistence.",
+          "Fire above Lake shows light reflecting on water. Forces move differently yet coexist.\n\nTension need not destroy harmony.\n\nBalanced opposition enriches awareness.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "First Difference",
-            description: "Divergence appears.",
+            name: "Initial Difference",
+            description: "Disagreement appears.",
           },
           {
             position: 2,
             type: 0,
-            name: "Attempt at Connection",
-            description: "Dialogue is possible.",
+            name: "Acknowledgment",
+            description: "Difference is recognized.",
           },
           {
             position: 3,
             type: 1,
-            name: "Rising Tension",
-            description: "Conflict intensifies.",
+            name: "Heightened Contrast",
+            description: "Tension intensifies.",
           },
           {
             position: 4,
             type: 1,
-            name: "Balancing Bridge",
-            description: "Linking opposites.",
+            name: "Dialogue",
+            description: "Exchange occurs.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Understanding",
-            description: "Respect reduces tension.",
+            type: 1,
+            name: "Mutual Respect",
+            description: "Understanding grows.",
           },
           {
             position: 6,
-            type: 1,
-            name: "Sharp Clash",
-            description: "Stubbornness harms.",
+            type: 0,
+            name: "Resolution",
+            description: "Tension softens.",
           },
         ],
       },
@@ -4860,118 +4897,120 @@ export const hexagrams: Hexagram[] = [
     number: 39,
     chineseName: "蹇",
     romanization: "Jiǎn",
-    elements: [5, 7],
-    lines: [0, 1, 0, 0, 0, 1],
+    elements: [7, 5],
+    lines: [0, 0, 1, 0, 1, 0],
     content: {
       cs: {
         name: "Překážka",
         meaning:
-          "Překážka symbolizuje zastavení cesty.\n\nPsychologicky jde o moment, kdy je třeba přehodnotit směr.\n\nObcházení může být moudřejší než přímý postup.",
+          "Překážka symbolizuje zastavení pohybu a nutnost změny směru. Cesta vpřed je ztížena nebo zcela blokována. Tento hexagram nepřináší okamžité řešení, ale upozorňuje na potřebu přehodnocení.\n\nPsychologicky jde o moment, kdy se člověk střetává s limity – vlastními i vnějšími. Může se objevit frustrace, pocit stagnace nebo izolace.\n\nPřekážka není konec, ale signál. Ukazuje, že současný směr není udržitelný.\n\nHexagram učí hledat podporu, měnit perspektivu a nebát se ustoupit, pokud je to nutné. Obtíž je impulsem k hlubšímu porozumění.",
         oracle: {
           interpretation: [
-            "Zvaž jinou cestu.",
-
-            "Nepřetlačuj odpor.",
-
-            "Vyhledej pomoc.",
+            "Nepokračuj silou proti zdi.",
+            "Změň úhel pohledu.",
+            "Hledej podporu.",
           ],
-
-          introspection: ["Kde je třeba změnit strategii?"],
+          introspection: [
+            "Co ti tato překážka ukazuje?",
+            "Zkoušíš tlačit místo přizpůsobení?",
+            "Kdo ti může pomoci?",
+          ],
         },
         anatomy:
-          "Překážka učí flexibilitě.\n\nObcházení může vést k úspěchu.\n\nTvrdohlavost situaci zhoršuje.",
+          "Hora nad Vodou vytváří obraz blokovaného toku. Voda symbolizuje pohyb, Hora zastavení.\n\nEnergie nemůže plynout přirozeně.\n\nAnatomie hexagramu zdůrazňuje, že někdy je nutné obejít překážku místo přímého střetu.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První odpor",
-            description: "Cesta se komplikuje.",
+            name: "První blok",
+            description: "Pohyb je omezen.",
           },
           {
             position: 2,
             type: 1,
-            name: "Hledání podpory",
-            description: "Spolupráce pomáhá.",
+            name: "Hledání řešení",
+            description: "Vzniká iniciativa ke změně.",
           },
           {
             position: 3,
             type: 0,
-            name: "Zdržení",
-            description: "Postup je obtížný.",
+            name: "Frustrace",
+            description: "Pokus o průlom selhává.",
           },
           {
             position: 4,
             type: 0,
-            name: "Změna směru",
-            description: "Je třeba úprava.",
+            name: "Zastavení",
+            description: "Je nutné přehodnocení.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vytrvalost",
-            description: "Trpělivost chrání.",
+            name: "Podpora",
+            description: "Pomoc přichází zvenčí.",
           },
           {
             position: 6,
             type: 1,
-            name: "Tvrdohlavost",
-            description: "Nevhodný boj škodí.",
+            name: "Nový směr",
+            description: "Cesta se otevírá jinudy.",
           },
         ],
       },
       en: {
         name: "Obstruction",
         meaning:
-          "Obstruction represents blocked progress.\n\nPsychologically, it signals need for reassessment.\n\nDetours may be wiser than force.",
+          "Obstruction represents blocked movement and the need to change direction. The path forward is difficult or entirely halted.\n\nPsychologically, it reflects confrontation with limits — internal or external. Frustration may arise.\n\nObstruction is not an end but a signal.\n\nIt invites support, perspective shift, and strategic retreat if necessary.",
         oracle: {
           interpretation: [
-            "Consider another path.",
-
-            "Do not force resistance.",
-
+            "Do not force your way forward.",
+            "Shift your perspective.",
             "Seek assistance.",
           ],
-
-          introspection: ["Where must strategy shift?"],
+          introspection: [
+            "What is this obstacle teaching you?",
+            "Are you pushing instead of adapting?",
+            "Who can support you?",
+          ],
         },
         anatomy:
-          "Obstruction teaches flexibility.\n\nDetours lead forward.\n\nForce worsens difficulty.",
+          "Mountain above Water blocks the natural flow. Water seeks movement; Mountain stops it.\n\nEnergy is restrained.\n\nSometimes the path lies around, not through, the obstacle.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Initial Resistance",
-            description: "Path complicates.",
+            name: "Initial Block",
+            description: "Movement slows.",
           },
           {
             position: 2,
             type: 1,
-            name: "Seeking Support",
-            description: "Cooperation helps.",
+            name: "Search for Alternative",
+            description: "Initiative arises.",
           },
           {
             position: 3,
             type: 0,
-            name: "Delay",
-            description: "Progress slows.",
+            name: "Frustration",
+            description: "Direct attempt fails.",
           },
           {
             position: 4,
             type: 0,
-            name: "Change of Direction",
-            description: "Adjustment needed.",
+            name: "Pause",
+            description: "Reevaluation required.",
           },
           {
             position: 5,
             type: 0,
-            name: "Perseverance",
-            description: "Patience protects.",
+            name: "Support",
+            description: "External help appears.",
           },
           {
             position: 6,
             type: 1,
-            name: "Stubbornness",
-            description: "Futile struggle harms.",
+            name: "New Direction",
+            description: "Alternative path opens.",
           },
         ],
       },
@@ -4988,76 +5027,78 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Uvolnění",
         meaning:
-          "Uvolnění přichází po napětí. Problém se rozpouští.\n\nPsychologicky jde o pocit úlevy.\n\nJe čas jednat lehce.",
+          "Uvolnění symbolizuje rozpuštění napětí po období obtíží. To, co bylo sevřené, se začíná otevírat.\n\nPsychologicky jde o moment úlevy a návratu rovnováhy. Situace, která byla komplikovaná, se vyjasňuje.\n\nUvolnění však vyžaduje vědomé rozhodnutí pustit to, co už není třeba držet.\n\nHexagram učí, že odpuštění a uvolnění starého napětí vytváří prostor pro nový začátek.",
         oracle: {
           interpretation: [
-            "Nech věci odejít.",
-
-            "Ulev si.",
-
-            "Využij nové možnosti.",
+            "Pusť staré napětí.",
+            "Využij příležitost k očistě.",
+            "Jednej rychle, dokud je cesta otevřená.",
           ],
-
-          introspection: ["Co můžeš konečně pustit?"],
+          introspection: [
+            "Co můžeš nyní uvolnit?",
+            "Držíš něco, co už neslouží?",
+            "Jak můžeš obnovit rovnováhu?",
+          ],
         },
         anatomy:
-          "Uvolnění obnovuje energii.\n\nJe čas pohybu.\n\nMinulé napětí se rozpouští.",
+          "Hrom nad Vodou vytváří obraz bouře, která pročistí vzduch. Hrom přináší pohyb, Voda uvolnění.\n\nNapětí je přerušeno.\n\nAnatomie hexagramu ukazuje, že pohyb a očista vedou k obnově toku.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První úleva",
-            description: "Napětí klesá.",
+            name: "První uvolnění",
+            description: "Napětí se snižuje.",
           },
           {
             position: 2,
             type: 1,
-            name: "Rozhodnutí",
-            description: "Jednej rychle.",
+            name: "Aktivní očista",
+            description: "Dochází k vědomému řešení.",
           },
           {
             position: 3,
             type: 0,
-            name: "Pochybnost",
-            description: "Nevracej se zpět.",
+            name: "Návrat rovnováhy",
+            description: "Situace se stabilizuje.",
           },
           {
             position: 4,
             type: 1,
-            name: "Odstranění překážky",
-            description: "Situace se čistí.",
+            name: "Rozhodné jednání",
+            description: "Problém je řešen přímo.",
           },
           {
             position: 5,
             type: 0,
-            name: "Stabilní klid",
-            description: "Rovnováha je obnovena.",
+            name: "Klid",
+            description: "Napětí je pryč.",
           },
           {
             position: 6,
             type: 0,
-            name: "Zbytečné otálení",
-            description: "Neváhej příliš.",
+            name: "Obnovený tok",
+            description: "Energie plyne přirozeně.",
           },
         ],
       },
       en: {
-        name: "Deliverance",
+        name: "Release",
         meaning:
-          "Deliverance follows tension. The problem dissolves.\n\nPsychologically, it reflects relief.\n\nLight action becomes possible.",
+          "Release represents the dissolution of tension after difficulty. What was tight begins to open.\n\nPsychologically, it marks relief and restored balance.\n\nRelease requires letting go consciously.\n\nForgiveness and resolution create space for renewal.",
         oracle: {
           interpretation: [
-            "Let things go.",
-
-            "Release tension.",
-
-            "Use new freedom wisely.",
+            "Let go of tension.",
+            "Use this moment for cleansing.",
+            "Act while the path is open.",
           ],
-
-          introspection: ["What can you finally release?"],
+          introspection: [
+            "What can you release now?",
+            "Are you holding onto what no longer serves?",
+            "How can balance be restored?",
+          ],
         },
         anatomy:
-          "Deliverance restores energy.\n\nMovement resumes.\n\nPast tension dissolves.",
+          "Thunder above Water shows storm clearing the air. Movement disrupts stagnation.\n\nTension dissolves.\n\nFlow is restored through decisive action.",
         evolution: [
           {
             position: 1,
@@ -5068,32 +5109,32 @@ export const hexagrams: Hexagram[] = [
           {
             position: 2,
             type: 1,
-            name: "Decision",
-            description: "Act swiftly.",
+            name: "Active Clearing",
+            description: "Conscious resolution.",
           },
           {
             position: 3,
             type: 0,
-            name: "Doubt",
-            description: "Do not regress.",
+            name: "Stabilization",
+            description: "Balance returns.",
           },
           {
             position: 4,
             type: 1,
-            name: "Obstacle Removed",
-            description: "Clarity returns.",
+            name: "Direct Action",
+            description: "Problem addressed.",
           },
           {
             position: 5,
             type: 0,
-            name: "Stable Calm",
-            description: "Balance restored.",
+            name: "Calm",
+            description: "Peace emerges.",
           },
           {
             position: 6,
             type: 0,
-            name: "Unnecessary Delay",
-            description: "Do not hesitate.",
+            name: "Restored Flow",
+            description: "Energy moves freely.",
           },
         ],
       },
@@ -5104,118 +5145,120 @@ export const hexagrams: Hexagram[] = [
     number: 41,
     chineseName: "損",
     romanization: "Sǔn",
-    elements: [7, 8],
+    elements: [8, 7],
     lines: [1, 1, 0, 0, 0, 1],
     content: {
       cs: {
-        name: "Úbytek",
+        name: "Zmenšení",
         meaning:
-          "Úbytek znamená vědomé zmenšení. Odevzdání části energie přináší dlouhodobý zisk.\n\nPsychologicky jde o schopnost zjednodušit.\n\nMéně může být více.",
+          "Zmenšení symbolizuje vědomé omezení, redukci nebo oběť ve prospěch rovnováhy. Není to ztráta způsobená tlakem okolností, ale dobrovolné zjednodušení.\n\nPsychologicky jde o schopnost vzdát se části svého komfortu či ambicí, aby vznikl prostor pro hlubší stabilitu. Zmenšení může přinést překvapivou úlevu.\n\nTento hexagram učí, že méně může znamenat více. Odstranění nadbytečného umožňuje vyniknout podstatnému.\n\nSkutečná síla spočívá v rozpoznání, co už není třeba držet.",
         oracle: {
           interpretation: [
-            "Zjednoduš.",
-
-            "Obětuj přebytečné.",
-
-            "Posil to podstatné.",
+            "Zjednodušuj vědomě.",
+            "Odevzdej to, co je nadbytečné.",
+            "Hledej rovnováhu skrze redukci.",
           ],
-
-          introspection: ["Co je nyní zbytečné?"],
+          introspection: [
+            "Co můžeš nyní pustit?",
+            "Kde tě nadbytek zatěžuje?",
+            "Co je skutečně podstatné?",
+          ],
         },
         anatomy:
-          "Úbytek vede k očištění.\n\nOběť posiluje podstatu.\n\nRovnováha je klíčem.",
+          "Hora nad Jezerem vytváří obraz omezení radosti. Hora představuje hranici, Jezero otevřenost.\n\nRadost je zadržena, aby byla zachována stabilita.\n\nAnatomie hexagramu ukazuje, že omezení může být ochranné a konstruktivní.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "První omezení",
-            description: "Redukce začíná.",
+            name: "První redukce",
+            description: "Dochází k vědomému omezení.",
           },
           {
             position: 2,
             type: 1,
-            name: "Vědomé zmenšení",
-            description: "Oběť má smysl.",
+            name: "Dobrovolná oběť",
+            description: "Člověk něco odevzdává.",
           },
           {
             position: 3,
             type: 0,
-            name: "Nejistota",
-            description: "Pochybnost o ztrátě.",
+            name: "Pocit ztráty",
+            description: "Objevuje se pochybnost.",
           },
           {
             position: 4,
             type: 0,
-            name: "Stabilizace",
-            description: "Zjednodušení pomáhá.",
+            name: "Vyrovnání",
+            description: "Rovnováha se obnovuje.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vnitřní zisk",
-            description: "Hodnota roste.",
+            name: "Vnitřní klid",
+            description: "Zmenšení přináší stabilitu.",
           },
           {
             position: 6,
             type: 1,
-            name: "Přílišná ztráta",
-            description: "Nerovnováha škodí.",
+            name: "Nadměrná askeze",
+            description: "Přílišné omezení může oslabit.",
           },
         ],
       },
       en: {
         name: "Decrease",
         meaning:
-          "Decrease signifies conscious reduction. Giving up something strengthens what remains.\n\nPsychologically, it reflects simplification.\n\nLess can mean more.",
+          "Decrease represents conscious reduction or sacrifice for the sake of balance. It is voluntary simplification rather than imposed loss.\n\nPsychologically, it reflects the ability to let go of excess to gain clarity and stability.\n\nLess can truly become more.\n\nStrength lies in knowing what is no longer necessary.",
         oracle: {
           interpretation: [
-            "Simplify.",
-
-            "Sacrifice excess.",
-
-            "Strengthen essentials.",
+            "Simplify consciously.",
+            "Release what is excessive.",
+            "Seek balance through reduction.",
           ],
-
-          introspection: ["What is unnecessary now?"],
+          introspection: [
+            "What can you let go of?",
+            "Where is excess weighing you down?",
+            "What truly matters?",
+          ],
         },
         anatomy:
-          "Decrease purifies.\n\nSacrifice strengthens essence.\n\nBalance maintains growth.",
+          "Mountain above Lake shows joy limited by boundary.\n\nRestriction preserves equilibrium.\n\nLimitation can serve protection and growth.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Initial Limitation",
-            description: "Reduction begins.",
+            name: "Initial Reduction",
+            description: "Conscious limitation begins.",
           },
           {
             position: 2,
             type: 1,
-            name: "Conscious Sacrifice",
-            description: "Loss has purpose.",
+            name: "Voluntary Sacrifice",
+            description: "Something is given up.",
           },
           {
             position: 3,
             type: 0,
-            name: "Doubt",
-            description: "Questioning the loss.",
+            name: "Sense of Loss",
+            description: "Doubt arises.",
           },
           {
             position: 4,
             type: 0,
-            name: "Stabilization",
-            description: "Simplification helps.",
+            name: "Rebalancing",
+            description: "Equilibrium returns.",
           },
           {
             position: 5,
             type: 0,
-            name: "Inner Gain",
-            description: "Value increases.",
+            name: "Inner Calm",
+            description: "Stability deepens.",
           },
           {
             position: 6,
             type: 1,
-            name: "Excessive Loss",
-            description: "Imbalance harms.",
+            name: "Excessive Restriction",
+            description: "Over-limitation weakens vitality.",
           },
         ],
       },
@@ -5226,106 +5269,120 @@ export const hexagrams: Hexagram[] = [
     number: 42,
     chineseName: "益",
     romanization: "Yì",
-    elements: [4, 3],
+    elements: [3, 4],
     lines: [1, 0, 0, 0, 1, 1],
     content: {
       cs: {
-        name: "Přínos",
+        name: "Zvýšení",
         meaning:
-          "Přínos znamená růst skrze sdílení. Dávání přináší návrat.\n\nPsychologicky jde o otevřenost a podporu.\n\nRůst je kolektivní.",
+          "Zvýšení symbolizuje období růstu a podpory. Energie je posilována a směřována k rozvoji.\n\nPsychologicky jde o fázi expanze, kdy příležitosti přicházejí přirozeně. Je to vhodný čas investovat energii do smysluplných projektů.\n\nZvýšení však vyžaduje zodpovědnost. To, co roste, musí být správně řízeno.\n\nHexagram učí, že skutečný růst je sdílený. Posílení jednoho prvku má prospět celku.",
         oracle: {
-          interpretation: ["Podpoř druhé.", "Buď štědrý.", "Růst sdílej."],
-
-          introspection: ["Kde můžeš být přínosem?"],
+          interpretation: [
+            "Využij podporu k rozvoji.",
+            "Investuj do toho, co má dlouhodobý smysl.",
+            "Sdílej svůj růst s ostatními.",
+          ],
+          introspection: [
+            "Kde se objevuje příležitost k růstu?",
+            "Jak můžeš přispět celku?",
+            "Co je třeba posílit?",
+          ],
         },
         anatomy:
-          "Přínos přináší expanzi.\n\nSdílení posiluje vztahy.\n\nMíra chrání rovnováhu.",
+          "Vítr nad Hromem vytváří obraz energie, která roste a šíří se. Hrom představuje iniciativu, Vítr postupné posilování.\n\nRůst je dynamický a zároveň trvalý.\n\nAnatomie hexagramu ukazuje, že expanze je udržitelná, pokud je vyvážená.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "První podpora",
-            description: "Růst začíná.",
+            type: 0,
+            name: "První impuls",
+            description: "Objevuje se možnost růstu.",
           },
           {
             position: 2,
             type: 0,
-            name: "Spolupráce",
-            description: "Sdílení posiluje.",
+            name: "Stabilní podpora",
+            description: "Zázemí je posíleno.",
           },
           {
             position: 3,
             type: 0,
-            name: "Nejistota",
-            description: "Důvěra je testována.",
+            name: "Růst důvěry",
+            description: "Sebevědomí sílí.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Rozšíření",
-            description: "Růst se zrychluje.",
+            type: 1,
+            name: "Expanze",
+            description: "Aktivní rozvoj probíhá.",
           },
           {
             position: 5,
             type: 1,
-            name: "Velkorysost",
-            description: "Dávání vrcholí.",
+            name: "Zralé zvýšení",
+            description: "Růst je harmonický.",
           },
           {
             position: 6,
-            type: 1,
-            name: "Přehnanost",
-            description: "Nadměrné rozdávání škodí.",
+            type: 0,
+            name: "Riziko nadměrnosti",
+            description: "Přehnaná expanze může narušit rovnováhu.",
           },
         ],
       },
       en: {
         name: "Increase",
         meaning:
-          "Increase signifies growth through generosity.\n\nPsychologically, it reflects openness and support.\n\nGrowth benefits all.",
+          "Increase represents growth and support. Energy strengthens and moves toward expansion.\n\nPsychologically, it signals opportunity and constructive development.\n\nGrowth requires responsibility.\n\nTrue increase benefits the whole, not only the individual.",
         oracle: {
-          interpretation: ["Support others.", "Be generous.", "Share growth."],
-
-          introspection: ["Where can you contribute?"],
+          interpretation: [
+            "Use support to develop.",
+            "Invest in long-term growth.",
+            "Share your gains.",
+          ],
+          introspection: [
+            "Where is growth emerging?",
+            "How can you contribute to the whole?",
+            "What needs strengthening?",
+          ],
         },
         anatomy:
-          "Increase brings expansion.\n\nSharing builds connection.\n\nModeration preserves balance.",
+          "Wind above Thunder symbolizes energy that expands and spreads. Thunder initiates; Wind sustains.\n\nGrowth is dynamic yet gradual.\n\nBalanced expansion ensures stability.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "Initial Support",
-            description: "Growth begins.",
+            type: 0,
+            name: "Initial Opportunity",
+            description: "Possibility appears.",
           },
           {
             position: 2,
             type: 0,
-            name: "Cooperation",
-            description: "Sharing strengthens.",
+            name: "Support Strengthened",
+            description: "Foundation improves.",
           },
           {
             position: 3,
             type: 0,
-            name: "Uncertainty",
-            description: "Trust is tested.",
+            name: "Growing Confidence",
+            description: "Trust expands.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Expansion",
-            description: "Growth accelerates.",
+            type: 1,
+            name: "Active Expansion",
+            description: "Development accelerates.",
           },
           {
             position: 5,
             type: 1,
-            name: "Generosity",
-            description: "Giving peaks.",
+            name: "Harmonious Growth",
+            description: "Increase stabilizes.",
           },
           {
             position: 6,
-            type: 1,
-            name: "Excess",
-            description: "Overgiving harms.",
+            type: 0,
+            name: "Excess Risk",
+            description: "Overgrowth threatens balance.",
           },
         ],
       },
@@ -5340,108 +5397,116 @@ export const hexagrams: Hexagram[] = [
     lines: [1, 1, 1, 1, 1, 0],
     content: {
       cs: {
-        name: "Rozhodnost",
+        name: "Průlom",
         meaning:
-          "Rozhodnost znamená jasné vyjádření pravdy. Je čas říci věci otevřeně.\n\nPsychologicky jde o průlom.\n\nOdvaha musí být spojena s odpovědností.",
+          "Průlom symbolizuje rozhodné vystoupení proti tomu, co již není v souladu s pravdou. Je to okamžik, kdy se napětí nahromadilo natolik, že je nutné jasné vymezení.\n\nPsychologicky jde o fázi, kdy se člověk rozhodne ukončit vnitřní kompromisy. Mlčení nebo váhání už není možné.\n\nPrůlom však neznamená agresi. Vyžaduje klidnou rozhodnost a transparentnost.\n\nHexagram učí, že pravda má být vyjádřena otevřeně, ale bez hněvu. Skutečná síla spočívá v jasnosti, nikoli v útoku.",
         oracle: {
           interpretation: [
-            "Promluv jasně.",
-
-            "Jednej rozhodně.",
-
-            "Nepodléhej hněvu.",
+            "Jednej rozhodně a otevřeně.",
+            "Vyjádři pravdu bez zbytečné tvrdosti.",
+            "Ukonči to, co již neslouží.",
           ],
-
-          introspection: ["Kde je třeba stanovit hranici?"],
+          introspection: [
+            "Co je třeba jasně pojmenovat?",
+            "Z čeho máš obavu vystoupit?",
+            "Jak můžeš jednat pevně, ale klidně?",
+          ],
         },
         anatomy:
-          "Rozhodnost přináší průlom.\n\nBez míry vede ke konfliktu.\n\nOdpovědnost stabilizuje změnu.",
+          "Jezero nad Nebem vytváří obraz síly, která dosahuje vrcholu a musí být vyjádřena. Nebe symbolizuje tvořivou energii, Jezero komunikaci.\n\nTlak narůstá až k bodu vyjádření.\n\nAnatomie hexagramu ukazuje, že energie potřebuje transparentní výstup, jinak se může stát destruktivní.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Vzrůstající tlak",
-            description: "Napětí roste.",
+            name: "První nespokojenost",
+            description: "Napětí se začíná hromadit.",
           },
           {
             position: 2,
             type: 1,
-            name: "Síla se spojuje",
-            description: "Podpora přichází.",
+            name: "Uvědomění problému",
+            description: "Situace je jasně viděna.",
           },
           {
             position: 3,
             type: 1,
-            name: "Odvaha",
-            description: "Pravda je vyslovena.",
+            name: "Růst tlaku",
+            description: "Rozhodnutí dozrává.",
           },
           {
             position: 4,
             type: 1,
-            name: "Průlom",
-            description: "Zlomový okamžik.",
+            name: "Veřejné vyjádření",
+            description: "Pravda je vyslovena.",
           },
           {
             position: 5,
             type: 1,
-            name: "Vrchol rozhodnutí",
-            description: "Akce je nutná.",
+            name: "Vrchol energie",
+            description: "Akce je nevyhnutelná.",
           },
           {
             position: 6,
             type: 0,
-            name: "Opatrnost",
-            description: "Pozor na přehnanost.",
+            name: "Zbývající odpor",
+            description: "Ještě může existovat zbytek napětí.",
           },
         ],
       },
       en: {
         name: "Breakthrough",
         meaning:
-          "Breakthrough signifies decisive expression.\n\nPsychologically, it reflects confrontation and clarity.\n\nCourage must be balanced with responsibility.",
+          "Breakthrough represents decisive confrontation with what no longer aligns with truth. Pressure has accumulated to the point of necessary expression.\n\nPsychologically, it marks the end of inner compromise. Silence is no longer sustainable.\n\nBreakthrough is not aggression but clarity.\n\nTruth must be expressed firmly yet without hostility.",
         oracle: {
-          interpretation: ["Speak clearly.", "Act decisively.", "Avoid anger."],
-
-          introspection: ["Where must a boundary be set?"],
+          interpretation: [
+            "Act decisively and openly.",
+            "Speak truth without aggression.",
+            "End what no longer serves.",
+          ],
+          introspection: [
+            "What needs to be clearly addressed?",
+            "What are you hesitant to confront?",
+            "How can you act firmly and calmly?",
+          ],
         },
         anatomy:
-          "Breakthrough clears the way.\n\nWithout moderation, conflict arises.\n\nResponsibility stabilizes change.",
+          "Lake above Heaven shows energy reaching the surface through expression. Creative force seeks articulation.\n\nPressure demands release.\n\nTransparent communication prevents destructive buildup.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Rising Pressure",
-            description: "Tension builds.",
+            name: "Initial Discontent",
+            description: "Tension begins.",
           },
           {
             position: 2,
             type: 1,
-            name: "Strength Unites",
-            description: "Support gathers.",
+            name: "Recognition",
+            description: "Problem becomes clear.",
           },
           {
             position: 3,
             type: 1,
-            name: "Courage",
-            description: "Truth is voiced.",
+            name: "Mounting Pressure",
+            description: "Decision ripens.",
           },
           {
             position: 4,
             type: 1,
-            name: "Breakthrough",
-            description: "Turning point.",
+            name: "Public Expression",
+            description: "Truth is spoken.",
           },
           {
             position: 5,
             type: 1,
-            name: "Decisive Peak",
-            description: "Action required.",
+            name: "Peak Force",
+            description: "Action becomes inevitable.",
           },
           {
             position: 6,
             type: 0,
-            name: "Caution",
-            description: "Beware excess.",
+            name: "Residual Resistance",
+            description: "Some tension may linger.",
           },
         ],
       },
@@ -5453,117 +5518,119 @@ export const hexagrams: Hexagram[] = [
     chineseName: "姤",
     romanization: "Gòu",
     elements: [4, 1],
-    lines: [1, 1, 1, 1, 1, 0],
+    lines: [0, 1, 1, 1, 1, 1],
     content: {
       cs: {
         name: "Setkání",
         meaning:
-          "Setkání představuje náhlý vstup silného vlivu do situace. Něco nového přichází rychle a intenzivně.\n\nPsychologicky jde o setkání s impulsem nebo osobou, která narušuje rovnováhu.\n\nJe třeba rozlišit mezi inspirací a pokušením.",
+          "Setkání symbolizuje náhlé setkání s vlivem nebo silou, která může být silná, ale ne zcela stabilní. Přichází rychle a vyžaduje opatrnost.\n\nPsychologicky jde o situaci, kdy do života vstupuje nová energie – osoba, myšlenka nebo impuls.\n\nTento hexagram varuje před bezhlavým přijetím. Ne vše, co je silné a přitažlivé, je dlouhodobě prospěšné.\n\nMoudrost spočívá v rozlišování. Je třeba zachovat odstup a nenechat se unést okamžitým dojmem.",
         oracle: {
           interpretation: [
-            "Buď pozorný.",
-
-            "Nepropadej okamžitému nadšení.",
-
-            "Zvaž důsledky.",
+            "Buď obezřetný při novém setkání.",
+            "Nenech se unést prvním dojmem.",
+            "Zvaž dlouhodobý dopad.",
           ],
-
-          introspection: ["Co do tvého života právě vstupuje?"],
+          introspection: [
+            "Co nového vstupuje do tvého života?",
+            "Jednáš z nadšení nebo z uvážení?",
+            "Jak můžeš zachovat stabilitu?",
+          ],
         },
         anatomy:
-          "Setkání může inspirovat.\n\nBez uvážení destabilizuje.\n\nVědomí chrání směr.",
+          "Nebe nad Větrem vytváří obraz silné energie, která se setkává s jemným vlivem. Vítr proniká, Nebe expanduje.\n\nSetkání může být intenzivní.\n\nAnatomie hexagramu ukazuje potřebu vědomého vedení této nové energie.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "První impuls",
-            description: "Nová energie vstupuje.",
+            type: 0,
+            name: "První kontakt",
+            description: "Objevuje se nový vliv.",
           },
           {
             position: 2,
             type: 1,
-            name: "Reakce",
-            description: "Situace se mění.",
+            name: "Zkoumání",
+            description: "Situace je testována.",
           },
           {
             position: 3,
             type: 1,
             name: "Přitažlivost",
-            description: "Síla roste.",
+            description: "Roste intenzita.",
           },
           {
             position: 4,
             type: 1,
-            name: "Napětí",
-            description: "Rovnováha je narušena.",
+            name: "Potenciální nestabilita",
+            description: "Hrozí nerovnováha.",
           },
           {
             position: 5,
             type: 1,
-            name: "Zralé rozhodnutí",
-            description: "Vědomá volba je nutná.",
+            name: "Vědomé řízení",
+            description: "Energie je stabilizována.",
           },
           {
             position: 6,
-            type: 0,
-            name: "Přehnané přijetí",
-            description: "Neuváženost škodí.",
+            type: 1,
+            name: "Přehnané zapojení",
+            description: "Nadměrná důvěra může být rizikem.",
           },
         ],
       },
       en: {
         name: "Coming to Meet",
         meaning:
-          "Coming to Meet signifies the sudden arrival of a strong influence.\n\nPsychologically, it reflects encountering a disruptive impulse or person.\n\nDiscernment is essential.",
+          "Coming to Meet represents a sudden encounter with a powerful influence. It arrives quickly and demands discernment.\n\nPsychologically, it may manifest as a new person, idea, or impulse entering life.\n\nNot all strong attractions are beneficial.\n\nWisdom lies in maintaining clarity and balance.",
         oracle: {
           interpretation: [
-            "Stay attentive.",
-
-            "Do not rush into enthusiasm.",
-
-            "Consider consequences.",
+            "Be cautious with new influences.",
+            "Avoid being swept away.",
+            "Consider long-term consequences.",
           ],
-
-          introspection: ["What is entering your life now?"],
+          introspection: [
+            "What new force is entering your life?",
+            "Are you reacting impulsively?",
+            "How can you remain grounded?",
+          ],
         },
         anatomy:
-          "Meeting can inspire.\n\nWithout awareness, it destabilizes.\n\nDiscernment preserves direction.",
+          "Heaven above Wind shows powerful energy meeting subtle influence. Wind penetrates; Heaven expands.\n\nThe encounter may be intense.\n\nDiscernment is required to maintain balance.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "Initial Impulse",
-            description: "New energy appears.",
+            type: 0,
+            name: "Initial Encounter",
+            description: "New influence appears.",
           },
           {
             position: 2,
             type: 1,
-            name: "Reaction",
-            description: "Circumstances shift.",
+            name: "Testing",
+            description: "Situation is examined.",
           },
           {
             position: 3,
             type: 1,
-            name: "Attraction",
-            description: "Influence intensifies.",
+            name: "Growing Attraction",
+            description: "Intensity increases.",
           },
           {
             position: 4,
             type: 1,
-            name: "Tension",
-            description: "Balance is disturbed.",
+            name: "Instability Risk",
+            description: "Balance may falter.",
           },
           {
             position: 5,
             type: 1,
-            name: "Conscious Choice",
-            description: "Mature decision required.",
+            name: "Conscious Guidance",
+            description: "Energy is stabilized.",
           },
           {
             position: 6,
-            type: 0,
-            name: "Excess Acceptance",
-            description: "Carelessness harms.",
+            type: 1,
+            name: "Overcommitment",
+            description: "Excess trust may be dangerous.",
           },
         ],
       },
@@ -5574,118 +5641,120 @@ export const hexagrams: Hexagram[] = [
     number: 45,
     chineseName: "萃",
     romanization: "Cuì",
-    elements: [8, 2],
+    elements: [2, 8],
     lines: [0, 0, 0, 1, 1, 0],
     content: {
       cs: {
         name: "Shromáždění",
         meaning:
-          "Shromáždění znamená spojení lidí nebo energií kolem společného cíle.\n\nPsychologicky jde o pocit sounáležitosti.\n\nJednota přináší sílu.",
+          "Shromáždění symbolizuje sjednocení lidí nebo sil kolem společného cíle. Energie se koncentruje a vytváří společné pole.\n\nPsychologicky jde o období, kdy je důležité sdílet hodnoty a hledat spojení. Spolupráce přináší sílu, kterou jednotlivec nemá.\n\nTento hexagram však upozorňuje, že shromáždění vyžaduje střed – jasné vedení nebo sdílenou vizi.\n\nBez jasného centra se skupina může rozpadnout nebo ztratit směr.",
         oracle: {
           interpretation: [
-            "Spoj se s ostatními.",
-
-            "Sdílej záměr.",
-
-            "Buduj důvěru.",
+            "Spojuj se s ostatními kolem smysluplného cíle.",
+            "Buduj pevné centrum.",
+            "Udržuj jednotu skrze sdílené hodnoty.",
           ],
-
-          introspection: ["Kde je potřeba kolektivní síla?"],
+          introspection: [
+            "S kým je nyní důležité se spojit?",
+            "Jaký je společný záměr?",
+            "Je tvá role ve skupině jasná?",
+          ],
         },
         anatomy:
-          "Jednota přináší růst.\n\nBez důvěry se rozpadá.\n\nSpolečný cíl stabilizuje.",
+          "Jezero nad Zemí vytváří obraz lidí shromážděných na otevřeném prostoru. Jezero symbolizuje komunikaci, Země stabilitu.\n\nSetkání potřebuje pevný základ.\n\nAnatomie hexagramu ukazuje, že stabilní základ umožňuje otevřenou výměnu.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "První spojení",
-            description: "Lidé se scházejí.",
+            description: "Vzniká potřeba spolupráce.",
           },
           {
             position: 2,
-            type: 0,
-            name: "Vznik důvěry",
-            description: "Jednota roste.",
+            type: 1,
+            name: "Navázání vztahů",
+            description: "Vznikají pevná spojení.",
           },
           {
             position: 3,
-            type: 0,
+            type: 1,
             name: "Nejistota",
-            description: "Spolupráce je testována.",
+            description: "Objevují se pochybnosti.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Organizace",
-            description: "Struktura vzniká.",
+            type: 0,
+            name: "Stabilizace skupiny",
+            description: "Společenství získává tvar.",
           },
           {
             position: 5,
-            type: 1,
+            type: 0,
             name: "Silné centrum",
-            description: "Vedení sjednocuje.",
+            description: "Vedení je respektováno.",
           },
           {
             position: 6,
             type: 0,
-            name: "Rozpad",
-            description: "Bez směru se celek rozpadá.",
+            name: "Riziko rozptýlení",
+            description: "Bez směru může dojít k rozkladu.",
           },
         ],
       },
       en: {
         name: "Gathering Together",
         meaning:
-          "Gathering Together represents uniting around a shared purpose.\n\nPsychologically, it reflects belonging.\n\nUnity creates strength.",
+          "Gathering Together represents unity around a shared purpose. Energy concentrates into a collective field.\n\nPsychologically, it highlights the importance of connection and cooperation.\n\nA strong center or vision is necessary.\n\nWithout clear direction, unity weakens.",
         oracle: {
           interpretation: [
-            "Unite with others.",
-
-            "Share intention.",
-
-            "Build trust.",
+            "Unite around meaningful goals.",
+            "Establish a stable center.",
+            "Strengthen shared values.",
           ],
-
-          introspection: ["Where is collective strength needed?"],
+          introspection: [
+            "Who should you align with now?",
+            "What is the common purpose?",
+            "Is your role clear?",
+          ],
         },
         anatomy:
-          "Unity strengthens growth.\n\nWithout trust, it collapses.\n\nShared purpose sustains cohesion.",
+          "Lake above Earth shows people gathered on solid ground. Communication rests on stability.\n\nCommunity needs foundation.\n\nStrong roots sustain collective harmony.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Initial Gathering",
-            description: "People assemble.",
+            name: "Initial Alliance",
+            description: "Need for cooperation emerges.",
           },
           {
             position: 2,
-            type: 0,
-            name: "Trust Forms",
-            description: "Unity grows.",
+            type: 1,
+            name: "Building Bonds",
+            description: "Connections deepen.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Testing Cooperation",
-            description: "Collaboration challenged.",
+            type: 1,
+            name: "Doubt",
+            description: "Uncertainty arises.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Organization",
-            description: "Structure develops.",
+            type: 0,
+            name: "Stabilization",
+            description: "Group solidifies.",
           },
           {
             position: 5,
-            type: 1,
-            name: "Strong Center",
-            description: "Leadership unifies.",
+            type: 0,
+            name: "Strong Leadership",
+            description: "Center holds firm.",
           },
           {
             position: 6,
             type: 0,
-            name: "Disintegration",
-            description: "Without direction, it dissolves.",
+            name: "Dispersion Risk",
+            description: "Without guidance unity fades.",
           },
         ],
       },
@@ -5702,112 +5771,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Vzestup",
         meaning:
-          "Vzestup představuje postupný růst skrze úsilí.\n\nPsychologicky jde o vytrvalé budování.\n\nKrok za krokem se dosahuje cíle.",
+          "Vzestup symbolizuje postupný růst skrze vytrvalost. Nejde o náhlý průlom, ale o trpělivé stoupání krok za krokem.\n\nPsychologicky tento hexagram ukazuje, že pokrok je možný, pokud je založen na stabilních hodnotách.\n\nVzestup je pomalý, ale jistý. Vyžaduje disciplínu a důvěru v proces.\n\nHexagram učí, že skutečný růst není dramatický, ale konzistentní.",
         oracle: {
           interpretation: [
             "Postupuj trpělivě.",
-
-            "Nevynechávej kroky.",
-
-            "Vytrvalost přináší výsledek.",
+            "Buduj krok za krokem.",
+            "Důvěřuj dlouhodobému procesu.",
           ],
-
-          introspection: ["Jaký je tvůj další malý krok?"],
+          introspection: [
+            "Kde můžeš postupovat systematicky?",
+            "Jsi ochoten investovat čas?",
+            "Na jakém základu buduješ svůj růst?",
+          ],
         },
         anatomy:
-          "Vzestup je postupný.\n\nVytrvalost buduje výšku.\n\nTrpělivost chrání stabilitu.",
+          "Vítr nad Zemí vytváří obraz kořenů, které pronikají půdou a umožňují růst. Vítr symbolizuje postupné pronikání, Země stabilitu.\n\nRůst je zakořeněný.\n\nAnatomie hexagramu zdůrazňuje, že stabilní základ je podmínkou vzestupu.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Skromný začátek",
-            description: "Růst začíná nenápadně.",
+            name: "První krok",
+            description: "Začátek je nenápadný.",
           },
           {
             position: 2,
-            type: 1,
-            name: "Podpora",
-            description: "Pomoc zvyšuje sílu.",
+            type: 0,
+            name: "Stabilní úsilí",
+            description: "Vytrvalost přináší pokrok.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Vytrvalost",
-            description: "Stálé úsilí.",
+            type: 0,
+            name: "Pochybnost",
+            description: "Tempo může působit pomalu.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Postupné zlepšení",
-            description: "Výsledky se objevují.",
+            type: 1,
+            name: "Posílení",
+            description: "Růst se zrychluje.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Zralý růst",
-            description: "Stabilní vzestup.",
+            type: 1,
+            name: "Zralý vzestup",
+            description: "Výsledek je viditelný.",
           },
           {
             position: 6,
             type: 0,
-            name: "Unáhlenost",
-            description: "Příliš rychlý postup škodí.",
+            name: "Udržení výšky",
+            description: "Je třeba zachovat stabilitu.",
           },
         ],
       },
       en: {
         name: "Pushing Upward",
         meaning:
-          "Pushing Upward signifies gradual progress through effort.\n\nPsychologically, it reflects steady development.\n\nStep by step brings achievement.",
+          "Pushing Upward represents gradual progress through persistence. It is steady ascent rather than sudden breakthrough.\n\nPsychologically, it reflects disciplined growth based on solid values.\n\nProgress may be slow, but it is secure.\n\nConsistency outweighs dramatic action.",
         oracle: {
           interpretation: [
             "Advance patiently.",
-
-            "Do not skip stages.",
-
-            "Persistence yields results.",
+            "Build step by step.",
+            "Trust the long-term process.",
           ],
-
-          introspection: ["What is your next small step?"],
+          introspection: [
+            "Where can you proceed methodically?",
+            "Are you willing to invest time?",
+            "What foundation supports your growth?",
+          ],
         },
         anatomy:
-          "Ascent is gradual.\n\nPerseverance builds height.\n\nPatience ensures stability.",
+          "Wind above Earth shows roots penetrating soil. Growth emerges from stability.\n\nExpansion is grounded.\n\nFirm foundations enable lasting ascent.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Humble Beginning",
-            description: "Growth starts quietly.",
+            name: "First Step",
+            description: "Beginning is subtle.",
           },
           {
             position: 2,
-            type: 1,
-            name: "Support",
-            description: "Assistance strengthens.",
+            type: 0,
+            name: "Steady Effort",
+            description: "Persistence yields progress.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Perseverance",
-            description: "Consistent effort.",
+            type: 0,
+            name: "Doubt",
+            description: "Progress feels slow.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Gradual Improvement",
-            description: "Results appear.",
+            type: 1,
+            name: "Strengthening",
+            description: "Momentum increases.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Mature Growth",
-            description: "Stable ascent.",
+            type: 1,
+            name: "Mature Ascent",
+            description: "Achievement becomes visible.",
           },
           {
             position: 6,
             type: 0,
-            name: "Haste",
-            description: "Rushing harms progress.",
+            name: "Maintaining Height",
+            description: "Stability must be preserved.",
           },
         ],
       },
@@ -5818,118 +5889,120 @@ export const hexagrams: Hexagram[] = [
     number: 47,
     chineseName: "困",
     romanization: "Kùn",
-    elements: [8, 5],
-    lines: [0, 1, 1, 1, 0, 0],
+    elements: [5, 8],
+    lines: [0, 1, 0, 1, 1, 0],
     content: {
       cs: {
         name: "Tíseň",
         meaning:
-          "Tíseň označuje období omezení a vnitřního tlaku. Vnější okolnosti svazují.\n\nPsychologicky jde o pocit vyčerpání nebo izolace.\n\nSíla se rodí zevnitř.",
+          "Tíseň symbolizuje období omezení, vyčerpání nebo pocitu sevření. Energie je omezena a pohyb vpřed se zdá nemožný.\n\nPsychologicky jde o zkušenost vnitřního tlaku. Člověk může mít pocit, že jeho možnosti jsou zúžené nebo že není slyšen.\n\nTento hexagram však neznamená beznaděj. Upozorňuje, že skutečná síla se rodí právě v omezení.\n\nTíseň učí vytrvalosti a vnitřní integritě. I když okolnosti svazují, charakter může zůstat pevný.",
         oracle: {
           interpretation: [
-            "Nevzdávej se.",
-
-            "Hledej vnitřní oporu.",
-
-            "Nevyčerpávej se bojem.",
+            "Vytrvej navzdory omezení.",
+            "Zachovej důstojnost i v tlaku.",
+            "Hledej sílu uvnitř, ne v okolnostech.",
           ],
-
-          introspection: ["Kde čerpáš sílu?"],
+          introspection: [
+            "Co tě nyní svazuje?",
+            "Reaguješ vzdorem, nebo vytrvalostí?",
+            "Jak můžeš zůstat věrný sobě i v obtížích?",
+          ],
         },
         anatomy:
-          "Tíseň učí vytrvalosti.\n\nVnitřní síla překoná omezení.\n\nTrpělivost přináší uvolnění.",
+          "Jezero nad Vodou vytváří obraz vyčerpaného zdroje. Voda představuje tok, Jezero jeho omezení.\n\nEnergie je sevřená mezi vnitřním tlakem a vnější hranicí.\n\nAnatomie hexagramu ukazuje, že stagnace může být příležitostí k vnitřnímu zrání.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První omezení",
-            description: "Cítíš tlak.",
+            name: "První sevření",
+            description: "Objevuje se omezení.",
           },
           {
             position: 2,
             type: 1,
-            name: "Zkouška trpělivosti",
-            description: "Vytrvalost je testována.",
+            name: "Hledání podpory",
+            description: "Člověk hledá oporu.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Izolace",
-            description: "Osamělost sílí.",
+            type: 0,
+            name: "Pocit izolace",
+            description: "Vzniká vnitřní tlak.",
           },
           {
             position: 4,
             type: 1,
-            name: "Hledání řešení",
-            description: "Cesta se hledá obtížně.",
+            name: "Vytrvalost",
+            description: "Síla charakteru roste.",
           },
           {
             position: 5,
-            type: 0,
+            type: 1,
             name: "Vnitřní pevnost",
-            description: "Síla roste uvnitř.",
+            description: "Zachována integrita.",
           },
           {
             position: 6,
             type: 0,
-            name: "Vyčerpání",
-            description: "Je nutný odpočinek.",
+            name: "Postupné uvolnění",
+            description: "Sevření se začíná uvolňovat.",
           },
         ],
       },
       en: {
         name: "Oppression",
         meaning:
-          "Oppression signifies constraint and inner pressure.\n\nPsychologically, it reflects exhaustion or isolation.\n\nStrength must come from within.",
+          "Oppression represents a period of restriction, exhaustion, or pressure. Movement feels limited and constrained.\n\nPsychologically, it reflects inner pressure or a sense of being unheard.\n\nYet this hexagram does not imply hopelessness. True strength emerges through limitation.\n\nIntegrity maintained under pressure becomes a source of resilience.",
         oracle: {
           interpretation: [
-            "Do not give up.",
-
-            "Seek inner support.",
-
-            "Avoid futile struggle.",
+            "Persevere under restriction.",
+            "Maintain dignity under pressure.",
+            "Seek strength within.",
           ],
-
-          introspection: ["Where do you draw strength?"],
+          introspection: [
+            "What currently confines you?",
+            "Are you reacting with resistance or resilience?",
+            "How can you remain true to yourself?",
+          ],
         },
         anatomy:
-          "Oppression builds endurance.\n\nInner strength overcomes limits.\n\nPatience leads to release.",
+          "Lake above Water shows constrained flow. Energy is compressed.\n\nLimitation intensifies awareness.\n\nStagnation can lead to inner maturation.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Initial Constraint",
-            description: "Pressure is felt.",
+            name: "Initial Constriction",
+            description: "Limitation appears.",
           },
           {
             position: 2,
             type: 1,
-            name: "Patience Tested",
-            description: "Endurance challenged.",
+            name: "Seeking Support",
+            description: "Help is sought.",
           },
           {
             position: 3,
-            type: 1,
+            type: 0,
             name: "Isolation",
-            description: "Loneliness intensifies.",
+            description: "Pressure increases.",
           },
           {
             position: 4,
             type: 1,
-            name: "Seeking Resolution",
-            description: "Way forward unclear.",
+            name: "Endurance",
+            description: "Character strengthens.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Inner Strength",
-            description: "Resilience grows.",
+            type: 1,
+            name: "Inner Integrity",
+            description: "Stability is preserved.",
           },
           {
             position: 6,
             type: 0,
-            name: "Exhaustion",
-            description: "Rest required.",
+            name: "Gradual Release",
+            description: "Tension begins to ease.",
           },
         ],
       },
@@ -5940,118 +6013,120 @@ export const hexagrams: Hexagram[] = [
     number: 48,
     chineseName: "井",
     romanization: "Jǐng",
-    elements: [5, 4],
-    lines: [0, 1, 0, 1, 1, 0],
+    elements: [4, 5],
+    lines: [0, 1, 1, 0, 1, 0],
     content: {
       cs: {
         name: "Studna",
         meaning:
-          "Studna symbolizuje zdroj, který zůstává stejný bez ohledu na okolnosti.\n\nPsychologicky jde o hluboké hodnoty.\n\nZdroje je třeba udržovat.",
+          "Studna symbolizuje zdroj, který je stále přítomný, i když si jej lidé někdy neváží. Je to obraz trvalé hodnoty.\n\nPsychologicky představuje vnitřní zdroj moudrosti nebo energie, který lze čerpat bez ohledu na vnější změny.\n\nStudna se nemění, mění se jen způsob, jak ji používáme.\n\nHexagram učí péči o zdroj – ať už je to vztah, schopnost nebo vlastní vnitřní stabilita.",
         oracle: {
           interpretation: [
-            "Pečuj o své zdroje.",
-
-            "Nezanedbávej základ.",
-
-            "Čerpej vědomě.",
+            "Pečuj o svůj zdroj.",
+            "Obnov přístup k tomu, co tě vyživuje.",
+            "Zlepši způsob, jak čerpáš energii.",
           ],
-
-          introspection: ["Co je tvým trvalým zdrojem?"],
+          introspection: [
+            "Jaký je tvůj vnitřní zdroj?",
+            "Pečuješ o něj dostatečně?",
+            "Jak můžeš obnovit svou energii?",
+          ],
         },
         anatomy:
-          "Studna je trvalá.\n\nÚdržba je nutná.\n\nZanedbání vede k vyčerpání.",
+          "Voda nad Větrem vytváří obraz hlubokého zdroje, který je dostupný díky správné konstrukci. Vítr symbolizuje přístup, Voda podstatu.\n\nZdroj je stabilní, ale musí být udržován.\n\nAnatomie hexagramu zdůrazňuje význam péče a pravidelného obnovování.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "Zanedbaný zdroj",
-            description: "Studna není využita.",
+            description: "Studna není využívána správně.",
           },
           {
             position: 2,
             type: 1,
-            name: "Čištění",
-            description: "Obnova začíná.",
+            name: "Částečný přístup",
+            description: "Zdroj je využíván neúplně.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Nedostatečné čerpání",
-            description: "Potenciál zůstává skrytý.",
+            type: 1,
+            name: "Obnova",
+            description: "Dochází k opravě systému.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Obnova",
-            description: "Zdroje se zlepšují.",
+            type: 0,
+            name: "Stabilní čerpání",
+            description: "Zdroj je dostupný.",
           },
           {
             position: 5,
             type: 1,
-            name: "Plná voda",
-            description: "Zdroj je připraven.",
+            name: "Plná kvalita",
+            description: "Voda je čistá a hluboká.",
           },
           {
             position: 6,
             type: 0,
-            name: "Nečinnost",
-            description: "Nevyužitý potenciál.",
+            name: "Sdílení",
+            description: "Zdroj prospívá ostatním.",
           },
         ],
       },
       en: {
         name: "The Well",
         meaning:
-          "The Well represents a constant source.\n\nPsychologically, it reflects deep values.\n\nSources require maintenance.",
+          "The Well represents a constant source that remains available regardless of changing circumstances.\n\nPsychologically, it symbolizes inner wisdom or renewable energy.\n\nThe source itself does not change — only our access to it does.\n\nCare and maintenance ensure its continued value.",
         oracle: {
           interpretation: [
-            "Care for your resources.",
-
-            "Maintain foundations.",
-
-            "Draw consciously.",
+            "Care for your source.",
+            "Restore access to nourishment.",
+            "Improve how you draw energy.",
           ],
-
-          introspection: ["What is your lasting source?"],
+          introspection: [
+            "What is your inner source?",
+            "Are you tending it properly?",
+            "How can you renew your vitality?",
+          ],
         },
         anatomy:
-          "The Well remains constant.\n\nMaintenance preserves value.\n\nNeglect leads to decline.",
+          "Water above Wind shows a structured well. Wind allows access; Water represents essence.\n\nThe source is stable but requires upkeep.\n\nMaintenance sustains nourishment.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "Neglected Source",
-            description: "The well is unused.",
+            description: "Improper use.",
           },
           {
             position: 2,
             type: 1,
-            name: "Cleaning",
-            description: "Renewal begins.",
+            name: "Partial Access",
+            description: "Resource incompletely drawn.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Underused Potential",
-            description: "Resources untapped.",
+            type: 1,
+            name: "Restoration",
+            description: "System repaired.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Restoration",
-            description: "Source improves.",
+            type: 0,
+            name: "Stable Drawing",
+            description: "Source accessible.",
           },
           {
             position: 5,
             type: 1,
-            name: "Full Water",
-            description: "Abundance available.",
+            name: "Pure Depth",
+            description: "Quality is high.",
           },
           {
             position: 6,
             type: 0,
-            name: "Inaction",
-            description: "Potential wasted.",
+            name: "Shared Resource",
+            description: "Benefit extends outward.",
           },
         ],
       },
@@ -6068,112 +6143,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Proměna",
         meaning:
-          "Proměna znamená zásadní změnu. Staré struktury již nefungují.\n\nPsychologicky jde o transformaci identity.\n\nZměna musí být načasovaná.",
+          "Proměna symbolizuje radikální změnu, která je již nevyhnutelná. Starý řád dosáhl svého konce a další setrvání by znamenalo stagnaci.\n\nPsychologicky jde o moment, kdy člověk cítí, že hluboká změna je nutná – v postoji, vztahu nebo směru života.\n\nProměna však nesmí být impulzivní. Vyžaduje vnitřní zralost a správné načasování.\n\nHexagram učí, že skutečná transformace vychází z hlubokého přesvědčení, nikoli z revolty. Změna má být jasná, otevřená a připravená.",
         oracle: {
           interpretation: [
-            "Jednej ve správný čas.",
-
-            "Nepospíchej.",
-
-            "Buď transparentní.",
+            "Změna je nutná — jednej vědomě.",
+            "Ujisti se, že tvé rozhodnutí je zralé.",
+            "Proměňuj, ale ne z unáhlenosti.",
           ],
-
-          introspection: ["Co je připraveno ke změně?"],
+          introspection: [
+            "Co ve tvém životě už dosloužilo?",
+            "Je tvá změna reakcí, nebo vědomým rozhodnutím?",
+            "Jsi připraven nést důsledky transformace?",
+          ],
         },
         anatomy:
-          "Proměna obnovuje energii.\n\nBez načasování selže.\n\nVědomí stabilizuje přerod.",
+          "Oheň nad Jezerem vytváří obraz energie, která mění povrch. Oheň transformuje, Jezero odráží změnu.\n\nStaré struktury se rozpouštějí.\n\nAnatomie hexagramu ukazuje, že proměna probíhá z vnitřního ohně směrem ven.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Nespokojenost",
-            description: "Tlak ke změně.",
+            name: "První nespokojenost",
+            description: "Vzniká vědomí nutnosti změny.",
           },
           {
             position: 2,
             type: 0,
-            name: "Příprava",
-            description: "Záměr se formuje.",
+            name: "Zvažování",
+            description: "Změna ještě není uskutečněna.",
           },
           {
             position: 3,
             type: 1,
-            name: "Odpor",
-            description: "Změna naráží na překážky.",
+            name: "Rostoucí tlak",
+            description: "Situace dozrává.",
           },
           {
             position: 4,
             type: 1,
-            name: "Průlom",
-            description: "Staré se rozpouští.",
+            name: "Rozhodnutí",
+            description: "Proměna je zahájena.",
           },
           {
             position: 5,
             type: 1,
-            name: "Jasnost",
+            name: "Stabilní transformace",
             description: "Změna je přijata.",
           },
           {
             position: 6,
             type: 0,
-            name: "Přehnanost",
-            description: "Příliš radikální krok škodí.",
+            name: "Nadměrná revolta",
+            description: "Změna bez ukotvení může být nestabilní.",
           },
         ],
       },
       en: {
         name: "Revolution",
         meaning:
-          "Revolution signifies fundamental change.\n\nPsychologically, it reflects transformation.\n\nTiming determines success.",
+          "Revolution represents necessary transformation. The old order has reached its end, and continuation would mean stagnation.\n\nPsychologically, it marks a moment when deep change is required.\n\nTrue revolution requires maturity and timing.\n\nTransformation must arise from conviction, not impulsive reaction.",
         oracle: {
           interpretation: [
-            "Act at the right moment.",
-
-            "Do not rush.",
-
-            "Be transparent.",
+            "Change is necessary — act consciously.",
+            "Ensure your decision is mature.",
+            "Transform with clarity.",
           ],
-
-          introspection: ["What is ready to change?"],
+          introspection: [
+            "What has outlived its purpose?",
+            "Is your change reactive or intentional?",
+            "Are you ready for the consequences?",
+          ],
         },
         anatomy:
-          "Revolution renews energy.\n\nWithout timing, it fails.\n\nAwareness stabilizes transition.",
+          "Fire above Lake shows transformative force affecting the surface. Inner fire drives outward change.\n\nStructures dissolve.\n\nChange must be rooted in clarity.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Dissatisfaction",
-            description: "Pressure for change.",
+            name: "Initial Discontent",
+            description: "Need for change arises.",
           },
           {
             position: 2,
             type: 0,
-            name: "Preparation",
-            description: "Intention forms.",
+            name: "Consideration",
+            description: "Decision not yet made.",
           },
           {
             position: 3,
             type: 1,
-            name: "Resistance",
-            description: "Obstacles arise.",
+            name: "Growing Pressure",
+            description: "Circumstances intensify.",
           },
           {
             position: 4,
             type: 1,
-            name: "Breakthrough",
-            description: "Old dissolves.",
+            name: "Commitment",
+            description: "Transformation begins.",
           },
           {
             position: 5,
             type: 1,
-            name: "Clarity",
-            description: "Change accepted.",
+            name: "Stable Renewal",
+            description: "Change becomes established.",
           },
           {
             position: 6,
             type: 0,
-            name: "Excess Radicalism",
-            description: "Overreaction harms.",
+            name: "Excessive Revolt",
+            description: "Instability threatens.",
           },
         ],
       },
@@ -6185,117 +6262,119 @@ export const hexagrams: Hexagram[] = [
     chineseName: "鼎",
     romanization: "Dǐng",
     elements: [4, 6],
-    lines: [1, 0, 1, 0, 1, 1],
+    lines: [0, 1, 1, 1, 0, 1],
     content: {
       cs: {
         name: "Kotlík",
         meaning:
-          "Kotlík symbolizuje kultivaci a transformaci skrze péči.\n\nPsychologicky jde o proces zrání.\n\nSprávné prostředí umožňuje růst.",
+          "Kotlík symbolizuje kultivaci a přeměnu surového materiálu v něco hodnotného. Je to obraz vnitřního zrání.\n\nPsychologicky jde o proces integrace zkušeností. Člověk zpracovává minulost a vytváří z ní moudrost.\n\nTento hexagram ukazuje, že transformace není pouze destrukce starého, ale také kultivace nového.\n\nKotlík představuje posvátný prostor, kde se energie mění kvalitou.",
         oracle: {
           interpretation: [
-            "Pečuj o proces.",
-
-            "Vytvářej hodnotu.",
-
-            "Buď trpělivý.",
+            "Pečuj o svůj vnitřní růst.",
+            "Zpracuj zkušenosti vědomě.",
+            "Proměň surovost v moudrost.",
           ],
-
-          introspection: ["Co je třeba kultivovat?"],
+          introspection: [
+            "Co ve svém životě právě kultivuješ?",
+            "Jak můžeš přetavit zkušenost v hodnotu?",
+            "Je tvůj proces zrání vědomý?",
+          ],
         },
         anatomy:
-          "Kotlík proměňuje surové v hodnotné.\n\nProces vyžaduje péči.\n\nTrpělivost přináší kvalitu.",
+          "Oheň nad Větrem vytváří obraz ohřevu a přeměny. Oheň transformuje, Vítr šíří vliv.\n\nProces je řízený a stabilní.\n\nAnatomie hexagramu zdůrazňuje význam péče o kvalitu a integritu.",
         evolution: [
           {
             position: 1,
             type: 1,
             name: "Základ",
-            description: "Stabilita je nutná.",
+            description: "Proces začíná přípravou.",
           },
           {
             position: 2,
-            type: 0,
-            name: "Naplnění",
-            description: "Obsah se formuje.",
+            type: 1,
+            name: "Stabilita",
+            description: "Nádoba drží pevně.",
           },
           {
             position: 3,
-            type: 1,
+            type: 0,
             name: "Narušení",
-            description: "Proces je ohrožen.",
+            description: "Proces může být dočasně narušen.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Úprava",
-            description: "Je třeba ladění.",
+            type: 1,
+            name: "Obnova",
+            description: "Transformace pokračuje.",
           },
           {
             position: 5,
-            type: 1,
+            type: 0,
             name: "Zralost",
-            description: "Výsledek je kvalitní.",
+            description: "Výsledek získává hodnotu.",
           },
           {
             position: 6,
             type: 1,
-            name: "Dokončení",
-            description: "Proces je završován.",
+            name: "Dokonalost",
+            description: "Proces dosahuje plnosti.",
           },
         ],
       },
       en: {
         name: "The Cauldron",
         meaning:
-          "The Cauldron represents cultivation and transformation.\n\nPsychologically, it reflects maturation.\n\nProper care enables refinement.",
+          "The Cauldron symbolizes cultivation and transformation of raw material into value. It represents inner refinement.\n\nPsychologically, it reflects integration of experience into wisdom.\n\nTransformation is not only destruction but refinement.\n\nThe Cauldron is a sacred vessel where energy changes quality.",
         oracle: {
           interpretation: [
-            "Nurture the process.",
-
-            "Create value.",
-
-            "Be patient.",
+            "Cultivate inner growth.",
+            "Process experience consciously.",
+            "Refine what is raw.",
           ],
-
-          introspection: ["What needs cultivation?"],
+          introspection: [
+            "What are you cultivating?",
+            "How can experience become wisdom?",
+            "Is your transformation intentional?",
+          ],
         },
         anatomy:
-          "The Cauldron refines raw material.\n\nProcess demands care.\n\nPatience produces quality.",
+          "Fire above Wind shows controlled transformation. Heat refines; air sustains.\n\nThe process requires structure.\n\nQuality depends on care and integrity.",
         evolution: [
           {
             position: 1,
             type: 1,
             name: "Foundation",
-            description: "Stability required.",
+            description: "Preparation begins.",
           },
           {
             position: 2,
-            type: 0,
-            name: "Filling",
-            description: "Content forms.",
+            type: 1,
+            name: "Stability",
+            description: "Container holds firm.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Disruption",
-            description: "Process challenged.",
+            type: 0,
+            name: "Disturbance",
+            description: "Process temporarily disrupted.",
           },
           {
             position: 4,
-            type: 0,
-            name: "Adjustment",
-            description: "Refinement needed.",
+            type: 1,
+            name: "Restoration",
+            description: "Transformation resumes.",
           },
           {
             position: 5,
-            type: 1,
+            type: 0,
             name: "Maturity",
-            description: "Quality achieved.",
+            description: "Value emerges.",
           },
           {
             position: 6,
             type: 1,
             name: "Completion",
-            description: "Transformation fulfilled.",
+            description: "Process reaches fullness.",
           },
         ],
       },
@@ -6312,112 +6391,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Otřes",
         meaning:
-          "Otřes představuje náhlý impulz, který probouzí. Přichází bez varování a narušuje jistoty.\n\nPsychologicky jde o šok nebo náhlé uvědomění.\n\nOtřes může být děsivý, ale přináší probuzení.",
+          "Otřes symbolizuje náhlý zásah, který probouzí vědomí. Je to šok, který naruší stabilitu, ale zároveň přináší nové uvědomění.\n\nPsychologicky jde o moment, kdy je člověk vytržen z komfortu. Událost může být překvapivá nebo zneklidňující, ale její smysl spočívá v probuzení.\n\nOtřes odhaluje, co je skutečně pevné. Pokud je základ stabilní, otřes nevede k pádu, ale k větší bdělosti.\n\nHexagram učí reagovat klidem. Strach je přirozený, ale vědomí musí zůstat jasné.",
         oracle: {
           interpretation: [
-            "Zachovej klid.",
-
-            "Nereaguj unáhleně.",
-
-            "Vnímej, co tě situace učí.",
+            "Zachovej klid i při náhlé změně.",
+            "Nepropadej panice.",
+            "Využij šok k probuzení.",
           ],
-
-          introspection: ["Co tě právě probouzí?"],
+          introspection: [
+            "Co tě nyní vyvádí z rovnováhy?",
+            "Jak reaguješ na nečekané situace?",
+            "Je tvůj základ dostatečně pevný?",
+          ],
         },
         anatomy:
-          "Otřes probouzí vědomí.\n\nPrvní reakce je strach.\n\nKlid přináší porozumění.",
+          "Hrom nad Hromem vytváří obraz opakovaného otřesu. Energie je silná a probouzející.\n\nDvojitý impuls zesiluje účinek.\n\nAnatomie hexagramu ukazuje, že opakovaný šok může přinést hlubší uvědomění.",
         evolution: [
           {
             position: 1,
             type: 1,
             name: "První šok",
-            description: "Impuls přichází náhle.",
+            description: "Náhlý podnět vyvolává překvapení.",
           },
           {
             position: 2,
             type: 0,
-            name: "Reakce strachu",
-            description: "Emoce jsou silné.",
+            name: "Vnitřní reakce",
+            description: "Strach či napětí se objevuje.",
           },
           {
             position: 3,
             type: 0,
-            name: "Ztráta rovnováhy",
-            description: "Nejistota roste.",
+            name: "Adaptace",
+            description: "Člověk hledá stabilitu.",
           },
           {
             position: 4,
             type: 1,
-            name: "Stabilizace",
-            description: "Klid se vrací.",
+            name: "Opakování",
+            description: "Další impuls posiluje uvědomění.",
           },
           {
             position: 5,
             type: 0,
-            name: "Poučení",
-            description: "Zkušenost přináší moudrost.",
+            name: "Zachování klidu",
+            description: "Reakce je vyvážená.",
           },
           {
             position: 6,
             type: 0,
-            name: "Přehnaná reakce",
-            description: "Strach může přetrvat.",
+            name: "Integrované probuzení",
+            description: "Otřes přináší trvalé poznání.",
           },
         ],
       },
       en: {
         name: "Shock",
         meaning:
-          "Shock represents sudden awakening. It disrupts certainty.\n\nPsychologically, it reflects sudden insight or crisis.\n\nShock can frighten but also enlighten.",
+          "Shock represents sudden awakening through disruption. Stability is shaken, yet awareness increases.\n\nPsychologically, it reflects being pulled out of comfort. The event may be startling, but its purpose is awakening.\n\nShock reveals what is truly stable.\n\nCalm response transforms fear into insight.",
         oracle: {
           interpretation: [
-            "Stay calm.",
-
-            "Avoid impulsive reaction.",
-
-            "Learn from the moment.",
+            "Remain calm in sudden change.",
+            "Do not panic.",
+            "Use shock as awakening.",
           ],
-
-          introspection: ["What is awakening within you?"],
+          introspection: [
+            "What is shaking your stability?",
+            "How do you react to surprise?",
+            "Is your foundation secure?",
+          ],
         },
         anatomy:
-          "Shock awakens awareness.\n\nFear subsides through calm.\n\nInsight emerges afterward.",
+          "Thunder above Thunder doubles the force of awakening.\n\nRepeated impact deepens awareness.\n\nShock can strengthen resilience.",
         evolution: [
           {
             position: 1,
             type: 1,
             name: "Initial Shock",
-            description: "Impulse strikes suddenly.",
+            description: "Sudden surprise.",
           },
           {
             position: 2,
             type: 0,
             name: "Fear Response",
-            description: "Emotion surges.",
+            description: "Inner tension appears.",
           },
           {
             position: 3,
             type: 0,
-            name: "Imbalance",
-            description: "Stability shaken.",
+            name: "Adaptation",
+            description: "Stability sought.",
           },
           {
             position: 4,
             type: 1,
-            name: "Regaining Balance",
-            description: "Calm returns.",
+            name: "Reinforced Awakening",
+            description: "Second impulse deepens effect.",
           },
           {
             position: 5,
             type: 0,
-            name: "Insight",
-            description: "Wisdom develops.",
+            name: "Composed Reaction",
+            description: "Calm maintained.",
           },
           {
             position: 6,
             type: 0,
-            name: "Lingering Fear",
-            description: "Reaction prolonged.",
+            name: "Integrated Insight",
+            description: "Awakening becomes lasting.",
           },
         ],
       },
@@ -6434,100 +6515,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Zastavení",
         meaning:
-          "Zastavení symbolizuje klid a schopnost přerušit pohyb.\n\nPsychologicky jde o meditativní zastavení.\n\nZastavit se znamená obnovit rovnováhu.",
+          "Zastavení symbolizuje klid a vědomé přerušení pohybu. Je to okamžik, kdy je třeba zastavit tělo i mysl.\n\nPsychologicky tento hexagram představuje schopnost sebeovládání a meditativní přítomnosti.\n\nZastavení není pasivita, ale aktivní rozhodnutí nepokračovat tam, kde by další pohyb vedl k nerovnováze.\n\nHexagram učí, že pravý klid vzniká uvnitř, nikoli z vnějších okolností.",
         oracle: {
-          interpretation: ["Zpomal.", "Nevyvíjej tlak.", "Najdi ticho."],
-
-          introspection: ["Kde je třeba přestat?"],
+          interpretation: [
+            "Zastav se a naslouchej.",
+            "Nepokračuj, pokud není jasnost.",
+            "Najdi klid v sobě.",
+          ],
+          introspection: [
+            "Kde je třeba se zastavit?",
+            "Dokážeš být v tichu bez neklidu?",
+            "Co ti klid odhaluje?",
+          ],
         },
         anatomy:
-          "Zastavení přináší jasnost.\n\nKlid obnovuje energii.\n\nPřílišná strnulost brzdí růst.",
+          "Hora nad Horou vytváří obraz pevného a klidného středu. Dvojité zastavení zdůrazňuje potřebu stability.\n\nPohyb se přerušuje vědomě.\n\nAnatomie hexagramu ukazuje, že klid je podmínkou správného dalšího kroku.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "První zastavení",
-            description: "Pohyb se zpomaluje.",
+            name: "Zastavení pohybu",
+            description: "První impuls je zastaven.",
           },
           {
             position: 2,
             type: 0,
-            name: "Vnitřní klid",
-            description: "Mysl se tiší.",
+            name: "Stabilizace",
+            description: "Napětí se uklidňuje.",
           },
           {
             position: 3,
             type: 1,
-            name: "Napětí těla",
-            description: "Je třeba uvolnění.",
+            name: "Vnitřní odpor",
+            description: "Objevuje se neklid.",
           },
           {
             position: 4,
             type: 0,
-            name: "Stabilita",
-            description: "Klid se prohlubuje.",
+            name: "Přijetí klidu",
+            description: "Zastavení je vědomé.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vyrovnanost",
-            description: "Vědomí je pevné.",
+            name: "Hluboký klid",
+            description: "Mysl se ztišuje.",
           },
           {
             position: 6,
             type: 1,
-            name: "Tvrdohlavost",
-            description: "Přílišná nehybnost škodí.",
+            name: "Riziko stagnace",
+            description: "Přílišné zastavení může bránit růstu.",
           },
         ],
       },
       en: {
         name: "Stillness",
         meaning:
-          "Stillness signifies pause and restraint.\n\nPsychologically, it reflects meditation.\n\nStopping restores balance.",
+          "Stillness represents conscious pause and inner calm. Movement stops intentionally.\n\nPsychologically, it reflects self-control and meditative awareness.\n\nStillness is not passivity but clarity.\n\nTrue calm arises within.",
         oracle: {
-          interpretation: ["Slow down.", "Do not force.", "Seek silence."],
-
-          introspection: ["Where must you pause?"],
+          interpretation: [
+            "Pause and listen.",
+            "Do not move without clarity.",
+            "Find stillness within.",
+          ],
+          introspection: [
+            "Where must you pause?",
+            "Can you remain in silence peacefully?",
+            "What does stillness reveal?",
+          ],
         },
         anatomy:
-          "Stillness clarifies.\n\nCalm renews energy.\n\nRigidity blocks growth.",
+          "Mountain above Mountain emphasizes stability and rest.\n\nMotion is intentionally halted.\n\nStillness prepares the next movement.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Initial Pause",
-            description: "Movement slows.",
+            name: "Stopping Motion",
+            description: "First impulse halted.",
           },
           {
             position: 2,
             type: 0,
-            name: "Inner Calm",
-            description: "Mind quiets.",
+            name: "Stabilization",
+            description: "Tension decreases.",
           },
           {
             position: 3,
             type: 1,
-            name: "Tension",
-            description: "Release needed.",
+            name: "Inner Restlessness",
+            description: "Unease surfaces.",
           },
           {
             position: 4,
             type: 0,
-            name: "Stability",
-            description: "Calm deepens.",
+            name: "Acceptance",
+            description: "Pause embraced.",
           },
           {
             position: 5,
             type: 0,
-            name: "Balance",
-            description: "Awareness firm.",
+            name: "Deep Calm",
+            description: "Mind settles.",
           },
           {
             position: 6,
             type: 1,
-            name: "Rigidity",
-            description: "Excess stillness harms.",
+            name: "Stagnation Risk",
+            description: "Excessive stillness blocks growth.",
           },
         ],
       },
@@ -6538,118 +6633,120 @@ export const hexagrams: Hexagram[] = [
     number: 53,
     chineseName: "漸",
     romanization: "Jiàn",
-    elements: [4, 7],
+    elements: [7, 4],
     lines: [0, 0, 1, 0, 1, 1],
     content: {
       cs: {
-        name: "Postupné působení",
+        name: "Postupný vývoj",
         meaning:
-          "Postupné působení symbolizuje pomalý, stabilní vývoj.\n\nPsychologicky jde o zrání vztahů nebo projektů.\n\nTrvalé změny jsou pozvolné.",
+          "Postupný vývoj symbolizuje pomalý, přirozený růst, který probíhá v souladu s časem. Není zde prostor pro urychlení.\n\nPsychologicky tento hexagram poukazuje na trpělivost a důvěru v proces. Výsledky nejsou okamžité, ale jsou stabilní.\n\nRůst se odehrává organicky – podobně jako strom, který zakořeňuje, než vyroste.\n\nHexagram učí, že skutečná změna potřebuje čas. Urychlení může narušit přirozený řád.",
         oracle: {
           interpretation: [
             "Buď trpělivý.",
-
-            "Nevynechávej kroky.",
-
-            "Buduj postupně.",
+            "Důvěřuj postupnému procesu.",
+            "Nepospíchej s výsledky.",
           ],
-
-          introspection: ["Kde potřebuješ více času?"],
+          introspection: [
+            "Kde je třeba více trpělivosti?",
+            "Respektuješ přirozené tempo?",
+            "Co roste pomalu, ale jistě?",
+          ],
         },
         anatomy:
-          "Postupnost přináší stabilitu.\n\nTrpělivost buduje pevnost.\n\nUnáhlenost narušuje proces.",
+          "Vítr nad Horou vytváří obraz postupného pronikání do pevné struktury. Hora symbolizuje stabilitu, Vítr vytrvalý vliv.\n\nZměna je nenápadná, ale trvalá.\n\nAnatomie hexagramu ukazuje, že vytrvalost přináší hluboké zakořenění.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Začátek cesty",
-            description: "Proces začíná pomalu.",
+            name: "První krok",
+            description: "Začátek je jemný.",
           },
           {
             position: 2,
             type: 0,
-            name: "Růst důvěry",
-            description: "Stabilita sílí.",
+            name: "Stabilní pokračování",
+            description: "Růst je klidný.",
           },
           {
             position: 3,
             type: 1,
-            name: "Překážka",
-            description: "Tempo je testováno.",
+            name: "Zkouška trpělivosti",
+            description: "Objevuje se netrpělivost.",
           },
           {
             position: 4,
             type: 0,
-            name: "Pokračování",
-            description: "Vytrvalost přináší pokrok.",
+            name: "Zakořenění",
+            description: "Základ je pevný.",
           },
           {
             position: 5,
             type: 1,
-            name: "Zralost",
-            description: "Výsledek je blízko.",
+            name: "Viditelný pokrok",
+            description: "Výsledek se začíná projevovat.",
           },
           {
             position: 6,
             type: 1,
-            name: "Předčasnost",
-            description: "Unáhlenost škodí.",
+            name: "Upevnění",
+            description: "Růst dosahuje stability.",
           },
         ],
       },
       en: {
-        name: "Gradual Progress",
+        name: "Gradual Development",
         meaning:
-          "Gradual Progress represents steady development.\n\nPsychologically, it reflects maturation.\n\nLasting change unfolds slowly.",
+          "Gradual Development represents slow, natural growth aligned with time. It cannot be rushed.\n\nPsychologically, it emphasizes patience and trust in process.\n\nLike a tree, growth begins with roots before branches.\n\nTrue change unfolds steadily.",
         oracle: {
           interpretation: [
             "Be patient.",
-
-            "Do not skip steps.",
-
-            "Build steadily.",
+            "Trust gradual progress.",
+            "Avoid rushing outcomes.",
           ],
-
-          introspection: ["Where is time required?"],
+          introspection: [
+            "Where is patience required?",
+            "Are you respecting natural timing?",
+            "What is quietly growing?",
+          ],
         },
         anatomy:
-          "Gradual growth ensures stability.\n\nPatience builds strength.\n\nHaste disrupts progress.",
+          "Wind above Mountain shows persistent influence on stable ground.\n\nChange is subtle but lasting.\n\nSteady effort brings deep roots.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Beginning the Path",
-            description: "Process starts slowly.",
+            name: "Gentle Beginning",
+            description: "Start is subtle.",
           },
           {
             position: 2,
             type: 0,
-            name: "Growing Trust",
-            description: "Stability increases.",
+            name: "Steady Continuation",
+            description: "Progress remains calm.",
           },
           {
             position: 3,
             type: 1,
-            name: "Obstacle",
-            description: "Pace tested.",
+            name: "Impatience",
+            description: "Desire for speed arises.",
           },
           {
             position: 4,
             type: 0,
-            name: "Continuation",
-            description: "Perseverance advances.",
+            name: "Rooting",
+            description: "Foundation strengthens.",
           },
           {
             position: 5,
             type: 1,
-            name: "Maturity",
-            description: "Outcome near.",
+            name: "Visible Progress",
+            description: "Growth becomes apparent.",
           },
           {
             position: 6,
             type: 1,
-            name: "Premature Action",
-            description: "Haste harms.",
+            name: "Stabilization",
+            description: "Development matures.",
           },
         ],
       },
@@ -6660,118 +6757,120 @@ export const hexagrams: Hexagram[] = [
     number: 54,
     chineseName: "歸妹",
     romanization: "Guī Mèi",
-    elements: [3, 8],
-    lines: [0, 0, 1, 1, 0, 0],
+    elements: [8, 3],
+    lines: [1, 1, 0, 1, 0, 0],
     content: {
       cs: {
-        name: "Vdávání dívky",
+        name: "Nevěsta",
         meaning:
-          "Tento hexagram symbolizuje vstup do vztahu nebo situace, kde nejsou podmínky plně vyrovnané.\n\nPsychologicky poukazuje na roli, kterou přijímáme bez plné kontroly.\n\nJe důležité znát své hranice.",
+          "Nevěsta symbolizuje vstup do situace, kde člověk nemá plnou kontrolu. Jde o přijetí role, která je podmíněná okolnostmi.\n\nPsychologicky tento hexagram poukazuje na nerovnováhu v postavení nebo očekáváních.\n\nNení vhodné usilovat o dominanci. Spíše je třeba přijmout omezení a hledat rovnováhu v dané roli.\n\nHexagram učí pokoru a schopnost přizpůsobení, dokud nenastane příznivější období.",
         oracle: {
           interpretation: [
-            "Nepodceňuj svou hodnotu.",
-
-            "Jednej s důstojností.",
-
-            "Nevstupuj do nerovnováhy bez vědomí.",
+            "Přijmi svou roli bez iluzí.",
+            "Neusiluj o kontrolu za každou cenu.",
+            "Jednej opatrně.",
           ],
-
-          introspection: ["Kde přijímáš méně, než si zasloužíš?"],
+          introspection: [
+            "Vstupuješ do situace s jasným porozuměním?",
+            "Je rovnováha mezi dáváním a přijímáním?",
+            "Co od tebe tato role vyžaduje?",
+          ],
         },
         anatomy:
-          "Nerovnováha vyžaduje vědomí.\n\nSebehodnota chrání integritu.\n\nZralost přináší rovnost.",
+          "Hrom nad Jezerem vytváří obraz pohybu nad otevřeností. Energie je nestabilní.\n\nPostavení je nerovné.\n\nAnatomie hexagramu ukazuje potřebu citlivého jednání.",
         evolution: [
           {
             position: 1,
-            type: 0,
-            name: "Nejistý začátek",
-            description: "Postavení není pevné.",
+            type: 1,
+            name: "Nerovný začátek",
+            description: "Vstup bez plné rovnováhy.",
           },
           {
             position: 2,
             type: 0,
-            name: "Přijetí role",
-            description: "Role je omezená.",
+            name: "Přijetí podmínek",
+            description: "Role je přijata.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Vnitřní napětí",
-            description: "Nerovnováha sílí.",
+            type: 0,
+            name: "Napětí",
+            description: "Objevuje se nesoulad.",
           },
           {
             position: 4,
             type: 1,
-            name: "Zkouška trpělivosti",
-            description: "Situace vyžaduje klid.",
+            name: "Adaptace",
+            description: "Probíhá přizpůsobení.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Možnost růstu",
-            description: "Vztah se může stabilizovat.",
+            type: 1,
+            name: "Stabilizace",
+            description: "Rovnováha se zlepšuje.",
           },
           {
             position: 6,
             type: 0,
-            name: "Zklamání",
-            description: "Nerealistická očekávání škodí.",
+            name: "Riziko iluze",
+            description: "Přehnaná očekávání mohou vést ke zklamání.",
           },
         ],
       },
       en: {
         name: "The Marrying Maiden",
         meaning:
-          "This hexagram signifies entering a relationship or role under unequal conditions.\n\nPsychologically, it reflects accepting limited agency.\n\nSelf-awareness is essential.",
+          "The Marrying Maiden represents entering a situation without full control. The role is shaped by circumstance.\n\nPsychologically, it highlights imbalance or unequal expectations.\n\nDominance is inappropriate.\n\nHumility and adaptation are required until conditions shift.",
         oracle: {
           interpretation: [
-            "Know your worth.",
-
-            "Act with dignity.",
-
-            "Avoid unconscious imbalance.",
+            "Accept your role realistically.",
+            "Do not seek control unnecessarily.",
+            "Proceed with caution.",
           ],
-
-          introspection: ["Where are you accepting less than you deserve?"],
+          introspection: [
+            "Do you understand the position you enter?",
+            "Is there balance in expectations?",
+            "What does this role require of you?",
+          ],
         },
         anatomy:
-          "Imbalance demands awareness.\n\nSelf-respect preserves integrity.\n\nMaturity restores equality.",
+          "Thunder above Lake shows unstable movement above openness.\n\nPosition lacks symmetry.\n\nCareful conduct preserves dignity.",
         evolution: [
           {
             position: 1,
-            type: 0,
-            name: "Uncertain Start",
-            description: "Position unstable.",
+            type: 1,
+            name: "Uneven Beginning",
+            description: "Entry lacks balance.",
           },
           {
             position: 2,
             type: 0,
-            name: "Role Acceptance",
-            description: "Limited authority.",
+            name: "Acceptance",
+            description: "Role acknowledged.",
           },
           {
             position: 3,
-            type: 1,
-            name: "Inner Tension",
-            description: "Imbalance intensifies.",
+            type: 0,
+            name: "Tension",
+            description: "Disparity felt.",
           },
           {
             position: 4,
             type: 1,
-            name: "Patience Tested",
-            description: "Calm required.",
+            name: "Adaptation",
+            description: "Adjustment begins.",
           },
           {
             position: 5,
-            type: 0,
-            name: "Potential Stability",
-            description: "Growth possible.",
+            type: 1,
+            name: "Improved Balance",
+            description: "Conditions stabilize.",
           },
           {
             position: 6,
             type: 0,
-            name: "Disappointment",
-            description: "Unrealistic expectations harm.",
+            name: "Illusion Risk",
+            description: "Unrealistic hopes may disappoint.",
           },
         ],
       },
@@ -6782,118 +6881,120 @@ export const hexagrams: Hexagram[] = [
     number: 55,
     chineseName: "豐",
     romanization: "Fēng",
-    elements: [3, 6],
-    lines: [1, 0, 0, 1, 0, 1],
+    elements: [6, 3],
+    lines: [1, 0, 1, 1, 0, 0],
     content: {
       cs: {
         name: "Hojnost",
         meaning:
-          "Hojnost představuje vrchol energie a plnosti.\n\nPsychologicky jde o období silné vitality a úspěchu.\n\nVrchol však netrvá věčně.",
+          "Hojnost symbolizuje vrchol energie a plnost života. Vše je zesílené – světlo, aktivita i odpovědnost.\n\nPsychologicky tento hexagram ukazuje období intenzity. Události jsou výrazné a rozhodnutí mají velký dopad.\n\nHojnost však není trvalý stav. Vrchol je přechodný.\n\nHexagram učí plně přijmout přítomný okamžik, ale zároveň si uvědomit jeho pomíjivost. Správné jednání ve vrcholu vyžaduje jasnost a disciplínu.",
         oracle: {
           interpretation: [
-            "Využij plnost času.",
-
-            "Buď vděčný.",
-
-            "Připrav se na změnu.",
+            "Využij plnost okamžiku.",
+            "Jednej rozhodně, ale s rozvahou.",
+            "Pamatuj, že vrchol není věčný.",
           ],
-
-          introspection: ["Jak zacházíš se svým úspěchem?"],
+          introspection: [
+            "Kde ve tvém životě vrcholí energie?",
+            "Jak zvládáš intenzitu?",
+            "Jednáš s vědomím dlouhodobých důsledků?",
+          ],
         },
         anatomy:
-          "Hojnost je dočasná.\n\nVděčnost stabilizuje.\n\nPřipravenost chrání budoucnost.",
+          "Hrom nad Ohněm vytváří obraz silného světla a pohybu. Energie je plná a dynamická.\n\nSvětlo je nejjasnější.\n\nAnatomie hexagramu ukazuje vrcholný bod, který je zároveň testem charakteru.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Nárůst energie",
-            description: "Síla roste.",
+            name: "První rozmach",
+            description: "Energie rychle roste.",
           },
           {
             position: 2,
             type: 0,
-            name: "Zastínění",
-            description: "Viditelnost je omezená.",
+            name: "Stabilní síla",
+            description: "Vrchol se blíží.",
           },
           {
             position: 3,
             type: 0,
-            name: "Nejasnost",
-            description: "Pozor na zmatek.",
+            name: "Přetížení",
+            description: "Hrozí ztráta rovnováhy.",
           },
           {
             position: 4,
             type: 1,
-            name: "Jasné vedení",
-            description: "Směr se upevňuje.",
+            name: "Plný vrchol",
+            description: "Energie je maximální.",
           },
           {
             position: 5,
             type: 0,
-            name: "Vrchol",
-            description: "Plnost dosahuje maxima.",
+            name: "Uvědomění pomíjivosti",
+            description: "Objevuje se nadhled.",
           },
           {
             position: 6,
             type: 1,
             name: "Úpadek",
-            description: "Nadměrnost vede k obratu.",
+            description: "Vrchol přechází do poklesu.",
           },
         ],
       },
       en: {
         name: "Abundance",
         meaning:
-          "Abundance represents fullness and peak vitality.\n\nPsychologically, it reflects success and brightness.\n\nPeaks are temporary.",
+          "Abundance represents peak energy and fullness of life. Everything is intensified — light, action, responsibility.\n\nPsychologically, it marks a period of intensity and visibility.\n\nAbundance is not permanent.\n\nClarity and discipline are required at the summit.",
         oracle: {
           interpretation: [
-            "Use the moment wisely.",
-
-            "Be grateful.",
-
-            "Prepare for change.",
+            "Embrace the fullness of the moment.",
+            "Act decisively with awareness.",
+            "Remember that peaks are temporary.",
           ],
-
-          introspection: ["How do you handle success?"],
+          introspection: [
+            "Where is energy peaking in your life?",
+            "How do you handle intensity?",
+            "Are you mindful of long-term consequences?",
+          ],
         },
         anatomy:
-          "Abundance is transient.\n\nGratitude stabilizes success.\n\nPreparedness protects continuity.",
+          "Thunder above Fire shows powerful illumination and movement.\n\nLight is at its brightest.\n\nThe peak tests character.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Rising Energy",
-            description: "Strength increases.",
+            name: "Initial Expansion",
+            description: "Energy surges.",
           },
           {
             position: 2,
             type: 0,
-            name: "Obscurity",
-            description: "Vision limited.",
+            name: "Approaching Peak",
+            description: "Strength stabilizes.",
           },
           {
             position: 3,
             type: 0,
-            name: "Confusion",
-            description: "Clarity required.",
+            name: "Overextension",
+            description: "Balance threatened.",
           },
           {
             position: 4,
             type: 1,
-            name: "Clear Leadership",
-            description: "Direction firm.",
+            name: "Full Zenith",
+            description: "Energy maximized.",
           },
           {
             position: 5,
             type: 0,
-            name: "Peak",
-            description: "Fullness achieved.",
+            name: "Perspective",
+            description: "Awareness deepens.",
           },
           {
             position: 6,
             type: 1,
             name: "Decline",
-            description: "Excess leads to reversal.",
+            description: "Peak begins to fade.",
           },
         ],
       },
@@ -6904,118 +7005,120 @@ export const hexagrams: Hexagram[] = [
     number: 56,
     chineseName: "旅",
     romanization: "Lǚ",
-    elements: [6, 7],
-    lines: [1, 0, 1, 0, 0, 1],
+    elements: [7, 6],
+    lines: [0, 0, 1, 1, 0, 1],
     content: {
       cs: {
         name: "Putování",
         meaning:
-          "Putování symbolizuje dočasnost a pohyb mimo domov.\n\nPsychologicky jde o období hledání.\n\nJe třeba zachovat lehkost a respekt.",
+          "Putování symbolizuje dočasnost a pohyb mimo známé prostředí. Člověk není doma a musí jednat opatrně.\n\nPsychologicky tento hexagram ukazuje období přechodu nebo změny kontextu.\n\nPutování vyžaduje lehkost a adaptabilitu. Není vhodné se pevně upínat.\n\nHexagram učí respektovat cizí prostředí a zachovat si vlastní integritu.",
         oracle: {
           interpretation: [
-            "Chovej se opatrně.",
-
+            "Jednej obezřetně v novém prostředí.",
             "Neulpívej.",
-
-            "Respektuj cizí prostředí.",
+            "Udržuj si důstojnost.",
           ],
-
-          introspection: ["Co se učíš na cestě?"],
+          introspection: [
+            "Kde se nyní cítíš jako host?",
+            "Dokážeš být flexibilní?",
+            "Jak si zachovat stabilitu mimo komfort?",
+          ],
         },
         anatomy:
-          "Putování přináší zkušenost.\n\nLehkost chrání.\n\nDomov se nachází uvnitř.",
+          "Oheň nad Horou vytváří obraz světla na vrcholu – viditelného, ale nestálého. Hora symbolizuje cizí půdu.\n\nPobyt je dočasný.\n\nAnatomie hexagramu ukazuje potřebu opatrnosti a přizpůsobení.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Nejistota",
-            description: "Pocit cizosti.",
+            name: "Nejistý začátek",
+            description: "Prostředí je nové.",
           },
           {
             position: 2,
             type: 0,
-            name: "Opatrnost",
-            description: "Přizpůsobení.",
+            name: "Adaptace",
+            description: "Člověk se přizpůsobuje.",
           },
           {
             position: 3,
             type: 1,
-            name: "Zranitelnost",
-            description: "Pozor na konflikt.",
+            name: "Riziko konfliktu",
+            description: "Hrozí nedorozumění.",
           },
           {
             position: 4,
             type: 0,
-            name: "Dočasné útočiště",
-            description: "Krátkodobý klid.",
+            name: "Stabilní chování",
+            description: "Respekt přináší klid.",
           },
           {
             position: 5,
             type: 0,
-            name: "Poučení",
-            description: "Zkušenost roste.",
+            name: "Dočasný úspěch",
+            description: "Situace se vyjasňuje.",
           },
           {
             position: 6,
             type: 1,
-            name: "Ztráta směru",
-            description: "Nepozornost škodí.",
+            name: "Ztráta opory",
+            description: "Přílišné uvolnění může vést k nestabilitě.",
           },
         ],
       },
       en: {
         name: "The Wanderer",
         meaning:
-          "The Wanderer represents transience and movement away from home.\n\nPsychologically, it reflects a period of searching.\n\nLightness and respect are necessary.",
+          "The Wanderer represents temporary position and movement through unfamiliar territory.\n\nPsychologically, it reflects transition and lack of rootedness.\n\nAdaptability is essential.\n\nRespect and integrity ensure safe passage.",
         oracle: {
           interpretation: [
-            "Be cautious.",
-
+            "Act cautiously in new surroundings.",
             "Do not cling.",
-
-            "Respect foreign ground.",
+            "Maintain dignity.",
           ],
-
-          introspection: ["What are you learning on this journey?"],
+          introspection: [
+            "Where are you a guest?",
+            "Can you remain flexible?",
+            "How do you stay grounded away from comfort?",
+          ],
         },
         anatomy:
-          "Wandering brings experience.\n\nLightness protects.\n\nHome is found within.",
+          "Fire above Mountain shows light exposed in foreign terrain.\n\nPosition is temporary.\n\nCareful conduct ensures safety.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Uncertainty",
-            description: "Feeling foreign.",
+            name: "Uncertain Entry",
+            description: "New environment.",
           },
           {
             position: 2,
             type: 0,
             name: "Adaptation",
-            description: "Cautious adjustment.",
+            description: "Adjustment occurs.",
           },
           {
             position: 3,
             type: 1,
-            name: "Vulnerability",
-            description: "Conflict risk.",
+            name: "Conflict Risk",
+            description: "Misunderstanding possible.",
           },
           {
             position: 4,
             type: 0,
-            name: "Temporary Shelter",
-            description: "Short-term rest.",
+            name: "Respectful Conduct",
+            description: "Stability through care.",
           },
           {
             position: 5,
             type: 0,
-            name: "Learning",
-            description: "Experience grows.",
+            name: "Temporary Success",
+            description: "Clarity emerges.",
           },
           {
             position: 6,
             type: 1,
-            name: "Loss of Direction",
-            description: "Carelessness harms.",
+            name: "Loss of Support",
+            description: "Overconfidence destabilizes.",
           },
         ],
       },
@@ -7032,112 +7135,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Pronikání",
         meaning:
-          "Pronikání symbolizuje jemný, vytrvalý vliv. Neprosazuje se silou, ale trpělivostí.\n\nPsychologicky jde o schopnost působit postupně.\n\nMěkkost může být silnější než tlak.",
+          "Pronikání symbolizuje jemnou, ale vytrvalou sílu, která působí bez nátlaku. Nejde o náhlý zásah, ale o postupné ovlivňování.\n\nPsychologicky tento hexagram poukazuje na schopnost trpělivě měnit situaci skrze konzistentní přístup. Místo tvrdého odporu volí flexibilitu.\n\nPronikání může být téměř neviditelné, přesto účinné. Je to síla, která se přizpůsobuje, ale neztrácí směr.\n\nHexagram učí, že vytrvalá jemnost může být silnější než agresivní tlak.",
         oracle: {
           interpretation: [
-            "Buď vytrvalý.",
-
-            "Postupuj nenápadně.",
-
-            "Nezvyšuj tlak.",
+            "Postupuj jemně, ale důsledně.",
+            "Nepoužívej sílu tam, kde stačí trpělivost.",
+            "Buduj vliv postupně.",
           ],
-
-          introspection: ["Kde můžeš působit jemněji?"],
+          introspection: [
+            "Kde můžeš působit nenápadně, ale vytrvale?",
+            "Reaguješ tlakem, nebo přizpůsobením?",
+            "Co vyžaduje dlouhodobou konzistenci?",
+          ],
         },
         anatomy:
-          "Pronikání je postupné.\n\nTrpělivost přináší výsledek.\n\nJemnost stabilizuje změnu.",
+          "Vítr nad Větrem vytváří obraz pronikající energie. Dvojité působení zesiluje vliv, aniž by bylo násilné.\n\nSměr je zachován, forma je flexibilní.\n\nAnatomie hexagramu zdůrazňuje sílu konzistence a jemného vlivu.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Jemný začátek",
-            description: "Vliv je nenápadný.",
+            name: "První vliv",
+            description: "Jemné působení začíná.",
           },
           {
             position: 2,
             type: 1,
             name: "Vytrvalost",
-            description: "Tlak roste postupně.",
+            description: "Směr je udržen.",
           },
           {
             position: 3,
             type: 1,
-            name: "Pochybnost",
-            description: "Nejistota zpomaluje.",
+            name: "Nejistota",
+            description: "Objevují se pochybnosti.",
           },
           {
             position: 4,
             type: 0,
-            name: "Adaptace",
-            description: "Flexibilita pomáhá.",
+            name: "Stabilní vliv",
+            description: "Působení sílí.",
           },
           {
             position: 5,
             type: 1,
-            name: "Stabilní vliv",
-            description: "Směr je upevněn.",
+            name: "Zralý účinek",
+            description: "Výsledek je patrný.",
           },
           {
             position: 6,
             type: 1,
-            name: "Přehnané opakování",
-            description: "Tvrdohlavost škodí.",
+            name: "Přílišná poddajnost",
+            description: "Nadměrná flexibilita může vést ke ztrátě směru.",
           },
         ],
       },
       en: {
         name: "The Gentle",
         meaning:
-          "The Gentle represents gradual influence through persistence.\n\nPsychologically, it reflects subtle impact.\n\nSoftness can overcome force.",
+          "The Gentle represents subtle yet persistent influence. It works without force, gradually shaping circumstances.\n\nPsychologically, it reflects patient consistency and adaptability.\n\nInfluence may be almost invisible, yet effective.\n\nGentle persistence can surpass aggressive force.",
         oracle: {
           interpretation: [
-            "Persist quietly.",
-
-            "Apply gentle pressure.",
-
-            "Avoid harshness.",
+            "Act gently but consistently.",
+            "Avoid unnecessary force.",
+            "Build influence over time.",
           ],
-
-          introspection: ["Where can you act more subtly?"],
+          introspection: [
+            "Where can steady influence be applied?",
+            "Are you forcing or adapting?",
+            "What requires long-term consistency?",
+          ],
         },
         anatomy:
-          "Gentle influence is gradual.\n\nPatience yields success.\n\nSoftness stabilizes change.",
+          "Wind above Wind shows penetrating influence doubled.\n\nDirection remains firm while method is flexible.\n\nConsistency strengthens effect.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Subtle Beginning",
-            description: "Influence begins quietly.",
+            name: "Initial Influence",
+            description: "Gentle action begins.",
           },
           {
             position: 2,
             type: 1,
-            name: "Perseverance",
-            description: "Steady persistence.",
+            name: "Persistence",
+            description: "Direction maintained.",
           },
           {
             position: 3,
             type: 1,
             name: "Doubt",
-            description: "Uncertainty slows progress.",
+            description: "Uncertainty appears.",
           },
           {
             position: 4,
             type: 0,
-            name: "Adaptation",
-            description: "Flexibility helps.",
+            name: "Stable Effect",
+            description: "Influence grows.",
           },
           {
             position: 5,
             type: 1,
-            name: "Stable Influence",
-            description: "Direction firm.",
+            name: "Mature Impact",
+            description: "Results visible.",
           },
           {
             position: 6,
             type: 1,
-            name: "Excess Persistence",
-            description: "Overdoing harms.",
+            name: "Excess Flexibility",
+            description: "Too much yielding weakens direction.",
           },
         ],
       },
@@ -7154,112 +7259,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Radost",
         meaning:
-          "Radost představuje otevřenost a komunikaci.\n\nPsychologicky jde o lehkost bytí.\n\nSdílená radost posiluje vztahy.",
+          "Radost symbolizuje otevřenost, sdílení a lehkost komunikace. Je to energie, která spojuje.\n\nPsychologicky tento hexagram poukazuje na důležitost autentického vyjádření a pozitivního kontaktu.\n\nRadost není povrchní veselí, ale hluboká spokojenost, která vzniká z vnitřní harmonie.\n\nHexagram učí, že sdílená radost posiluje vztahy a podporuje spolupráci.",
         oracle: {
           interpretation: [
-            "Buď otevřený.",
-
-            "Sdílej.",
-
-            "Nenech radost sklouznout k povrchnosti.",
+            "Sdílej otevřeně.",
+            "Komunikuj s lehkostí.",
+            "Buduj vztahy skrze radost.",
           ],
-
-          introspection: ["Co tě skutečně těší?"],
+          introspection: [
+            "Kde můžeš být otevřenější?",
+            "Je tvá radost autentická?",
+            "Jak můžeš podpořit harmonii?",
+          ],
         },
         anatomy:
-          "Radost spojuje.\n\nUpřímnost ji stabilizuje.\n\nPovrchnost ji oslabuje.",
+          "Jezero nad Jezerem vytváří obraz dvojnásobné radosti a komunikace. Otevřenost je zesílena.\n\nSpojení je přirozené.\n\nAnatomie hexagramu ukazuje sílu sdílení a vzájemného povzbuzení.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "První nadšení",
-            description: "Lehkost přichází.",
+            type: 0,
+            name: "První úsměv",
+            description: "Otevřenost začíná.",
           },
           {
             position: 2,
             type: 1,
             name: "Sdílení",
-            description: "Komunikace sílí.",
+            description: "Komunikace se rozvíjí.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Povrchnost",
-            description: "Radost je nestálá.",
+            type: 1,
+            name: "Riziko povrchnosti",
+            description: "Radost může být neupřímná.",
           },
           {
             position: 4,
-            type: 1,
+            type: 0,
             name: "Upřímnost",
-            description: "Vztahy se prohlubují.",
+            description: "Kontakt je autentický.",
           },
           {
             position: 5,
             type: 1,
-            name: "Stálá radost",
-            description: "Lehkost je pevná.",
+            name: "Vzájemné povzbuzení",
+            description: "Vztahy se posilují.",
           },
           {
             position: 6,
-            type: 0,
-            name: "Přehnanost",
-            description: "Nadměrná lehkomyslnost škodí.",
+            type: 1,
+            name: "Nadměrná lehkomyslnost",
+            description: "Přílišná bezstarostnost může oslabit hloubku.",
           },
         ],
       },
       en: {
-        name: "Joy",
+        name: "The Joyous",
         meaning:
-          "Joy represents openness and communication.\n\nPsychologically, it reflects lightness of being.\n\nShared joy strengthens bonds.",
+          "The Joyous represents openness, communication, and shared delight. It connects people.\n\nPsychologically, it highlights authentic expression and positive exchange.\n\nTrue joy arises from inner harmony.\n\nShared joy strengthens relationships.",
         oracle: {
           interpretation: [
-            "Be open.",
-
-            "Share sincerely.",
-
-            "Avoid superficiality.",
+            "Share openly.",
+            "Communicate lightly yet sincerely.",
+            "Strengthen bonds through joy.",
           ],
-
-          introspection: ["What truly brings you joy?"],
+          introspection: [
+            "Where can you be more open?",
+            "Is your joy genuine?",
+            "How can harmony be deepened?",
+          ],
         },
         anatomy:
-          "Joy unites.\n\nSincerity stabilizes.\n\nSuperficiality weakens.",
+          "Lake above Lake doubles openness and exchange.\n\nConnection flows naturally.\n\nShared encouragement builds strength.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "Initial Enthusiasm",
-            description: "Lightness appears.",
+            type: 0,
+            name: "Initial Openness",
+            description: "Connection begins.",
           },
           {
             position: 2,
             type: 1,
             name: "Sharing",
-            description: "Communication grows.",
+            description: "Exchange develops.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Superficiality",
-            description: "Joy unstable.",
+            type: 1,
+            name: "Superficial Risk",
+            description: "Insincerity possible.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Sincerity",
-            description: "Relationships deepen.",
+            type: 0,
+            name: "Authenticity",
+            description: "Genuine contact.",
           },
           {
             position: 5,
             type: 1,
-            name: "Stable Joy",
-            description: "Lightness sustained.",
+            name: "Mutual Encouragement",
+            description: "Relationships strengthen.",
           },
           {
             position: 6,
-            type: 0,
-            name: "Excess",
-            description: "Carelessness harms.",
+            type: 1,
+            name: "Excess Lightness",
+            description: "Carelessness weakens depth.",
           },
         ],
       },
@@ -7276,106 +7383,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Rozptýlení",
         meaning:
-          "Rozptýlení znamená uvolnění napětí a rozpuštění překážek.\n\nPsychologicky jde o rozvolnění strachu.\n\nJednota vzniká odstraněním bariér.",
+          "Rozptýlení symbolizuje rozpuštění napětí a uvolnění ztuhlých struktur. To, co bylo pevně svázané, se začíná rozcházet.\n\nPsychologicky tento hexagram poukazuje na potřebu uvolnit rigidní postoje nebo emocionální bloky. Někdy je nutné rozpustit staré formy, aby vznikl prostor pro nový řád.\n\nRozptýlení nemusí znamenat chaos. Může být očistným procesem, který odstraňuje zbytečnou zátěž.\n\nHexagram učí vědomému uvolnění. Ne všechno, co se rozpadá, je ztrátou – někdy jde o nutnou transformaci.",
         oracle: {
-          interpretation: ["Uvolni napětí.", "Spojuj.", "Nehromad obavy."],
-
-          introspection: ["Co můžeš rozpustit?"],
+          interpretation: [
+            "Uvolni napětí.",
+            "Rozpusť to, co je příliš rigidní.",
+            "Vytvoř prostor pro nový začátek.",
+          ],
+          introspection: [
+            "Co držíš příliš pevně?",
+            "Kde je třeba uvolnit kontrolu?",
+            "Co se může rozpustit, aby vznikla lehkost?",
+          ],
         },
         anatomy:
-          "Rozpuštění přináší klid.\n\nJednota vzniká uvolněním.\n\nRovnováha je nutná.",
+          "Vítr nad Vodou vytváří obraz rozptylování mlhy nad hladinou. Pohyb rozrušuje stagnaci.\n\nEnergie proudí volněji.\n\nAnatomie hexagramu ukazuje proces rozpuštění starých struktur, aby vznikla obnova.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "První uvolnění",
-            description: "Napětí klesá.",
+            description: "Napětí začíná polevovat.",
           },
           {
             position: 2,
             type: 1,
-            name: "Spojení",
-            description: "Vztahy se obnovují.",
+            name: "Rozpuštění bariér",
+            description: "Staré bloky se rozpadají.",
           },
           {
             position: 3,
             type: 0,
             name: "Nejistota",
-            description: "Proces není dokončen.",
+            description: "Ztráta pevného rámce může vyvolat obavy.",
           },
           {
             position: 4,
             type: 0,
-            name: "Rozpouštění",
-            description: "Překážky mizí.",
+            name: "Očištění",
+            description: "Situace se vyjasňuje.",
           },
           {
             position: 5,
             type: 1,
-            name: "Jednota",
-            description: "Společný cíl se upevňuje.",
+            name: "Nové spojení",
+            description: "Vzniká zdravější struktura.",
           },
           {
             position: 6,
             type: 1,
-            name: "Ztráta směru",
-            description: "Přílišná rozvolněnost škodí.",
+            name: "Nadměrné rozpuštění",
+            description: "Přílišné uvolnění může vést ke ztrátě směru.",
           },
         ],
       },
       en: {
         name: "Dispersion",
         meaning:
-          "Dispersion signifies dissolving tension and obstacles.\n\nPsychologically, it reflects release of fear.\n\nUnity emerges through openness.",
+          "Dispersion represents the dissolving of tension and the breaking apart of rigid structures.\n\nPsychologically, it highlights the need to release fixed attitudes or emotional blocks. Sometimes old forms must dissolve to allow renewal.\n\nDispersion is not chaos, but cleansing.\n\nConscious release creates space for transformation.",
         oracle: {
           interpretation: [
             "Release tension.",
-
-            "Reconnect.",
-
-            "Do not cling to fear.",
+            "Dissolve rigidity.",
+            "Make room for renewal.",
           ],
-
-          introspection: ["What can you dissolve?"],
+          introspection: [
+            "What are you holding too tightly?",
+            "Where is control unnecessary?",
+            "What can dissolve to create lightness?",
+          ],
         },
         anatomy:
-          "Dispersion brings relief.\n\nUnity forms through openness.\n\nBalance maintains clarity.",
+          "Wind above Water disperses the surface and stirs stagnation.\n\nFlow becomes freer.\n\nDissolution prepares renewal.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "Initial Release",
-            description: "Tension decreases.",
+            description: "Tension loosens.",
           },
           {
             position: 2,
             type: 1,
-            name: "Reconnection",
-            description: "Relationships restored.",
+            name: "Barrier Dissolution",
+            description: "Old blocks break.",
           },
           {
             position: 3,
             type: 0,
             name: "Uncertainty",
-            description: "Process incomplete.",
+            description: "Loss of structure causes doubt.",
           },
           {
             position: 4,
             type: 0,
-            name: "Dissolving",
-            description: "Obstacles fade.",
+            name: "Clarification",
+            description: "Situation clears.",
           },
           {
             position: 5,
             type: 1,
-            name: "Unity",
-            description: "Purpose strengthened.",
+            name: "Healthy Reconnection",
+            description: "New structure forms.",
           },
           {
             position: 6,
             type: 1,
-            name: "Loss of Focus",
-            description: "Excess diffusion harms.",
+            name: "Excess Dissolution",
+            description: "Too much release leads to instability.",
           },
         ],
       },
@@ -7386,88 +7501,90 @@ export const hexagrams: Hexagram[] = [
     number: 60,
     chineseName: "節",
     romanization: "Jié",
-    elements: [5, 8],
-    lines: [0, 1, 0, 1, 1, 0],
+    elements: [8, 5],
+    lines: [1, 1, 0, 0, 1, 0],
     content: {
       cs: {
         name: "Omezení",
         meaning:
-          "Omezení symbolizuje strukturu a hranice.\n\nPsychologicky jde o disciplínu.\n\nHranice chrání energii.",
+          "Omezení symbolizuje stanovení hranic a vědomou regulaci. Struktura a pravidla dávají formu energii.\n\nPsychologicky tento hexagram poukazuje na potřebu sebekázně a jasných hranic. Bez omezení se energie rozptýlí.\n\nOmezení však musí být přiměřené. Přílišná restrikce dusí přirozený růst.\n\nHexagram učí rovnováze mezi svobodou a strukturou. Zdravé hranice vytvářejí stabilitu.",
         oracle: {
           interpretation: [
-            "Stanov si meze.",
-
-            "Respektuj pravidla.",
-
-            "Nepřeháněj omezení.",
+            "Stanov jasné hranice.",
+            "Reguluj energii rozumně.",
+            "Vyhýbej se extrémům.",
           ],
-
-          introspection: ["Kde potřebuješ jasné hranice?"],
+          introspection: [
+            "Kde potřebuješ více disciplíny?",
+            "Nejsou tvá omezení příliš přísná?",
+            "Jak můžeš vytvořit zdravou strukturu?",
+          ],
         },
         anatomy:
-          "Omezení stabilizuje.\n\nDisciplína chrání.\n\nPřehnanost omezuje růst.",
+          "Jezero nad Vodou vytváří obraz vody ohraničené břehy. Proud je veden, nikoli zastaven.\n\nStruktura dává směr.\n\nAnatomie hexagramu zdůrazňuje význam přiměřených hranic.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "První hranice",
-            description: "Limity vznikají.",
+            description: "Začíná regulace.",
           },
           {
             position: 2,
             type: 1,
             name: "Sebekontrola",
-            description: "Disciplína sílí.",
+            description: "Disciplína se upevňuje.",
           },
           {
             position: 3,
             type: 0,
-            name: "Nespokojenost",
-            description: "Omezení je testováno.",
+            name: "Napětí z omezení",
+            description: "Přílišná kontrola vyvolává odpor.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Pevná struktura",
-            description: "Řád se upevňuje.",
+            type: 0,
+            name: "Vyvážená struktura",
+            description: "Hranice jsou přiměřené.",
           },
           {
             position: 5,
             type: 1,
-            name: "Vyváženost",
-            description: "Omezení je zdravé.",
+            name: "Stabilita",
+            description: "Struktura přináší klid.",
           },
           {
             position: 6,
             type: 0,
-            name: "Přehnanost",
-            description: "Přílišná tvrdost škodí.",
+            name: "Přehnané restrikce",
+            description: "Nadměrné omezení vede k zablokování.",
           },
         ],
       },
       en: {
         name: "Limitation",
         meaning:
-          "Limitation represents structure and boundaries.\n\nPsychologically, it reflects discipline.\n\nBoundaries protect energy.",
+          "Limitation represents conscious boundaries and regulation. Structure shapes energy.\n\nPsychologically, it reflects self-discipline and clarity of limits.\n\nExcessive restriction stifles growth.\n\nHealthy boundaries create stability.",
         oracle: {
           interpretation: [
-            "Set limits.",
-
-            "Respect structure.",
-
-            "Avoid excess rigidity.",
+            "Set clear boundaries.",
+            "Regulate wisely.",
+            "Avoid extremes.",
           ],
-
-          introspection: ["Where are boundaries needed?"],
+          introspection: [
+            "Where is discipline needed?",
+            "Are your limits too rigid?",
+            "How can structure support growth?",
+          ],
         },
         anatomy:
-          "Limitation stabilizes.\n\nDiscipline protects.\n\nRigidity blocks growth.",
+          "Lake above Water shows flow contained by banks.\n\nStructure guides movement.\n\nBalanced boundaries sustain energy.",
         evolution: [
           {
             position: 1,
             type: 0,
             name: "Initial Boundary",
-            description: "Limits appear.",
+            description: "Regulation begins.",
           },
           {
             position: 2,
@@ -7478,26 +7595,26 @@ export const hexagrams: Hexagram[] = [
           {
             position: 3,
             type: 0,
-            name: "Resistance",
-            description: "Limits tested.",
+            name: "Tension",
+            description: "Restriction creates pressure.",
           },
           {
             position: 4,
-            type: 1,
-            name: "Firm Structure",
-            description: "Order established.",
+            type: 0,
+            name: "Balanced Structure",
+            description: "Limits are appropriate.",
           },
           {
             position: 5,
             type: 1,
-            name: "Balanced Restraint",
-            description: "Healthy limits.",
+            name: "Stability",
+            description: "Structure brings calm.",
           },
           {
             position: 6,
             type: 0,
-            name: "Rigidity",
-            description: "Excess restriction harms.",
+            name: "Over-Restriction",
+            description: "Too much control blocks vitality.",
           },
         ],
       },
@@ -7514,95 +7631,114 @@ export const hexagrams: Hexagram[] = [
       cs: {
         name: "Vnitřní pravda",
         meaning:
-          "Vnitřní pravda představuje upřímnost a důvěru.\n\nPsychologicky jde o soulad mezi slovem a činem.\n\nAutenticita vytváří důvěru.",
+          "Vnitřní pravda symbolizuje upřímnost, která vychází ze středu bytosti. Nejde o vnější deklarace, ale o hluboký soulad mezi myšlenkou, slovem a činem.\n\nPsychologicky tento hexagram poukazuje na autenticitu. Člověk, který jedná z vnitřní pravdy, nepotřebuje manipulovat ani přesvědčovat silou.\n\nDůvěra vzniká tam, kde je konzistence a otevřenost.\n\nHexagram učí, že skutečný vliv vychází ze srdce, nikoli z kontroly.",
         oracle: {
-          interpretation: ["Buď upřímný.", "Naslouchej sobě.", "Buduj důvěru."],
-
-          introspection: ["Jednáš v souladu se svým nitrem?"],
+          interpretation: [
+            "Jednej upřímně.",
+            "Naslouchej svému středu.",
+            "Buduj důvěru skrze autenticitu.",
+          ],
+          introspection: [
+            "Jednáš v souladu se svým vnitřním přesvědčením?",
+            "Kde můžeš být otevřenější?",
+            "Co znamená být pravdivý sám k sobě?",
+          ],
         },
         anatomy:
-          "Pravda vytváří spojení.\n\nIntegrita stabilizuje vztahy.\n\nSebeklam vede k rozpadu.",
+          "Jezero nad Větrem vytváří obraz otevřenosti, která proniká hluboko. Komunikace a citlivost se spojují.\n\nVnitřní stabilita umožňuje vnější důvěru.\n\nAnatomie hexagramu zdůrazňuje soulad mezi nitrem a vnějškem.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "První důvěra",
-            description: "Upřímnost začíná.",
+            type: 0,
+            name: "Zárodek důvěry",
+            description: "Upřímnost začíná uvnitř.",
           },
           {
             position: 2,
             type: 1,
-            name: "Sdílení",
-            description: "Vztah se prohlubuje.",
+            name: "Otevřenost",
+            description: "Autenticita se projevuje navenek.",
           },
           {
             position: 3,
-            type: 0,
-            name: "Pochybnost",
-            description: "Důvěra je testována.",
+            type: 1,
+            name: "Zkouška pravdivosti",
+            description: "Upřímnost je vystavena tlaku.",
           },
           {
             position: 4,
             type: 0,
-            name: "Vnitřní soulad",
-            description: "Jednota sílí.",
+            name: "Stabilní integrita",
+            description: "Vnitřní klid posiluje vztahy.",
           },
           {
             position: 5,
             type: 1,
-            name: "Silné jádro",
-            description: "Integrita vrcholí.",
+            name: "Vzájemná důvěra",
+            description: "Důvěra je oboustranná.",
           },
           {
             position: 6,
             type: 1,
-            name: "Sebeklam",
-            description: "Neupřímnost škodí.",
+            name: "Riziko iluze",
+            description: "Přehnaná důvěra může vést k naivitě.",
           },
         ],
       },
       en: {
         name: "Inner Truth",
         meaning:
-          "Inner Truth represents sincerity and trust.\n\nPsychologically, it reflects alignment between words and actions.\n\nAuthenticity builds connection.",
+          "Inner Truth represents sincerity arising from the center of one’s being. It is not about outward declarations but deep alignment between thought, word, and action.\n\nPsychologically, it reflects authenticity.\n\nTrust emerges from consistency.\n\nTrue influence comes from integrity.",
         oracle: {
-          interpretation: ["Be sincere.", "Listen within.", "Build trust."],
-
-          introspection: ["Are you aligned with yourself?"],
+          interpretation: [
+            "Act with sincerity.",
+            "Listen to your inner core.",
+            "Build trust through authenticity.",
+          ],
+          introspection: [
+            "Are you aligned with your values?",
+            "Where can you be more honest?",
+            "What does authenticity mean to you?",
+          ],
         },
         anatomy:
-          "Truth builds connection.\n\nIntegrity sustains relationships.\n\nDeception dissolves trust.",
+          "Lake above Wind combines openness with gentle penetration.\n\nInner alignment creates outer trust.\n\nIntegrity strengthens connection.",
         evolution: [
           {
             position: 1,
-            type: 1,
-            name: "Initial Trust",
-            description: "Sincerity begins.",
+            type: 0,
+            name: "Seed of Trust",
+            description: "Sincerity begins within.",
           },
           {
             position: 2,
             type: 1,
-            name: "Sharing",
-            description: "Connection deepens.",
+            name: "Openness",
+            description: "Authenticity expressed.",
           },
-          { position: 3, type: 0, name: "Doubt", description: "Trust tested." },
+          {
+            position: 3,
+            type: 1,
+            name: "Test of Truth",
+            description: "Integrity challenged.",
+          },
           {
             position: 4,
             type: 0,
-            name: "Inner Alignment",
-            description: "Harmony strengthens.",
+            name: "Stable Integrity",
+            description: "Inner calm strengthens bonds.",
           },
           {
             position: 5,
             type: 1,
-            name: "Strong Core",
-            description: "Integrity peaks.",
+            name: "Mutual Trust",
+            description: "Trust becomes reciprocal.",
           },
           {
             position: 6,
             type: 1,
-            name: "Self-Deception",
-            description: "Dishonesty harms.",
+            name: "Naivety Risk",
+            description: "Blind trust may mislead.",
           },
         ],
       },
@@ -7613,118 +7749,120 @@ export const hexagrams: Hexagram[] = [
     number: 62,
     chineseName: "小過",
     romanization: "Xiǎo Guò",
-    elements: [3, 7],
+    elements: [7, 3],
     lines: [0, 0, 1, 1, 0, 0],
     content: {
       cs: {
         name: "Převaha malého",
         meaning:
-          "Převaha malého upozorňuje na důležitost detailu.\n\nPsychologicky jde o jemné úpravy.\n\nMalé kroky mají význam.",
+          "Převaha malého symbolizuje situaci, kdy velké kroky nejsou vhodné. Malé, přesné činy mají větší význam než odvážné tahy.\n\nPsychologicky tento hexagram poukazuje na detail, opatrnost a citlivost.\n\nNení čas na dramatické změny.\n\nHexagram učí, že někdy je síla v jemnosti a přesnosti.",
         oracle: {
           interpretation: [
-            "Buď pozorný k detailům.",
-
-            "Neusiluj o velké skoky.",
-
+            "Zaměř se na detaily.",
+            "Neusiluj o velké průlomy.",
             "Postupuj opatrně.",
           ],
-
-          introspection: ["Co vyžaduje jemnou úpravu?"],
+          introspection: [
+            "Kde stačí malé kroky?",
+            "Neusiluješ o příliš mnoho?",
+            "Jak můžeš jednat citlivěji?",
+          ],
         },
         anatomy:
-          "Malé kroky budují stabilitu.\n\nDetail rozhoduje.\n\nPřehnanost škodí.",
+          "Hora nad Hromem vytváří obraz malého pohybu pod pevnou strukturou.\n\nSíla je omezená.\n\nOpatrnost je klíčová.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Malý krok",
-            description: "Začátek je nenápadný.",
+            name: "Malý začátek",
+            description: "Drobné kroky.",
           },
           {
             position: 2,
             type: 0,
-            name: "Opatrnost",
-            description: "Rovnováha je křehká.",
+            name: "Stabilita",
+            description: "Omezení je respektováno.",
           },
           {
             position: 3,
             type: 1,
-            name: "Přehnaný zásah",
-            description: "Velké kroky škodí.",
+            name: "Pokušení přehánět",
+            description: "Hrozí překročení míry.",
           },
           {
             position: 4,
             type: 1,
-            name: "Stabilizace",
-            description: "Malé změny pomáhají.",
+            name: "Vyváženost",
+            description: "Malé kroky přinášejí jistotu.",
           },
           {
             position: 5,
             type: 0,
-            name: "Pečlivost",
-            description: "Detail rozhoduje.",
+            name: "Citlivost",
+            description: "Vnímání detailů.",
           },
           {
             position: 6,
             type: 0,
-            name: "Překročení",
-            description: "Přílišný zásah narušuje.",
+            name: "Překročení hranice",
+            description: "Velké gesto může způsobit potíže.",
           },
         ],
       },
       en: {
         name: "Preponderance of the Small",
         meaning:
-          "Preponderance of the Small emphasizes attention to detail.\n\nPsychologically, it reflects subtle adjustments.\n\nSmall actions matter.",
+          "This hexagram suggests that small, precise actions are appropriate, not grand gestures.\n\nPsychologically, it emphasizes detail and caution.\n\nIt is not time for dramatic moves.\n\nStrength lies in subtlety.",
         oracle: {
           interpretation: [
-            "Focus on details.",
-
-            "Avoid big leaps.",
-
+            "Focus on small steps.",
+            "Avoid dramatic action.",
             "Proceed carefully.",
           ],
-
-          introspection: ["What needs subtle refinement?"],
+          introspection: [
+            "Where are small actions sufficient?",
+            "Are you overreaching?",
+            "How can you be more precise?",
+          ],
         },
         anatomy:
-          "Small steps ensure stability.\n\nDetails matter.\n\nExcess disrupts.",
+          "Mountain above Thunder shows restrained movement.\n\nCaution governs action.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Small Step",
-            description: "Subtle beginning.",
+            name: "Small Beginning",
+            description: "Minor steps.",
           },
           {
             position: 2,
             type: 0,
-            name: "Caution",
-            description: "Balance delicate.",
+            name: "Stability",
+            description: "Limits respected.",
           },
           {
             position: 3,
             type: 1,
-            name: "Excess Action",
-            description: "Too much harms.",
+            name: "Excess Risk",
+            description: "Temptation to overreach.",
           },
           {
             position: 4,
             type: 1,
-            name: "Stabilization",
-            description: "Minor changes help.",
+            name: "Balance",
+            description: "Measured progress.",
           },
           {
             position: 5,
             type: 0,
-            name: "Carefulness",
-            description: "Detail decisive.",
+            name: "Sensitivity",
+            description: "Attention to detail.",
           },
           {
             position: 6,
             type: 0,
-            name: "Overreach",
-            description: "Excess disturbs.",
+            name: "Boundary Crossing",
+            description: "Overdoing creates problems.",
           },
         ],
       },
@@ -7735,112 +7873,120 @@ export const hexagrams: Hexagram[] = [
     number: 63,
     chineseName: "既濟",
     romanization: "Jì Jì",
-    elements: [5, 6],
+    elements: [6, 5],
     lines: [1, 0, 1, 0, 1, 0],
     content: {
       cs: {
-        name: "Po dokončení",
+        name: "Dokončení",
         meaning:
-          "Po dokončení symbolizuje stav, kdy je cíle dosaženo.\n\nPsychologicky jde o krátký moment rovnováhy.\n\nStav není trvalý.",
+          "Dokončení symbolizuje stav po úspěšném završení. Věci jsou na svém místě.\n\nPsychologicky jde o okamžik rovnováhy po náročném období.\n\nTento stav je však křehký.\n\nHexagram učí bdělosti i po dosažení cíle.",
         oracle: {
-          interpretation: ["Zůstaň bdělý.", "Nepolevuj.", "Udržuj rovnováhu."],
-
-          introspection: ["Co je třeba dále udržovat?"],
+          interpretation: [
+            "Udržuj rovnováhu.",
+            "Nepolevuj v pozornosti.",
+            "Dokončení je začátek nové fáze.",
+          ],
+          introspection: [
+            "Co jsi právě dokončil?",
+            "Jak udržíš stabilitu?",
+            "Co následuje dál?",
+          ],
         },
         anatomy:
-          "Dokončení je dočasné.\n\nBdělost chrání stav.\n\nNedbalost vede k obratu.",
+          "Voda nad Ohněm vytváří obraz vyvážených protikladů.\n\nHarmonie je dosažena.\n\nBdělost je nutná.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Úspěšný začátek",
-            description: "Stav je stabilní.",
+            name: "Úspěšný start",
+            description: "Začátek je stabilní.",
           },
           {
             position: 2,
             type: 0,
-            name: "Opatrnost",
-            description: "Rovnováha křehká.",
+            name: "Rovnováha",
+            description: "Věci jsou v pořádku.",
           },
           {
             position: 3,
             type: 1,
-            name: "Narušení",
-            description: "Hrozí rozpad.",
+            name: "Napětí",
+            description: "Křehkost rovnováhy.",
           },
           {
             position: 4,
             type: 0,
-            name: "Obnova",
-            description: "Stabilita se vrací.",
+            name: "Udržení",
+            description: "Stav je stabilizován.",
           },
           {
             position: 5,
             type: 1,
-            name: "Udržení",
-            description: "Rovnováha pevná.",
+            name: "Vyvrcholení",
+            description: "Úspěch je plný.",
           },
           {
             position: 6,
             type: 0,
-            name: "Zanedbání",
-            description: "Nepozornost škodí.",
+            name: "Obrat",
+            description: "Cyklus se chýlí ke změně.",
           },
         ],
       },
       en: {
         name: "After Completion",
         meaning:
-          "After Completion signifies achieved order.\n\nPsychologically, it reflects temporary balance.\n\nCompletion is not permanent.",
+          "After Completion represents a state of achieved balance.\n\nPsychologically, it is the calm after effort.\n\nYet this state is fragile.\n\nVigilance is required.",
         oracle: {
           interpretation: [
-            "Remain vigilant.",
-
-            "Do not relax too soon.",
-
             "Maintain balance.",
+            "Stay attentive.",
+            "Completion begins a new phase.",
           ],
-
-          introspection: ["What requires continued care?"],
+          introspection: [
+            "What has been completed?",
+            "How will you sustain balance?",
+            "What comes next?",
+          ],
         },
         anatomy:
-          "Completion is temporary.\n\nVigilance preserves order.\n\nNeglect causes reversal.",
+          "Water above Fire symbolizes balanced opposites.\n\nHarmony achieved.\n\nAwareness must continue.",
         evolution: [
           {
             position: 1,
             type: 1,
-            name: "Successful Start",
-            description: "Stability present.",
+            name: "Stable Beginning",
+            description: "Order established.",
           },
           {
             position: 2,
             type: 0,
-            name: "Caution",
-            description: "Balance delicate.",
+            name: "Balance",
+            description: "Harmony present.",
           },
           {
             position: 3,
             type: 1,
-            name: "Disturbance",
-            description: "Instability possible.",
+            name: "Tension",
+            description: "Fragility emerges.",
           },
           {
             position: 4,
             type: 0,
-            name: "Recovery",
-            description: "Order restored.",
+            name: "Maintenance",
+            description: "Balance sustained.",
           },
           {
             position: 5,
             type: 1,
-            name: "Maintenance",
-            description: "Balance upheld.",
+            name: "Fullness",
+            description: "Success complete.",
           },
           {
             position: 6,
             type: 0,
-            name: "Neglect",
-            description: "Carelessness harms.",
+            name: "Turning Point",
+            description: "Cycle shifts.",
           },
         ],
       },
@@ -7851,116 +7997,120 @@ export const hexagrams: Hexagram[] = [
     number: 64,
     chineseName: "未濟",
     romanization: "Wèi Jì",
-    elements: [6, 5],
+    elements: [5, 6],
     lines: [0, 1, 0, 1, 0, 1],
     content: {
       cs: {
         name: "Před dokončením",
         meaning:
-          "Před dokončením znamená, že proces ještě není uzavřen.\n\nPsychologicky jde o fázi těsně před cílem.\n\nOpatrnost je zásadní.",
+          "Před dokončením symbolizuje situaci těsně před vyřešením. Cíl je blízko, ale ještě není dosažen.\n\nPsychologicky jde o období napětí a očekávání.\n\nPřílišná netrpělivost může vše narušit.\n\nHexagram učí soustředění a opatrnosti v poslední fázi.",
         oracle: {
           interpretation: [
-            "Nevzdávej se těsně před cílem.",
-
-            "Buď trpělivý.",
-
-            "Dokonči proces vědomě.",
+            "Zachovej soustředění.",
+            "Nespěchej.",
+            "Dokonči vědomě.",
           ],
-
-          introspection: ["Co zbývá dotáhnout?"],
+          introspection: [
+            "Jsi opravdu připraven?",
+            "Neuspěcháváš závěr?",
+            "Co ještě zbývá dokončit?",
+          ],
         },
         anatomy:
-          "Proces je téměř hotov.\n\nTrpělivost přináší dokončení.\n\nUnáhlenost vše narušuje.",
+          "Oheň nad Vodou vytváří obraz nevyvážených sil. Harmonie ještě není dosažena.\n\nNapětí je patrné.\n\nVyžaduje trpělivost.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Nejistý začátek",
-            description: "Proces je otevřený.",
+            name: "Nejistý start",
+            description: "Začátek je křehký.",
           },
           {
             position: 2,
             type: 1,
-            name: "Zkouška",
-            description: "Vytrvalost je nutná.",
+            name: "Naděje",
+            description: "Směr je jasnější.",
           },
           {
             position: 3,
             type: 0,
-            name: "Zdržení",
-            description: "Tempo zpomaluje.",
+            name: "Napětí",
+            description: "Hrozí předčasný krok.",
           },
           {
             position: 4,
             type: 1,
-            name: "Obnovená energie",
-            description: "Síla se vrací.",
+            name: "Stabilizace",
+            description: "Situace se zlepšuje.",
           },
           {
             position: 5,
             type: 0,
-            name: "Těsně před cílem",
-            description: "Opatrnost klíčová.",
+            name: "Připravenost",
+            description: "Cíl je blízko.",
           },
           {
             position: 6,
             type: 1,
-            name: "Unáhlenost",
-            description: "Předčasné jednání škodí.",
+            name: "Předčasné uspokojení",
+            description: "Spěch může narušit výsledek.",
           },
         ],
       },
       en: {
         name: "Before Completion",
         meaning:
-          "Before Completion signifies unfinished process.\n\nPsychologically, it reflects being near the goal.\n\nCaution is crucial.",
+          "Before Completion represents a situation nearing resolution, yet not finished.\n\nPsychologically, it reflects tension and anticipation.\n\nImpatience can disrupt progress.\n\nFocus and care are essential.",
         oracle: {
           interpretation: [
-            "Do not give up near the finish.",
-            "Be patient.",
+            "Stay focused.",
+            "Avoid haste.",
             "Complete consciously.",
           ],
-
-          introspection: ["What remains unfinished?"],
+          introspection: [
+            "Are you truly ready?",
+            "Are you rushing the ending?",
+            "What remains unfinished?",
+          ],
         },
         anatomy:
-          "Completion is near.\n\nPatience ensures success.\n\nHaste disrupts fulfillment.",
+          "Fire above Water shows imbalance.\n\nHarmony not yet achieved.\n\nPatience required.",
         evolution: [
           {
             position: 1,
             type: 0,
-            name: "Uncertain Beginning",
-            description: "Process open.",
+            name: "Fragile Start",
+            description: "Unstable beginning.",
           },
           {
             position: 2,
             type: 1,
-            name: "Trial",
-            description: "Perseverance required.",
+            name: "Hope",
+            description: "Direction clearer.",
           },
           {
             position: 3,
             type: 0,
-            name: "Delay",
-            description: "Progress slows.",
+            name: "Tension",
+            description: "Risk of premature action.",
           },
           {
             position: 4,
             type: 1,
-            name: "Renewed Energy",
-            description: "Strength returns.",
+            name: "Stabilization",
+            description: "Conditions improve.",
           },
           {
             position: 5,
             type: 0,
             name: "Near Completion",
-            description: "Caution essential.",
+            description: "Goal close.",
           },
           {
             position: 6,
             type: 1,
-            name: "Premature Action",
-            description: "Haste harms.",
+            name: "Premature Satisfaction",
+            description: "Haste disrupts outcome.",
           },
         ],
       },
