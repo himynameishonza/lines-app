@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, Platform } from "react-native";
 import TopNavigationBarHomeScreen from "../components/navbars/TopNavigationBarHomeScreen";
 import EmptyState from "../components/readingList/EmptyState";
 import LoadingState from "../components/readingList/LoadingState";
@@ -103,39 +103,40 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
       ) : readings.length === 0 ? (
         <EmptyState  />
       ) : (
-        <View className="flex-1 border">
-          <ScrollView className="flex-1 px-6 pt-32" contentContainerStyle={{ paddingBottom: 80, flexGrow: 1 }}>
-            {Object.entries(groupedReadings).map(([dateLabel, dateReadings]) => (
-              <View key={dateLabel} className="mb-6">
-                <ReadingListDateHeader dateLabel={dateLabel}/>
-                
-                {dateReadings.map((reading) => {
-                  const hexagram = getHexagram(reading.hexagramId);
-                  if (!hexagram) return null;
+        <ScrollView 
+          className="flex-1 px-6 pt-32" 
+          contentContainerStyle={{ paddingBottom: Platform.OS === 'android' ? 180 : 80 }}
+        >
+          {Object.entries(groupedReadings).map(([dateLabel, dateReadings]) => (
+            <View key={dateLabel} className="mb-6">
+              <ReadingListDateHeader dateLabel={dateLabel}/>
+              
+              {dateReadings.map((reading) => {
+                const hexagram = getHexagram(reading.hexagramId);
+                if (!hexagram) return null;
 
-                  return (
-                    <ReadingListItem
-                      key={reading.id}
-                      reading={reading}
-                      hexagram={hexagram}
-                      onPress={() => onReadingPress(reading.id)}
-                      onDelete={() => handleDeleteRequest(reading.id)}
-                      onRegisterClose={(callback) => registerCloseCallback(reading.id, callback)}
-                      onUnregisterClose={() => unregisterCloseCallback(reading.id)}
-                      onCloseOthers={() => {
-                        Object.entries(closeSwipeCallbacks.current).forEach(([id, callback]) => {
-                          if (id !== reading.id) callback();
-                        });
-                      }}
-                      hasAnyOpen={hasAnyOpen}
-                      t={t}
-                    />
-                  );
-                })}
-              </View>
-            ))}
-          </ScrollView>
-        </View>
+                return (
+                  <ReadingListItem
+                    key={reading.id}
+                    reading={reading}
+                    hexagram={hexagram}
+                    onPress={() => onReadingPress(reading.id)}
+                    onDelete={() => handleDeleteRequest(reading.id)}
+                    onRegisterClose={(callback) => registerCloseCallback(reading.id, callback)}
+                    onUnregisterClose={() => unregisterCloseCallback(reading.id)}
+                    onCloseOthers={() => {
+                      Object.entries(closeSwipeCallbacks.current).forEach(([id, callback]) => {
+                        if (id !== reading.id) callback();
+                      });
+                    }}
+                    hasAnyOpen={hasAnyOpen}
+                    t={t}
+                  />
+                );
+              })}
+            </View>
+          ))}
+        </ScrollView>
       )}
       <LinearGradient
               colors={[

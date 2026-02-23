@@ -127,14 +127,6 @@ export default function CoinTossScreen({
       h.lines[5] === lines[5]
     );
     
-    // Debug: log if hexagram not found
-    if (!foundHexagram) {
-      console.log('Hexagram not found!');
-      console.log('Lines:', lines);
-      console.log('Lower trigram:', lowerTrigram?.id, lowerTrigram?.content.en.name);
-      console.log('Upper trigram:', upperTrigram?.id, upperTrigram?.content.en.name);
-    }
-    
     return foundHexagram;
   };
 
@@ -227,7 +219,7 @@ export default function CoinTossScreen({
           <View className="flex flex-row justify-center gap-x-12">
             <View className="flex items-center">
               <GeistMonoText className="pb-2 text-text/50" variant="medium">
-                Dolní trigram
+                {t('coinToss.lowerTrigram')}
               </GeistMonoText>
               <HexagramSymbol 
                 size={64} 
@@ -241,7 +233,7 @@ export default function CoinTossScreen({
             </View>
             <View className="flex items-center">
               <GeistMonoText className="pb-2 text-text/50" variant="medium">
-                Horní trigram
+                {t('coinToss.upperTrigram')}
               </GeistMonoText>
               <HexagramSymbol 
                 size={64} 
@@ -261,45 +253,6 @@ export default function CoinTossScreen({
           </View>
         </View>
         <View className="flex gap-y-6">
-          {/* <View className="flex items-center flex-row justify-between px-4">
-            <View className="flex flex-col gap-y-2">
-              <View className="w-20 h-20 rounded-full border border-text/20 bg-text/5 items-center justify-center">
-                {coinValues.length > 0 && (
-                  <GeistMonoText variant="bold" className="text-text text-2xl">
-                    {coinValues[0]}
-                  </GeistMonoText>
-                )}
-              </View>
-              <GeistMonoText variant="bold" className="text-center text-lg text-text/50">
-                {coinValues.length > 0 ? (coinValues[0] === 2 ? t("coinToss.heads") : t("coinToss.tails")) : "???"}
-              </GeistMonoText>
-            </View>
-            
-            <View className="flex flex-col gap-y-2">
-              <View className="w-20 h-20 rounded-full border border-text/20 bg-text/5 items-center justify-center">
-                {coinValues.length > 0 && (
-                  <GeistMonoText variant="bold" className="text-text text-2xl">
-                    {coinValues[1]}
-                  </GeistMonoText>
-                )}
-              </View>
-              <GeistMonoText variant="bold" className="text-center text-lg text-text/50">
-                {coinValues.length > 0 ? (coinValues[1] === 2 ? t("coinToss.heads") : t("coinToss.tails")) : "???"}
-              </GeistMonoText>
-            </View>
-            <View className="flex flex-col gap-y-2">
-              <View className="w-20 h-20 rounded-full border border-text/20 bg-text/5 items-center justify-center">
-                {coinValues.length > 0 && (
-                  <GeistMonoText variant="bold" className="text-text text-2xl">
-                    {coinValues[2]}
-                  </GeistMonoText>
-                )}
-              </View>
-              <GeistMonoText variant="bold" className="text-center text-lg text-text/50">
-                {coinValues.length > 0 ? (coinValues[2] === 2 ? t("coinToss.heads") : t("coinToss.tails")) : "???"}
-              </GeistMonoText>
-            </View>
-          </View> */}
           {currentLine >= 6 ? (
             // Show hexagram name when complete or error message
             <View className="items-center py-8">
@@ -314,7 +267,7 @@ export default function CoinTossScreen({
                 </>
               ) : (
                 <GeistMonoText className="text-text/50 text-base text-center">
-                  Tento hexagram zatím není v databázi
+                  {t('coinToss.hexagramNotFound')}
                 </GeistMonoText>
               )}
             </View>

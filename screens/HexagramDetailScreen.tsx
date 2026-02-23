@@ -9,6 +9,7 @@ import HexagramSymbol from "../components/HexagramSymbol";
 import { trigrams } from "../data/trigrams";
 import i18n from "../i18n/config";
 import { getYinYangTranslation } from "../data/yinyang";
+import { useTranslation } from "react-i18next";
 
 interface HexagramDetailScreenProps {
   hexagram: Hexagram;
@@ -25,6 +26,7 @@ export default function HexagramDetailScreen({
   showHomeButton = false,
   changingLines = [],
 }: HexagramDetailScreenProps) {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<HexagramDetailTab>("meaning");
   const scrollViewRef = useRef<ScrollView>(null);
 
@@ -53,7 +55,7 @@ export default function HexagramDetailScreen({
                 variant="bold"
                 className="text-text text-base py-2"
               >
-                Výklad
+                {t('detail.interpretation')}
               </GeistMonoText>
               {oracleContent.interpretation.map((text, index) => (
                 <GeistMonoText key={index} className="text-text text-sm leading-5 py-4">
@@ -67,7 +69,7 @@ export default function HexagramDetailScreen({
                   variant="bold"
                   className="text-text text-base py-2"
                 >
-                  Introspekce
+                  {t('detail.introspection')}
                 </GeistMonoText>
                 {oracleContent.introspection.map((text, index) => (
                   <GeistMonoText
@@ -165,7 +167,7 @@ export default function HexagramDetailScreen({
                   variant="bold"
                   className="text-text text-base py-2"
                 >
-                  Spodní trigram
+                  {t('detail.lowerTrigram')}
                 </GeistMonoText>
                 <View className="flex-row items-center space-x-4">
                   <HexagramSymbol
@@ -195,7 +197,7 @@ export default function HexagramDetailScreen({
                   variant="bold"
                   className="text-text text-base py-2"
                 >
-                  Horní trigram
+                  {t('detail.upperTrigram')}
                 </GeistMonoText>
                 <View className="flex-row items-center space-x-4">
                   <HexagramSymbol
@@ -241,11 +243,11 @@ export default function HexagramDetailScreen({
                   variant="bold"
                   className="text-text text-base mb-4"
                 >
-                  Proměnné čáry
+                  {t('evolution.changingLines')}
                 </GeistMonoText>
 
                 <GeistMonoText className="text-text text-sm">
-                  Hexagram obsahuje měnící se čáry. Zvýrazněné čáry představují body transformace v tomto čtení.
+                  {t('evolution.changingLinesDescription')}
                 </GeistMonoText>
               </View>
             )}
@@ -256,7 +258,7 @@ export default function HexagramDetailScreen({
                 variant="bold"
                 className="text-text text-base mb-4 pt-6"
               >
-                Současná situace
+                {t('evolution.present')}
               </GeistMonoText>}
               {hexagram.content[i18n.language as "cs" | "en"].evolution.map(
                 (item) => {
@@ -284,7 +286,7 @@ export default function HexagramDetailScreen({
                         className="text-text text-sm"
                         variant="bold"
                       >
-                        {item.position}. linie - {item.name}
+                        {item.position}. {t('detail.line')} - {item.name}
                       </GeistMonoText>
 
                       <GeistMonoText className="text-text text-sm leading-7">
@@ -304,7 +306,7 @@ export default function HexagramDetailScreen({
                     variant="bold"
                     className="text-text text-base mb-4"
                   >
-                    Budoucnost
+                    {t('evolution.future')}
                   </GeistMonoText>
                 </View>
 

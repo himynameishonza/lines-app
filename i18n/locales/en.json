@@ -8,12 +8,18 @@
     "meaning": "Meaning",
     "oracle": "Oracle",
     "anatomy": "Anatomy",
-    "evolution": "Evolution"
+    "evolution": "Evolution",
+    "lowerTrigram": "Lower Trigram",
+    "upperTrigram": "Upper Trigram",
+    "interpretation": "Interpretation",
+    "introspection": "Introspection",
+    "line": "line"
   },
   "evolution": {
     "changingLines": "Changing Lines",
     "present": "Present Situation",
-    "future": "Future / Transformation"
+    "future": "Future",
+    "changingLinesDescription": "The hexagram contains changing lines. Highlighted lines represent points of transformation in this reading."
   },
   "settings": {
     "title": "Settings",
@@ -113,7 +119,10 @@
     "heads": "Heads",
     "tails": "Tails",
     "lastToss": "Last Toss",
-    "sum": "Sum"
+    "sum": "Sum",
+    "lowerTrigram": "Lower Trigram",
+    "upperTrigram": "Upper Trigram",
+    "hexagramNotFound": "This hexagram is not yet in the database"
   },
   "deleteModal": {
     "title": "Delete Reading?",

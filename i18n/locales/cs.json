@@ -8,12 +8,18 @@
     "meaning": "Význam",
     "oracle": "Orákulum",
     "anatomy": "Anatomie",
-    "evolution": "Vývoj"
+    "evolution": "Vývoj",
+    "lowerTrigram": "Spodní trigram",
+    "upperTrigram": "Horní trigram",
+    "interpretation": "Výklad",
+    "introspection": "Introspekce",
+    "line": "linie"
   },
   "evolution": {
     "changingLines": "Proměnné čáry",
     "present": "Současná situace",
-    "future": "Budoucnost / Transformace"
+    "future": "Budoucnost",
+    "changingLinesDescription": "Hexagram obsahuje měnící se linie. Zvýrazněné linie představují body transformace v tomto čtení."
   },
   "settings": {
     "title": "Nastavení",
@@ -117,7 +123,10 @@
     "heads": "Hlava",
     "tails": "Orel",
     "lastToss": "Poslední hod",
-    "sum": "Součet"
+    "sum": "Součet",
+    "lowerTrigram": "Dolní trigram",
+    "upperTrigram": "Horní trigram",
+    "hexagramNotFound": "Tento hexagram zatím není v databázi"
   },
   "deleteModal": {
     "title": "Smazat čtení?",
