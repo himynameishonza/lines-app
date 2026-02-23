@@ -133,5 +133,8 @@
     "message": "Tato akce je nevratná. Čtení bude trvale odstraněno.",
     "cancel": "Zrušit",
     "confirm": "Smazat"
+  },
+  "share": {
+    "error": "Nelze sdílet"
   }
 }

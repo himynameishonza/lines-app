@@ -129,5 +129,8 @@
     "message": "This action cannot be undone. The reading will be permanently removed.",
     "cancel": "Cancel",
     "confirm": "Delete"
+  },
+  "share": {
+    "error": "Unable to share"
   }
 }

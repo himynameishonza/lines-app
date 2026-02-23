@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { View } from 'react-native';
+import { View, Share, Alert } from 'react-native';
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useState, useEffect } from 'react';
 import { useFonts, BodoniModa_400Regular, BodoniModa_500Medium, BodoniModa_600SemiBold, BodoniModa_700Bold } from '@expo-google-fonts/bodoni-moda';
 import {GeistMono_400Regular, GeistMono_500Medium, GeistMono_700Bold} from "@expo-google-fonts/geist-mono"
 import * as SplashScreen from 'expo-splash-screen';
 import './i18n/config';
+import i18n from './i18n/config';
 import HomeScreen from './screens/HomeScreen';
 import HexagramsScreen from './screens/HexagramsScreen';
 import HexagramDetailScreen from './screens/HexagramDetailScreen';
@@ -96,6 +97,46 @@ function AppContent() {
     }
   };
 
+  const handleShare = async () => {
+    console.log('handleShare called');
+    if (!selectedHexagram) {
+      console.log('No hexagram selected');
+      return;
+    }
+
+    const hasChangingLines = changingLines.some(line => line === true);
+    const language = i18n.language as 'en' | 'cs';
+    console.log('About to share:', { hasChangingLines, language });
+    
+    // Build share text
+    let shareText = `${selectedHexagram.content[language].name}\n`;
+    shareText += `${selectedHexagram.chineseName} · ${selectedHexagram.romanization}\n\n`;
+    shareText += `${selectedHexagram.content[language].meaning}\n`;
+    
+    if (hasChangingLines) {
+      shareText += `\n--- ${i18n.t('evolution.changingLines')} ---\n`;
+      selectedHexagram.content[language].evolution.forEach((line) => {
+        if (changingLines[line.position - 1]) {
+          shareText += `\n${line.position}. ${i18n.t('detail.line')} - ${line.name}\n${line.description}\n`;
+        }
+      });
+    }
+
+    try {
+      const result = await Share.share({
+        message: shareText,
+      });
+      
+      if (result.action === Share.dismissedAction) {
+        // User dismissed the share dialog
+        console.log('Share dismissed');
+      }
+    } catch (error) {
+      console.error('Share error:', error);
+      Alert.alert(i18n.t('share.error'), error instanceof Error ? error.message : 'Unknown error');
+    }
+  };
+
   const renderScreen = () => {
     // Show new reading screen
     if (showNewReading) {
@@ -126,6 +167,7 @@ function AppContent() {
         <HexagramDetailScreen
           hexagram={selectedHexagram}
           onBack={handleHomeFromDetail}
+          onShare={handleShare}
           showHomeButton={navigationSource === 'dashboard'}
           changingLines={changingLines}
         />
