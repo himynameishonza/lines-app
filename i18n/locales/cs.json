@@ -24,21 +24,20 @@
   "settings": {
     "title": "Nastavení",
     "language": "Jazyk aplikace",
-    "eink":"E-ink mód",
-    "version":"Verze",
+    "version": "Verze",
     "sortBy": "Řazení hexagramů",
-     "sort": {
+    "sort": {
       "fuSi": "Sekvence Fu Si",
       "wen": "Sekvence krále Wena"
     },
     "viewMode": "Výchozí rozložení knihy",
-    "viewModes":{
-     "carousel": "Karousel",
-     "list": "Seznam",
-     "grid": "Mřížka"
+    "viewModes": {
+      "carousel": "Karousel",
+      "list": "Seznam",
+      "grid": "Mřížka"
     },
     "theme": "Vizuální téma knihy",
-    "themes":{
+    "themes": {
       "default": "Výchozí",
       "minimal": "Minimalistické",
       "patterns": "Vzory"
@@ -55,7 +54,8 @@
     "subtitle": "Vaše cesta I-ťing",
     "empty": {
       "title": "Zatím žádná čtení",
-      "subtitle": "Začněte své první čtení a vydejte se na cestu poznání."
+      "subtitle": "Začněte své první čtení a vydejte se na cestu poznání!",
+      "addNew": "Přidat nové čtení"
     },
     "loading": {
       "title": "Načítání čtení",
@@ -71,41 +71,18 @@
       "coinToss": "Metoda hodu mincí"
     }
   },
-  "hexagrams":{
+  "hexagrams": {
     "search": "Hledat v knize hexagramů...",
-    "noResultsTitle":"Žádné výsledky",
-    "noResultsDescription":"Zkuste vyhledat jiný výraz"
+    "noResultsTitle": "Žádné výsledky",
+    "noResultsDescription": "Zkuste vyhledat jiný výraz"
   },
   "newReading": {
     "title": "Nové čtení",
     "guide": "Jak položit otázku?",
     "guideText": "Zaměřte se na otevřené otázky, které vedou k zamyšlení, spíše než na odpovědi typu ano/ne. Formulujte svou otázku jasně a s úmyslem. Kniha proměn nejlépe odpovídá na otázky týkající se pochopení situací, načasování a osobního růstu.",
-    "exampleBad1": "Budu bohatý/bohatá?",
-    "exampleGood1": "Na co bych se měl zaměřit, abych vytvořil větší stabilitu a hojnost?",
-    "exampleBad2": "Mám se rozejít s partnerem/partnerkou?",
-    "exampleGood2": "Jaký přístup mi pomůže jednat správně v tomto vztahu?",
     "placeholder": "Položte svou otázku...",
-    "randomHexagram": "Náhodný hexagram",
-    "randomWithChanging": "Náhodný s proměnou",
     "coinToss": "Vytvořit hexagram",
-    "close": "Zavřít",
-    "next": "Další krok",
-    "back": "Zpět",
-    "step1": {
-      "title": "Jak se ptát?",
-      "subtitle": "Průvodce smysluplnými otázkami"
-    },
-    "step2": {
-      "title": "Položte otázku",
-      "subtitle": "Vaše otázka"
-    },
-    "step3": {
-      "title": "Vyberte metodu",
-      "subtitle": "Zvolte způsob čtení",
-      "randomDescription": "Získejte okamžité čtení hexagramu",
-      "randomWithChangingDescription": "Náhodný hexagram s transformací",
-      "coinTossDescription": "Tradiční metoda s virtuálními mincemi"
-    }
+    "question": "Položte otázku"
   },
   "coinToss": {
     "title": "Hod mincí",

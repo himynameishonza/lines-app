@@ -24,16 +24,15 @@
   "settings": {
     "title": "Settings",
     "language": "App language",
-    "eink":"E-ink mode",
-    "version":"Version",
+    "version": "Version",
     "viewMode": "Default book layout",
-    "viewModes":{
-     "carousel": "Carousel",
-     "list": "List",
-     "grid": "Grid"
+    "viewModes": {
+      "carousel": "Carousel",
+      "list": "List",
+      "grid": "Grid"
     },
     "theme": "Book theme",
-    "themes":{
+    "themes": {
       "default": "Default",
       "minimal": "Minimalist",
       "patterns": "Patterns"
@@ -46,10 +45,10 @@
     "coffee": "This app is free and developed independently in spare time. If it brings you value, you can support its development with a small contribution — perhaps for a coffee.",
     "contribute": "Contribute"
   },
-  "hexagrams":{
+  "hexagrams": {
     "search": "Search in book of hexagrams...",
-     "noResultsTitle":"No results",
-    "noResultsDescription":"Try a different search term"
+    "noResultsTitle": "No results",
+    "noResultsDescription": "Try a different search term"
   },
   "home": {
     "greeting": {
@@ -60,7 +59,8 @@
     "subtitle": "Your I Ching Journey",
     "empty": {
       "title": "No readings yet",
-      "subtitle": "Start your first reading to begin your journey"
+      "subtitle": "Start your first reading to begin your journey!",
+      "addNew": "Add new reading"
     },
     "loading": {
       "title": "Loading readings",
@@ -81,27 +81,8 @@
     "guide": "How to ask your question?",
     "guideText": "Focus on open-ended questions that invite reflection rather than yes/no answers. Frame your question with clarity and intention. The I Ching responds best to questions about understanding situations, timing, and personal growth.",
     "placeholder": "Ask your question...",
-    "randomHexagram": "Random Hexagram",
-    "randomWithChanging": "Random with Transformation",
     "coinToss": "Create the hexagram",
-    "close": "Close",
-    "next": "Next",
-    "back": "Back",
-    "step1": {
-      "title": "How to Ask",
-      "subtitle": "Guide to meaningful questions"
-    },
-    "step2": {
-      "title": "Your Question",
-      "subtitle": "What would you like to know?"
-    },
-    "step3": {
-      "title": "Choose Method",
-      "subtitle": "Select your reading method",
-      "randomDescription": "Get an instant hexagram reading",
-      "randomWithChangingDescription": "Random hexagram with transformation",
-      "coinTossDescription": "Traditional method with virtual coins"
-    }
+    "question": "Your Question"
   },
   "coinToss": {
     "title": "Coin Toss",

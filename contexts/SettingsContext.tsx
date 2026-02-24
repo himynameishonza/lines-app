@@ -8,7 +8,6 @@ const SESSION_VIEW_MODE_KEY = '@hexagrams_session_view_mode';
 interface Settings {
   sortBy: TSort;
   viewMode: TViewMode;
-  einkMode: boolean;
   theme: TTheme;
 }
 
@@ -17,7 +16,6 @@ interface SettingsContextType {
   sessionViewMode: TViewMode | null;
   setSortBy: (sortBy: TSort) => void;
   setViewMode: (viewMode: TViewMode) => void;
-  setEinkMode: (einkMode: boolean) => void;
   setTheme: (theme: TTheme) => void;
   setSessionViewMode: (viewMode: TViewMode) => void;
 }
@@ -25,7 +23,6 @@ interface SettingsContextType {
 const defaultSettings: Settings = {
   sortBy: 'fuSi',
   viewMode: "carousel",
-  einkMode: false,
   theme: 'default',
 };
 
@@ -96,10 +93,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     setSettings(prev => ({ ...prev, sortBy }));
   };
 
-  const setEinkMode = (einkMode: boolean) => {
-    setSettings(prev => ({ ...prev, einkMode }));
-  };
-
   const setViewMode = (viewMode: TViewMode) => {
     setSettings(prev => ({ ...prev, viewMode }));
   };
@@ -109,7 +102,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setEinkMode, setViewMode, setTheme, setSessionViewMode }}>
+    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setViewMode, setTheme, setSessionViewMode }}>
       {children}
     </SettingsContext.Provider>
   );

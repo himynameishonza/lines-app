@@ -5,21 +5,21 @@ import Constants from "expo-constants";
 import TopNavigationBarSettingsScreen from "../components/navbars/TopNavigationBarSettingsScreen";
 import GeistMonoText from "../components/typography/GeistMonoText";
 import Picker from "../components/Picker";
-import Toggle from "../components/Toggle";
 import { useSettings } from "../contexts/SettingsContext";
 import { Coffee } from "lucide-react-native";
 import { TLanguage, TTheme, TViewMode } from "../types/generic";
+import Button from "../components/Button";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
-  const { settings, setSortBy, setEinkMode, setViewMode, setTheme } =
-    useSettings();
+  const { settings, setSortBy, setViewMode, setTheme } = useSettings();
   const currentLanguage = i18n.language as TLanguage;
 
   const appVersion = Constants.expoConfig?.version || "1.0.0";
-  const buildNumber = Constants.expoConfig?.ios?.buildNumber || 
-                      Constants.expoConfig?.android?.versionCode || 
-                      "1";
+  const buildNumber =
+    Constants.expoConfig?.ios?.buildNumber ||
+    Constants.expoConfig?.android?.versionCode ||
+    "1";
 
   const changeLanguage = (lang: TLanguage) => {
     i18n.changeLanguage(lang);
@@ -114,20 +114,9 @@ export default function SettingsScreen() {
             </GeistMonoText>
 
             <GeistMonoText className="text-sm text-text">
-              {appVersion} ({buildNumber})
+              {appVersion} (build {buildNumber})
             </GeistMonoText>
           </View>
-          {/* E-ink mode switch */}
-          {/* <View className="flex flex-row w-full items-center justify-between py-6">
-            <GeistMonoText className="text-sm text-text" variant="bold">
-              {t("settings.eink")}
-            </GeistMonoText>
-
-            <Toggle
-              value={settings.einkMode}
-              onValueChange={setEinkMode}
-            />
-          </View> */}
         </View>
       </View>
 
@@ -139,15 +128,10 @@ export default function SettingsScreen() {
         >
           {t("settings.coffee")}
         </GeistMonoText>
-        <TouchableOpacity
-          className="rounded bg-text w-full px-3 py-4"
-          onPress={handleCoffeePress}
-          activeOpacity={0.8}
-        >
-          <GeistMonoText className="text-primary text-center" variant="medium">
-            {t("settings.contribute")}
-          </GeistMonoText>
-        </TouchableOpacity>
+
+        <View className="w-full">
+          <Button onPress={handleCoffeePress} label={t("settings.contribute")} />
+        </View>
       </View>
     </View>
   );

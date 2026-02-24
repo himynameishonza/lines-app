@@ -176,7 +176,7 @@ function AppContent() {
 
     switch (activeTab) {
       case 'dashboard':
-        return <HomeScreen onAdd={() => {}} onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
+        return <HomeScreen onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
       case 'hexagrams':
         return (
           <HexagramsScreen 
@@ -188,7 +188,7 @@ function AppContent() {
       case 'settings':
         return <SettingsScreen />;
       default:
-        return <HomeScreen onAdd={() => {}} onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
+        return <HomeScreen onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
     }
   };
 

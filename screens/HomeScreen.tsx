@@ -13,12 +13,11 @@ import ReadingListDateHeader from "../components/readingList/ReadingListDateHead
 import { LinearGradient } from "expo-linear-gradient";
 
 interface HomeScreenProps {
-  onAdd: () => void;
   onCoinToss: () => void;
   onReadingPress: (readingId: string) => void;
 }
 
-export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeScreenProps) {
+export default function HomeScreen({ onCoinToss, onReadingPress }: HomeScreenProps) {
   const { t } = useTranslation();
   const { readings, isLoading, deleteReading } = useReadings();
   const closeSwipeCallbacks = useRef<{ [key: string]: () => void }>({});
@@ -54,10 +53,6 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
 
   const getHexagram = (hexagramId: number) => {
     return hexagrams.find(h => h.id === hexagramId);
-  };
-
-  const hasChangingLines = (reading: typeof readings[0]) => {
-    return reading.changingLines?.some(line => line === true);
   };
 
   const registerCloseCallback = (id: string, callback: () => void) => {
@@ -101,7 +96,7 @@ export default function HomeScreen({ onAdd, onCoinToss, onReadingPress }: HomeSc
       {isLoading ? (
         <LoadingState />
       ) : readings.length === 0 ? (
-        <EmptyState  />
+        <EmptyState onAdd={onCoinToss}  />
       ) : (
         <ScrollView 
           className="flex-1 px-6 pt-32" 

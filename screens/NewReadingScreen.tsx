@@ -1,15 +1,26 @@
 import React, { useState } from "react";
-import { View, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from "react-native";
+import {
+  View,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import { useTranslation } from "react-i18next";
 import GeistMonoText from "../components/typography/GeistMonoText";
 import TopNavigationBarNewReading from "../components/navbars/TopNavigationBarNewReading";
+import Button from "../components/Button";
 
 interface NewReadingScreenProps {
   onBack: () => void;
   onCoinToss: (question: string) => void;
 }
 
-export default function NewReadingScreen({ onBack, onCoinToss }: NewReadingScreenProps) {
+export default function NewReadingScreen({
+  onBack,
+  onCoinToss,
+}: NewReadingScreenProps) {
   const { t } = useTranslation();
   const [question, setQuestion] = useState("");
 
@@ -20,14 +31,17 @@ export default function NewReadingScreen({ onBack, onCoinToss }: NewReadingScree
   };
 
   return (
-    <KeyboardAvoidingView 
+    <KeyboardAvoidingView
       className="flex-1 bg-primary"
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <View className="flex-1">
         <TopNavigationBarNewReading onBack={onBack} />
 
-        <ScrollView className="flex-1 px-6 pt-32" contentContainerStyle={{ flexGrow: 1 }}>
+        <ScrollView
+          className="flex-1 px-6 pt-32"
+          contentContainerStyle={{ flexGrow: 1 }}
+        >
           {/* Guide Section */}
           <View className="mb-6">
             <GeistMonoText variant="bold" className="text-base text-text mb-3">
@@ -41,7 +55,7 @@ export default function NewReadingScreen({ onBack, onCoinToss }: NewReadingScree
           {/* Question Input */}
           <View className="flex-1 mb-6">
             <GeistMonoText variant="bold" className="text-base text-text mb-3">
-              {t("newReading.step2.subtitle")}
+              {t("newReading.question")}
             </GeistMonoText>
             <TextInput
               value={question}
@@ -50,26 +64,25 @@ export default function NewReadingScreen({ onBack, onCoinToss }: NewReadingScree
               placeholderTextColor="rgba(6, 40, 63, 0.3)"
               multiline
               className="rounded-lg py-3 px-4 text-text border border-dashed border-text/25 flex-1"
-              style={{ fontFamily: "GeistMono", fontWeight: 500, letterSpacing: 1, fontSize: 14, lineHeight: 24, textAlignVertical: "top" }}
+              style={{
+                fontFamily: "GeistMono",
+                fontWeight: 500,
+                letterSpacing: 1,
+                fontSize: 14,
+                lineHeight: 24,
+                textAlignVertical: "top",
+              }}
             />
           </View>
         </ScrollView>
 
         {/* Bottom Button */}
-        <View className="px-6 pb-10">
-          <TouchableOpacity
-            onPress={handleContinue}
+        <View className="px-6 pb-12">
+          <Button
             disabled={!question.trim()}
-            className={`rounded py-4 ${question.trim() ? `bg-text` : "bg-text/20"}`}
-            activeOpacity={0.8}
-          >
-            <GeistMonoText 
-              variant="medium" 
-              className={`text-center ${question.trim() ? "text-primary" : "text-text/40"}`}
-            >
-              {t("newReading.coinToss")}
-            </GeistMonoText>
-          </TouchableOpacity>
+            onPress={handleContinue}
+            label={t("newReading.coinToss")}
+          />
         </View>
       </View>
     </KeyboardAvoidingView>
