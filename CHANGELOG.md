@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.0] - 2026-02-24
+
+### Added
+- First-launch onboarding wizard with 5 screens
+  - Language selection (English/Czech)
+  - Welcome screen with app logo
+  - What is I Ching explanation
+  - What is a Hexagram explanation
+  - How it works guide
+- Wizard completion tracking in settings
+- Dev-only "Reset Wizard" button in Settings
+
+### Changed
+- App now shows onboarding on first launch only
+- Language can be selected during onboarding
+
 ## [0.3.0] - 2026-02-23
 
 ### Added
