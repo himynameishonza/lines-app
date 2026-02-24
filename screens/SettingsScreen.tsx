@@ -12,7 +12,7 @@ import Button from "../components/Button";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
-  const { settings, setSortBy, setViewMode, setTheme } = useSettings();
+  const { settings, setSortBy, setViewMode, setTheme, setHasCompletedWizard } = useSettings();
   const currentLanguage = i18n.language as TLanguage;
 
   const appVersion = Constants.expoConfig?.version || "1.0.0";
@@ -27,6 +27,12 @@ export default function SettingsScreen() {
 
   const handleCoffeePress = () => {
     Linking.openURL("https://buymeacoffee.com/himynameishonza");
+  };
+
+  const handleResetWizard = () => {
+    setHasCompletedWizard(false);
+    // Optionally reload the app or show a message
+    alert("Wizard reset! Please restart the app to see the onboarding again.");
   };
 
   const languages = [
@@ -117,6 +123,25 @@ export default function SettingsScreen() {
               {appVersion} (build {buildNumber})
             </GeistMonoText>
           </View>
+
+          {/* DEV: Reset Wizard Button */}
+          {__DEV__ && (
+            <View className="flex flex-row w-full items-center justify-between py-6">
+              <GeistMonoText className="text-sm text-text" variant="bold">
+                Reset Wizard (Dev)
+              </GeistMonoText>
+
+              <TouchableOpacity
+                onPress={handleResetWizard}
+                className="bg-text/10 px-4 py-2 rounded"
+                activeOpacity={0.7}
+              >
+                <GeistMonoText className="text-sm text-text" variant="medium">
+                  Reset
+                </GeistMonoText>
+              </TouchableOpacity>
+            </View>
+          )}
         </View>
       </View>
 

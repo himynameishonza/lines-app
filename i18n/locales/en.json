@@ -113,5 +113,56 @@
   },
   "share": {
     "error": "Unable to share"
+  },
+ "wizard": {
+  "welcome": {
+    "title": "Welcome to Lines",
+    "subtitle": "A tool for working with the Book of Changes. For moments when you need distance."
+  },
+
+  "about": {
+    "title": "What is the Book of Changes?",
+    "body": "The Book of Changes, also known as the I Ching, is an ancient Chinese system of symbols.\n\nIt works with 64 hexagrams that describe different forms of change and development within a situation.\n\nIt does not predict what will happen. It helps you see the situation more clearly.\n\nIt is not an esoteric device, but a psychological tool for reflection."
+  },
+
+  "hexagram": {
+    "title": "What is a hexagram?",
+    "body": "A hexagram is a figure composed of six lines. Each line is either broken (yin) or unbroken (yang).\n\nA hexagram consists of a lower and an upper trigram (three lines each).\n\nHexagrams are read from the bottom upward."
+  },
+
+  "howTo": {
+    "title": "How does it work?",
+    "step1": "Begin with a question that is relevant to you.",
+    "step2": "The app generates a hexagram using virtual coin tosses, describing the dynamics of your situation.",
+    "step3": "Read the interpretation as a prompt for reflection, not as a fixed conclusion."
+  },
+
+  "changingLines": {
+    "title": "Changing lines",
+    "body": "Sometimes a changing line appears during generation. It marks a point where the situation is developing.\n\nIn such cases, a second hexagram is generated, symbolizing the potential direction of change."
+  },
+
+  "hexagramNavigation": {
+    "title": "How to read a hexagram card",
+    "meaning": "Meaning",
+    "meaningBody": "This section explains the general meaning of the hexagram.",
+    "oracle": "Oracle",
+    "oracleBody": "The Oracle offers a concise interpretation and includes questions for introspection.",
+    "anatomy": "Anatomy",
+    "anatomyBody": "Anatomy describes the trigrams that compose the hexagram.",
+    "evolution": "Evolution",
+    "evolutionBody": "This section describes the development of the situation through individual lines. When changing lines appear, it also presents the secondary hexagram."
+  },
+
+  "language": {
+    "title": "Choose language",
+    "hint": "You can change the language later in Settings"
+  },
+
+  "actions": {
+    "continue": "Continue",
+    "skip": "Skip",
+    "getStarted": "Get Started"
   }
+}
 }

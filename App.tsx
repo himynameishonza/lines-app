@@ -13,10 +13,12 @@ import HexagramDetailScreen from './screens/HexagramDetailScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import CoinTossScreen from './screens/CoinTossScreen';
 import NewReadingScreen from './screens/NewReadingScreen';
+import OnboardingScreen from './screens/OnboardingScreen';
 import MainNavigationBar from './components/navbars/MainNavigationBar';
 import { TMainNavigationTab, TViewMode } from './types/generic';
 import { ReadingsProvider, useReadings } from './contexts/ReadingsContext';
 import { SettingsProvider } from './contexts/SettingsContext';
+import { useSettings } from './contexts/SettingsContext';
 import { Hexagram, hexagrams } from './data/hexagrams';
 
 // Keep the splash screen visible while we fetch resources
@@ -26,6 +28,7 @@ type TabType = 'dashboard' | 'hexagrams' | 'new-reading' | 'settings';
 
 function AppContent() {
   const { addReading, getReading } = useReadings();
+  const { settings, setHasCompletedWizard, isLoading: settingsLoading } = useSettings();
   const [activeTab, setActiveTab] = useState<TabType>('dashboard');
   const [selectedHexagram, setSelectedHexagram] = useState<Hexagram | null>(null);
   const [changingLines, setChangingLines] = useState<boolean[]>([]);
@@ -36,6 +39,14 @@ function AppContent() {
   
   // Track scroll positions for hexagrams screen
   const [hexagramsViewMode, setHexagramsViewMode] = useState<TViewMode>('carousel');
+
+  // Show onboarding if wizard not completed
+  const showOnboarding = !settings.hasCompletedWizard;
+
+  const handleOnboardingComplete = (language: string) => {
+    console.log('Onboarding completed with language:', language);
+    setHasCompletedWizard(true);
+  };
 
   const handleTabChange = (tab: TabType) => {
     setActiveTab(tab);
@@ -138,6 +149,16 @@ function AppContent() {
   };
 
   const renderScreen = () => {
+    // Show loading while settings are loading
+    if (settingsLoading) {
+      return null; // Or a loading screen
+    }
+
+    // Show onboarding screen if not completed
+    if (showOnboarding) {
+      return <OnboardingScreen onComplete={handleOnboardingComplete} />;
+    }
+
     // Show new reading screen
     if (showNewReading) {
       return (
@@ -195,7 +216,7 @@ function AppContent() {
   return (
     <View style={{ flex: 1 }}>
       {renderScreen()}
-      {!selectedHexagram && !showCoinToss && !showNewReading && (
+      {!selectedHexagram && !showCoinToss && !showNewReading && !showOnboarding && (
         <MainNavigationBar activeTab={activeTab as TMainNavigationTab} onTabChange={handleTabChange} />
       )}
       <StatusBar />

@@ -4,11 +4,13 @@ import { TSort, TTheme, TViewMode } from '../types/generic';
 
 const SETTINGS_STORAGE_KEY = '@settings';
 const SESSION_VIEW_MODE_KEY = '@hexagrams_session_view_mode';
+const WIZARD_COMPLETED_KEY = '@wizard_completed';
 
 interface Settings {
   sortBy: TSort;
   viewMode: TViewMode;
   theme: TTheme;
+  hasCompletedWizard: boolean;
 }
 
 interface SettingsContextType {
@@ -18,12 +20,15 @@ interface SettingsContextType {
   setViewMode: (viewMode: TViewMode) => void;
   setTheme: (theme: TTheme) => void;
   setSessionViewMode: (viewMode: TViewMode) => void;
+  setHasCompletedWizard: (completed: boolean) => void;
+  isLoading: boolean;
 }
 
 const defaultSettings: Settings = {
   sortBy: 'fuSi',
   viewMode: "carousel",
   theme: 'default',
+  hasCompletedWizard: false,
 };
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
@@ -32,6 +37,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [sessionViewMode, setSessionViewModeState] = useState<TViewMode | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Load settings and session view mode from AsyncStorage on mount
   useEffect(() => {
@@ -58,6 +64,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       console.error('Error loading settings:', error);
     } finally {
       setIsLoaded(true);
+      setIsLoading(false);
     }
   };
 
@@ -101,8 +108,12 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     setSettings(prev => ({ ...prev, theme }));
   };
 
+  const setHasCompletedWizard = (completed: boolean) => {
+    setSettings(prev => ({ ...prev, hasCompletedWizard: completed }));
+  };
+
   return (
-    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setViewMode, setTheme, setSessionViewMode }}>
+    <SettingsContext.Provider value={{ settings, sessionViewMode, setSortBy, setViewMode, setTheme, setSessionViewMode, setHasCompletedWizard, isLoading }}>
       {children}
     </SettingsContext.Provider>
   );

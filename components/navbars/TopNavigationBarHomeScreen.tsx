@@ -16,15 +16,6 @@ export default function TopNavigationBarHomeScreen({
   return (
     <TopNavigationBar
       justifyContent="flex-end"
-      leftElement={
-        <TouchableOpacity
-          className="w-full h-full flex items-center justify-center"
-          onPress={onAdd}
-          activeOpacity={0.6}
-        >
-          <CircleQuestionMarkIcon size={28} className="text-text" strokeWidth={1.5} />
-        </TouchableOpacity>
-      }
       title="Čtení"
       rightElement={
         <TouchableOpacity

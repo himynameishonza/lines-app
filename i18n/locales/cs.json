@@ -113,5 +113,50 @@
   },
   "share": {
     "error": "Nelze sdílet"
+  },
+  "wizard": {
+    "welcome": {
+      "title": "Vítají Vás Lines!",
+      "subtitle": "Nástroj pro práci s Knihou proměn. Pro chvíle, kdy potřebujete odstup."
+    },
+
+    "about": {
+      "title": "Co je Kniha proměn?",
+      "body": "Kniha proměn, neboli I-ťing, je starověký čínský systém symbolů.\n\nPracuje s 64 hexagramy, které zachycují různé podoby změny a vývoje situace.\n\nNeříká, co se stane. Ukazuje, jak situaci vidět.\n\nNejedná se o ezoterickou pomůcku, ale o psychologický afirmační nástroj."
+    },
+    "hexagram": {
+      "title": "Co je hexagram?",
+      "body": "Hexagram je obrazec složený ze šesti linií. Každá linie je buď přerušená (jin) nebo nepřerušená (jang).\n\nHexagram tvoří spodní a horní trigram (trojlinie).\n\nHexagram potom čteme odspoda nahoru."
+    },
+    "howTo": {
+      "title": "Jak to funguje?",
+      "step1": "Začněte otázkou, která je pro vás aktuální.",
+      "step2": "Aplikace pomocí hodů mincí vygeneruje hexagram, který popisuje dynamiku vaší situace.",
+      "step3": "Výklad čtěte jako podnět k přemýšlení, ne jako dogmatický závěr."
+    },
+    "changingLines": {
+      "title": "Proměnlivé linie",
+      "body": "Někdy se při generování objeví proměnná linie. Ta označuje místo, kde se situace vyvíjí.\n\nV takovém případě se vygeneruje ještě druhý hexagram symbolizující budoucí vývoj situace."
+    },
+    "hexagramNavigation": {
+      "title": "Jak číst v kartě hexagramu?",
+      "meaning": "Význam",
+      "meaningBody": "V této části se dozvíte obecný význam daného hexagramu.",
+      "oracle": "Orákulum",
+      "oracleBody": "Orákulum slouží jako jednoduchý výklad hexagramu. Nabízí také otázky k introspekci.",
+      "anatomy": "Anatomie",
+      "anatomyBody": "Anatomie popisuje trigramy daného hexagramu.",
+      "evolution": "Vývoj",
+      "evolutionBody": "Tato část popisuje vývoj situace podle jednotlivých linií. V případě proměnlivých linií nabízí i sekundární hexagram."
+    },
+    "language": {
+      "title": "Vyberte jazyk",
+      "hint": "Jazyk můžete změnit později v Nastavení"
+    },
+    "actions": {
+      "continue": "Pokračovat",
+      "skip": "Přeskočit",
+      "getStarted": "Začít"
+    }
   }
 }
