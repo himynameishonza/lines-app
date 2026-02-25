@@ -25,10 +25,12 @@ const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 interface OnboardingScreenProps {
   onComplete: (language: string) => void;
+  skipLanguageSelection?: boolean;
 }
 
 export default function OnboardingScreen({
   onComplete,
+  skipLanguageSelection = false,
 }: OnboardingScreenProps) {
   const { t, i18n } = useTranslation();
   const [currentPage, setCurrentPage] = useState(0);
@@ -42,7 +44,10 @@ export default function OnboardingScreen({
   };
 
   const goToNextPage = () => {
-    if (currentPage < 6) {
+    // When skipping, we have 6 screens (0-5), last is 5
+    // When not skipping, we have 7 screens (0-6), last is 6
+    const lastPage = skipLanguageSelection ? 5 : 6;
+    if (currentPage < lastPage) {
       scrollViewRef.current?.scrollTo({
         x: SCREEN_WIDTH * (currentPage + 1),
         animated: true,
@@ -78,13 +83,15 @@ export default function OnboardingScreen({
         contentContainerStyle={{ flexGrow: 1 }}
       >
         {/* Screen 1: Language Selection */}
-        <View className="flex-1" style={{ width: SCREEN_WIDTH }}>
-          <LanguageScreen
-            selectedLanguage={selectedLanguage}
-            onLanguageSelect={handleLanguageSelect}
-            t={t}
-          />
-        </View>
+        {!skipLanguageSelection && (
+          <View className="flex-1" style={{ width: SCREEN_WIDTH }}>
+            <LanguageScreen
+              selectedLanguage={selectedLanguage}
+              onLanguageSelect={handleLanguageSelect}
+              t={t}
+            />
+          </View>
+        )}
         {/* Screen 2: Welcome */}
         <View className="flex-1" style={{ width: SCREEN_WIDTH }}>
           <WelcomeScreen onSkip={handleSkip} t={t} />
@@ -118,12 +125,12 @@ export default function OnboardingScreen({
 
       {/* Progress Dots */}
       <View className="absolute bottom-32 left-0 right-0 flex-row justify-center items-center gap-2">
-        {[0, 1, 2, 3, 4, 5, 6].map((index) => {
+        {Array.from({ length: skipLanguageSelection ? 6 : 7 }).map((_, i) => {
           const dotClass =
-            index === currentPage
+            i === currentPage
               ? "w-2 h-2 rounded-full bg-text"
               : "w-2 h-2 rounded-full bg-text/20";
-          return <View key={index} className={dotClass} />;
+          return <View key={i} className={dotClass} />;
         })}
       </View>
 
@@ -131,7 +138,7 @@ export default function OnboardingScreen({
       <View className="absolute bottom-0 left-0 right-0 px-6 pb-12">
         <Button
           label={
-            currentPage === 6
+            currentPage === (skipLanguageSelection ? 5 : 6)
               ? t("wizard.actions.getStarted")
               : t("wizard.actions.continue")
           }

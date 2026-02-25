@@ -11,7 +11,7 @@ export type TMainNavigationTab = 'dashboard' | 'hexagrams' | 'settings';
 export type HexagramDetailTab = 'meaning' | 'oracle' | 'anatomy' | 'evolution';
 
 // Themes
-export type TTheme = "default"|"minimal"|"patterns"
+export type TTheme = "minimal"|"patterns"
 
 // Sorting
 export type TSort = 'fuSi' | 'wen';

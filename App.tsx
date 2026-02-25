@@ -42,10 +42,16 @@ function AppContent() {
 
   // Show onboarding if wizard not completed
   const showOnboarding = !settings.hasCompletedWizard;
+  const [skipLanguageSelection, setSkipLanguageSelection] = useState(false);
 
   const handleOnboardingComplete = (language: string) => {
     console.log('Onboarding completed with language:', language);
     setHasCompletedWizard(true);
+    setSkipLanguageSelection(false); // Reset the flag
+  };
+
+  const handleWizardReset = () => {
+    setSkipLanguageSelection(true);
   };
 
   const handleTabChange = (tab: TabType) => {
@@ -156,7 +162,7 @@ function AppContent() {
 
     // Show onboarding screen if not completed
     if (showOnboarding) {
-      return <OnboardingScreen onComplete={handleOnboardingComplete} />;
+      return <OnboardingScreen onComplete={handleOnboardingComplete} skipLanguageSelection={skipLanguageSelection} />;
     }
 
     // Show new reading screen
@@ -197,7 +203,7 @@ function AppContent() {
 
     switch (activeTab) {
       case 'dashboard':
-        return <HomeScreen onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
+        return <HomeScreen onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} onWizardReset={handleWizardReset} />;
       case 'hexagrams':
         return (
           <HexagramsScreen 
@@ -209,7 +215,7 @@ function AppContent() {
       case 'settings':
         return <SettingsScreen />;
       default:
-        return <HomeScreen onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} />;
+        return <HomeScreen onCoinToss={handleStartNewReading} onReadingPress={handleReadingPress} onWizardReset={handleWizardReset} />;
     }
   };
 

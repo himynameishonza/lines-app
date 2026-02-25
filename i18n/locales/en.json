@@ -33,7 +33,6 @@
     },
     "theme": "Book theme",
     "themes": {
-      "default": "Default",
       "minimal": "Minimalist",
       "patterns": "Patterns"
     },

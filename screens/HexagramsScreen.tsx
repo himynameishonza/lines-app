@@ -18,7 +18,6 @@ import { useSettings } from "../contexts/SettingsContext";
 import { useTranslation } from "react-i18next";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import DashedLine from "../components/DashedLine";
-import { CardDefault } from "../components/cardThemes/CardDefault";
 import { CardMinimal } from "../components/cardThemes/CardMinimal";
 import { CardPatterns } from "../components/cardThemes/CardPatterns";
 
@@ -218,9 +217,6 @@ export default function HexagramsScreen({
                 onPress={() => onHexagramPress?.(item)}
                 style={{ marginRight: index < filteredHexagrams.length - 1 ? CARD_SPACING : 0 }}
               >
-                {settings.theme === 'default' && (
-                  <CardDefault item={item} width={CARD_WIDTH} />
-                )}
                  {settings.theme === 'minimal' && (
                   <CardMinimal item={item} width={CARD_WIDTH} />
                 )}

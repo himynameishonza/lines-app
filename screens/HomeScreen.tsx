@@ -15,9 +15,10 @@ import { LinearGradient } from "expo-linear-gradient";
 interface HomeScreenProps {
   onCoinToss: () => void;
   onReadingPress: (readingId: string) => void;
+  onWizardReset?: () => void;
 }
 
-export default function HomeScreen({ onCoinToss, onReadingPress }: HomeScreenProps) {
+export default function HomeScreen({ onCoinToss, onReadingPress, onWizardReset }: HomeScreenProps) {
   const { t } = useTranslation();
   const { readings, isLoading, deleteReading } = useReadings();
   const closeSwipeCallbacks = useRef<{ [key: string]: () => void }>({});
@@ -91,7 +92,7 @@ export default function HomeScreen({ onCoinToss, onReadingPress }: HomeScreenPro
 
   return (
     <View className="bg-primary flex-1">
-      <TopNavigationBarHomeScreen onAdd={onCoinToss} />
+      <TopNavigationBarHomeScreen onAdd={onCoinToss} onWizardReset={onWizardReset} />
       
       {isLoading ? (
         <LoadingState />
