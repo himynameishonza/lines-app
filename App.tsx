@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Share, Alert } from 'react-native';
+import { View, Share, Alert, BackHandler } from 'react-native';
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useState, useEffect } from 'react';
 import { useFonts, BodoniModa_400Regular, BodoniModa_500Medium, BodoniModa_600SemiBold, BodoniModa_700Bold } from '@expo-google-fonts/bodoni-moda';
@@ -53,6 +53,51 @@ function AppContent() {
   const handleWizardReset = () => {
     setSkipLanguageSelection(true);
   };
+
+  // Handle Android back button
+  useEffect(() => {
+    const backAction = () => {
+      // If showing hexagram detail, go back to the source screen
+      if (selectedHexagram) {
+        handleHomeFromDetail();
+        return true;
+      }
+      
+      // If showing coin toss, go back
+      if (showCoinToss) {
+        setShowCoinToss(false);
+        setCurrentQuestion('');
+        return true;
+      }
+      
+      // If showing new reading screen, go back
+      if (showNewReading) {
+        setShowNewReading(false);
+        return true;
+      }
+      
+      // If showing onboarding, don't allow back (user must complete it)
+      if (showOnboarding) {
+        return true;
+      }
+      
+      // If on any tab other than dashboard, go to dashboard
+      if (activeTab !== 'dashboard') {
+        setActiveTab('dashboard');
+        return true;
+      }
+      
+      // Otherwise, allow default behavior (exit app)
+      return false;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction
+    );
+
+    return () => backHandler.remove();
+  }, [selectedHexagram, showCoinToss, showNewReading, showOnboarding, activeTab]);
 
   const handleTabChange = (tab: TabType) => {
     setActiveTab(tab);

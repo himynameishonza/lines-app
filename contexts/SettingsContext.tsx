@@ -27,7 +27,7 @@ interface SettingsContextType {
 const defaultSettings: Settings = {
   sortBy: 'fuSi',
   viewMode: "carousel",
-  theme: 'minimal',
+  theme: 'patterns',
   hasCompletedWizard: false,
 };
 
