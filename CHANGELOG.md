@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.5.0] - 2026-02-25
+
+### Added
+- Android hardware back button support with intelligent navigation
+- Reset wizard option in home screen navigation (skips language selection)
+
+### Changed
+- Wizard now skips language selection when reset from home screen
+- Onboarding progress indicators now correctly reflect number of screens
+
+### Fixed
+- Removed sandbox data from production builds - app now starts with empty storage
+- Fixed wizard "Get Started" button not appearing on last screen when skipping language selection
+- Fixed Android back button exiting app instead of navigating back through screens
+
 ## [0.4.0] - 2026-02-24
 
 ### Added
